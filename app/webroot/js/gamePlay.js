@@ -67,7 +67,7 @@ function setSelection(x,y){
 	var iconOffset = width / 2;
 
 	var crosshair=document.createElement("img");
-	crosshair.src = "/cskplay_framework/app/webroot/img/logo.png";
+	crosshair.src = "/cskplay/app/webroot/img/logo.png";
 	crosshair.id = "single_crosshair";
 	crosshair.style.pointerEvents = "none";
 	crosshair.style.width = width + "px";

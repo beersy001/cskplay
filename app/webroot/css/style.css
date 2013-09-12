@@ -364,7 +364,7 @@ a{
 	margin-right: 10px;
 }
 
-#selection_overlay{
+.overlay{
 	position: absolute;
 	display: none;
 	z-index: 2;
@@ -376,6 +376,8 @@ a{
 	height: 50%;
 	width: 101%;
 }
+
+
 
 #game_image_container{
 	position: relative;

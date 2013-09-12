@@ -35,7 +35,7 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 
 <script type="text/javascript">
 	var el=document.getElementById("container");
-	el.style.background = "url('/cskplay_framework/app/webroot/img/backdrop.png')";
+	el.style.background = "url('/cskplay/app/webroot/img/backdrop.png')";
 	el.style.backgroundPosition = "center 70%";
 	el.style.backgroundRepeat = "no-repeat"; 
 	el.style.backgroundAttachment = "fixed";

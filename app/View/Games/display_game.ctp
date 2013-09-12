@@ -32,24 +32,46 @@ $this->Html->script( "gamePlay", array("inline"=>false));
 <script>
 	$(function(){
 		$("img#game_image").click(function(){
-			closeWindow();
+			toggleSelectionWindow();
 		}); 
 	});
 
 	$(function(){
 		$("#selection_overlay").click(function(){
-			closeWindow();
+			toggleSelectionWindow();
+		}); 
+	});
+
+	$(function(){
+		$("a#buy_game_balls_link").click(function(){
+			toggleBuyGameBallsWindow();
+		}); 
+	});
+
+	$(function(){
+		$("#buy_game_balls_overlay").click(function(){
+			toggleBuyGameBallsWindow();
 		}); 
 	});
 
 
-	var closeWindow = function(){
+	var toggleSelectionWindow = function(){
 		if ($("#selection_overlay").css('display') == 'none'){
 			$("#selection_overlay").show('slide',{direction:'up'},800);
 		} else{
 			$("#selection_overlay").hide('slide',{direction:'up'},200);
 		}
 	};
+
+	var toggleBuyGameBallsWindow = function(){
+		if ($("#buy_game_balls_overlay").css('display') == 'none'){
+			$("#buy_game_balls_overlay").show('slide',{direction:'up'},800);
+		} else{
+			$("#buy_game_balls_overlay").hide('slide',{direction:'up'},200);
+		}
+	};
+
+
 </script>
 
 <div class="onerow">
@@ -78,7 +100,7 @@ $this->Html->script( "gamePlay", array("inline"=>false));
 
 		<div class="alternate alternate_one">
 			<h2>Game Balls</h2>
-			<a href="#">Buy More Game Balls</a>
+			<a id="buy_game_balls_link" href="#">Buy More Game Balls</a>
 
 			<div id="game_ball_bag" class="alternate alternate_two">
 
@@ -123,7 +145,7 @@ $this->Html->script( "gamePlay", array("inline"=>false));
 
 		<?= $this->Html->image( 'gameImage1.jpg', array('id'=>'game_image') ) ?>
 
-		<div id="selection_overlay">
+		<div class="overlay" id="selection_overlay">
 			<h1>Your Selection!</h1>
 			<p>x: <span id="x_selection">0</span> </p>
 			<p>y: <span id="y_selection">0</span> </p>
@@ -140,6 +162,10 @@ $this->Html->script( "gamePlay", array("inline"=>false));
 			<br>
 			<br>
 			<p>Click here to try again</p>
+		</div>
+
+		<div class="overlay" id="buy_game_balls_overlay">
+			<iframe id="" src="/cskplay/Users/purchaseGameBalls"></iframe>
 		</div>
 	
 		

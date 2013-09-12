@@ -48,7 +48,7 @@
 		<script>
 			$(function(){
 				$("a#close").click(function(){
-					parent.closeIFrame();
+					parent.toggleBuyGameBallsWindow();
 				}); 
 			});
 		</script>
