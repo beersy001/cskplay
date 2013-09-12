@@ -1,0 +1,461 @@
+@charset "utf-8";
+
+
+/* Headings */
+.large_link{
+	color:#DDDDDD;
+	font:25px Calibri,Arial,sans-serif;
+	text-decoration: none;
+}
+
+h1{
+	color: rgb(255,255,255);
+}
+
+h2{
+	color: rgb(255,255,255);
+	margin-bottom: 10px;
+}
+
+
+/** General Style Info **/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+html, body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+html, body, #container{
+	color:#777;
+	font:15px Calibri,Arial,sans-serif;
+}
+
+img {
+	text-decoration: none;
+	border: 0px;
+}
+
+#container{
+	background: url('../img/blank_goal.png');
+	background-repeat: no-repeat; 
+	background-position: center top;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height:100%;
+	position:relative;
+	overflow: auto;
+}
+
+#main_header{
+	background: rgba(40,32,59,0.80);
+	position: relative;
+	min-height: 95px;
+	margin-bottom: 80px;
+}
+
+#main_body{
+	padding-bottom:100px;
+	border-width: 3px;
+	width:90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#main_footer{
+	background: rgba(40,32,59,0.9);
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:94px;
+	clear: both;
+}
+
+#small_footer{
+	background: rgba(00,00,00,1);
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:34px;
+}
+
+.middle_image{
+	vertical-align: middle;
+}
+
+
+
+#page_footer{
+	background: rgba(40,32,59,0.7);
+	border-style: solid;
+	border-color: rgba(40,32,59,1);
+	border-width: 3px;
+	position:absolute;
+	bottom:90px;
+	left: 5%;
+	width:90%;
+	height: 150px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#header_content{
+	width: 100%;
+	position: relative;
+}
+
+#login_box_header{
+	float: right;
+	position: absolute;
+	right: 35px;
+	top: 5px;
+	color: rgb(200,200,200);
+	font:15px Calibri,Arial,sans-serif;
+	text-align: right;
+	text-decoration: none;
+	width: 50%;
+	overflow: auto;
+}
+
+#login_box_header img{
+	padding-left: 5px;
+	float: right;
+
+}
+
+/* On Login page */
+#login_box_large{
+	background: rgba(40,32,59,0.7);
+	border-color: rgba(40,32,59,1);
+	border-style: solid;
+	border-width: 3px;
+	width: 25%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+}
+
+#main_logo{
+	width: 150px;
+	position: absolute;
+	left: 35px;
+	top: 15px;
+}
+
+#text_logo{
+	width: 275px;
+	position: absolute;
+	left: 195px;
+	top: 15px;
+}
+
+#nav_links{
+	float: right;
+	padding-top: 70px;
+	padding-right: 35px;
+}
+
+#nav_links a{
+	color: rgb(200,200,200);
+	font:20px Calibri,Arial,sans-serif;
+	text-decoration: none;
+}
+
+#good_causes_button{
+	width: 300px;
+}
+
+#check_results_button{
+	width: 100px;
+}
+
+#outtakes_button{
+	width: 130px;
+}
+
+.footer_element{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	width:33%;
+	text-align:center;
+}
+
+.large{
+	width: 66%;
+}
+
+.medium{
+	width: 80%;
+}
+
+#paypal_image{
+	width: 60px;
+}
+
+#facebook_login_button{
+	width: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+}
+
+.clear{
+	clear: left;
+	display: block; 
+}
+
+.right_align{
+	text-align: right;
+}
+
+.left_align{
+	text-align: left;
+}
+
+.center_align{
+	text-align: center;
+}
+
+
+.crosshair{
+	pointer-events: none;
+	width: 50px;
+	position: absolute;
+}
+
+img.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#home_padding{
+	padding-bottom: 900px;
+}
+
+#sidebar {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	display: none;
+	background: rgba(40,32,59,0.85);
+	color: #FFF;
+	padding: 10px;
+	width: 400px;
+	height: 90%;
+}
+
+#home_buttons{
+	position: absolute;
+	right: 100px;
+	top: 500px;
+}
+
+#play_now_button{
+	padding-right: 15px;
+}
+
+
+
+#toggle{
+	color: #FFF;
+}
+
+label{
+	display: block;
+}
+
+#facebook_login_button_page{
+	width: 150px;
+	float: right;
+}
+
+#login_page_form{
+	padding-top: 30px;
+	padding-bottom: 40px;
+	position: relative;
+	height: 100%;
+}
+
+#forgot_password_link{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#login_box_page{
+	margin-top: 20px;
+}
+
+a{
+	color: #FFF;
+}
+
+#countdown{
+	margin-top: 5px;
+}
+
+.countdown_digit{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	height: 20px;
+	width: 15px;
+	color: #f3f5f4;
+	text-align: center;
+	border:1px solid;
+	border-color: #242424;
+	border-radius:2px;
+	background: rgb(80,85,86);
+	background: -moz-linear-gradient(top,  rgba(80,85,86,1) 1%, rgba(80,85,86,1) 52%, rgba(67,68,69,1) 56%, rgba(34,35,43,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(80,85,86,1)), color-stop(52%,rgba(80,85,86,1)), color-stop(56%,rgba(67,68,69,1)), color-stop(100%,rgba(34,35,43,1)));
+	background: -webkit-linear-gradient(top,  rgba(80,85,86,1) 1%,rgba(80,85,86,1) 52%,rgba(67,68,69,1) 56%,rgba(34,35,43,1) 100%);
+	background: -o-linear-gradient(top,  rgba(80,85,86,1) 1%,rgba(80,85,86,1) 52%,rgba(67,68,69,1) 56%,rgba(34,35,43,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(80,85,86,1) 1%,rgba(80,85,86,1) 52%,rgba(67,68,69,1) 56%,rgba(34,35,43,1) 100%);
+	background: linear-gradient(to bottom,  rgba(80,85,86,1) 1%,rgba(80,85,86,1) 52%,rgba(67,68,69,1) 56%,rgba(34,35,43,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#505556', endColorstr='#22232b',GradientType=0 );
+}
+
+.countdown_digit p{
+	margin-right: auto;
+	margin-left: auto;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: middle;
+	font-size: 12px;
+}
+
+.digit_label{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	font-size: 12px;
+}
+
+#days_label{
+	margin-right: 18px;
+}
+
+#hours_label{
+	margin-right: 20px;
+}
+
+#mins_label{
+	margin-right: 19px;
+}
+
+#secs_label{
+	margin-right: 5px;
+}
+
+
+.marg{
+	margin-right: 10px;
+}
+
+#selection_overlay{
+	position: absolute;
+	display: none;
+	z-index: 2;
+	bottom: 50px;
+	top: 20px;
+	padding-top: 20px;
+	background: rgba(40,32,59,0.85);
+	cursor: default;
+	height: 50%;
+	width: 101%;
+}
+
+#game_image_container{
+	position: relative;
+	text-align: center;
+	cursor: crosshair;
+}
+
+#game_image{
+	width: 100%;
+	border-style: solid;
+	border-color: rgba(40,32,59,1);
+	border-width: 5px;
+
+}
+
+.alternate{
+	text-align: center;
+	padding: 5px;
+}
+
+.alternate_one{
+	background: rgba(40,32,59,0.9);
+	color: #cac8c8;
+}
+
+.alternate_two{
+	background: rgba(200,200,200,0.9);
+	color: #28203b;
+}
+
+.alternate_one h2{
+	color: #cac8c8;
+}
+
+.alternate_two h2{
+	color: #28203b;
+}
+
+img.game_ball_image{
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+}
+
+#game_ball_bag{
+	width: 165px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.game_ball{
+	font-weight:bold;
+	margin-top: 5px;
+}
+
+.avaliable{
+	color: green;
+}
+
+.not_avaliable{
+	text-decoration: line-through;
+	color: red;
+}
+
+
+table{
+	width: 100%;
+}
+
+td{
+	text-align: center;
+	width: 30%;
+}
+
+
+@media all and (max-width: 970px) {
+
+	#facebook_info{
+		display: none;
+	}
+}
+
+
