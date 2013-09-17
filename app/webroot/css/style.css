@@ -229,8 +229,9 @@ img {
 
 .crosshair{
 	pointer-events: none;
-	width: 50px;
+	width: 15px;
 	position: absolute;
+	z-index: 10;
 }
 
 img.center {
@@ -371,7 +372,7 @@ a{
 	bottom: 50px;
 	top: 20px;
 	padding-top: 20px;
-	background: rgba(40,32,59,0.85);
+	background: rgba(40,32,59,0.75);
 	cursor: default;
 	height: 50%;
 	width: 101%;
@@ -382,15 +383,46 @@ a{
 #game_image_container{
 	position: relative;
 	text-align: center;
-	cursor: crosshair;
 }
 
-#game_image{
+.game_image{
+	position: relative;
 	width: 100%;
 	border-style: solid;
 	border-color: rgba(40,32,59,1);
 	border-width: 5px;
+	cursor: crosshair;
+}
 
+.display_none{
+	display: none;
+}
+
+
+.game_image_inlay{
+	display: none;
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+	width: 175px;
+	border-style: solid;
+	border-color: rgba(40,32,59,1);
+	border-width: 4px;
+}
+
+#game_image_tab{
+	position: absolute;
+	z-index: 10;
+	bottom: -5px;
+	right: 0;
+	width: 175px;
+	height: 25px;
+	border-style: solid;
+	border-color: rgba(40,32,59,1);
+	border-bottom-left-radius:2em;
+	border-bottom-right-radius:2em;
+	background: black;
+	border-width: 4px;
 }
 
 .alternate{

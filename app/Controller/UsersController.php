@@ -127,6 +127,12 @@ class UsersController extends AppController {
 		$this->set('results', $results);
 
 		$this->set('currentUser', $user);
+
+		$numberOfBallsPlayed = $this->Game->getNumberOfBallsPlayed($username);
+		$numberOfBallsRemaining = $this->User->getNumberOfAttemptsRemaining($username);
+
+		$this->set('ballsRemaining', $numberOfBallsRemaining);
+		$this->set('ballsPlayed', $numberOfBallsPlayed);
 		
 	}
 

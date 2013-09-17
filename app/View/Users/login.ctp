@@ -1,5 +1,20 @@
 <?php $this->Html->script( "moveHomeButtons", array("inline"=>false));?>
 
+<script>
+
+	function changeGameImage(){
+		document.getElementById('game_image').src = '/cskplay/img/gameImage2.jpg';
+		document.getElementById('game_image_inlay').src = '/cskplay/img/gameImage1.jpg';
+	}
+
+	function changeGameImageBack(){
+		document.getElementById('game_image').src = '/cskplay/img/gameImage1.jpg';
+		document.getElementById('game_image_inlay').src = '/cskplay/img/gameImage1.jpg';
+	}
+
+</script>
+
+
 <div class="onerow">
 	<div class="col5 alternate_one" id="login_box_page">
 
@@ -15,13 +30,13 @@
 			<?= $this->form->input('username'); ?>
 			<?= $this->form->input('password'); ?>
 			<?= $this->form->end('login'); ?>
-		
-		<?= $this->Html->link('forgot password',array('controller' => 'users', 'action' => 'forgotPassword'), array('id' => 'forgot_password_link')); ?>
+			<?= $this->Html->link('forgot password',array('controller' => 'users', 'action' => 'forgotPassword'), array('id' => 'forgot_password_link')); ?>
 		</div>
 	</div>
 
 	<div class="col7 last">
 		<?= $this->Html->image( 'gameImage1.jpg', array('id'=>'game_image') ) ?>
+		<?= $this->Html->image( 'gameImage2.jpg', array('id'=>'game_image_inlay', 'onmouseover' => 'changeGameImage()', 'onmouseout' => 'changeGameImageBack()') ) ?>
 	</div>
 
 	<div id="home_buttons">

@@ -34,7 +34,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public $helpers = array('Html'); 
+	public $helpers = array('Html','Js'); 
 	
 	public $components = array(
 		//'DebugKit.Toolbar',
@@ -44,7 +44,8 @@ class AppController extends Controller {
 			'logoutRedirect' => array('controller' => 'pages', 'action' => 'home'),
 			'authError' => "Access Denied",
 			'authorize' => array('controller')
-		)
+		),
+		'RequestHandler'
 	);
 
 

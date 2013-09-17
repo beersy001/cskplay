@@ -4,12 +4,12 @@ $(document).ready(function() {
 	HTMLImageElement.prototype.registerClick = registerClick;
 	HTMLImageElement.prototype.findMouse = findMouse;
 
-	document.getElementById("game_image").onclick = function(event) {
-		game_image.registerClick(event);
+	document.getElementById("game_image_main").onclick = function(event) {
+		game_image_main.registerClick(event);
 	}
 
-	document.getElementById("game_image").onmousemove = function(event) {
-		game_image.findMouse(event);
+	document.getElementById("game_image_main").onmousemove = function(event) {
+		game_image_main.findMouse(event);
 	}
 });
 
@@ -23,18 +23,14 @@ function registerClick(event) {
 
 	setSelection(event.pageX,event.pageY);
 
-	var button = document.getElementById("submit_game_button");
-
-	button.href = "registerSelection?x=" + imageX + "&y=" + imageY;
-
-	document.getElementById("x_selection").innerHTML = imageX;
-	document.getElementById("y_selection").innerHTML = imageY;
+	document.getElementById("x_input").value = imageX;
+	document.getElementById("y_input").value = imageY;
 
 }
 
 function calculateCoords(event){
 	var defaultImage = document.getElementById('imageHidden')
-	var currentElement = document.getElementById("game_image");;
+	var currentElement = document.getElementById("game_image_main");;
 
 
 	var imageX = 0;
@@ -63,7 +59,7 @@ function calculateCoords(event){
 
 function setSelection(x,y){
 
-	var	width = 50;
+	var	width = 18;
 	var iconOffset = width / 2;
 
 	var crosshair=document.createElement("img");

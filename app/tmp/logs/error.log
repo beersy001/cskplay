@@ -1,694 +1,596 @@
-2013-09-12 15:47:17 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 15:47:24 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 15:48:03 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 15:52:11 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 15:54:16 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 15:54:21 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:11:03 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:15:37 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:16:47 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:19:22 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:19:40 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:22:06 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:22:20 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:22:22 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:23:12 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:28:50 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:28:51 Error: [MissingActionException] Action GamesController::purchaseGameBalls() could not be found.
+2013-09-13 15:19:35 Error: [MissingActionException] Action GamesController::demo_test.txt() could not be found.
 Exception Attributes: array (
   'controller' => 'GamesController',
-  'action' => 'purchaseGameBalls',
+  'action' => 'demo_test.txt',
 )
-Request URL: /cskplay/Games/purchaseGameBalls
+Request URL: /cskplay/games/demo_test.txt
 Stack Trace:
 #0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
 #1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2013-09-12 16:28:52 Error: [MissingActionException] Action GamesController::purchaseGameBalls() could not be found.
+2013-09-13 15:40:06 Error: [MissingViewException] View file "C:\wamp\www\cskplay\app\View\Games\display_overlay.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cskplay\\app\\View\\Games\\display_overlay.ctp',
+)
+Request URL: /cskplay/games/displayOverlay
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\View\View.php(468): View->_getViewFileName('displayOverlay')
+#1 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(952): View->render('displayOverlay', 'ajax')
+#2 C:\wamp\www\cskplay\app\Controller\GamesController.php(81): Controller->render('displayOverlay', 'ajax')
+#3 [internal function]: GamesController->displayOverlay()
+#4 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(GamesController), Array)
+#5 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-13 15:53:10 Error: [MissingControllerException] Controller class CskplayController could not be found.
+Exception Attributes: array (
+  'class' => 'CskplayController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/cskplay/Games/displayGame
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-13 19:59:51 Error: [FacebookApiException] Could not resolve host: graph.facebook.com
+Request URL: /cskplay/games/displayGame
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-14 11:10:40 Error: [FacebookApiException] Resolving timed out after 10000 milliseconds
+Request URL: /cskplay/games/displayGame
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-14 11:11:04 Error: [FacebookApiException] Resolving timed out after 10000 milliseconds
+Request URL: /cskplay/games/displayGame
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-14 11:11:16 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php, line 964]
+2013-09-14 11:11:16 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/games/displayGame
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 964)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 964, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 964, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-14 11:11:28 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\facebook.php, line 49]
+2013-09-14 11:11:28 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/games/displayGame
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 09:00:37 Error: [FacebookApiException] Resolving timed out after 10000 milliseconds
+Request URL: /cskplay/games/displayGame
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-16 09:26:31 Error: [FacebookApiException] Connection timed out after 10374 milliseconds
+Request URL: /cskplay/Users/accountAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 C:\wamp\www\cskplay\app\Controller\UsersController.php(36): AppController->beforeFilter()
+#6 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#10 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-16 09:27:17 Error: [FacebookApiException] Connection timed out after 10016 milliseconds
+Request URL: /cskplay/Users/accountAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 C:\wamp\www\cskplay\app\Controller\UsersController.php(36): AppController->beforeFilter()
+#6 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#10 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-16 09:28:02 Error: [FacebookApiException] Connection timed out after 10623 milliseconds
+Request URL: /cskplay/Users/accountAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 C:\wamp\www\cskplay\app\Controller\UsersController.php(36): AppController->beforeFilter()
+#6 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#10 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-16 09:28:47 Error: [FacebookApiException] Connection timed out after 10015 milliseconds
+Request URL: /cskplay/Users/accountAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 C:\wamp\www\cskplay\app\Controller\UsersController.php(36): AppController->beforeFilter()
+#6 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#10 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-16 09:29:33 Error: [FacebookApiException] Connection timed out after 10280 milliseconds
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-16 09:31:48 Error: [FacebookApiException] Connection timed out after 10640 milliseconds
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-16 09:33:00 Error: [FacebookApiException] Connection timed out after 10327 milliseconds
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-16 09:33:27 Error: [FacebookApiException] Connection timed out after 10249 milliseconds
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-16 09:34:06 Error: [FacebookApiException] Connection timed out after 10186 milliseconds
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-16 09:34:46 Error: [FacebookApiException] Connection timed out after 10530 milliseconds
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-16 09:35:07 Error: [FacebookApiException] Connection timed out after 10000 milliseconds
+Request URL: /cskplay/Users/login
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 C:\wamp\www\cskplay\app\Controller\UsersController.php(36): AppController->beforeFilter()
+#6 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#10 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-16 09:35:17 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php, line 964]
+2013-09-16 09:35:17 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/Users/login
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 964)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 964, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 964, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 09:35:27 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\facebook.php, line 49]
+2013-09-16 09:35:27 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/Users/login
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 14:57:13 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php, line 964]
+2013-09-16 14:57:13 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/users/login?code=AQAg3mKjLNiCYZ6JaNpxXDcOdZR31k71ONROWQ4mtLxZ0IHZDBb0OrAuJMbefb8l_crYOTGXMmoJETx9ZKqrPQ9orbFgmfLcURZu8xelem-K3mTEMOPGBO1QBYqIhxJUKQEZGN-6qP9DPOIG0jZisRbY4LrbCXFP9lJfPHz047Yn87aMXjVF0ylP9FgfW5opCom68L4-UOBY8OZ5UU5_alBQ0h7vppts9LToycnJklkZWzfqlxsi7Ih3fNET3aEfU3C24TwCKqEXnJjkWTyiIWflCPjvYgUADK1HBC-a32_QV8OmbUOLDryI9uLFX5cHlVM&state=e959f15bfe26e55009c25364ca59520d
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 964)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 964, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 964, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 14:57:26 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php, line 971]
+2013-09-16 14:57:26 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/users/login?code=AQAp2eIosDJC1OY_f_as1YqsPwr4SpEwhBj6LDZccbdjX3qgckpSnXZclP8h-dKSUZvGZ0uMgTm_iaG11llAMsbRdQkcsWVjln2_mVgYv7s_S1MiCTEnEs5513XmVNBkvLaxUi5GXs0VF62Mjp5gw8x7SkhuAiLkkCZMp3OfcmPnc5EDRO36aP_toG2bpOl5FYe2rehuU4rrEhPbR4glJ_gDqFexRPB_f39Ebo7o3-clvEYscSzKwHJARtQ9fAUnKBGFmLq3YAmN9S8nQZMVgPBPCp5lIuvpCbeOMinefQMDv6qyd8kt0MHBKhxcq57LWzA&state=e959f15bfe26e55009c25364ca59520d
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 971)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 971, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 971, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 14:57:31 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\facebook.php, line 49]
+2013-09-16 14:57:31 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/users/login?code=AQDoXOPlket3BHQ5zweyaU_YC6OEASMCp6qcKjvNByoW9AyaM6P8mwV2kyfTLHNg6hJTUHUDW6rfztw_nFqTGF73TROZpGT9avacjZM0Hwiq1Gd9yMrNqxf1v3NAdXCggxPpSGGl-S9_OUvoqpG1wUHJWTCXvso3TkYX0kWCn7UAl3_55R8sGxUlkS8NgORQaWd8uO2k5rTZn-T4jiOhnUUDI_k2cii3ulbslM0DER2dSuGmWlzjN2XKaGoRw0LVQ_kFpFLj_vqFPAa7s8iGXNR6Ur3XN-DUlAVzBHwjfE4Hg3eFxti8o2gNX2rDPP9fl5s&state=e959f15bfe26e55009c25364ca59520d
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 14:57:41 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\facebook.php, line 49]
+2013-09-16 14:57:41 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/users/login?code=AQDO6IgPKsgOCmNJd8qtGWFwOocHDw1MZoCxcvJ0bMgPZvkC7nf1_MZh0zjzkOIBWZwgFHRc0RxDuYlL264i1bU7pmjsgQHixgcRAG58tbMTnAl93WUQhrphPlQzS-wxP4NDuG5v-KVKiEj6L1JpZv8c3ElgLIdoxkdc59OG2PInV0o4fJTF5UN36NJTiIFX1O8YlJZxqPwL1kMZEjZUSb5tx4LsyTSRNn3408ea8JwsQOkUFJARbtrtQe2w5J2PnP-bC8Z46bkaHCRzoqNWFILLXGQZDD2V1CFpOlinGa4JxIlMUcqrVCs1RuGzpIMJnoY&state=e959f15bfe26e55009c25364ca59520d
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 14:57:49 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\facebook.php, line 49]
+2013-09-16 14:57:49 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/users/login?code=AQCshGr7Hs5vrOgEYlIFPLGI6uOL4vYeCNuUAMkII4AYtguA3Datrnuk0wOj-NBHm3yAEOAHO1VgRQ7vPa_pzgPKtgTV15WNkBj0MYpKl2CCjfg7X1Xks18S1hHGcwNFdum7T9YwSpUsGmSKnzI1JvxGO8uRHzGg3nF5TUBctT298iHFT5FrgzReBVK8Odmux28dTXDK1qVS-q_dfVoYeFadjjgAitDJagjfDzIJt-q6T5Z2_f_uqROaPp0Oiw047LAPGpaVQBqxz1VofouUDFWICDg9pN-JX8B2mGaSIDGb3NtwQiPh4yIiWpvd5DfSQeQ&state=e959f15bfe26e55009c25364ca59520d
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 15:01:25 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php, line 971]
+2013-09-16 15:01:25 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/users/login?code=AQDT7jjjcNkK8buL4OXKE4nQwbMP6Sb5wRitH6PijZ8367iO3wlxmB6uWULM_ABGVY68qSUomMhvPALxyBLWY9V7vmcu6r6er-VVAcBF7x4rlkhOOiuyyFunQa5_f1zW1J8y8YQIUpI9UzUEZHLwyo6jYb6HFEfYy5DBk6iFeHSVnTI6pqYyRqpBi8n4mF85PG-XYd_a-rdAbRngCn8Bza32dM5sjiLWp7RI22iZ1OeRjr3O_lZPxPgRWZcfw219sNXH1AvwK2hFz6UNtRy9nVTNgoP9Php7CW6wk3jbEBrjgCC6p9QsbKWNVwI7x2RWNmw&state=901e49e270d59dc57f1fb76e32e22c00
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 971)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 971, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 971, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 15:01:28 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\facebook.php, line 49]
+2013-09-16 15:01:28 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/users/login?code=AQAuVjcvvAhmSNhu1r05vyLwzC8VXHjF_avtnuPHRL4SPQj5mtKuLXIM9rzmduttX_IHyMDUzJZH0tqBL7XmFzs2ZYx_hUmYH2MFVCFS0GERmpkZF9evFLjRJR9v6oxHZBDYId7RU1_ZHdJM9EkJONXaYzv2WzQOeMB5cw5I7LOFZyzzqovQZ9le2DKh7GrxQO8evv-co4eZvvLfMl3368jVT1AXek-imGlA6U3lFku59cNPmXp8kOL6jn3sCmZFrYzic9J_4jZiQA6Ij8owjLuLP2xVU1TBPoPsvqvIGVcxTLEhIjITp1ko0RAQa3m4N3E&state=901e49e270d59dc57f1fb76e32e22c00
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 15:01:38 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php, line 964]
+2013-09-16 15:01:38 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/users/login?code=AQCeFK_b3xKa99P1lCzaMRZpXqbMKLQydG4LC7pBYkWtzz19SsqBnZsHUnpu4XdmIirgvMC3jmdvC3xE3yBkES909m-ODI74ASwsj76aRZcoPKMlK3DojtzD4FsIbBLOAx3yBftJvg4QyTTpmKW1Sr1N2jD2FTFnA8gz7U-NE3-tob4rtlMx9-BQ9ibV_77jRuLvR4UGnUwZIsVDlVEWe3_yxMQhu1x6a5PAVcFFTA0m4kqvvVHBZ30rOegWaiUOAjHswqRrGkwxAyO1WA-dVibPnPXoQror91Lf5E4lnwW-QK_3NqgtHGXCdzS4S0s4ia8&state=901e49e270d59dc57f1fb76e32e22c00
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 964)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 964, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 964, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 15:18:42 Error: [FacebookApiException] Operation timed out after 10000 milliseconds with 0 out of 0 bytes received
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-16 15:19:35 Error: [FacebookApiException] Operation timed out after 10623 milliseconds with 0 out of 0 bytes received
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-16 15:19:51 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php, line 971]
+2013-09-16 15:19:51 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 971)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 971, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 971, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 15:20:00 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\facebook.php, line 49]
+2013-09-16 15:20:00 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\csk...', 49, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-16 15:50:20 Error: [FacebookApiException] Could not resolve host: graph.facebook.com
+Request URL: /cskplay/Users/accountAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 C:\wamp\www\cskplay\app\Controller\UsersController.php(36): AppController->beforeFilter()
+#6 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#10 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-16 15:50:56 Error: [FacebookApiException] Resolving timed out after 10000 milliseconds
+Request URL: /cskplay/Users/accountAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 C:\wamp\www\cskplay\app\Controller\UsersController.php(36): AppController->beforeFilter()
+#6 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#10 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-16 15:50:56 Error: [FacebookApiException] Could not resolve host: graph.facebook.com
+Request URL: /cskplay/pages/home
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#6 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-09-16 15:51:46 Error: [FacebookApiException] Connection timed out after 10000 milliseconds
+Request URL: /cskplay/Users/accountAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 C:\wamp\www\cskplay\app\Controller\UsersController.php(36): AppController->beforeFilter()
+#6 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#10 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-16 15:52:27 Error: [FacebookApiException] Resolving timed out after 10000 milliseconds
+Request URL: /cskplay/Users/accountAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 C:\wamp\www\cskplay\app\Controller\UsersController.php(36): AppController->beforeFilter()
+#6 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#10 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-16 15:59:41 Error: [FacebookApiException] Operation timed out after 10421 milliseconds with 0 out of 0 bytes received
+Request URL: /cskplay/Users/purchaseGameBalls
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(913): BaseFacebook->makeRequest('https://graph.f...', Array)
+#1 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(876): BaseFacebook->_oauthRequest('https://graph.f...', Array)
+#2 [internal function]: BaseFacebook->_graph('/me', 'GET')
+#3 C:\wamp\www\cskplay\app\Vendor\facebook-php-sdk-master\src\base_facebook.php(654): call_user_func_array(Array, Array)
+#4 C:\wamp\www\cskplay\app\Controller\AppController.php(62): BaseFacebook->api('/me', 'GET')
+#5 C:\wamp\www\cskplay\app\Controller\UsersController.php(36): AppController->beforeFilter()
+#6 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\cskplay\lib\Cake\Event\CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(184): Controller->startupProcess()
+#10 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-09-17 14:03:05 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [C:\wamp\www\cskplay\app\View\Games\display_game.ctp, line 188]
+2013-09-17 14:03:05 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /cskplay/games/displayGame
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 188)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 188, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 188, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-17 15:42:02 Error: [MissingActionException] Action GamesController::none() could not be found.
 Exception Attributes: array (
   'controller' => 'GamesController',
-  'action' => 'purchaseGameBalls',
+  'action' => 'none',
 )
-Request URL: /cskplay/Games/purchaseGameBalls
+Request URL: /cskplay/games/none
 Stack Trace:
 #0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
 #1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2013-09-12 16:28:54 Error: [MissingActionException] Action GamesController::purchaseGameBalls() could not be found.
+2013-09-17 15:42:27 Error: [MissingControllerException] Controller class ImgController could not be found.
 Exception Attributes: array (
-  'controller' => 'GamesController',
-  'action' => 'purchaseGameBalls',
-)
-Request URL: /cskplay/Games/purchaseGameBalls
-Stack Trace:
-#0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
-#2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2013-09-12 16:28:55 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
+  'class' => 'ImgController',
   'plugin' => NULL,
 )
-Request URL: /cskplay/js/jquery-1.10.2.min.map
+Request URL: /cskplay/img/gameImage2
 Stack Trace:
 #0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2013-09-12 16:29:16 Error: [MissingActionException] Action GamesController::purchaseGameBalls() could not be found.
+2013-09-17 15:42:27 Error: [MissingControllerException] Controller class ImgController could not be found.
 Exception Attributes: array (
-  'controller' => 'GamesController',
-  'action' => 'purchaseGameBalls',
-)
-Request URL: /cskplay/Games/purchaseGameBalls
-Stack Trace:
-#0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
-#2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2013-09-12 16:29:17 Error: [MissingActionException] Action GamesController::purchaseGameBalls() could not be found.
-Exception Attributes: array (
-  'controller' => 'GamesController',
-  'action' => 'purchaseGameBalls',
-)
-Request URL: /cskplay/Games/purchaseGameBalls
-Stack Trace:
-#0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
-#2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2013-09-12 16:29:19 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
+  'class' => 'ImgController',
   'plugin' => NULL,
 )
-Request URL: /cskplay/js/jquery-1.10.2.min.map
+Request URL: /cskplay/img/gameImage1
 Stack Trace:
 #0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2013-09-12 16:29:37 Error: [MissingControllerException] Controller class JsController could not be found.
+2013-09-17 15:42:29 Error: [MissingControllerException] Controller class ImgController could not be found.
 Exception Attributes: array (
-  'class' => 'JsController',
+  'class' => 'ImgController',
   'plugin' => NULL,
 )
-Request URL: /cskplay/js/jquery-1.10.2.min.map
+Request URL: /cskplay/img/gameImage2
 Stack Trace:
 #0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2013-09-12 16:29:38 Error: [MissingControllerException] Controller class JsController could not be found.
+2013-09-17 15:42:31 Error: [MissingControllerException] Controller class ImgController could not be found.
 Exception Attributes: array (
-  'class' => 'JsController',
+  'class' => 'ImgController',
   'plugin' => NULL,
 )
-Request URL: /cskplay/js/jquery-1.10.2.min.map
+Request URL: /cskplay/img/gameImage1
 Stack Trace:
 #0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2013-09-12 16:29:44 Error: [MissingControllerException] Controller class JsController could not be found.
+2013-09-17 15:42:49 Error: [MissingControllerException] Controller class ImgController could not be found.
 Exception Attributes: array (
-  'class' => 'JsController',
+  'class' => 'ImgController',
   'plugin' => NULL,
 )
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:30:00 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:30:05 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:30:41 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:30:43 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:33:31 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:33:38 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:33:47 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:33:51 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:33:52 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:34:30 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:34:31 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:34:33 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:34:34 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:34:46 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:34:53 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:34:53 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:34:58 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:34:59 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:35:02 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:35:03 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:35:05 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:35:08 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:35:10 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:35:12 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:36:00 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:36:05 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:36:08 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:36:09 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:36:13 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:37:12 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:37:15 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:37:21 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:37:22 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:37:29 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:37:30 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:38:54 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:38:55 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:01 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:03 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:05 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:11 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:13 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:16 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:20 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:21 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:36 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:37 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:43 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:44 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
-Stack Trace:
-#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2013-09-12 16:39:47 Error: [MissingControllerException] Controller class JsController could not be found.
-Exception Attributes: array (
-  'class' => 'JsController',
-  'plugin' => NULL,
-)
-Request URL: /cskplay/js/jquery-1.10.2.min.map
+Request URL: /cskplay/img/gameImage2.png
 Stack Trace:
 #0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}

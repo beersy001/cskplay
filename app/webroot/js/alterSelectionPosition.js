@@ -13,11 +13,11 @@ function replaceContentInContainer() {
 	var elems = document.getElementsByTagName('*'), i;
 
 	var defaultImage = document.getElementById('imageHidden');
-	var currentElement = document.getElementById('game_image');
+	var currentElement = document.getElementById('main_image');
 
 
-	var previousWidth = 2880;
-	var previousHeight = 1800;
+	var previousWidth = 4256;
+	var previousHeight = 2832;
 
 	var totalOffsetX = 0;
 	var totalOffsetY = 0;
@@ -25,8 +25,9 @@ function replaceContentInContainer() {
 	var widthRatio = currentElement.offsetWidth / previousWidth;
 	var heightRatio = currentElement.offsetHeight / previousHeight;
 	
-	var	width = 50;
-	var chrossHairOffset = 50 / 2;
+	var	width = 15;
+	var chrossHairOffset = width / 2;
+	var chrossHairOffset = 0;
 
 	do {
 		totalOffsetX += currentElement.offsetLeft;

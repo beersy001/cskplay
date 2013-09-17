@@ -31,14 +31,62 @@ $this->Html->script( "gamePlay", array("inline"=>false));
 
 <script>
 	$(function(){
-		$("img#game_image").click(function(){
-			toggleSelectionWindow();
+		$("#game_image_tab").click(function(){
+			swapGameImage();
 		}); 
+	});
+
+	function toggleInLayImageUp(){
+		$("#game_image_main_inlay").show('slide',{direction:'down'},400);
+	};
+
+	function toggleInLayImageDown(){
+		$("#game_image_main_inlay").hide('slide',{direction:'down'},200);
+	};
+
+	function swapGameImage(){
+		if(document.getElementById("game_image_main").style.display != "none"){
+
+			document.getElementById("game_image_main_inlay").src = "/cskplay/img/gameImage1.jpg";
+			document.getElementById("game_image_main").style.display = "none";
+			document.getElementById("game_image_alt").style.display = "inline";
+			document.getElementById("single_crosshair").style.display = "none";
+
+		}else{
+
+			document.getElementById("game_image_main_inlay").src = "/cskplay/img/gameImage2.jpg";
+			document.getElementById("game_image_main").style.display = "inline";
+			document.getElementById("game_image_alt").style.display = "none";
+		}
+	}
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+
+	$("#game_ball_bag").load("displayGame");
+	//$("#selection_overlay").load("displayOverlay");
+
+});
+
+	$(function(){
+		$("img#game_image_main").click(function(){
+			toggleSelectionWindow();
+		});
 	});
 
 	$(function(){
 		$("#selection_overlay").click(function(){
 			toggleSelectionWindow();
+		}); 
+	});
+
+	$(function(){
+		$("#coord_submit").click(function(){
+			toggleSelectionWindow();
+			toggleSelectionSavedWindow();
 		}); 
 	});
 
@@ -54,20 +102,50 @@ $this->Html->script( "gamePlay", array("inline"=>false));
 		}); 
 	});
 
+	$(function(){
+		$("#selection_saved_overlay").click(function(){
+			toggleSelectionSavedWindow();
+		}); 
+	});
 
 	var toggleSelectionWindow = function(){
 		if ($("#selection_overlay").css('display') == 'none'){
+			if($("#buy_game_balls_overlay").css('display') != 'none'){
+				$("#buy_game_balls_overlay").hide('slide',{direction:'up'},200);
+			}
+			if($("#selection_saved_overlay").css('display') != 'none'){
+				$("#selection_saved_overlay").hide('slide',{direction:'up'},200);
+			}
 			$("#selection_overlay").show('slide',{direction:'up'},800);
 		} else{
 			$("#selection_overlay").hide('slide',{direction:'up'},200);
+			
+
 		}
 	};
 
 	var toggleBuyGameBallsWindow = function(){
 		if ($("#buy_game_balls_overlay").css('display') == 'none'){
+			if($("#selection_overlay").css('display') != 'none'){
+				$("#selection_overlay").hide('slide',{direction:'up'},200);
+			}
 			$("#buy_game_balls_overlay").show('slide',{direction:'up'},800);
 		} else{
 			$("#buy_game_balls_overlay").hide('slide',{direction:'up'},200);
+
+		}
+	};
+
+	var toggleSelectionSavedWindow = function(){
+		if ($("#selection_saved_overlay").css('display') == 'none'){
+			$("#selection_saved_overlay").show('slide',{direction:'up'},800);
+			window.setTimeout(function() {
+				toggleSelectionSavedWindow();
+			}, 3000);
+			
+			setTimeout("timeout()", 3000); 
+		} else{
+			$("#selection_saved_overlay").hide('slide',{direction:'up'},600);
 		}
 	};
 
@@ -98,78 +176,63 @@ $this->Html->script( "gamePlay", array("inline"=>false));
 			</table>
 		</div>
 
-		<div class="alternate alternate_one">
+		<div class="alternate alternate_one" >
 			<h2>Game Balls</h2>
+
 			<a id="buy_game_balls_link" href="#">Buy More Game Balls</a>
 
 			<div id="game_ball_bag" class="alternate alternate_two">
-
-				<?php
-
-					$count = 1;
-
-					for($i = 1; $i <= $ballsPlayed; $i++){
-						?>
-						<div class="game_ball not_avaliable">
-							<span><?=$count?> | </span>
-							<?= $this->Html->image( 'logo_32_32.png', array('class'=>'game_ball_image') ) ?>
-							<span>Game Ball</span>
-						</div>
-						<?php
-						$count++;
-					}
-
-					for($i = 1; $i <= $ballsRemaining; $i++){
-						?>
-						<div class="game_ball avaliable">
-							<span><?=$count?> | </span>
-							<?= $this->Html->image( 'logo_32_32.png', array('class'=>'game_ball_image') ) ?>
-							<span>Game Ball</span>
-						</div>
-						<?php
-						$count++;
-					}
-				?>
+				<p>Loading...</p>
 			</div>
-
 		</div>
-		
+
 
 
 	</div>
 
 	<div class="col9 last" id="game_image_container">
+		<?= $this->Html->image( 'gameImage1.jpg', array('class'=>'game_image', 'id'=>'game_image_main') ) ?>
+		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image display_none', 'id'=>'game_image_alt') ) ?>
+		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image_inlay display_none', 'id'=>'game_image_main_inlay') ) ?>
+		<div id="game_image_tab" onmouseover="toggleInLayImageUp()" onmouseout="toggleInLayImageDown()">
+		</div>
 
-
-	
-
-		<?= $this->Html->image( 'gameImage1.jpg', array('id'=>'game_image') ) ?>
+		<!-- ==========================================================================-->
+		<!-- ======== Overlays 														   -->
+		<!-- ==========================================================================-->
 
 		<div class="overlay" id="selection_overlay">
+
 			<h1>Your Selection!</h1>
-			<p>x: <span id="x_selection">0</span> </p>
-			<p>y: <span id="y_selection">0</span> </p>
-			<br>
 
 			<?php
-				if($this->Session->read('Auth.User.attemptsLeft') == 0){
+				//if($this->Session->read('Auth.User.attemptsLeft') == 0){
+				if($ballsRemaining == 0){
 					echo "<p>Please purchase more Game Balls to play</p>";
 				}else {
-					echo $this->Html->link('Submit',array('controller' => 'games', 'action' => 'registerSelection'),array('id' => 'submit_game_button', 'class' => 'large_link'));
+					
+					echo $this->Form->create( array('controller'=>'Games', 'action'=>'displayGame'));
+					echo $this->Form->input('x',array('id'=>'x_input', 'readonly'));
+					echo $this->Form->input('y',array('id'=>'y_input', 'readonly'));
+					echo $this->Js->submit('Submit', array('id'=>'coord_submit', 'update'=> '#game_ball_bag'));
+					echo $this->Form->end();
 				}
 			?>
-
-			<br>
-			<br>
-			<p>Click here to try again</p>
+			<button>Cancel</button>
 		</div>
 
 		<div class="overlay" id="buy_game_balls_overlay">
 			<iframe id="" src="/cskplay/Users/purchaseGameBalls"></iframe>
 		</div>
-	
-		
+
+		<div class="overlay" id="selection_saved_overlay">
+			<h1>Your Selection!</h1>
+			<p>Your selection has been saved</p>
+		</div>
+		<!-- ==========================================================================-->
+		<!-- ==========================================================================-->
 
 		<?= $this->Html->image( 'gameImage1.jpg', array('id'=>'imageHidden','style'=>'display: none; position: absolute'));?>
+
 	</div>
 </div>

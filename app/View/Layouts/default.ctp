@@ -33,7 +33,10 @@
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
+			echo $this->Js->writeBuffer(array('cache'=>FALSE));
 			echo $scripts_for_layout;
+
+
 
 
 		?>

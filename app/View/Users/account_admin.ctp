@@ -32,8 +32,11 @@ $this->Html->script( "alterSelectionPosition", array("inline"=>false));
 foreach ($results as $element) {
 	$xPos = $element['Game']['x'];
 	$yPos = $element['Game']['y'];
+	$id = $element['Game']['id'];
 
-	echo $this->Html->image( 'logo.png', array('class'=>'crosshair', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px" ) );
+	echo $this->Html->image( 'logo.png', array('class'=>'crosshair','id' => $id . 'unselected', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px" ) );
+	echo $this->Html->image( 'logo_inverse.png', array('class'=>'crosshair','id' => $id . 'selected', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px; display: none" ) );
+
 }
 
 ?>
@@ -53,6 +56,28 @@ foreach ($results as $element) {
 				location.reload();
 			}
 		};
+
+
+		function changeSelectionIcon(elem){
+			var rawId = elem.id.substring(elem.id.length - 4, 0);
+			document.getElementById(rawId + 'unselected').style.display = 'none';
+			document.getElementById(rawId + 'selected').style.display = 'block';
+			document.getElementById(rawId + 'selected').style.zIndex = '20';
+		}
+
+		function changeSelectionIconBack(elem){
+			var rawId = elem.id.substring(elem.id.length - 4, 0);
+			document.getElementById(rawId + 'unselected').style.display = 'block';
+			document.getElementById(rawId + 'selected').style.display = 'none';
+			document.getElementById(rawId + 'selected').style.zIndex = '10';
+		}
+
+
+
+
+
+
+
 	</script>
 
 
@@ -60,39 +85,49 @@ foreach ($results as $element) {
 <iframe id="sidebar" src="purchaseGameBalls">
 </iframe>
 
-
-<div class="onerow">
-	<div class="col12">
-		<h1>My Page</h1>
-	</div>
-</div>
-
-
 <div class="onerow">
 	<div class="col5">
-		
-		<h2>My Details</h2>
-		Username: <?= $this->Session->read('Auth.User.username'); ?> <br>
-		Full Name: <?= $this->Session->read('Auth.User.fullName'); ?> <br>
-		Email Address: <?= $this->Session->read('Auth.User.email'); ?>
 
-		<br>
-		<br>
+		<div class="alternate alternate_one">
+			<h2>My Details</h2>
+			Username: <?= $this->Session->read('Auth.User.username'); ?> <br>
+			Full Name: <?= $this->Session->read('Auth.User.fullName'); ?> <br>
+			Email Address: <?= $this->Session->read('Auth.User.email'); ?>
+		</div>
 
-		<h2>Game Details</h2>
-		Attempts Made: <?= sizeof($results); ?> <br>
-		Attempts Left: <?= $currentUser['User']['attemptsLeft'] ?> <br>
-		<a href="#" id="toggle">Buy More Game Balls</a> <br>
-		<?= $this->Html->link('Play Now',array('controller' => 'games', 'action' => 'displayGame')) ?>
+		<div class="alternate alternate_two">
+			<h2>Game Details</h2>
+			Attempts Made: <?= sizeof($results); ?> <br>
+			Attempts Left: <?= $currentUser['User']['attemptsLeft'] ?> <br>
+			<a href="#" id="toggle">Buy More Game Balls</a> <br>
+			<?= $this->Html->link('Play Now',array('controller' => 'games', 'action' => 'displayGame')) ?>
 
+
+	<?php
+		$count = 1;
+
+		foreach ($results as $element) {
+		$xPos = $element['Game']['x'];
+		$yPos = $element['Game']['y'];
+		$id = $element['Game']['id'];
+	?>
+		<div class="game_ball avaliable" id="<?= $id . 'icon' ?>" onmouseover="changeSelectionIcon(this)" onmouseout="changeSelectionIconBack(this)">
+			<span><?=$count?> | </span>
+			<?= $this->Html->image( 'logo_32_32.png', array('class'=>'game_ball_image', 'id' => '$id' . 'bagIcon') ) ?>
+			<span>Game Ball | (<?= $xPos . " , " . $yPos ?>)</span>
+		</div>
+	<?php
+		$count++;
+		}
+	?>
+
+		</div>
 
 	</div>
 
 	<div class="col7 last">
 
-		<h2>My Selections</h2>
-
-		<?= $this->Html->image( 'gameImage1.jpg', array('id'=>'game_image') ) ?>
+		<?= $this->Html->image( 'gameImage1.jpg', array('class'=>'game_image', 'id'=>'main_image') ) ?>
 
 	</div>
 </div>

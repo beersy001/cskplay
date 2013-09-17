@@ -33,6 +33,52 @@ class GamesController extends AppController {
 
 	public function displayGame() {
 		$this->loadModel('User');
+
+		$username = $this->Session->read('Auth.User.username');
+
+		////////////////////////////////////////////////////////////////////////////////////////////////
+		if($this->RequestHandler->isAjax()){
+
+			if($this->Session->read('Auth.User.attemptsLeft') != 0){
+
+				if(isset($this->data) && !empty($this->data)){
+
+					$coords = $this->data['Game'];
+				
+					$data = array(
+						'username' => $username,
+						'x' => $coords['x'],
+						'y' => $coords['y']
+					);
+				
+					$this->Game->save($data);
+
+					$user = $this->User->read(null, $username);
+					$gameBalls = $user['User']['attemptsLeft'];
+					$this->User->saveField('attemptsLeft', $gameBalls - 1);
+
+					$this->Session->write('Auth', $this->User->read(null, $username));
+				}
+			}
+		}
+		////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+		$numberOfBallsPlayed = $this->Game->getNumberOfBallsPlayed($username);
+		$numberOfBallsRemaining = $this->User->getNumberOfAttemptsRemaining($username);
+
+		$this->set('ballsRemaining', $numberOfBallsRemaining);
+		$this->set('ballsPlayed', $numberOfBallsPlayed);
+
+		if($this->RequestHandler->isAjax()){
+			$this->render('gameBalls','ajax');
+		}
+	}
+
+	public function displayOverlay(){
+		$this->loadModel('User');
+
 		$username = $this->Session->read('Auth.User.username');
 
 		$numberOfBallsPlayed = $this->Game->getNumberOfBallsPlayed($username);
@@ -40,36 +86,11 @@ class GamesController extends AppController {
 
 		$this->set('ballsRemaining', $numberOfBallsRemaining);
 		$this->set('ballsPlayed', $numberOfBallsPlayed);
-	}
 
-	public function registerSelection(){
-
-		$this->loadModel('User');
-
-		if($this->Session->read('Auth.User.attemptsLeft') != 0){
-
-			$username = $this->Session->read('Auth.User.username');
-
-			$x = $this->request->query['x'];
-			$y = $this->request->query['y'];
-
-			$data = array(
-				'username' => $username,
-				'x' => $x,
-				'y' => $y
-			);
-		
-			$this->Game->save($data);
-
-			$user = $this->User->read(null, $username);
-			$gameBalls = $user['User']['attemptsLeft'];
-			$this->User->saveField('attemptsLeft', $gameBalls - 1);
-
-			$this->Session->write('Auth', $this->User->read(null, $username));
-
+		if($this->RequestHandler->isAjax()){
+			$this->render('displayOverlay','ajax');
 		}
-
-		$this->redirect(array('controller'=>'Games', 'action' => 'displayGame'));
-
 	}
+	
+
 }
