@@ -26,54 +26,19 @@ App::uses('Debugger', 'Utility');
 ?>
 
 <div class="onerow">
-	<div class="col6">
-		<h2>CSK Play - Celebrity</h2>
+	<div class="col6 alternate alternate_one">
+		<h1><?=$celebName?></h1>
+		<?= $this->Html->image( $celebImage, array('id'=>'celebPicture', 'class' => 'middle_image') ) ?>
 	</div>
 
-	<div class="col6 last">
-		<h2>CSK Play - Celebrity</h2>
+	<div class="col6 last alternate alternate_one">
+		<h2>This Months Celebrity</h2>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mi nec purus tincidunt blandit et vitae ligula. Pellentesque pharetra laoreet lorem, suscipit aliquam tortor euismod nec. Vivamus vel nisi et felis gravida molestie. Nunc a sodales odio. Phasellus vehicula mattis diam a interdum. Duis at congue urna, non malesuada ipsum. Donec in ipsum iaculis, vehicula elit sed, rhoncus libero. Nunc pulvinar elementum velit. Suspendisse rutrum, lectus sit amet tempor pretium, nulla sem vestibulum nisi, sit amet tincidunt eros est non nisl. Nulla eget turpis orci. Donec tempor pellentesque luctus. Quisque posuere aliquam placerat. Aliquam suscipit pretium nisl, condimentum feugiat neque fermentum placerat.
+			<?=$celebText?>
 		</p>
 	</div>
 </div>
 
-<div class="onerow">
-	<div class="col4">
-		<h2>CSK Play - Celebrity</h2>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mi nec purus tincidunt blandit et vitae ligula. Pellentesque pharetra laoreet lorem, suscipit aliquam tortor euismod nec. Vivamus vel nisi et felis gravida molestie. Nunc a sodales odio. Phasellus vehicula mattis diam a interdum. Duis at congue urna, non malesuada ipsum. Donec in ipsum iaculis, vehicula elit sed, rhoncus libero.
-		</p>
-	</div>
 
-	<div class="col4">
-		<h2>CSK Play - Celebrity</h2>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mi nec purus tincidunt blandit et vitae ligula. Pellentesque pharetra laoreet lorem, suscipit aliquam tortor euismod nec. Vivamus vel nisi et felis gravida molestie. Nunc a sodales odio. Phasellus vehicula mattis diam a interdum. Duis at congue urna, non malesuada ipsum. Donec in ipsum iaculis, vehicula elit sed, rhoncus libero.
-		</p>
-	</div>
 
-	<div class="col4 last">
-		<h2>CSK Play - Celebrity</h2>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mi nec purus tincidunt blandit et vitae ligula. Pellentesque pharetra laoreet lorem, suscipit aliquam tortor euismod nec. Vivamus vel nisi et felis gravida molestie. Nunc a sodales odio. Phasellus vehicula mattis diam a interdum. Duis at congue urna, non malesuada ipsum. Donec in ipsum iaculis, vehicula elit sed, rhoncus libero.
-		</p>
-	</div>
-</div>
-
-<div class="onerow">
-	<div class="col8">
-		<h2>CSK Play - Celebrity</h2>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mi nec purus tincidunt blandit et vitae ligula. Pellentesque pharetra laoreet lorem, suscipit aliquam tortor euismod nec. Vivamus vel nisi et felis gravida molestie. Nunc a sodales odio. Phasellus vehicula mattis diam a interdum. Duis at congue urna, non malesuada ipsum. Donec in ipsum iaculis, vehicula elit sed, rhoncus libero. Nunc pulvinar elementum velit. Suspendisse rutrum, lectus sit amet tempor pretium, nulla sem vestibulum nisi, sit amet tincidunt eros est non nisl. Nulla eget turpis orci. Donec tempor pellentesque luctus. Quisque posuere aliquam placerat. Aliquam suscipit pretium nisl, condimentum feugiat neque fermentum placerat.
-		</p>
-	</div>
-
-	<div class="col4 last">
-		<h2>CSK Play - Celebrity</h2>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed mi nec purus tincidunt blandit et vitae ligula. Pellentesque pharetra laoreet lorem, suscipit aliquam tortor euismod nec. Vivamus vel nisi et felis gravida molestie. Nunc a sodales odio. Phasellus vehicula mattis diam a interdum. Duis at congue urna, non malesuada ipsum. Donec in ipsum iaculis, vehicula elit sed, rhoncus libero. Nunc pulvinar elementum velit. Suspendisse rutrum, lectus sit amet tempor pretium, nulla sem vestibulum nisi, sit amet tincidunt eros est non nisl. Nulla eget turpis orci. Donec tempor pellentesque luctus. Quisque posuere aliquam placerat. Aliquam suscipit pretium nisl, condimentum feugiat neque fermentum placerat.
-		</p>
-	</div>
-</div>
 

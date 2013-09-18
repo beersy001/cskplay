@@ -33,13 +33,33 @@ html, body {
 }
 
 html, body, #container{
-	color:#777;
-	font:15px Calibri,Arial,sans-serif;
+	color: #777;
+	font: 15px Calibri,Arial,sans-serif;
 }
 
 img {
 	text-decoration: none;
 	border: 0px;
+}
+
+#aboutUsContainer p {
+	padding: 5px;
+}
+
+ul {
+	
+	list-style-image: url("../img/logo_20_20.png");
+	padding-left:14px;
+	vertical-align: middle;
+	
+}
+
+ol li{
+	margin-left: 30px;
+	list-style-type: square;
+	
+	vertical-align: middle;
+
 }
 
 #container{
@@ -171,23 +191,21 @@ img {
 }
 
 #good_causes_button{
-	width: 300px;
+	width: 270px;
 }
 
 #check_results_button{
-	width: 100px;
+	width: 110px;
 }
 
 #outtakes_button{
-	width: 130px;
+	width: 120px;
 }
 
 .footer_element{
-	display: inline-block;
-	*display: inline;
-	zoom: 1;
-	width:33%;
-	text-align:center;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 .large{
@@ -427,7 +445,6 @@ a{
 
 .alternate{
 	text-align: center;
-	padding: 5px;
 }
 
 .alternate_one{
@@ -472,6 +489,11 @@ img.game_ball_image{
 .not_avaliable{
 	text-decoration: line-through;
 	color: red;
+}
+
+#aboutUsContainer{
+	background: rgba(40,32,59,0.9);
+	overflow: auto;
 }
 
 

@@ -26,8 +26,8 @@
 			echo $this->Html->charset(); 
 			echo $this->Html->meta('icon');
 			echo $this->Html->css('cake.generic');
-			echo $this->Html->css('style');
 			echo $this->Html->css('grid_layout');
+			echo $this->Html->css('style');
 			echo $this->Html->script('jquery');
 			echo $this->Html->script('countdown');
 			echo $this->fetch('meta');
@@ -60,7 +60,8 @@
 					
 					<div id="nav_links">
 						<?php 
-							echo $this->Html->link('Charities',array('controller' => 'pages', 'action' => 'goodcauses')) . " | " .
+							echo $this->Html->link('Home',array('controller' => 'pages', 'action' => 'home')) . " | " .
+							$this->Html->link('Charities',array('controller' => 'pages', 'action' => 'goodcauses')) . " | " .
 							$this->Html->link('Play Now',array('controller' => 'games', 'action' => 'displayGame')) .  " | " .
 							$this->Html->link('Celebrity of the Month',array('controller' => 'celebrities', 'action' => 'thisMonthsCelebrity'));
 						?>
@@ -72,7 +73,7 @@
 					<?php
 						if(!$authUser){
 							echo $this->Html->link('Login', array('controller'=>'Users', 'action'=>'login'),array('id' => 'facebookButton')) . " | " . 
-							$this->Html->link('Register', array('controller'=>'Users', 'action'=>'register'),array('id' => 'facebookButton'));
+							$this->Html->link('Register', array('controller'=>'Users', 'action'=>'add'),array('id' => 'facebookButton'));
 						} else {
 							echo "<img id='profile_picture' src='https://graph.facebook.com/$facebookUserId/picture'> ";
 							echo "<p>Welcome " . $facebookUserProfile['name'] . " | ";
@@ -113,17 +114,22 @@
 			</div>
 
 			<div id="small_footer">
-
-				<p class="footer_element left_align">Privacy Policy | About Us | Contatct Us</p>
-
-
-				<p class="footer_element"><?= $this->Html->image( 'under_16.png', array('id'=>'under_16_image', 'class' => 'middle_image') ) ?>
-					You must be 16 or over to play or claim a prize </p>
-
-
-				<p class="footer_element right_align"><?= $this->Html->image( 'paypal_logo.png', array('id'=>'paypal_image', 'class' => 'middle_image') ) ?></p>
-
-
+				<div class="onerow">
+					<div class="col4 footer_element left_align">
+						<?php 
+							echo $this->Html->link('Privacy Policy',array('controller' => 'pages', 'action' => 'privacyPolicy')) . " | " .
+							$this->Html->link('About Us',array('controller' => 'pages', 'action' => 'aboutUs')) . " | " .
+							$this->Html->link('Contact Us',array('controller' => 'pages', 'action' => 'contactUs'));
+						?>
+					</div>
+					<div class="col4 footer_element center_align">
+						<p><?= $this->Html->image( 'under_16.png', array('id'=>'under_16_image', 'class' => 'middle_image') ) ?>
+						You must be 16 or over to play or claim a prize </p>
+					</div>
+					<div class="col4 last footer_element right_align">
+						<p><?= $this->Html->image( 'paypal_logo.png', array('id'=>'paypal_image', 'class' => 'middle_image') ) ?></p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

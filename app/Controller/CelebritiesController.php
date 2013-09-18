@@ -31,6 +31,46 @@ App::uses('AppController', 'Controller');
 class CelebritiesController extends AppController {
 
 	public function thisMonthsCelebrity() {
+		$celeb = $this->Celebrity->getCurrentCelebrity();
 
+		$this->set('celebName',$celeb['name']);
+		$this->set('celebImage',$celeb['picture']);
+		$this->set('celebText',$celeb['text']);
+	}
+
+	public function celebrityAdmin(){
+		$this->set('celebrities', $this->Celebrity->getAllCelebrities());
+	}
+
+	public function addCelebrity(){
+
+		$celebrityData = $this->request->data['Celebrity'];
+
+		$celebrityData['_id'] = $celebrityData['month'];
+
+		$this->Celebrity->save($celebrityData);
+
+		$this->Session->setFlash('Celebrity Saved');
+		$this->redirect(array('action' => 'celebrityAdmin'));
+	}
+
+	public function editCelebrity(){
+
+		$action = $this->request->data['submitButton'];
+		unset($this->request->data['submitButton']);
+
+		$data = $this->request->data['Celebrity'];
+
+		if($action == 'Delete'){
+			$this->Celebrity->delete($data['month']);
+		}elseif($action == 'Edit'){
+
+			$this->Celebrity->delete($data['month']);
+			$data['_id'] = $data['month'];
+
+			$this->Celebrity->save($data);
+		}
+
+		$this->redirect(array('action' => 'celebrityAdmin'));
 	}
 }

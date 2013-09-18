@@ -101,9 +101,11 @@ class UsersController extends AppController {
 		if ($this->request->is('post')) {
 
 			if(isset($this->request->data['User']['password'])){
+				//create MD5 password
 				$this->request->data['User']['password'] = AuthComponent::password($this->request->data['User']['password']);
 			}
 
+			
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
 				return $this->redirect(array('action' => 'index'));

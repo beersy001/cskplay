@@ -2,14 +2,20 @@
 
 <?php echo $this->Session->flash(); ?>
 
-<h2>Add User</h2>
 
-<div class="users form">
-	<?php
-		echo $this->Form->create('User'); 
-		echo $this->Form->input('username');
-		echo $this->Form->input('password');
-		echo $this->Form->input('role', array('options' => array('admin' => 'Admin', 'user' => 'User')));
-		echo $this->Form->end('Submit');
-	?>
+<div class="onerow">
+	<div class="col12 alternate_one" >
+		<h2>Add User</h2>
+		<div class="users form">
+			<?php
+				echo $this->Form->create('User');
+				echo $this->Form->input('fullName');
+				echo $this->Form->input('emailAddress');
+				echo $this->Form->input('username');
+				echo $this->Form->input('password');
+				echo $this->Form->input('passwordVerify');
+				echo $this->Form->end('Submit');
+			?>
+		</div>
+	</div>
 </div>

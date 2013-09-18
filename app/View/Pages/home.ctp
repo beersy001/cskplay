@@ -24,8 +24,6 @@ endif;
 App::uses('Debugger', 'Utility');
 
 $this->Html->script( "moveHomeButtons", array("inline"=>false));
-
-
 ?>
 
 
@@ -42,6 +40,9 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 	el.style.backgroundSize = "cover";
 </script>
 
+
+
+
 <div id="home_padding"></div> 
 
 <div id="home_buttons">
@@ -49,22 +50,22 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 	<?= $this->Html->image( 'view_demo_button.png', array('id'=>'view_demo_button', 'url' => array('controller' => 'pages', 'action' => 'viewDemo')) ) ?>
 </div>
 
-
 <div id="page_footer">
-	<div class="footer_element">
-		<?= $this->Html->image( 'good_causes.png', array('id'=>'good_causes_button', 'url' => array('controller' => 'pages', 'action' => 'goodcauses')) ) ?>
-		<br>
-		<?= $this->Html->link('Good Causes',array('controller' => 'pages', 'action' => 'goodcauses'),array('class' => 'large_link')) ?>
-	</div>
-	<div class="footer_element">
-		<?= $this->Html->image( 'check_results.png', array('id'=>'check_results_button', 'url' => array('controller' => 'pages', 'action' => 'goodcauses')) ) ?>
-		<br>
-		<?= $this->Html->link('Check Results',array('controller' => 'pages', 'action' => 'goodcauses'),array('class' => 'large_link')) ?>
-
-	</div>
-	<div class="footer_element">
-		<?= $this->Html->image( 'outtakes.png', array('id'=>'outtakes_button', 'url' => array('controller' => 'pages', 'action' => 'goodcauses')) ) ?>
-		<br>
-		<?= $this->Html->link('Outtakes',array('controller' => 'pages', 'action' => 'goodcauses'),array('class' => 'large_link')) ?>
+	<div class="onerow">
+		<div class="col4 footer_element center_align">
+			<?= $this->Html->image( 'good_causes.png', array('id'=>'good_causes_button', 'class'=>'center', 'url' => array('controller' => 'pages', 'action' => 'goodcauses')) ) ?>
+			<br>
+			<?= $this->Html->link('Good Causes',array('controller' => 'pages', 'action' => 'goodcauses'),array('class' => 'large_link')) ?>
+		</div>
+		<div class="col4 footer_element center_align">
+			<?= $this->Html->image( 'check_results.png', array('id'=>'check_results_button', 'class'=>'center', 'url' => array('controller' => 'pages', 'action' => 'goodcauses')) ) ?>
+			<br>
+			<?= $this->Html->link('Check Results',array('controller' => 'pages', 'action' => 'goodcauses'),array('class' => 'large_link')) ?>
+		</div>
+		<div class="col4 last footer_element center_align">
+			<?= $this->Html->image( 'outtakes.png', array('id'=>'outtakes_button', 'class'=>'center', 'url' => array('controller' => 'pages', 'action' => 'goodcauses')) ) ?>
+			<br>
+			<?= $this->Html->link('Outtakes',array('controller' => 'pages', 'action' => 'goodcauses'),array('class' => 'large_link')) ?>
+		</div>
 	</div>
 </div>
