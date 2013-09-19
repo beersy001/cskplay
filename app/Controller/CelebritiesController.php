@@ -73,4 +73,8 @@ class CelebritiesController extends AppController {
 
 		$this->redirect(array('action' => 'celebrityAdmin'));
 	}
+
+	public function outtakes(){
+		
+	}
 }

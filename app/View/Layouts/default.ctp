@@ -35,10 +35,6 @@
 			echo $this->fetch('script');
 			echo $this->Js->writeBuffer(array('cache'=>FALSE));
 			echo $scripts_for_layout;
-
-
-
-
 		?>
 
 		<title>Celebrity Spot Kick</title>
@@ -50,6 +46,20 @@
 
 	</head>
 	<body>
+
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=503746699700838";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk')
+		);
+	</script>
+
+
 		<div id="container">
 			<div id="main_header">
 				<div id="header_content">
@@ -110,7 +120,7 @@
 			</div>
 
 			<div id="main_footer">
-
+				<div class="fb-like" data-href="http://developers.facebook.com/docs/reference/plugins/like" data-width="500" data-layout="button_count" data-show-faces="true" data-send="true"></div>
 			</div>
 
 			<div id="small_footer">

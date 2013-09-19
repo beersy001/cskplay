@@ -55,6 +55,7 @@ function swapGameImage(){
 		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image display_none', 'id'=>'game_image_alt') ) ?>
 		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image_inlay display_none', 'id'=>'game_image_main_inlay') ) ?>
 		<div id="game_image_tab" onmouseover="toggleInLayImageUp()" onmouseout="toggleInLayImageDown()">
+			Reverse View
 		</div>
 	</div>
 

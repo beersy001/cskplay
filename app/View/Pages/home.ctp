@@ -63,7 +63,7 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 			<?= $this->Html->link('Check Results',array('controller' => 'pages', 'action' => 'goodcauses'),array('class' => 'large_link')) ?>
 		</div>
 		<div class="col4 last footer_element center_align">
-			<?= $this->Html->image( 'outtakes.png', array('id'=>'outtakes_button', 'class'=>'center', 'url' => array('controller' => 'pages', 'action' => 'goodcauses')) ) ?>
+			<?= $this->Html->image( 'outtakes.png', array('id'=>'outtakes_button', 'class'=>'center', 'url' => array('controller' => 'celebrities', 'action' => 'outtakes')) ) ?>
 			<br>
 			<?= $this->Html->link('Outtakes',array('controller' => 'pages', 'action' => 'goodcauses'),array('class' => 'large_link')) ?>
 		</div>

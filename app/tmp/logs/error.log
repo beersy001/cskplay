@@ -707,3 +707,76 @@ Stack Trace:
 #3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-09-19 12:29:35 Error: [MissingViewException] View file "C:\wamp\www\cskplay\app\View\Pages\view_demo.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cskplay\\app\\View\\Pages\\view_demo.ctp',
+)
+Request URL: /cskplay/pages/viewDemo
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\View\View.php(468): View->_getViewFileName('viewDemo')
+#1 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(952): View->render('viewDemo', NULL)
+#2 C:\wamp\www\cskplay\app\Controller\PagesController.php(55): Controller->render('viewDemo')
+#3 [internal function]: PagesController->display('viewDemo')
+#4 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-19 12:29:36 Error: [MissingViewException] View file "C:\wamp\www\cskplay\app\View\Pages\view_demo.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cskplay\\app\\View\\Pages\\view_demo.ctp',
+)
+Request URL: /cskplay/pages/viewDemo
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\View\View.php(468): View->_getViewFileName('viewDemo')
+#1 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(952): View->render('viewDemo', NULL)
+#2 C:\wamp\www\cskplay\app\Controller\PagesController.php(55): Controller->render('viewDemo')
+#3 [internal function]: PagesController->display('viewDemo')
+#4 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-19 12:29:38 Error: [MissingViewException] View file "C:\wamp\www\cskplay\app\View\Pages\view_demo.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cskplay\\app\\View\\Pages\\view_demo.ctp',
+)
+Request URL: /cskplay/pages/viewDemo
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\View\View.php(468): View->_getViewFileName('viewDemo')
+#1 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(952): View->render('viewDemo', NULL)
+#2 C:\wamp\www\cskplay\app\Controller\PagesController.php(55): Controller->render('viewDemo')
+#3 [internal function]: PagesController->display('viewDemo')
+#4 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-19 15:54:18 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\wamp\www\cskplay\app\View\Celebrities\outtakes.ctp, line 9]
+2013-09-19 15:54:18 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /cskplay/celebrities/outtakes
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 9, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 9, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-19 15:54:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/jamesCorden_.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-19 15:54:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/jamesCorden_headshot.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
