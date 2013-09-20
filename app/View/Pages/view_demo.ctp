@@ -1,4 +1,3 @@
-
 <script type="text/javascript">
 	var el=document.getElementById("container");
 	el.style.background = "url('/cskplay/app/webroot/img/blank_goal_dark.png')";
@@ -8,12 +7,13 @@
 	el.style.backgroundSize = "cover";
 </script>
 
+
 <div class="onerow">
-	<div class="col2">
-		<?= $this->Html->image( 'jamesCorden_headshot.jpg', array('id'=>'headshot_image', 'class' => 'middle_image') ) ?>
+	<div class="col4">
+		<h1>CSK Play Demo</h1>
 	</div>
 
-	<div class="col10 last">
+	<div class="col8 last">
 		<blockquote>I like it a lot, I really liked it when the ball went in the net. My charity is amazing...</blockquote>	
 	</div>
 </div>
@@ -32,5 +32,4 @@
 		</video>
 	</div>
 </div>
-
 

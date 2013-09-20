@@ -31,6 +31,9 @@ App::uses('AppController', 'Controller');
 class CelebritiesController extends AppController {
 
 	public function thisMonthsCelebrity() {
+
+		$this->set('title_for_page', 'This Months Celebrity');
+
 		$celeb = $this->Celebrity->getCurrentCelebrity();
 
 		$this->set('celebName',$celeb['name']);
@@ -39,6 +42,8 @@ class CelebritiesController extends AppController {
 	}
 
 	public function celebrityAdmin(){
+		$this->set('title_for_page', 'Celebrity Admin');
+
 		$this->set('celebrities', $this->Celebrity->getAllCelebrities());
 	}
 
@@ -75,6 +80,8 @@ class CelebritiesController extends AppController {
 	}
 
 	public function outtakes(){
+		$this->set('title_for_page', 'Celebrity Outtakes');
+
 		
 	}
 }

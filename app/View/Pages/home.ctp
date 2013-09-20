@@ -38,6 +38,10 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 	el.style.backgroundRepeat = "no-repeat"; 
 	el.style.backgroundAttachment = "fixed";
 	el.style.backgroundSize = "cover";
+
+	var title=document.getElementById("page_title_banner");
+	title.style.display = "none";
+
 </script>
 
 
@@ -53,9 +57,9 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 <div id="page_footer">
 	<div class="onerow">
 		<div class="col4 footer_element center_align">
-			<?= $this->Html->image( 'good_causes.png', array('id'=>'good_causes_button', 'class'=>'center', 'url' => array('controller' => 'pages', 'action' => 'goodcauses')) ) ?>
+			<?= $this->Html->image( 'good_causes.png', array('id'=>'good_causes_button', 'class'=>'center', 'url' => array('controller' => 'pages', 'action' => 'goodCauses')) ) ?>
 			<br>
-			<?= $this->Html->link('Good Causes',array('controller' => 'pages', 'action' => 'goodcauses'),array('class' => 'large_link')) ?>
+			<?= $this->Html->link('Good Causes',array('controller' => 'pages', 'action' => 'goodCauses'),array('class' => 'large_link')) ?>
 		</div>
 		<div class="col4 footer_element center_align">
 			<?= $this->Html->image( 'check_results.png', array('id'=>'check_results_button', 'class'=>'center', 'url' => array('controller' => 'pages', 'action' => 'goodcauses')) ) ?>
@@ -65,7 +69,7 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 		<div class="col4 last footer_element center_align">
 			<?= $this->Html->image( 'outtakes.png', array('id'=>'outtakes_button', 'class'=>'center', 'url' => array('controller' => 'celebrities', 'action' => 'outtakes')) ) ?>
 			<br>
-			<?= $this->Html->link('Outtakes',array('controller' => 'pages', 'action' => 'goodcauses'),array('class' => 'large_link')) ?>
+			<?= $this->Html->link('Outtakes',array('controller' => 'celebrities', 'action' => 'outtakes'),array('class' => 'large_link')) ?>
 		</div>
 	</div>
 </div>

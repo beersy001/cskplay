@@ -10,11 +10,10 @@ window.onresize = function(event) {
 
 
 function replaceContentInContainer() {
-	var elems = document.getElementsByTagName('*'), i;
+	var elems = document.getElementsByTagName('IMG'), i;
 
 	var defaultImage = document.getElementById('imageHidden');
 	var currentElement = document.getElementById('main_image');
-
 
 	var previousWidth = 4256;
 	var previousHeight = 2832;
@@ -35,19 +34,20 @@ function replaceContentInContainer() {
 		
 	} while (currentElement = currentElement.offsetParent)
 
+	for(var i=0; i < elems.length; i++){
+		var elemId = elems[i].id;
 
-	for (i in elems) {
+		if(elemId != null){
+			var idText = elemId.substring(elemId.length - 8, elemId.length);
+		}
 
-		if((' ' + elems[i].className + ' ').indexOf('crosshair') > -1) {
-			
+		if( idText == 'selected') {
+						
 			var leftPx = elems[i].style.left;
 			var topPx = elems[i].style.top;
 
 			var left = leftPx.substr(0,leftPx.length -2);
 			var top = topPx.substr(0,topPx.length -2);
-
-			console.log('left: ' + left);
-			console.log('top : ' + top);
 
 			var imageX = Math.round((left * widthRatio) + totalOffsetX,0);
 			var imageY = Math.round((top * heightRatio) + totalOffsetY,0);

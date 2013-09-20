@@ -71,7 +71,7 @@
 					<div id="nav_links">
 						<?php 
 							echo $this->Html->link('Home',array('controller' => 'pages', 'action' => 'home')) . " | " .
-							$this->Html->link('Charities',array('controller' => 'pages', 'action' => 'goodcauses')) . " | " .
+							$this->Html->link('Charities',array('controller' => 'pages', 'action' => 'goodCauses')) . " | " .
 							$this->Html->link('Play Now',array('controller' => 'games', 'action' => 'displayGame')) .  " | " .
 							$this->Html->link('Celebrity of the Month',array('controller' => 'celebrities', 'action' => 'thisMonthsCelebrity'));
 						?>
@@ -112,6 +112,10 @@
 				</div>
 			</div>
 
+			<div id="page_title_banner">
+				<h1 id="page_title"><?=$title_for_page?></h1>
+			</div>
+
 			<div class="grid" id="main_grid">
 
 				<?php echo $this->Session->flash(); ?>
@@ -133,8 +137,8 @@
 						?>
 					</div>
 					<div class="col4 footer_element center_align">
-						<p><?= $this->Html->image( 'under_16.png', array('id'=>'under_16_image', 'class' => 'middle_image') ) ?>
-						You must be 16 or over to play or claim a prize </p>
+						<?= $this->Html->image( 'under_16.png', array('id'=>'under_16_image', 'class' => 'middle_image') ) ?>
+						You must be 16 or over to play or claim a prize
 					</div>
 					<div class="col4 last footer_element right_align">
 						<p><?= $this->Html->image( 'paypal_logo.png', array('id'=>'paypal_image', 'class' => 'middle_image') ) ?></p>

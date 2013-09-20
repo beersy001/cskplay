@@ -42,6 +42,8 @@ class UsersController extends AppController {
 	}
 
 	public function login(){
+		$this->set('title_for_page', 'Login');
+
 
 		if($this->Auth->loggedIn()){
 			return $this->redirect(array('controller' => 'pages', 'action' => 'home'));
@@ -117,6 +119,8 @@ class UsersController extends AppController {
 	}
 
 	public function accountAdmin(){
+
+		$this->set('title_for_page', 'My Page');
 
 		$this->loadModel('Game');
 

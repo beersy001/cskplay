@@ -15,6 +15,7 @@ h1{
 h2{
 	color: rgb(255,255,255);
 	margin-bottom: 10px;
+	font: 35px Calibri,Arial,sans-serif;
 }
 
 
@@ -42,8 +43,19 @@ img {
 	border: 0px;
 }
 
-#aboutUsContainer p {
+.large_page_paragraph{
 	padding: 5px;
+	font-family: Georgia, serif;
+	font-size: 20px;
+	color: white;
+	margin-bottom: 15px;
+}
+
+.small_page_paragraph{
+	font-family: Georgia, serif;
+	font-size: 16px;
+	color: white;
+	margin-bottom: 5px;
 }
 
 ul {
@@ -83,6 +95,21 @@ ol li{
 	margin-bottom: 80px;
 }
 
+#page_title_banner{
+	position: absolute;
+	top: 95px;
+	height: 40px;
+	width: 100%;
+	background: white;
+}
+
+#page_title{
+	position: absolute;
+	left: 200px;
+	height: 100%;
+	color: rgb(40,32,59);
+}
+
 #main_body{
 	padding-bottom:100px;
 	border-width: 3px;
@@ -110,6 +137,10 @@ ol li{
 
 .middle_image{
 	vertical-align: middle;
+}
+
+.top{
+	vertical-align: top;
 }
 
 
@@ -169,6 +200,7 @@ ol li{
 	position: absolute;
 	left: 35px;
 	top: 15px;
+	z-index: 1;
 }
 
 #text_logo{
@@ -243,6 +275,10 @@ ol li{
 
 .center_align{
 	text-align: center;
+}
+
+.full_align{
+	text-align: justify;
 }
 
 
@@ -644,24 +680,25 @@ blockquote{
 	font-size: 30px;
 	font-style: italic;
 	color: white;
-    padding-left: 120px;
-    margin-top: 50px;
+	padding-left: 120px;
+	margin-top: 50px;
 }
  
 blockquote:before {
-    display: block;
-    font-size: 200px;
-    content: open-quote;
-    height: 1px;
-    margin-left: -0.55em;
-    position:relative;
-    top:-60px;
+	display: block;
+	font-size: 200px;
+	content: open-quote;
+	height: 1px;
+	margin-left: -0.55em;
+	position:relative;
+	top:-60px;
 }
 
-#headshot_image{
+.headshot_image{
 	border-style: solid;
 	border-color: rgba(255,255,255,1);
 	border-width: 5px;
+	width: 95%;
 }
 
 .outtakes_video{
@@ -676,6 +713,42 @@ blockquote:before {
 	font-size: 20px;
 	color: white;
 	margin-bottom: 15px;
+}
+
+/* **********************************************************************************/
+/*		Good Causes Page															*/
+/* **********************************************************************************/
+/*
+.youtube_video{
+	border-style: solid;
+	border-color: rgba(255,255,255,1);
+	border-width: 5px;
+}
+
+.video_container{
+	width: 100%;
+	max-width: 800px;
+}
+*/
+.video_container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+ 
+.video_container iframe,
+.video_container object,
+.video_container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 95%;
+	height: 95%;
+	border-style: solid;
+	border-color: rgba(255,255,255,1);
+	border-width: 5px;
 }
 
 

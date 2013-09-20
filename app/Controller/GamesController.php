@@ -32,6 +32,8 @@ App::uses('AppController', 'Controller');
 class GamesController extends AppController {
 
 	public function displayGame() {
+
+		$this->set('title_for_page', 'Make Your Choice!');
 		$this->loadModel('User');
 
 		$username = $this->Session->read('Auth.User.username');
