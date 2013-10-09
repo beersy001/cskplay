@@ -22,6 +22,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link href='http://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+
 		<?php
 			echo $this->Html->charset(); 
 			echo $this->Html->meta('icon');
@@ -66,16 +68,6 @@
 
 					<?= $this->Html->image( 'logo.png', array('id'=>'main_logo', 'url' => array('controller' => 'pages', 'action' => 'home')) ) ?>
 					<?= $this->Html->image( 'csk_play.png', array('id'=>'text_logo', 'url' => array('controller' => 'pages', 'action' => 'home')) ) ?>
-
-					
-					<div id="nav_links">
-						<?php 
-							echo $this->Html->link('Home',array('controller' => 'pages', 'action' => 'home')) . " | " .
-							$this->Html->link('Charities',array('controller' => 'pages', 'action' => 'goodCauses')) . " | " .
-							$this->Html->link('Play Now',array('controller' => 'games', 'action' => 'displayGame')) .  " | " .
-							$this->Html->link('Celebrity of the Month',array('controller' => 'celebrities', 'action' => 'thisMonthsCelebrity'));
-						?>
-					</div>
 				</div>
 			
 
@@ -114,6 +106,14 @@
 
 			<div id="page_title_banner">
 				<h1 id="page_title"><?=$title_for_page?></h1>
+				<div id="nav_links">
+						<?php 
+							echo $this->Html->link('Home',array('controller' => 'pages', 'action' => 'home')) . " | " .
+							$this->Html->link('Charities',array('controller' => 'pages', 'action' => 'goodCauses')) . " | " .
+							$this->Html->link('Play Now',array('controller' => 'games', 'action' => 'displayGame')) .  " | " .
+							$this->Html->link('Celebrity of the Month',array('controller' => 'celebrities', 'action' => 'thisMonthsCelebrity'));
+						?>
+					</div>
 			</div>
 
 			<div class="grid" id="main_grid">
@@ -129,18 +129,17 @@
 
 			<div id="small_footer">
 				<div class="onerow">
-					<div class="col4 footer_element left_align">
+					<div class="col3 footer_element left_align">
 						<?php 
 							echo $this->Html->link('Privacy Policy',array('controller' => 'pages', 'action' => 'privacyPolicy')) . " | " .
-							$this->Html->link('About Us',array('controller' => 'pages', 'action' => 'aboutUs')) . " | " .
 							$this->Html->link('Contact Us',array('controller' => 'pages', 'action' => 'contactUs'));
 						?>
 					</div>
-					<div class="col4 footer_element center_align">
+					<div class="col6 footer_element center_align">
 						<?= $this->Html->image( 'under_16.png', array('id'=>'under_16_image', 'class' => 'middle_image') ) ?>
 						You must be 16 or over to play or claim a prize
 					</div>
-					<div class="col4 last footer_element right_align">
+					<div class="col3 last footer_element right_align">
 						<p><?= $this->Html->image( 'paypal_logo.png', array('id'=>'paypal_image', 'class' => 'middle_image') ) ?></p>
 					</div>
 				</div>

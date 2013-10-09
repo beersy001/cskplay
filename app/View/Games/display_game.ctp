@@ -50,6 +50,7 @@ $this->Html->script( "gamePlay", array("inline"=>false));
 			document.getElementById("game_image_main_inlay").src = "/cskplay/img/gameImage1.jpg";
 			document.getElementById("game_image_main").style.display = "none";
 			document.getElementById("game_image_alt").style.display = "inline";
+			document.getElementById("game_image_tab").innerHTML = "Front View";
 			document.getElementById("single_crosshair").style.display = "none";
 
 		}else{
@@ -57,6 +58,8 @@ $this->Html->script( "gamePlay", array("inline"=>false));
 			document.getElementById("game_image_main_inlay").src = "/cskplay/img/gameImage2.jpg";
 			document.getElementById("game_image_main").style.display = "inline";
 			document.getElementById("game_image_alt").style.display = "none";
+			document.getElementById("game_image_tab").innerHTML = "Reverse View";
+			document.getElementById("single_crosshair").style.display = "block";
 		}
 	}
 </script>
@@ -64,12 +67,12 @@ $this->Html->script( "gamePlay", array("inline"=>false));
 
 
 <script>
-$(document).ready(function(){
+	$(document).ready(function(){
 
-	$("#game_ball_bag").load("displayGame");
-	//$("#selection_overlay").load("displayOverlay");
+		$("#game_ball_bag").load("displayGame");
+		//$("#selection_overlay").load("displayOverlay");
 
-});
+	});
 
 	$(function(){
 		$("img#game_image_main").click(function(){

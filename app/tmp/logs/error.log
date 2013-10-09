@@ -904,3 +904,88 @@ Stack Trace:
 #6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2013-10-07 11:07:24 Error: [MissingViewException] View file "C:\wamp\www\cskplay\app\View\Pages\goodcauses.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cskplay\\app\\View\\Pages\\goodcauses.ctp',
+)
+Request URL: /cskplay/pages/goodcauses
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\View\View.php(468): View->_getViewFileName('goodcauses')
+#1 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(952): View->render('goodcauses', NULL)
+#2 C:\wamp\www\cskplay\app\Controller\PagesController.php(60): Controller->render('goodcauses')
+#3 [internal function]: PagesController->display('goodcauses')
+#4 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-10-07 13:51:44 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\wamp\www\cskplay\app\Controller\CelebritiesController.php, line 47]
+2013-10-07 13:51:44 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cskplay/celebrities/celebrityAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 47, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 47, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-07 13:52:00 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\wamp\www\cskplay\app\Controller\CelebritiesController.php, line 47]
+2013-10-07 13:52:00 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cskplay/celebrities/celebrityAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 47, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 47, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-07 14:03:13 Error: Fatal Error (1): Call to undefined method CelebritiesController::fetch() in [C:\wamp\www\cskplay\app\Controller\CelebritiesController.php, line 62]
+2013-10-07 14:03:13 Error: [FatalErrorException] Call to undefined method CelebritiesController::fetch()
+Request URL: /cskplay/celebrities/celebrityAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\csk...', 62)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\csk...', 62, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\csk...', 62, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-08 11:27:05 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\cskplay\app\View\Celebrities\celebrity_admin.ctp, line 113]
+2013-10-08 11:27:05 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /cskplay/celebrities/celebrityAdmin
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 113)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 113, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 113, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-09 09:36:39 Error: [MissingViewException] View file "C:\wamp\www\cskplay\app\View\Pages\goodcauses.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cskplay\\app\\View\\Pages\\goodcauses.ctp',
+)
+Request URL: /cskplay/pages/goodcauses
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\View\View.php(468): View->_getViewFileName('goodcauses')
+#1 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(952): View->render('goodcauses', NULL)
+#2 C:\wamp\www\cskplay\app\Controller\PagesController.php(60): Controller->render('goodcauses')
+#3 [internal function]: PagesController->display('goodcauses')
+#4 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-10-09 15:55:00 Error: [MissingViewException] View file "C:\wamp\www\cskplay\app\View\Pages\goodcauses.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cskplay\\app\\View\\Pages\\goodcauses.ctp',
+)
+Request URL: /cskplay/pages/goodcauses
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\View\View.php(468): View->_getViewFileName('goodcauses')
+#1 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(952): View->render('goodcauses', NULL)
+#2 C:\wamp\www\cskplay\app\Controller\PagesController.php(65): Controller->render('goodcauses')
+#3 [internal function]: PagesController->display('goodcauses')
+#4 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}

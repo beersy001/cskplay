@@ -44,18 +44,26 @@ class CelebritiesController extends AppController {
 	public function celebrityAdmin(){
 		$this->set('title_for_page', 'Celebrity Admin');
 
+		if(!empty($this->data)){
+			$celebrityData = $this->request->data['Celebrity'];
+
+			$celebrityData['_id'] = $celebrityData['month'];
+
+			$this->Celebrity->save($celebrityData);
+		}
+
 		$this->set('celebrities', $this->Celebrity->getAllCelebrities());
+
+		if($this->RequestHandler->isAjax()){
+			$this->render('listAll','ajax');
+		}else{
+			//$this->render('listAll');
+		}
 	}
 
 	public function addCelebrity(){
 
-		$celebrityData = $this->request->data['Celebrity'];
-
-		$celebrityData['_id'] = $celebrityData['month'];
-
-		$this->Celebrity->save($celebrityData);
-
-		$this->Session->setFlash('Celebrity Saved');
+		
 		$this->redirect(array('action' => 'celebrityAdmin'));
 	}
 
@@ -81,7 +89,9 @@ class CelebritiesController extends AppController {
 
 	public function outtakes(){
 		$this->set('title_for_page', 'Celebrity Outtakes');
+	}
 
-		
+	public function listAll(){
+		$this->set('celebrities', $this->Celebrity->getAllCelebrities());
 	}
 }

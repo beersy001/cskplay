@@ -1,6 +1,16 @@
-window.onload = function() {
+
+
+
+window.onload = function() {	
 	replaceContentInContainer();
+
+	$("#page_title_banner").show('slide',{direction:'right'},1000);
+	
+	runCameraFlashes();
+	
+
 };
+
 
 
 window.onresize = function(event) {
@@ -28,9 +38,36 @@ function replaceContentInContainer() {
 	} else {
 		var top = screenHeight - 100;
 	}
-	var padding = screenHeight;
+	var padding = screenHeight - 150;
 
 	homeButtons.style.top = top + "px";
 	bodyPadding.style.paddingBottom = padding + "px";
 	
+}
+
+
+function runCameraFlashes(){
+	setInterval(function(){
+		findCamera();
+	},1000);
+}
+
+function findCamera(){
+	setInterval(function(){
+		flashCamera();
+	},100);
+
+	setInterval(function(){
+		flashCamera();
+	},100);
+}
+
+function flashCamera(){
+	var flashElement = document.getElementById("flash1");
+
+	if(flashElement.style.display == "none"){
+		flashElement.style.display = "block";
+	} else{
+		flashElement.style.display = "none";
+	}
 }
