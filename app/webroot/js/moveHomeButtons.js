@@ -1,12 +1,10 @@
-
-
-
 window.onload = function() {	
 	replaceContentInContainer();
 
 	$("#page_title_banner").show('slide',{direction:'right'},1000);
 	
-	runCameraFlashes();
+	runCameraFlashes(300);
+	runCameraFlashes(500);
 	
 
 };
@@ -38,7 +36,7 @@ function replaceContentInContainer() {
 	} else {
 		var top = screenHeight - 100;
 	}
-	var padding = screenHeight - 150;
+	var padding = screenHeight - 155;
 
 	homeButtons.style.top = top + "px";
 	bodyPadding.style.paddingBottom = padding + "px";
@@ -46,28 +44,29 @@ function replaceContentInContainer() {
 }
 
 
-function runCameraFlashes(){
-	setInterval(function(){
-		findCamera();
-	},1000);
-}
-
-function findCamera(){
-	setInterval(function(){
-		flashCamera();
-	},100);
+function runCameraFlashes(delay){
 
 	setInterval(function(){
-		flashCamera();
-	},100);
-}
 
-function flashCamera(){
-	var flashElement = document.getElementById("flash1");
+		var randomFlashId = Math.floor(Math.random() * 24) + 1;
+		var count = 0;
+		var flashElement = document.getElementById("flash" + randomFlashId);
 
-	if(flashElement.style.display == "none"){
-		flashElement.style.display = "block";
-	} else{
 		flashElement.style.display = "none";
-	}
+		
+		var intervalId = setInterval(function(){
+
+			if(count < 2){
+				if(flashElement.style.display == "none"){
+					flashElement.style.display = "block";
+				} else{
+					flashElement.style.display = "none";
+				}
+				count++;
+			}else{
+				flashElement.style.display = "none";
+				clearInterval(intervalId);
+			}
+		},200);
+	},delay);
 }
