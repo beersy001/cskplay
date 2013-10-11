@@ -36,7 +36,7 @@ function replaceContentInContainer() {
 	} else {
 		var top = screenHeight - 100;
 	}
-	var padding = screenHeight - 155;
+	var padding = screenHeight - 175;
 
 	homeButtons.style.top = top + "px";
 	bodyPadding.style.paddingBottom = padding + "px";

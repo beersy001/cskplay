@@ -989,3 +989,18 @@ Stack Trace:
 #6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2013-10-11 10:29:54 Error: [MissingViewException] View file "C:\wamp\www\cskplay\app\View\Pages\goodcauses.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cskplay\\app\\View\\Pages\\goodcauses.ctp',
+)
+Request URL: /cskplay/pages/goodcauses
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\View\View.php(468): View->_getViewFileName('goodcauses')
+#1 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(952): View->render('goodcauses', NULL)
+#2 C:\wamp\www\cskplay\app\Controller\PagesController.php(65): Controller->render('goodcauses')
+#3 [internal function]: PagesController->display('goodcauses')
+#4 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}

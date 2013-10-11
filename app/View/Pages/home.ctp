@@ -39,66 +39,43 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 	el.style.backgroundRepeat = "no-repeat"; 
 	el.style.backgroundSize = "cover";
 	el.style.backgroundAttachment = "scroll";
+
+
+	function showDiv(divId){
+		$("#" + divId).show('slide',{direction:'down'},400);
+	};
+	function hideDiv(divId){
+		$("#" + divId).hide('slide',{direction:'down'},400);
+	};
 	
 </script>
 
-
-<script>
-	
-
-</script>
-
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash1') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash2') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash3') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash4') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash5') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash6') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash7') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash8') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash9') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash10') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash11') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash12') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash13') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash14') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash15') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash16') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash17') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash18') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash19') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash20') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash21') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash22') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash23') ) ?>
-<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash24') ) ?>
-<!--
-<div class="starbust_test" id="flash1">1</div>
-<div class="starbust_test" id="flash2">2</div>
-<div class="starbust_test" id="flash3">3</div>
-<div class="starbust_test" id="flash4">4</div>
-<div class="starbust_test" id="flash5">5</div>
-<div class="starbust_test" id="flash6">6</div>
-<div class="starbust_test" id="flash7">7</div>
-<div class="starbust_test" id="flash8">8</div>
-<div class="starbust_test" id="flash9">9</div>
-<div class="starbust_test" id="flash10">10</div>
-<div class="starbust_test" id="flash11">11</div>
-<div class="starbust_test" id="flash12">12</div>
-<div class="starbust_test" id="flash13">13</div>
-<div class="starbust_test" id="flash14">14</div>
-<div class="starbust_test" id="flash15">15</div>
-<div class="starbust_test" id="flash16">16</div>
-<div class="starbust_test" id="flash17">17</div>
-<div class="starbust_test" id="flash18">18</div>
-<div class="starbust_test" id="flash19">19</div>
-<div class="starbust_test" id="flash20">20</div>
-<div class="starbust_test" id="flash21">21</div>
-<div class="starbust_test" id="flash22">22</div>
-<div class="starbust_test" id="flash23">23</div>
-<div class="starbust_test" id="flash24">24</div>
--->
-
+<div id="starbursts">
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash1') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash2') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash3') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash4') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash5') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash6') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash7') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash8') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash9') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash10') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash11') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash12') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash13') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash14') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash15') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash16') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash17') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash18') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash19') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash20') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash21') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash22') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash23') ) ?>
+	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash24') ) ?>
+</div>
 
 <div id="home_padding"></div> 
 
@@ -111,46 +88,14 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 	<button class="button large_button" id="view_demo_button">View Demo</button>
 
 </div>
-
-<div class="onerow dividing_row" id="about_us">
-	<div class="col12">
-		<h1>About Us</h1>
-	</div>
-</div>
-
-<div class="onerow" id="about_us">
-
-	<div class="col4">
-		<p>CSK Play is the idea of two best friends, Jonathan Lawson and Munur Shah.  Jonathan and Munur have been best friends from the age of 11 (now somewhere in their 40’s), and although their initial careers took them in different directions, they always talked about “giving something back” to the community.</p>
-		<p>CSK Play’s mission is just that, to raise money for charities, good causes and CSK’s Sporting Foundation through sport orientated online competitions. CSK’s aim is to ensure each competition is both fun and worthwhile for our customers and charities alike. </p>
+<div class="sliding_container">
+	<div class="onerow dividing_row top">
+		<div class="col12">
+			<h1><span class="panel_icon">|||</span> Quick Links</h1>
+		</div>
 	</div>
 
-	<div class="col4">
-	<p>They have created CSK Play with a number of ideas in mind:</p>
-
-<ul>
-	<li>Creating a fun and interactive sporting competition where 100% of profits will be split between:
-		<ol>
-			<li class="inner">Our Charity partner</li>
-			<li class="inner">CSK’s Sporting Foundation</li>
-			<li class="inner">Each month’s Celebrity’s chosen Charity</li>
-		</ol>
-	</li>
-	<li>Giving all children in the UK the ability to try many different sports – making sports accessible and creating a legacy of Sport kick started from the success of the London 2012 Olympics</li>
-	<li>Continued awareness of multiple Charities</li>
-</ul>
-	</div>
-
-	<div class="col4 last">
-	<h2>CSK Play Sporting Foundation – Sports for Children </h2>
-		<p>CSK Play will donate 30% of the profits to its Sporting Foundation.</p>
-		<p>The Sporting Foundation will focus on giving all children the ability to engage in sports they may now necessarily be able to participate in due their availability/cost.</p>
-		<p>We will initially work with schools in the UK to provide on-going sessions, sports trainers and facilities for free.</p>
-	</div>
-</div>
-
-
-	<div class="onerow">
+	<div class="onerow" id="quick_links">
 		<div class="col4 footer_element center_align">
 			<?= $this->Html->image( 'good_causes.png', array('id'=>'good_causes_button', 'class'=>'center', 'url' => array('controller' => 'pages', 'action' => 'goodCauses')) ) ?>
 			<br>
@@ -167,3 +112,45 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 			<?= $this->Html->link('Outtakes',array('controller' => 'celebrities', 'action' => 'outtakes'),array('class' => 'large_link')) ?>
 		</div>
 	</div>
+</div>
+
+<div class="sliding_container">
+	<div class="onerow dividing_row">
+		<div class="col12">
+			<h1><span class="panel_icon">|||</span> About Us</h1>
+		</div>
+	</div>
+
+	<div class="onerow" id="about_us">
+
+		<div class="col4">
+			<p>CSK Play is the idea of two best friends, Jonathan Lawson and Munur Shah.  Jonathan and Munur have been best friends from the age of 11 (now somewhere in their 40’s), and although their initial careers took them in different directions, they always talked about “giving something back” to the community.</p>
+			<p>CSK Play’s mission is just that, to raise money for charities, good causes and CSK’s Sporting Foundation through sport orientated online competitions. CSK’s aim is to ensure each competition is both fun and worthwhile for our customers and charities alike. </p>
+		</div>
+
+		<div class="col4">
+		<p>They have created CSK Play with a number of ideas in mind:</p>
+
+	<ul>
+		<li>Creating a fun and interactive sporting competition where 100% of profits will be split between:
+			<ol>
+				<li class="inner">Our Charity partner</li>
+				<li class="inner">CSK’s Sporting Foundation</li>
+				<li class="inner">Each month’s Celebrity’s chosen Charity</li>
+			</ol>
+		</li>
+		<li>Giving all children in the UK the ability to try many different sports – making sports accessible and creating a legacy of Sport kick started from the success of the London 2012 Olympics</li>
+		<li>Continued awareness of multiple Charities</li>
+	</ul>
+		</div>
+
+		<div class="col4 last">
+		<h2>CSK Play Sporting Foundation – Sports for Children </h2>
+			<p>CSK Play will donate 30% of the profits to its Sporting Foundation.</p>
+			<p>The Sporting Foundation will focus on giving all children the ability to engage in sports they may now necessarily be able to participate in due their availability/cost.</p>
+			<p>We will initially work with schools in the UK to provide on-going sessions, sports trainers and facilities for free.</p>
+		</div>
+	</div>
+</div>
+
+	
