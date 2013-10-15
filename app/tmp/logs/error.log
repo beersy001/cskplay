@@ -1004,3 +1004,110 @@ Stack Trace:
 #6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2013-10-14 10:07:34 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\cskplay\app\Controller\PagesController.php, line 61]
+2013-10-14 10:07:34 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /cskplay/pages/goodCauses
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 61)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 61, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 61, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-14 16:54:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/starbust_test.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-14 16:54:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/starbust_test.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-15 15:41:14 Error: [MissingActionException] Action CelebritiesController::listAll() could not be found.
+Exception Attributes: array (
+  'controller' => 'CelebritiesController',
+  'action' => 'listAll',
+)
+Request URL: /cskplay/celebrities/listAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CelebritiesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-10-15 15:41:19 Error: [MissingActionException] Action CelebritiesController::listAll() could not be found.
+Exception Attributes: array (
+  'controller' => 'CelebritiesController',
+  'action' => 'listAll',
+)
+Request URL: /cskplay/celebrities/listAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CelebritiesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-10-15 16:02:59 Error: Fatal Error (4): syntax error, unexpected '$celeb' (T_VARIABLE) in [C:\wamp\www\cskplay\app\Controller\CelebritiesController.php, line 47]
+2013-10-15 16:02:59 Error: [FatalErrorException] syntax error, unexpected '$celeb' (T_VARIABLE)
+Request URL: /cskplay/celebrities/celebrityAdmin?data%5BCelebrity%5D%5Bname%5D=James&data%5BCelebrity%5D%5Bmonth%5D=11%2F2013&data%5BCelebrity%5D%5Bpicture%5D=jamesBond.jpg&data%5BCelebrity%5D%5Btext%5D=James&submitButton=Delete
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 47, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 47, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-15 16:11:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/JamesJames_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-15 16:13:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/MirandaKerr.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-15 16:16:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/MirandaKerr.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-15 16:17:49 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 4]
+2013-10-15 16:17:49 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 4, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 4, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-15 16:18:00 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 4]
+2013-10-15 16:18:00 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 4, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 4, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

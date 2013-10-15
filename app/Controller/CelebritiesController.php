@@ -30,14 +30,21 @@ App::uses('AppController', 'Controller');
  */
 class CelebritiesController extends AppController {
 
-	public function thisMonthsCelebrity() {
+	public function viewAll(){
+		$this->set('title_for_page', 'Our Celebrities');
+		$this->set('pageId','viewAll');
 
+		$this->set('celebrities', $this->Celebrity->getAllCelebrities());
+	}
+
+	public function thisMonthsCelebrity() {
+		
 		$this->set('title_for_page', 'This Months Celebrity');
 
 		$celeb = $this->Celebrity->getCurrentCelebrity();
 
-		$this->set('celebName',$celeb['name']);
-		$this->set('celebImage',$celeb['picture']);
+		$this->set('celebName',$celeb['firstName'] . ' ' . $celeb['surname']);
+		$this->set('celebImage',$celeb['firstName'] . $celeb['surname'] . '_large.jpg');
 		$this->set('celebText',$celeb['text']);
 	}
 
@@ -62,12 +69,13 @@ class CelebritiesController extends AppController {
 	}
 
 	public function addCelebrity(){
-
+		$this->set('title_for_page', 'This Months Celebrity');
 		
 		$this->redirect(array('action' => 'celebrityAdmin'));
 	}
 
 	public function editCelebrity(){
+		$this->set('title_for_page', 'This Months Celebrity');
 
 		$action = $this->request->data['submitButton'];
 		unset($this->request->data['submitButton']);
@@ -88,10 +96,16 @@ class CelebritiesController extends AppController {
 	}
 
 	public function outtakes(){
+		$this->set('title_for_page', 'This Months Celebrity');
 		$this->set('title_for_page', 'Celebrity Outtakes');
 	}
 
 	public function listAll(){
+		$this->set('title_for_page', 'Our Celebrities');
+		$this->set('pageId','viewAll');
+
 		$this->set('celebrities', $this->Celebrity->getAllCelebrities());
 	}
+
+
 }

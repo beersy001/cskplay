@@ -9,9 +9,9 @@
 }
 
 html, body {
-   margin:0;
-   padding:0;
-   height:100%;
+	margin:0;
+	padding:0;
+	height:100%;
 }
 
 .grid{
@@ -20,6 +20,7 @@ html, body {
 	width:100%;
 	margin-right: auto;
 	margin-left: auto;
+	height: 100%;
 	overflow: auto;
 }
 
@@ -30,6 +31,9 @@ html, body {
 	margin-right: auto;
 	margin-left: auto;
 	z-index: 2;
+	text-align: justify;
+	-ms-text-justify: distribute-all-lines;
+	text-justify: distribute-all-lines;
 }
 
 /* 
@@ -41,6 +45,7 @@ html, body {
 	margin: 0 3% 0 0;
 	margin-bottom: 20px;
 	padding: 20px 0;
+	height: 100%;
 }
 
 .col1.last, .col2.last, .col3.last, .col4.last, .col5.last, .col6.last, .col7.last, .col8.last, .col9.last, .col10.last, .col11.last, .col12 {

@@ -34,6 +34,7 @@ class GamesController extends AppController {
 	public function displayGame() {
 
 		$this->set('title_for_page', 'Make Your Choice!');
+		$this->set('pageId', 'displayGame');
 		$this->loadModel('User');
 
 		$username = $this->Session->read('Auth.User.username');

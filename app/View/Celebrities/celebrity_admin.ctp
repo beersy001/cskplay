@@ -23,12 +23,15 @@
 
 		<div class="onerow">
 			<div class="col2">
-				<p>Name</p>
+				<p>First Name</p>
 			</div>
 			<div class="col2">
+				<p>Surname</p>
+			</div>
+			<div class="col1">
 				<p>Month</p>
 			</div>
-			<div class="col2">
+			<div class="col1">
 				<p>Picture</p>
 			</div>
 			<div class="col2">
@@ -45,36 +48,21 @@
 
 
 		<?php foreach($celebrities as $celeb){ 
-			$celebText = $celeb
 
 		?>
 			<form>
-				<input name="data[Celebrity][name]" value=<?=$celeb['Celebrity']['name'] ?> type="text">
+				<input name="data[Celebrity][firstName]" value=<?=$celeb['Celebrity']['firstName'] ?> type="text">
+				<input name="data[Celebrity][surname]" value=<?=$celeb['Celebrity']['surname'] ?> type="text">
 				<input name="data[Celebrity][month]" value=<?=$celeb['Celebrity']['month'] ?> type="text">
-				<input name="data[Celebrity][picture]" value=<?=$celeb['Celebrity']['picture'] ?> type="text">
-				<input name="data[Celebrity][text]" value=<?= $celeb['Celebrity']['text'] ?> type="text">
+				<input name="data[Celebrity][picture]" value=<?=$celeb['Celebrity']['firstName'] . $celeb['Celebrity']['surname'] . '.jpg' ?> type="text">
+				<input name="data[Celebrity][text]" value="<?= $celeb['Celebrity']['text'] ?>" type="textarea">
 				<input name="submitButton" value="Edit" type="submit">
 				<input name="submitButton" value="Delete" type="submit">
 			</form>
 		<?php
-		print_r($celeb['Celebrity']['text']);
 
 		 } ?>
 
-		<?php
-		/*
-			foreach($celebrities as $celeb){
-				echo $this->Form->create(array('controller'=>'Celebrities', 'action'=>'editCelebrity'));
-				echo $this->Form->input('name',		array('value'=>$celeb['Celebrity']['name']));
-				echo $this->Form->input('month',	array('value'=>$celeb['Celebrity']['month']));
-				echo $this->Form->input('picture',	array('value'=>$celeb['Celebrity']['picture']));
-				echo $this->Form->input('text',		array('type'=>'textarea', 'value'=>$celeb['Celebrity']['text']));
-				echo $this->Form->submit('Edit',	array('class'=>'submitButton', 'value'=>'edit', 'name'=>'submitButton'));
-				echo $this->Form->submit('Delete',	array('class'=>'submitButton', 'value'=>'delete', 'name'=>'submitButton'));
-				echo $this->Form->end();
-			}
-		*/
-		?>
 	</div>
 </div>
 
@@ -84,7 +72,8 @@
 
 		<?php
 			echo $this->Form->create();
-			echo $this->Form->input('name');
+			echo $this->Form->input('firstName');
+			echo $this->Form->input('surname');
 			echo $this->Form->input('month');
 			echo $this->Form->input('picture');
 			echo $this->Form->input('text', array('type'=>'textarea'));

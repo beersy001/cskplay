@@ -56,8 +56,17 @@ class PagesController extends AppController {
 
 
 		$this->set('title_for_page', $title_for_layout);
+		$this->set('pageId', $page);
 
 		if($title_for_layout == 'Home'){
+
+			$this->layout= 'home_page';
+
+			$this->set('backgroundImage', '/cskplay/app/webroot/img/backdrop.png');
+			$this->set('backgroundPosition', 'center 70%');
+			$this->set('backgroundRepeat', 'no-repeat');
+			$this->set('backgroundSize', 'cover');
+			$this->set('backgroundAttachment', 'scroll');
 			$this->set('title_for_page', '');
 		}
 		

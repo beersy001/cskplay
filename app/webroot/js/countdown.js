@@ -1,8 +1,3 @@
-$(document).ready(function() {
-	
-	var timer = setInterval(showRemaining, 1000);
-});
-
 function showRemaining() {
 	var now = new Date();
 

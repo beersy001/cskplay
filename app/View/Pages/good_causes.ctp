@@ -37,34 +37,34 @@ App::uses('Debugger', 'Utility');
 
 
 <div class="onerow">
-	<div class="col4 ">
+	<div class="col4 border text_box">
 		<h2 class="center_align">The Bobby Moore Fund</h2>
 
 		<?= $this->Html->image( 'bobby_moore_fund_logo.png', array('id'=>'bobby_moore_logo') ) ?>
 
-		<p class="large_page_paragraph">
+		<p>
 			Since 1993, the Bobby Moore Fund has gone from strength to strength. With your help, over £2 million is now raised each year through events, partnerships, and activities organised by supporters.
 		</p>
-		<p class="large_page_paragraph">
+		<p>
 			Thanks to your support, to date the Bobby Moore Fund has raised over £20 million. The funds are spent on world class bowel cancer research carried out by leading scientists working across the UK.
 		</p>
 
 		
 	</div>
 	<div class="col8 last">
-		<div class="video_container">
-			<iframe class="youtube_video" src="//www.youtube.com/embed/m_S42QvAtXE?HD=1;rel=0;showinfo=0;controls=0" allowfullscreen></iframe>
+		<div class="video_container ">
+			<iframe class="youtube_video border" src="//www.youtube.com/embed/m_S42QvAtXE?HD=1;rel=0;showinfo=0;controls=0" allowfullscreen></iframe>
 		</div>
 	</div>
 </div>
 
 <div class="onerow">
-	<div class="col8 justify_align top">
+	<div class="col8 border text_box">
 		<h2 class="center_align">Bobby Moore</h2>
 		<div class="col4">
 			<?= $this->Html->image( 'bobbyMooreHeadshot.jpg', array('class'=>'headshot_image') ) ?>
 		</div>
-		<div class="col8 justify_align last">
+		<div class="col8 last">
 			<p class="small_page_paragraph">Robert Frederick Chelsea Moore was born on 12 April 1941 in Barking, Essex.</p>
 
 			<p class="small_page_paragraph">He played for West Ham United and Fulham FC and led England to World Cup victory in 1966.</p>
@@ -83,7 +83,7 @@ App::uses('Debugger', 'Utility');
 		</div>
 		
 	</div>
-	<div class="col4 last justify_align">
+	<div class="col4 last border text_box">
 		<h2 class="center_align">Stephanie Moore</h2>
 		<div class="col4">
 			<?= $this->Html->image( 'stephanieMooreHeadshot.jpg', array('class'=>'headshot_image') ) ?>

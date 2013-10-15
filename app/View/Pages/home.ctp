@@ -24,22 +24,13 @@ endif;
 App::uses('Debugger', 'Utility');
 
 $this->Html->script( "moveHomeButtons", array("inline"=>false));
+$this->Html->script( "cameraFlashes", array("inline"=>false));
 ?>
-
-
 
 <?php echo $this->Session->flash(); ?>
 
-
 <script type="text/javascript">
 	
-	var el=document.getElementById("background");
-	el.style.background = "url('/cskplay/app/webroot/img/backdrop.png')";
-	el.style.backgroundPosition = "center 70%";
-	el.style.backgroundRepeat = "no-repeat"; 
-	el.style.backgroundSize = "cover";
-	el.style.backgroundAttachment = "scroll";
-
 
 	function showDiv(divId){
 		$("#" + divId).show('slide',{direction:'down'},400);
@@ -50,44 +41,7 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 	
 </script>
 
-<div id="starbursts">
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash1') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash2') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash3') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash4') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash5') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash6') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash7') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash8') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash9') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash10') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash11') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash12') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash13') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash14') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash15') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash16') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash17') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash18') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash19') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash20') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash21') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash22') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash23') ) ?>
-	<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash24') ) ?>
-</div>
 
-<div id="home_padding"></div> 
-
-<div id="home_buttons">
-	<!--
-	<?= $this->Html->image( 'play_now_button.png', array('id'=>'play_now_button', 'url' => array('controller' => 'games', 'action' => 'displayGame')) ) ?>
-	<?= $this->Html->image( 'view_demo_button.png', array('id'=>'view_demo_button', 'url' => array('controller' => 'pages', 'action' => 'viewDemo')) ) ?>
-	-->
-	<button class="button large_button" id="play_now_button">Play Now</button>
-	<button class="button large_button" id="view_demo_button">View Demo</button>
-
-</div>
 <div class="sliding_container">
 	<div class="onerow dividing_row top">
 		<div class="col12">
@@ -96,7 +50,7 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 	</div>
 
 	<div class="onerow" id="quick_links">
-		<div class="col4 footer_element center_align">
+		<div class="col4 center_align">
 			<?= $this->Html->image( 'good_causes.png', array('id'=>'good_causes_button', 'class'=>'center', 'url' => array('controller' => 'pages', 'action' => 'goodCauses')) ) ?>
 			<br>
 			<?= $this->Html->link('Good Causes',array('controller' => 'pages', 'action' => 'goodCauses'),array('class' => 'large_link')) ?>
@@ -115,6 +69,7 @@ $this->Html->script( "moveHomeButtons", array("inline"=>false));
 </div>
 
 <div class="sliding_container">
+
 	<div class="onerow dividing_row">
 		<div class="col12">
 			<h1><span class="panel_icon">|||</span> About Us</h1>

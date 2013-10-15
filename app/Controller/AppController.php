@@ -51,6 +51,12 @@ class AppController extends Controller {
 
 	public function beforeFilter(){
 
+		$this->set('backgroundImage', '/cskplay/app/webroot/img/blank_goal_dark.png');
+		$this->set('backgroundPosition', 'center 70%');
+		$this->set('backgroundRepeat', 'no-repeat');
+		$this->set('backgroundSize', 'cover');
+		$this->set('backgroundAttachment', 'scroll');
+
 		App::import('Vendor', 'facebook-php-sdk-master/src/facebook');
 		$this->Facebook = new Facebook(array(
 			'appId'  => '503746699700838',
@@ -83,8 +89,8 @@ class AppController extends Controller {
 				true))
 		));
 		$this->set('fb_logout_url', $this->Facebook->getLogoutUrl(array('next' => Router::url(array('controller' => 'users', 'action' => 'logout'), true))));
-
 		$this->set('user', $this->Auth->user());
+
 
 	}
 }
