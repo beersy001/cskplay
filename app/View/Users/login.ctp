@@ -1,39 +1,6 @@
 <?php $this->Html->script( "moveHomeButtons", array("inline"=>false));?>
+<?php $this->Html->script( "swapGameImage", array("inline"=>false));?>
 
-<script>
-
-$(function(){
-	$("#game_image_tab").click(function(){
-		swapGameImage();
-	}); 
-});
-
-function toggleInLayImageUp(){
-	$("#game_image_main_inlay").show('slide',{direction:'down'},400);
-};
-
-function toggleInLayImageDown(){
-	$("#game_image_main_inlay").hide('slide',{direction:'down'},200);
-};
-
-function swapGameImage(){
-	if(document.getElementById("game_image_main").style.display != "none"){
-
-		document.getElementById("game_image_main_inlay").src = "/cskplay/img/gameImage1.jpg";
-		document.getElementById("game_image_main").style.display = "none";
-		document.getElementById("game_image_alt").style.display = "inline";
-			document.getElementById("game_image_tab").innerHTML = "Front View";
-		document.getElementById("single_crosshair").style.display = "none";
-	}else{
-		
-		document.getElementById("game_image_main_inlay").src = "/cskplay/img/gameImage2.jpg";
-		document.getElementById("game_image_main").style.display = "inline";
-			document.getElementById("game_image_tab").innerHTML = "Reverse View";
-		document.getElementById("game_image_alt").style.display = "none";
-	}
-}
-
-</script>
 
 <div class="onerow">
 	<div class="col5 alternate_one" id="login_box_page">
@@ -54,14 +21,17 @@ function swapGameImage(){
 		</div>
 	</div>
 
-	<div class="col7 last">
-		<?= $this->Html->image( 'gameImage1.jpg', array('class'=>'game_image', 'id'=>'game_image_main') ) ?>
-		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image display_none', 'id'=>'game_image_alt') ) ?>
+	<div class="col7 no_padding border last" id="game_image_container">
+		<?= $this->Html->image( 'gameImage1.jpg', array('class'=>'game_image no_padding no_margin', 'id'=>'game_image_main') ) ?>
+		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image  display_none', 'id'=>'game_image_alt') ) ?>
 		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image_inlay display_none', 'id'=>'game_image_main_inlay') ) ?>
-		<div id="game_image_tab" onmouseover="toggleInLayImageUp()" onmouseout="toggleInLayImageDown()">
-			Reverse View
+		<div class="game_image_info_bar">
+			<span id="game_image_tab" onmouseover="toggleInLayImageUp()" onmouseout="toggleInLayImageDown()">
+				Front View
+			</span>
 		</div>
 	</div>
+
 
 	<div id="home_buttons">
 		<?= $this->Html->image( 'view_demo_button.png', array('id'=>'view_demo_button', 'url' => array('controller' => 'pages', 'action' => 'viewDemo')) ) ?>

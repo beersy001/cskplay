@@ -43,6 +43,7 @@ class UsersController extends AppController {
 
 	public function login(){
 		$this->set('title_for_page', 'Login');
+		$this->set('pageId', 'login');
 
 
 		if($this->Auth->loggedIn()){

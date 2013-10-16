@@ -51,7 +51,7 @@ App::uses('Debugger', 'Utility');
 
 		
 	</div>
-	<div class="col8 last">
+	<div class="col8 last no_padding">
 		<div class="video_container ">
 			<iframe class="youtube_video border" src="//www.youtube.com/embed/m_S42QvAtXE?HD=1;rel=0;showinfo=0;controls=0" allowfullscreen></iframe>
 		</div>

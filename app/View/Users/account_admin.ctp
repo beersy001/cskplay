@@ -26,8 +26,9 @@ App::uses('Debugger', 'Utility');
 // cakePHP html 'helper' to dynamicaly create a <script> tag
 // loads gamePlay.js
 
-$this->Html->script( "alterSelectionPosition", array("inline"=>false));
+$this->set('pageId', 'accountAdmin');
 
+$this->Html->script( "moveUserSelections", array("inline"=>false));
 
 foreach ($results as $element) {
 	$xPos = $element['Game']['x'];
@@ -36,49 +37,43 @@ foreach ($results as $element) {
 
 	echo $this->Html->image( 'logo.png', array('class'=>'crosshair','id' => $id . 'unselected', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px" ) );
 	echo $this->Html->image( 'logo_inverse.png', array('class'=>'crosshair','id' => $id . 'selected', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px; display: none" ) );
-
 }
 
 ?>
-	<script>
-		$(function(){
-			$("a#toggle").click(function(){
-				closeIFrame();
-			}); 
-		});
+
+<script>
+	$(function(){
+		$("a#toggle").click(function(){
+			closeIFrame();
+		}); 
+	});
 
 
-		var closeIFrame = function(){
-			if ($("#sidebar").css('display') == 'none'){
-				$("#sidebar").show('slide',{direction:'left'},800);
-			} else{
-				$("#sidebar").hide('slide',{direction:'left'},100);
-				location.reload();
-			}
-		};
-
-
-		function changeSelectionIcon(elem){
-			var rawId = elem.id.substring(elem.id.length - 4, 0);
-			document.getElementById(rawId + 'unselected').style.display = 'none';
-			document.getElementById(rawId + 'selected').style.display = 'block';
-			document.getElementById(rawId + 'selected').style.zIndex = '20';
+	var closeIFrame = function(){
+		if ($("#sidebar").css('display') == 'none'){
+			$("#sidebar").show('slide',{direction:'left'},800);
+		} else{
+			$("#sidebar").hide('slide',{direction:'left'},100);
+			location.reload();
 		}
-
-		function changeSelectionIconBack(elem){
-			var rawId = elem.id.substring(elem.id.length - 4, 0);
-			document.getElementById(rawId + 'unselected').style.display = 'block';
-			document.getElementById(rawId + 'selected').style.display = 'none';
-			document.getElementById(rawId + 'selected').style.zIndex = '10';
-		}
+	};
 
 
+	function changeSelectionIcon(elem){
+		var rawId = elem.id.substring(elem.id.length - 4, 0);
+		document.getElementById(rawId + 'unselected').style.display = 'none';
+		document.getElementById(rawId + 'selected').style.display = 'block';
+		document.getElementById(rawId + 'selected').style.zIndex = '20';
+	}
 
+	function changeSelectionIconBack(elem){
+		var rawId = elem.id.substring(elem.id.length - 4, 0);
+		document.getElementById(rawId + 'unselected').style.display = 'block';
+		document.getElementById(rawId + 'selected').style.display = 'none';
+		document.getElementById(rawId + 'selected').style.zIndex = '10';
+	}
 
-
-
-
-	</script>
+</script>
 
 
 

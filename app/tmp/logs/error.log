@@ -1111,3 +1111,47 @@ Stack Trace:
 #3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-10-16 08:56:23 Error: [MissingActionException] Action CelebritiesController::allCelebrities() could not be found.
+Exception Attributes: array (
+  'controller' => 'CelebritiesController',
+  'action' => 'allCelebrities',
+)
+Request URL: /cskplay/celebrities/allCelebrities
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CelebritiesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-10-16 13:01:04 Error: [MissingViewException] View file "C:\wamp\www\cskplay\app\View\Pages\view_all.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\cskplay\\app\\View\\Pages\\view_all.ctp',
+)
+Request URL: /cskplay/pages/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\View\View.php(468): View->_getViewFileName('viewAll')
+#1 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(952): View->render('viewAll', NULL)
+#2 C:\wamp\www\cskplay\app\Controller\PagesController.php(74): Controller->render('viewAll')
+#3 [internal function]: PagesController->display('viewAll')
+#4 C:\wamp\www\cskplay\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-10-16 13:36:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/js/alterSelectionPosition.js
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-16 14:47:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/js/flipGameImage.js
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
