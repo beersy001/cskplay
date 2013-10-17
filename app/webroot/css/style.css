@@ -120,7 +120,7 @@ img {
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 
-	background: url('/cskplay/app/webroot/img/blank_goal_dark.png');
+	background: url('/cskplay/app/webroot/img/blank_goal_white.png');
 	background-position: center 70%;
 	background-repeat: no-repeat; 
 	background-attachment: fixed;

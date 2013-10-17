@@ -6,8 +6,9 @@ class Celebrity extends AppModel{
 		$month = date('m/Y');
 
 		$results = $this->find($type = 'all', array('conditions' => array('Celebrity.month' => $month)));
-
-		return $results[0]['Celebrity'];
+		if(sizeof($results) > 0){
+			return $results[0]['Celebrity'];
+		}
 	}
 
 	public function getAllCelebrities(){

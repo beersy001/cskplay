@@ -70,7 +70,7 @@ class AppController extends Controller {
 			$this->set('facebookUserId', null);
 		}
 
-		$this->Auth->allow('display','view','displayWinners','thisMonthsCelebrity');
+		$this->Auth->allow('display','view','displayWinners','thisMonthsCelebrity', 'viewAll');
 		$this->set('authUser', $this->Auth->user());
 
 	}

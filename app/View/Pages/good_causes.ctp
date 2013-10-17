@@ -26,14 +26,6 @@ App::uses('Debugger', 'Utility');
 ?>
 
 
-<script type="text/javascript">
-	var el=document.getElementById("container");
-	el.style.background = "url('/cskplay/app/webroot/img/blank_goal_dark.png')";
-	el.style.backgroundPosition = "center 70%";
-	el.style.backgroundRepeat = "no-repeat"; 
-	el.style.backgroundAttachment = "fixed";
-	el.style.backgroundSize = "cover";
-</script>
 
 
 <div class="onerow">

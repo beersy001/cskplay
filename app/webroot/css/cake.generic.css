@@ -73,6 +73,8 @@ pre {
 	font-size: 16px;
 	line-height: 20px;
 	clear: both;
+	position: absolute;
+	z-index: 1000;
 }
 .cake-error > a {
 	text-shadow: none;
