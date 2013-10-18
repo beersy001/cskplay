@@ -4,8 +4,8 @@ function moveUserSelections() {
 	var defaultImage = document.getElementById('imageHidden');
 	var currentElement = document.getElementById('main_image');
 
-	var previousWidth = 4256;
-	var previousHeight = 2832;
+	var previousWidth = 594;
+	var previousHeight = 385;
 
 	var totalOffsetX = 0;
 	var totalOffsetY = 0;
@@ -15,7 +15,7 @@ function moveUserSelections() {
 	
 	var	width = 15;
 	var chrossHairOffset = width / 2;
-	var chrossHairOffset = 0;
+	//var chrossHairOffset = 0;
 
 	do {
 		totalOffsetX += currentElement.offsetLeft;

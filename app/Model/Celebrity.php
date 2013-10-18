@@ -11,7 +11,11 @@ class Celebrity extends AppModel{
 	}
 
 	public function getAllCelebrities(){
-		return $this->find($type = 'all');
+		$celebs = $this->find($type = 'all');
+
+
+
+		return $celebs;
 	}
 
 }

@@ -26,12 +26,12 @@ App::uses('Debugger', 'Utility');
 ?>
 
 <div class="onerow">
-	<div class="col6 alternate alternate_one">
+	<div class="col6">
 		<h1><?=$celebName?></h1>
-		<?= $this->Html->image( $celebImage, array('id'=>'celebPicture', 'class' => 'middle_image') ) ?>
+		<?= $this->Html->image( $celebImage, array('id'=>'celebPicture', 'class' => 'middle_image border') ) ?>
 	</div>
 
-	<div class="col6 last alternate alternate_one">
+	<div class="col6 last text_box border ">
 		<h2>This Months Celebrity</h2>
 		<p>
 			<?=$celebText?>

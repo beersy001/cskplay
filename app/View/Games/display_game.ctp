@@ -74,33 +74,29 @@ $this->Html->script( "toggleOverlays", array("inline"=>false));
 	});
 </script>
 
-<div class="onerow">
-	<div class="col3 text_box border">
-		<div class=" ">
-			<h1>Play Now</h1>
-			<p>
-				To play the game, 1st buy some game balls and then click on the image and 
-				choose where you think the ball should be. Then review your selection and click submit.
-			</p>
+<div class="onerow text_box page_container border">
+	<div class="col3">
+		
+		<h1>Play Now</h1>
+		<p>
+			To play the game, 1st buy some game balls and then click on the image and 
+			choose where you think the ball should be. Then review your selection and click submit.
+		</p>
+
+		<h2>Game Balls</h2>
+
+		<a id="buy_game_balls_link" href="#">Buy More Game Balls</a>
+
+		<div id="game_ball_bag" class="alternate alternate_two">
+			<p>Loading...</p>
 		</div>
-
-	
-
-		<div class="alternate alternate_one" >
-			<h2>Game Balls</h2>
-
-			<a id="buy_game_balls_link" href="#">Buy More Game Balls</a>
-
-			<div id="game_ball_bag" class="alternate alternate_two">
-				<p>Loading...</p>
-			</div>
-		</div>
-
-
-
 	</div>
 
-	<div class="col9 no_padding border last" id="game_image_container">
+
+
+
+
+	<div class="col9 last" id="game_image_container">
 		<?= $this->Html->image( 'gameImage1.jpg', array('class'=>'game_image no_padding no_margin', 'id'=>'game_image_main') ) ?>
 		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image  display_none', 'id'=>'game_image_alt') ) ?>
 		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image_inlay display_none', 'id'=>'game_image_main_inlay') ) ?>
@@ -111,6 +107,8 @@ $this->Html->script( "toggleOverlays", array("inline"=>false));
 				Front View
 			</span>
 		</div>
+
+
 
 		<!-- ==========================================================================-->
 		<!-- =		 Overlays 														   -->

@@ -1155,3 +1155,140 @@ Request URL: /cskplay/js/flipGameImage.js
 Stack Trace:
 #0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-10-18 09:51:04 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 13]
+2013-10-18 09:51:04 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';'
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 13, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 13, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-18 10:01:51 Error: Fatal Error (4): syntax error, unexpected '.' in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 11]
+2013-10-18 10:01:51 Error: [FatalErrorException] syntax error, unexpected '.'
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 11, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 11, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-18 10:25:23 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 13]
+2013-10-18 10:25:23 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';'
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 13, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 13, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-18 10:49:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/_headshot.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-18 10:49:55 Error: Fatal Error (1): Cannot use object of type MongoDate as array in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 10]
+2013-10-18 10:49:55 Error: [FatalErrorException] Cannot use object of type MongoDate as array
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-18 10:50:00 Error: Fatal Error (1): Cannot use object of type MongoDate as array in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 10]
+2013-10-18 10:50:00 Error: [FatalErrorException] Cannot use object of type MongoDate as array
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-18 10:52:29 Error: Fatal Error (1): Cannot use object of type MongoDate as array in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 10]
+2013-10-18 10:52:29 Error: [FatalErrorException] Cannot use object of type MongoDate as array
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-18 10:52:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/11_headshot.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-18 10:53:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/11_headshot.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-18 10:53:53 Error: Fatal Error (1): Cannot use object of type MongoDate as array in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 10]
+2013-10-18 10:53:53 Error: [FatalErrorException] Cannot use object of type MongoDate as array
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\csk...', 10, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-18 10:56:12 Error: Fatal Error (1): Call to a member function format() on a non-object in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 15]
+2013-10-18 10:56:12 Error: [FatalErrorException] Call to a member function format() on a non-object
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\csk...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\csk...', 15, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\csk...', 15, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-18 11:04:28 Error: Fatal Error (64): Cannot use [] for reading in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 7]
+2013-10-18 11:04:28 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', 'C:\wamp\www\csk...', 7)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', 'C:\wamp\www\csk...', 7, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', 'C:\wamp\www\csk...', 7, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-18 11:09:35 Error: Fatal Error (1): Call to a member function format() on a non-object in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 12]
+2013-10-18 11:09:35 Error: [FatalErrorException] Call to a member function format() on a non-object
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\csk...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\csk...', 12, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\csk...', 12, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-18 14:31:48 Error: Fatal Error (4): syntax error, unexpected 'fade_bottom' (T_STRING), expecting ',' or ';' in [C:\wamp\www\cskplay\app\View\Celebrities\view_all.ctp, line 35]
+2013-10-18 14:31:48 Error: [FatalErrorException] syntax error, unexpected 'fade_bottom' (T_STRING), expecting ',' or ';'
+Request URL: /cskplay/celebrities/viewAll
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 35, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 35, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
