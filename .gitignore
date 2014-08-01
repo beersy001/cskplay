@@ -1,0 +1,4 @@
+# Files for git to ignore
+
+# CakePHP tmp files
+app/tmp/cache/
