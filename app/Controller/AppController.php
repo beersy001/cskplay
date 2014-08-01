@@ -34,13 +34,13 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public $helpers = array('Html','Js'); 
+	public $helpers = array('Html','Js','Session'); 
 	
 	public $components = array(
 		//'DebugKit.Toolbar',
 		'Session',
 		'Auth' => array(
-			'loginRedirect' => array('controller' => 'pages', 'action' => 'home'),
+			'loginRedirect' => array('controller' => 'games', 'action' => 'displayGame'),
 			'logoutRedirect' => array('controller' => 'pages', 'action' => 'home'),
 			'authError' => "Access Denied",
 			'authorize' => array('controller')
@@ -50,12 +50,6 @@ class AppController extends Controller {
 
 
 	public function beforeFilter(){
-
-		$this->set('backgroundImage', '/cskplay/app/webroot/img/blank_goal_dark.png');
-		$this->set('backgroundPosition', 'center 70%');
-		$this->set('backgroundRepeat', 'no-repeat');
-		$this->set('backgroundSize', 'cover');
-		$this->set('backgroundAttachment', 'scroll');
 
 		App::import('Vendor', 'facebook-php-sdk-master/src/facebook');
 		$this->Facebook = new Facebook(array(
@@ -70,8 +64,18 @@ class AppController extends Controller {
 			$this->set('facebookUserId', null);
 		}
 
-		$this->Auth->allow('display','view','displayWinners','thisMonthsCelebrity');
+		$this->Auth->allow('display','view','displayWinners','thisMonthsCelebrity','viewAll');
 		$this->set('authUser', $this->Auth->user());
+		
+		//if(!$this->Session->check('celebs')){
+			$this->loadModel('Celebrity');
+			$this->loadModel('Charity');
+			$this->loadModel('Partner');
+			$this->Session->write('celebs',$this->Celebrity->getAllCelebritiesNames());
+			$this->Session->write('cskCharities',$this->Charity->getCharityNamesByType('csk'));
+			$this->Session->write('celebCharities',$this->Charity->getCharityNamesByType('celeb'));
+			$this->Session->write('partners',$this->Partner->getPartnerNames());
+		//}
 
 	}
 
@@ -91,6 +95,6 @@ class AppController extends Controller {
 		$this->set('fb_logout_url', $this->Facebook->getLogoutUrl(array('next' => Router::url(array('controller' => 'users', 'action' => 'logout'), true))));
 		$this->set('user', $this->Auth->user());
 
-
+		//print_r($this->Session->read());
 	}
 }

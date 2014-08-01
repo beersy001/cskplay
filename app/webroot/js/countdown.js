@@ -1,18 +1,19 @@
-function showRemaining() {
+function countdown() {
 	var now = new Date();
-
 	var m = now.getMonth();
+	var y = now.getFullYear();
 	//getMonth() returns 0-11 so we need to add 1 to bring it up to the current month
 	m++;
 
-
 	if (m == 12) {
+		//rollover for new year
 		m = 1;
+		y++;
 	}else{
 		m++;
 	}
 
-	var end = new Date(m + '/01/2013 12:00 AM');
+	var end = new Date(m + '/01/' + y + ' 12:00 AM');
 	var distance = end - now;
 	var _second = 1000;
 	var _minute = _second * 60;

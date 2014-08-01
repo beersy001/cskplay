@@ -8,7 +8,7 @@ class DATABASE_CONFIG {
     public $default = array(
         'datasource' => 'Mongodb.MongodbSource',
         'host' => 'localhost',
-        'database' => 'cskplay',
+        'database' => 'cskplay_dev',
         'port' => 27017,
         'prefix' => '',
         'persistent' => 'true',

@@ -1,0 +1,1 @@
+<?= $this->element('game/game_sidebar'); ?>

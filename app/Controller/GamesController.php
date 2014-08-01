@@ -1,99 +1,192 @@
 <?php
-/**
- * Static content controller.
- *
- * This file will render views from views/games/
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.Controller
- * @since         CakePHP(tm) v 0.2.9
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-App::uses('AppController', 'Controller');
-
-
-/**
- * Static content controller
- *
- * Override this controller by placing a copy in controllers directory of an application
- *
- * @package       app.Controller
- */
 class GamesController extends AppController {
+
+	public $components = array(
+		'Session',
+		'RequestHandler',
+		'Auth' => array(
+			'loginRedirect' => array('controller' => 'pages', 'action' => 'home'),
+			'logoutRedirect' => array('controller' => 'pages', 'action' => 'home'),
+			'authError' => "Access Denied",
+			'authorize' => array('controller')
+		)
+	);
+
+	public function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->allow('displayDemo', 'displayGame', 'fetchPractice', 'fetchLoupe', 'confirmation', 'basket');
+	}
 
 	public function displayGame() {
 
-		$this->set('title_for_page', 'Make Your Choice!');
-		$this->set('pageId', 'displayGame');
+		echo '<script>var date = "' . date('Ym') . '"</script>';
+		
 		$this->loadModel('User');
+		$this->loadModel('GameBall');
 
 		$username = $this->Session->read('Auth.User.username');
+		$user = $this->User->read(null, $username);
 
-		////////////////////////////////////////////////////////////////////////////////////////////////
-		if($this->RequestHandler->isAjax()){
+		$month = date('Ym');
 
-			if($this->Session->read('Auth.User.attemptsLeft') != 0){
+		$this->set('month', $month);
+		$this->set('realMonth', strtolower(DateTime::createFromFormat('!Ym', $month)->format('F')));
 
-				if(isset($this->data) && !empty($this->data)){
+		//if($user['User']['completeProfile'] == 1){
 
-					$coords = $this->data['Game'];
+		$numberOfBallsRemaining = $this->User->getNumberOfAttemptsRemaining($username);
+		$results = $this->GameBall->getUsersResults($username,date('Ym'));
+		$teams = $this->User->getTeams($username);
+		$practiceGames = $this->Game->getPracticeGames();
+		$competition = $this->Game->getCurrentCompetition();
+
+		$this->set('results', $results);
+		$this->set('ballsRemaining', $numberOfBallsRemaining);
+		$this->set('teams', $teams);
+		$this->set('title_for_page', 'play now');
+		$this->set('pageId', 'displayGame');
+		$this->set('month', date('Ym'));
+		$this->set('typeOfGame', 'competition');
+		$this->set('practiceGames',$practiceGames);
+		$this->set('competition',$competition);
+
+
+		//	if($this->request->is('ajax')){
+		//		$this->redirect(array('action' => 'fetchGameSidebar'));
+		//	}
+	//	}
+	//	}else{
+	//		$this->redirect(array('controller'=>'users', 'action' => 'addDetails'));
+	//	}
+	}
+
+	public function displayDemo() {
+
+		echo '<script>var date = "' . date('Ym') . '"</script>';
+		
+		$this->loadModel('User');
+		$this->loadModel('GameBall');
+
+		$user = $this->User->read(null, 'demo');
+
+		$numberOfBallsRemaining = 5;
+		$results = $this->GameBall->getUsersResults('demo',date('Ym'));
+		$teams = $this->User->getTeams('demo');
+		$month = date('Ym');
+	
+		$this->set('results', $results);
+		$this->set('ballsRemaining', $numberOfBallsRemaining);
+		$this->set('teams', $teams);
+		$this->set('title_for_page', 'demo');
+		$this->set('pageId', 'displayGame');
+		$this->set('month', $month);
+		$this->set('realMonth', strtolower(DateTime::createFromFormat('!Ym', $month)->format('F Y')));
+	}
+
+	public function basket(){
+
+		if ($this->request->is('post')) {
+			if ( isset( $this->request->data['Selection'] ) ) {
 				
-					$data = array(
-						'username' => $username,
-						'x' => $coords['x'],
-						'y' => $coords['y']
-					);
-				
-					$this->Game->save($data);
+				$data = $this->request->data;
 
-					$user = $this->User->read(null, $username);
-					$gameBalls = $user['User']['attemptsLeft'];
-					$this->User->saveField('attemptsLeft', $gameBalls - 1);
-
-					$this->Session->write('Auth', $this->User->read(null, $username));
-				}
+				$this->Session->write('selections', $data['Selection']);
 			}
 		}
-		////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		if(!$this->Auth->user()){
+			
+			$this->Session->write('basketRedirect', true);
+			$this->redirect(array('controller' => 'Users', 'action' => 'add'));
 
-
-
-		$numberOfBallsPlayed = $this->Game->getNumberOfBallsPlayed($username);
-		$numberOfBallsRemaining = $this->User->getNumberOfAttemptsRemaining($username);
-
-		$this->set('ballsRemaining', $numberOfBallsRemaining);
-		$this->set('ballsPlayed', $numberOfBallsPlayed);
-
-		if($this->RequestHandler->isAjax()){
-			$this->render('gameBalls','ajax');
 		}
 	}
 
-	public function displayOverlay(){
+	public function confirmation(){
+
+		$this->loadModel('GameBall');
+
+		$insertedIds = $this->Session->read('insertedIds');
+
+		$insertedGameBalls = array();
+
+		foreach ($insertedIds as $key => $id) {
+			$gameball = $this->GameBall->find('first', array(
+				'conditions' => array( "_id" => $id )
+			));
+
+			array_push($insertedGameBalls, $gameball);
+		}
+
+		$this->set('insertedGameBalls', $insertedGameBalls);
+		
+	}
+
+	public function fetchGameSidebar(){
+
 		$this->loadModel('User');
+		$this->loadModel('GameBall');
 
 		$username = $this->Session->read('Auth.User.username');
+		$user = $this->User->read(null, $username);
 
-		$numberOfBallsPlayed = $this->Game->getNumberOfBallsPlayed($username);
 		$numberOfBallsRemaining = $this->User->getNumberOfAttemptsRemaining($username);
+		$results = $this->GameBall->getUsersResults($username,date('Ym'));
+		$teams = $this->User->getTeams($username);
+		$practiceGames = $this->Game->getPracticeGames();
+		$competition = $this->Game->getCurrentCompetition();
 
+		$this->set('month', date('Ym'));
+		$this->set('results', $results);
 		$this->set('ballsRemaining', $numberOfBallsRemaining);
-		$this->set('ballsPlayed', $numberOfBallsPlayed);
+		$this->set('teams', $teams);
+		$this->set('typeOfGame', 'competition');
+		$this->set('practiceGames',$practiceGames);
+		$this->set('competition',$competition);
+	}
 
-		if($this->RequestHandler->isAjax()){
-			$this->render('displayOverlay','ajax');
+	public function fetchCompetition(){
+		if($this->request->is('ajax')){
+			$this->set('month', date('Ym'));
+			$this->set('typeOfGame', 'competition');
+			$this->render('/Elements/game/game_images');
 		}
 	}
-	
 
+	public function fetchPractice(){
+		if($this->request->is('ajax')){
+
+			$month = $this->request->params['named']['month'];
+
+			$this->set('month', $month);
+			$this->set('typeOfGame', 'practice');
+			$this->render('/Elements/game/game_images');
+		}
+	}
+
+	public function fetchLoupe(){
+		if($this->request->is('ajax')){
+
+			if(isset($this->request->params['named']['month'])){
+				$month = $this->request->params['named']['month'];
+			}else{
+				$month = date('Ym');
+			}
+
+			$this->set('month', $month);
+			$this->set('typeOfGame', 'practice');
+			$this->render('/Elements/game/game_loupe');
+		}
+	}
+
+
+	public function addGame(){
+		$this->set('title_for_page', 'new game');
+		$this->set('pageId', 'newGame');
+
+		if($this->request->is('post')) {
+			$this->Game->save($this->request->data);
+		}
+
+	}
 }

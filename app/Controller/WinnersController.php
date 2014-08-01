@@ -1,24 +1,4 @@
 <?php
-/**
- * Static content controller.
- *
- * This file will render views from views/winners/
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.Controller
- * @since         CakePHP(tm) v 0.2.9
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
 App::uses('AppController', 'Controller');
 
 /**
@@ -37,20 +17,126 @@ class WinnersController extends AppController {
 	 */
 	public $name = 'Winners';
 
-	/**
-	 * This controller does not use a model
-	 *
-	 * @var array
-	 */
-	public $uses = array();
 
-	/**
-	 * Displays a view
-	 *
-	 * @param mixed What page to display
-	 * @return void
-	 */
-	public function displayWinners() {
+
+	/********************************************************
+	 *		Winning Spot									*
+	 ********************************************************/
+	public function winningSpot(){
+		$this->set('title_for_page', 'Winning Spot');
+		$this->set('pageId', 'winningSpot');
+
+		$this->loadModel('User');
+		$this->loadModel('Rank');
+		$this->loadModel('Game');
+		$this->loadModel('GameBall');
+
+
+		if($this->request->is('post')) {	
+
+			$data = $this->request->data;
+			$month = $this->request->data['Winner']['month'];
+			$data['Winner']['_id'] = $month;
+
+			//debug($this->request->data);
+			//debug($month);
+
+			$gameballs = array();
+			$userSortedGameballs = array();
+
+			foreach ($this->GameBall->getAllGameBallsByMonth($month) as $key => $gameBall) {
+
+				//print_r($gameBall);
+				
+				$userSortedGameballs[$gameBall['GameBall']['username']][$gameBall['GameBall']['id']] = $gameBall;
+
+				$updatedGameBall = $this->calculateDistances($gameBall, $data['Winner']['xPos'], $data['Winner']['yPos'], $month);
+				
+				array_push($gameballs, $updatedGameBall);					
+			}
+
+			foreach ($userSortedGameballs as $username => $usersGameballs) {
+
+				foreach ($usersGameballs as $gameballId => $gameball) {
+
+				}
+
+			}
+
+			$this->GameBall->saveMany($gameballs);
+
+			$this->Game->endGame($month,$data['Winner']['xPos'],$data['Winner']['yPos']);
+
+			//$this->redirect(array('controller'=>'Winners', 'action' => 'viewWinners'));
+
+		}else{
+			if(isset($this->request->params['named']['month'])){
+				echo '<script>var date = "' . $this->request->params['named']['month'] . '"</script>';
+				$this->set('month',$this->request->params['named']['month']);
+				$this->set('typeOfGame','competition');
+			}
+		}
+
+
+
+
+
+	}
+
+	private function calculateDistances($gameBall,$x,$y,$month){
+
+		$distanceX = abs($x - $gameBall['GameBall']['x']);
+		$distanceY = abs($y - $gameBall['GameBall']['y']);
+
+		$sqrX = ($distanceX > 0) ? pow($distanceX, 2) : 0;
+		$sqrY = ($distanceY > 0) ? pow($distanceY, 2) : 0;
+
+		$distanceFromWinningSpot = round(sqrt( $sqrX + $sqrY),1);
+
+		$gameBall['GameBall']['distanceFromWinningSpot'] = $distanceFromWinningSpot;
+		$gameBall['GameBall']['winningX'] = $x;
+		$gameBall['GameBall']['winningY'] = $y;
+		
+		return $gameBall;
+	}
+
+
+	private function generateRanks($month, $user){
+
+		$iteration = 0;
+		$selections = array();
+
+		foreach ($user['User']['games'][$month]['choices'] as $id => $selection) {
+			$iteration++;
+
+			$selection['_id'] = $user['User']['id'] . '_' . $iteration . '_' . $month;
+			$selection['month'] = $month;
+			$selection['username'] = $user['User']['id'];
+
+			array_push($selections, $selection);
+		}
+
+		$this->Rank->saveMany($selections);
+
+		return $selections;
+	}
+
+	/********************************************************
+	 *		Find a Winner									*
+	 ********************************************************/
+	private function findWinner($month){
+
+		$this->loadModel('Rank');
+
+		$results = $this->Rank->getTopWinners($month);
+		
+		return $results;
+	}
+
+	/********************************************************
+	 *		Find a Winner									*
+	 ********************************************************/
+	public function viewWinners(){
 
 	}
 }

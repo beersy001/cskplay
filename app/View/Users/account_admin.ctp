@@ -1,132 +1,253 @@
 <?php
-/**
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Pages
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-if (!Configure::read('debug')){
-	throw new NotFoundException();
-}
-
 App::uses('Debugger', 'Utility');
 
-// cakePHP html 'helper' to dynamicaly create a <script> tag
-// loads gamePlay.js
-
-$this->set('pageId', 'accountAdmin');
-
 $this->Html->script( "moveUserSelections", array("inline"=>false));
+$this->Html->script( "gamePlay", array("inline"=>false));
 
-foreach ($results as $element) {
-	$xPos = $element['Game']['x'];
-	$yPos = $element['Game']['y'];
-	$id = $element['Game']['id'];
-
-	echo $this->Html->image( 'logo.png', array('class'=>'crosshair','id' => $id . 'unselected', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px" ) );
-	echo $this->Html->image( 'logo_inverse.png', array('class'=>'crosshair','id' => $id . 'selected', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px; display: none" ) );
-}
-
+$endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? true : false ;
 ?>
 
 <script>
-	$(function(){
-		$("a#toggle").click(function(){
-			closeIFrame();
-		}); 
+	$(document).ready(function() {
+		var originalFontSize = 16;
+		var sectionWidth = $('.adaptive_text').width();
+
+		$('.adaptive_text a').each(function(){
+			var spanWidth = $(this).width();
+			var newFontSize = (sectionWidth/spanWidth) * originalFontSize;
+			$(this).css({"font-size" : newFontSize, "line-height" : newFontSize/1.2 + "px"});
+		});
 	});
+</script>
 
+<script>
+	$(document).ready(function() {
 
-	var closeIFrame = function(){
-		if ($("#sidebar").css('display') == 'none'){
-			$("#sidebar").show('slide',{direction:'left'},800);
-		} else{
-			$("#sidebar").hide('slide',{direction:'left'},100);
-			location.reload();
-		}
-	};
+		$("#edit_details_button").click( function(event) {		
+			$(".full_overlay").css("left","0px");
+		});
 
-
-	function changeSelectionIcon(elem){
-		var rawId = elem.id.substring(elem.id.length - 4, 0);
-		document.getElementById(rawId + 'unselected').style.display = 'none';
-		document.getElementById(rawId + 'selected').style.display = 'block';
-		document.getElementById(rawId + 'selected').style.zIndex = '20';
-	}
-
-	function changeSelectionIconBack(elem){
-		var rawId = elem.id.substring(elem.id.length - 4, 0);
-		document.getElementById(rawId + 'unselected').style.display = 'block';
-		document.getElementById(rawId + 'selected').style.display = 'none';
-		document.getElementById(rawId + 'selected').style.zIndex = '10';
-	}
-
+		$("#cancel_edit_details_button").click( function(event) {	
+			$(".full_overlay").css("left","-9999px");
+		});
+	});
 </script>
 
 
+<div class="full_overlay" id="edit_user_overlay">
+	<div id="edit_user_container">
+		<?= $this->Html->image( 'quickLinks/pencil_white.png', array('class'=>'user_title_image', 'align'=>'left') ) ?>
+		<p id="cancel_edit_details_button" class="mock_link">back to my account</a>
+		<h2 class="large_indent border_bottom margin_bottom">edit your details</h2>
+		<div class="large_indent form_container">
+			<?php
+				echo $this->Form->create('User', array(
+					'controller'=>'Users',
+					'action' => 'edit',
+					'inputDefaults' => array(
+						'label' => false,
+						'div' => false
+						)
+					));
 
-<iframe id="sidebar" src="purchaseGameBalls">
-</iframe>
+				echo $this->Form->input('id', array(
+					'type' => 'hidden',
+					'value' => AuthComponent::user('id')
+				));
 
-<div class="onerow">
-	<div class="col5">
+				echo '<div class="input_row">';
+				echo $this->Form->label('User.firstName', 'first name',array('class' => 'clear'));
+				echo $this->Form->label('User.surname', 'surname');
+				echo $this->Form->input('firstName',array('class' => 'clear small_input', 'onChange'=>'validateFirstName();'));
+				echo $this->Form->input('surname',array('class' => 'small_input'));
+				echo '<div id="check_name" class="input_row_validaion tiny_text"></div>';
 
-		<div class="alternate alternate_one">
-			<h2>My Details</h2>
-			Username: <?= $this->Session->read('Auth.User.username'); ?> <br>
-			Full Name: <?= $this->Session->read('Auth.User.fullName'); ?> <br>
-			Email Address: <?= $this->Session->read('Auth.User.email'); ?>
+				echo '</div>';
+
+				echo '<div class="input_row">';
+				echo $this->Form->label('User.emailAddress', 'email address');
+				echo $this->Form->input('emailAddress',array('class' => 'clear medium_input'));
+				echo '</div>';
+
+				echo '<div class="input_row">';
+				echo $this->Form->label('User.phoneNumberOne', '1st contact number',array('class' => 'clear'));
+				echo $this->Form->label('User.phoneNumberTwo', '2nd contact number');
+				echo $this->Form->input('phoneNumberOne',array('class' => 'clear small_input'));
+				echo $this->Form->input('phoneNumberTwo',array('class' => 'small_input'));
+				echo '</div>';
+
+				echo $this->Form->end('submit');
+			?>
 		</div>
-
-		<div class="alternate alternate_two">
-			<h2>Game Details</h2>
-			Attempts Made: <?= sizeof($results); ?> <br>
-			Attempts Left: <?= $currentUser['User']['attemptsLeft'] ?> <br>
-			<a href="#" id="toggle">Buy More Game Balls</a> <br>
-			<?= $this->Html->link('Play Now',array('controller' => 'games', 'action' => 'displayGame')) ?>
-
-
-	<?php
-		$count = 1;
-
-		foreach ($results as $element) {
-		$xPos = $element['Game']['x'];
-		$yPos = $element['Game']['y'];
-		$id = $element['Game']['id'];
-	?>
-		<div class="game_ball avaliable" id="<?= $id . 'icon' ?>" onmouseover="changeSelectionIcon(this)" onmouseout="changeSelectionIconBack(this)">
-			<span><?=$count?> | </span>
-			<?= $this->Html->image( 'logo_32_32.png', array('class'=>'game_ball_image', 'id' => '$id' . 'bagIcon') ) ?>
-			<span>Game Ball | (<?= $xPos . " , " . $yPos ?>)</span>
-		</div>
-	<?php
-		$count++;
-		}
-	?>
-
-		</div>
-
-	</div>
-
-	<div class="col7 last">
-
-		<?= $this->Html->image( 'gameImage1.jpg', array('class'=>'game_image', 'id'=>'main_image') ) ?>
 
 	</div>
 </div>
 
+<div class="grid" id="main_grid">
 
-	
-<?= $this->Html->image( 'gameImage1.jpg', array('id'=>'imageHidden','style'=>'display: none; position: absolute')) ?>
+	<div class="onerow background_container" id="my_account_container">
+
+		<div class="col6">
+			<p id="edit_details_button" class="mock_link tiny_text">edit</p>
+			<?= $this->Html->image( 'user_white.png', array('class'=>'user_title_image', 'align'=>'left') ) ?>
+			<h2 class="large_indent">my details</h2>
+			<div class="large_indent text_info">
+				<?php
+					$completeProfile = $this->Session->read('Auth.User.completeProfile');
+					$username = $this->Session->read('Auth.User.username');
+					$firstName = $this->Session->read('Auth.User.firstName');
+					$surname = $this->Session->read('Auth.User.surname');
+					$emailAddress = $this->Session->read('Auth.User.emailAddress');
+					$phoneNumberOne = $this->Session->read('Auth.User.phoneNumberOne');
+					$phoneNumberTwo = $this->Session->read('Auth.User.phoneNumberTwo');
+					$region = $this->Session->read('Auth.User.region');
+					$dateOfBirth = $this->Session->read('Auth.User.dateOfBirth');
+
+					if(isset($username)){
+						echo '<p>username <span class="large_text">' . $username . '</span></p>';
+					}
+
+					if(isset($firstName)){
+						echo '<p>name <span class="large_text">' . $firstName . ' ' . $surname . '</span></p>';
+					}
+
+					if(isset($emailAddress)){
+						echo '<p>email <span class="large_text">' . $emailAddress . '</span></p>';
+					}
+
+					if(isset($dateOfBirth)){
+						echo '<p>date of birth <span class="large_text">' . $dateOfBirth . '</span></p>';
+					}
+
+					if(isset($phoneNumberOne)){
+						echo '<p>phone number <span class="large_text">' . $phoneNumberOne . '</span></p>';
+					}
+
+					if(!empty($phoneNumberTwo)){
+						echo '<p>phone number <span class="large_text">' . $phoneNumberTwo . '</span></p>';
+					}
+
+					if(isset($region)){
+						echo '<p>region <span class="large_text">' . $region . '</span></p>';
+					}
+
+					echo '<p>gameballs remaining <span class="large_text">'. $currentUser['User']['gameBallsLeft'] .'</span></p>';
+
+					if(!$completeProfile){
+					}
+				?>
+				<?php echo $this->Form->create('User'); ?>
+
+			</div>
+		</div>
+
+		<div class="col6 last">
+			<?= $this->Html->image( 'user_white.png', array('class'=>'user_title_image', 'align'=>'left') ) ?>
+			<h2 class="large_indent">purchase gameballs</h2>
+			<div class="large_indent">
+				<?= $this->element('paypal'); ?>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="onerow background_container <?php if (sizeof($distinctMonths) <= 0) { echo 'margin_bottom'; } ?>">
+
+		<div class="col4">
+			<?= $this->Html->image( 'team_white.png', array('class'=>'team_title_image', 'align'=>'left') ) ?>
+			<h2 class="large_indent">create a team</h2>
+			<div class="large_indent form_container">
+				<?php
+					echo $this->Form->create('Team', array(
+						'controller'=>'Teams',
+						'action' => 'createTeam',
+						'inputDefaults' => array(
+							'label' => false,
+							'div' => false
+							)
+						));
+					echo '<div class="input_row">';
+					echo $this->Form->label('Team.name', 'team name',array('class' => 'tiny_text'));
+					echo $this->Form->input('Team.name',array('class' => 'wide_input'));
+					echo '</div>';
+					echo $this->Form->end('submit');
+				?>
+			</div>
+		</div>	
+
+		<div class="col4">
+			<?= $this->Html->image( 'team_white.png', array('class'=>'title_image team_title_image', 'align'=>'left') ) ?>
+			<h2 class="large_indent">join a team</h2>
+			<div class="large_indent form_container">
+				<?php echo $this->Session->flash('joinTeam'); ?>
+
+				<?php
+					echo $this->Form->create('User', array(
+						'controller'=>'Users',
+						'action' => 'joinTeam',
+						'inputDefaults' => array(
+							'label' => false,
+							'div' => false
+							)
+						));
+					echo '<div class="input_row">';
+					echo $this->Form->label('Team.name', 'team name',array('class' => 'clear tiny_text'));
+					echo $this->Form->input('Team.name',array('class' => 'wide_input clear'));
+					echo '</div>';
+					echo '<div class="input_row">';
+					echo $this->Form->label('Team.pinNumber', 'team pin number',array('class' => 'tiny_text'));
+					echo $this->Form->input('Team.pinNumber',array('class' => 'wide_input', 'type' => 'number'));
+					echo '</div>';
+					echo $this->Form->end('submit');
+				?>
+			</div>
+		</div>
+			
+		<div class="col4 last">
+			<?= $this->Html->image( 'team_white.png', array('class'=>'title_image team_title_image', 'align'=>'left') ) ?>
+			<h2 class="large_indent">my teams</h2>	
+			<div class="large_indent">
+				<?php
+				if(isset($currentUser['User']['teams'])){
+					foreach ($currentUser['User']['teams'] as $teamName => $teamDetails) {
+
+						echo '<p>';
+						echo $this->Html->link($teamName,array('controller'=>'teams', 'action'=>'viewTeam', 'id'=>$teamDetails['id']));
+						echo '</p>';
+						if(sizeof($currentUser['User']['teams']) > 1 ){	
+						}
+					}
+				}else{
+					echo '<p class="tiny_text">you are not currently in a team. <a href="#teamName">create</a> or <a href="#joinTeamName">join</a> a team</p>';
+				}
+				?>
+			</div>
+		</div>
+	</div>
+
+	<?php
+	if (sizeof($distinctMonths) > 0) {
+	?>
+
+	<div class="onerow background_container margin_bottom">
+		<div class="col7">
+			<?= $this->Html->image( 'user_white.png', array('class'=>'title_image user_title_image', 'align'=>'left') ) ?>
+			<h2 class="large_indent">my game history</h2>
+			<div class="large_indent">
+				<?= $this->element('gameballs/months_played'); ?>
+			</div>
+		</div>
+
+		<div class="col5 last">
+			<div class="adaptive_text">
+
+				<?=$this->Html->link('play',array('controller'=>'games', 'action'=>'displayGame'), array('class'=>'no_decoration'))?>
+			</div>
+		</div>
+	</div>
+	<?php
+	}
+	?>
+</div>
+
+<?= $this->element('quick_links'); ?>

@@ -1,39 +1,61 @@
-<?php $this->Html->script( "moveHomeButtons", array("inline"=>false));?>
-<?php $this->Html->script( "swapGameImage", array("inline"=>false));?>
+<?php
+	echo '<script>var date = "' . date('Ym') . '"</script>';
+	$this->Html->script( "slideShow", array("inline"=>false));
+?>
+<div class="grid" id="main_grid">
+	<div class="onerow background_container no_padding overflow_hidden">
+		<div class="col5" id="login_box_page">
 
+			<div class="col6 right_align">
+				
+				<h1 class="dark_background">login</h1>
+				<p class="right_align" >or <?= $this->Html->link('join',array('controller' => 'users', 'action' => 'add')); ?><p>
+				<?php echo $this->Session->flash(); ?>
+				<br>
+				<?= $this->Html->image( 'facebook_login_image.png', array('id'=>'facebook_button', 'class'=>'float_right', 'url' => $fb_login_url) );?>
+			</div>
+			<div class="col6 last form_container" id="login_page_form">
 
-<div class="onerow">
-	<div class="col5 alternate_one" id="login_box_page">
+				<?php
+					echo $this->Form->create('User', array('controller'=>'Users', 'action' => 'login'));
+					echo '<div class="input_row">';
 
-		<div class="col6">
-			<h1 class="right_align">Login</h1>
-			<p class="right_align">or <?= $this->Html->link('join',array('controller' => 'users', 'action' => 'add')); ?><p>
-
-			<br>
-			<?= $this->Html->image( 'facebook_login_image.png', array('id'=>'facebook_login_button_page', 'class'=>'right', 'url' => $fb_login_url) );?>
+					echo $this->Form->input('username',array(
+						'class' => 'clear wide_input',
+						'label' => array(
+							'text' => 'username'
+						)
+					));
+					echo '</div>';
+					echo '<div class="input_row">';
+					echo $this->Form->input('password',array(
+						'class' => 'clear wide_input',
+						'label' => array(
+							'text' => 'password'
+						)
+					));
+					echo '</div>';
+					echo $this->Form->end('submit');
+				?>
+				
+			</div>
 		</div>
-		<div class="col6 last" id="login_page_form">
-			<?= $this->form->create(); ?>
-			<?= $this->form->input('username'); ?>
-			<?= $this->form->input('password'); ?>
-			<?= $this->form->end('login'); ?>
-			<?= $this->Html->link('forgot password',array('controller' => 'users', 'action' => 'forgotPassword'), array('id' => 'forgot_password_link')); ?>
+		<div class="col7 last no_padding no_margin float_right">
+
+			<div id="slideshow">
+				<?= $this->Html->image( 'slideshow/image1.jpg', array('id'=>'slide1', 'class'=>'active') ) ?>
+				<?= $this->Html->image( 'slideshow/image2.jpg', array('id'=>'slide2') ) ?>
+				<?= $this->Html->image( 'slideshow/image3.jpg', array('id'=>'slide3') ) ?>
+				<?= $this->Html->image( 'slideshow/image4.jpg', array('id'=>'slide4') ) ?>
+				<?= $this->Html->image( 'slideshow/image5.jpg', array('id'=>'slide5') ) ?>
+			</div>
+		
+			<script>
+				$(function() {
+					setInterval( "slideSwitch('slideshow')", 3500 );
+				});
+			</script>
 		</div>
-	</div>
-
-	<div class="col7 no_padding border last" id="game_image_container">
-		<?= $this->Html->image( 'gameImage1.jpg', array('class'=>'game_image no_padding no_margin', 'id'=>'game_image_main') ) ?>
-		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image  display_none', 'id'=>'game_image_alt') ) ?>
-		<?= $this->Html->image( 'gameImage2.jpg', array('class'=>'game_image_inlay display_none', 'id'=>'game_image_main_inlay') ) ?>
-		<div class="game_image_info_bar">
-			<span id="game_image_tab" onmouseover="toggleInLayImageUp()" onmouseout="toggleInLayImageDown()">
-				Front View
-			</span>
-		</div>
-	</div>
-
-
-	<div id="home_buttons">
-		<?= $this->Html->image( 'view_demo_button.png', array('id'=>'view_demo_button', 'url' => array('controller' => 'pages', 'action' => 'viewDemo')) ) ?>
+		
 	</div>
 </div>

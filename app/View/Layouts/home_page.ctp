@@ -1,27 +1,8 @@
-<?php
-/**
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 		<link href='http://fonts.googleapis.com/css?family=Chivo:400,900' rel='stylesheet' type='text/css'>
 		<?php
@@ -32,30 +13,32 @@
 			echo $this->Html->css('style');
 			echo $this->Html->script('jquery');
 			echo $this->Html->script('countdown');
+			echo $this->Html->script('changeActiveMenu');
 			echo $this->Html->script('page');
 			echo $this->Html->script('facebook');
+			echo $this->Html->script('cameraFlashes');
+			echo $this->Html->script('scrollingAnimation');
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 			echo $this->Js->writeBuffer(array('cache'=>FALSE));
-			echo $scripts_for_layout;
 		?>
 
 		<title><?= $pageId ?></title>
 		
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-
-
 	</head>
 	<body>
 		<div id="fb-root"></div>
 		
 		<?= $this->element('header'); ?>
 		
-		<div id="background">
+		<section class="home-bg-wrapper">
+			<div class="home-bg-wrapper__image-bg">
+				<div class="image-bg__transparent-overlay"></div>
+			</div>
 
-			<div id="starbursts">
+			<div class="home-bg-wrapper__starbursts">
 				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash1') ) ?>
 				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash2') ) ?>
 				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash3') ) ?>
@@ -80,78 +63,113 @@
 				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash22') ) ?>
 				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash23') ) ?>
 				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash24') ) ?>
-<!--
-				<p class="starbust_test" id='flash1'>1</p>
-				<p class="starbust_test" id='flash2'>2</p>
-				<p class="starbust_test" id='flash3'>3</p>
-				<p class="starbust_test" id='flash4'>4</p>
-				<p class="starbust_test" id='flash5'>5</p>
-				<p class="starbust_test" id='flash6'>6</p>
-				<p class="starbust_test" id='flash7'>7</p>
-				<p class="starbust_test" id='flash8'>8</p>
-				<p class="starbust_test" id='flash9'>9</p>
-				<p class="starbust_test" id='flash10'>10</p>
-				<p class="starbust_test" id='flash11'>11</p>
-				<p class="starbust_test" id='flash12'>12</p>
-				<p class="starbust_test" id='flash13'>13</p>
-				<p class="starbust_test" id='flash14'>14</p>
-				<p class="starbust_test" id='flash15'>15</p>
-				<p class="starbust_test" id='flash16'>16</p>
-				<p class="starbust_test" id='flash17'>17</p>
-				<p class="starbust_test" id='flash18'>18</p>
-				<p class="starbust_test" id='flash19'>19</p>
-				<p class="starbust_test" id='flash20'>20</p>
-				<p class="starbust_test" id='flash21'>21</p>
-				<p class="starbust_test" id='flash22'>22</p>
-				<p class="starbust_test" id='flash23'>23</p>
-				<p class="starbust_test" id='flash24'>24</p>
--->
 			</div>
 
-
-
-			<div id="home_buttons">
-				<button class="button large_button border" id="play_now_button">Play Now</button>
-				<button class="button large_button border" id="view_demo_button">View Demo</button>
+			<div class="home_button_container" id="play_button_container">
+				<?= $this->Html->link('play',array('controller' => 'games', 'action' => 'displayGame'),array( 'id' => 'play_button', 'class' => 'main_button')) ?>
 			</div>
 
-			<div id='countdown' class='border'>
+			<div id='countdown'>
 				<div class="countdown_duration_container">
 					<div class="countdown_digit" id="days_first"></div>
 					<div class="countdown_digit marg" id="days_second"></div>
-					<p class="digit_label" id="days_label">Days</p>
+					<p class="digit_label" id="days_label">days</p>
 				</div>
 
 				<div class="countdown_duration_container">
 					<div class="countdown_digit" id="hours_first"></div>
 					<div class="countdown_digit marg" id="hours_second"></div>
-					<p class="digit_label" id="hours_label">Hours</p>
+					<p class="digit_label" id="hours_label">hours</p>
 				</div>
 
 				<div class="countdown_duration_container">
 					<div class="countdown_digit" id="minutes_first"></div>
 					<div class="countdown_digit marg" id="minutes_second"></div>
-					<p class="digit_label" id="mins_label">Mins</p>
+					<p class="digit_label" id="mins_label">mins</p>
 				</div>
 
 				<div class="countdown_duration_container">
 					<div class="countdown_digit" id="seconds_first"></div>
 					<div class="countdown_digit" id="seconds_second"></div>
-					<p class="digit_label" id="secs_label">Secs</p>
+					<p class="digit_label" id="secs_label">secs</p>
 				</div>
 			</div>
 
+			<div id="countdown_text">
+				<?= $this->Html->link('until our next winners!',array('controller' => 'games', 'action' => 'displayGame'),array()) ?>
+			</div>
+		</section>
 
-		</div>
+		
+		<section class="info-wrapper">
 
-		<div id="home_container">
-			<div class="grid" id="main_grid">
-
-				<?php echo $this->Session->flash(); ?>
-				<?php echo $this->fetch('content'); ?>
-
+			<div class="info-wrapper__block animation-step" id="who-are-csk__step" data-animation-run="false">
+				<div class="col8 left animation-step__element">
+					<h1>Celebrity Spot Kick</h1>
+					<h2>Who are we and what do we stand for?</h2>
+					<p>We believe that every child in the country deserves the right to play a vast variety or sports.</p>
+					<p>Our sporting program is designed to provide the equipment and coaching needed for our youngstars to be successfull sports men and women.</p>
+					<?= $this->Html->link('find out more',array('controller' => 'pages', 'action' => 'csk'),array('class' => 'cta helper--fullwidth')) ?>
+				</div>
+				<div class="col4 right last animation-step__element">
+					<?= $this->Html->image( 'quickLinks/logo_white.png', array('url' => array('controller' => 'pages', 'action' => 'csk')) ) ?>
+				</div>
+				<div class="clear"></div>
 			</div>
 
+
+			<div class="info-wrapper__block animation-step" id="celebrities__step" data-animation-run="false">
+				<div class="col8 right last animation-step__element">
+					<h1>Our Celebrities</h1>
+					<h2>Who's been working with us?</h2>
+					<p>Checkout the celebrities that are supporting our cause. Each has participated in a number of sporting challenges</p>
+					<p>We have great people like James Corden working with us and supporting ur great cause.</p>
+					<?= $this->Html->link('find out more',array('controller' => 'celebrities', 'action' => 'viewAll'),array('class' => 'cta helper--fullwidth')) ?>
+				</div>
+				<div class="col4 left animation-step__element">
+					<?= $this->Html->image( 'quickLinks/celebs_white.png', array('url' => array('controller' => 'celebrities', 'action' => 'viewAll')) ) ?>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="info-wrapper__block animation-step" id="who-are-csk__step" data-animation-run="false">
+				<div class="col8 left animation-step__element">
+					<h1>Sporting Foundation</h1>
+					<h2>How do we help children through sports?</h2>
+					<p>We believe that every child in the country deserves the right to play a vast variety or sports.</p>
+					<p>Our sporting program is designed to provide the equipment and coaching needed for our youngstars to be successfull sports men and women.</p>
+					<?= $this->Html->link('find out more',array('controller' => 'game_balls', 'action' => 'checkResults'),array('class' => 'cta helper--fullwidth')) ?>
+				</div>
+				<div class="col4 right last animation-step__element">
+					<?= $this->Html->image( 'quickLinks/charity_white.png', array('url' => array('controller' => 'game_balls', 'action' => 'checkResults'))) ?>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+
+			<div class="info-wrapper__block animation-step" id="celebrities__step" data-animation-run="false">
+				
+				<div class="col8 right last animation-step__element">
+					<h1>Spot The Ball</h1>
+					<h2>Why do we use spot the ball?</h2>
+					<p>Spot the ball is an age old game that we can all relate to from our childhood.</p>
+					<p>It gives us the ability to raise money whilst giving the players a chance to win the jackpot!</p>
+					<?= $this->Html->link('find out more',array('controller' => 'game_balls', 'action' => 'checkResults'),array('class' => 'cta helper--fullwidth')) ?>
+				</div>
+				<div class="col4 left animation-step__element">
+					<?= $this->Html->image( 'quickLinks/results_white.png', array('url' => array('controller' => 'game_balls', 'action' => 'checkResults'))) ?>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		</section>
+		
+
+		<div id="home_container">
+			<div class="grid" id="home_grid">
+				<?php echo $this->Session->flash(); ?>
+				<?php echo $this->fetch('content'); ?>
+			</div>
 			<?= $this->element('footer'); ?>
 		</div>
 	</body>

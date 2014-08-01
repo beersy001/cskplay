@@ -9,8 +9,6 @@ function toggleSelectionWindow(){
 		$("#selection_overlay").show('slide',{direction:'up'},800);
 	} else{
 		$("#selection_overlay").hide('slide',{direction:'up'},200);
-		
-
 	}
 };
 
@@ -29,11 +27,6 @@ function toggleBuyGameBallsWindow(){
 function toggleSelectionSavedWindow(){
 	if ($("#selection_saved_overlay").css('display') == 'none'){
 		$("#selection_saved_overlay").show('slide',{direction:'up'},800);
-		window.setTimeout(function() {
-			toggleSelectionSavedWindow();
-		}, 3000);
-		
-		setTimeout("timeout()", 3000); 
 	} else{
 		$("#selection_saved_overlay").hide('slide',{direction:'up'},600);
 	}

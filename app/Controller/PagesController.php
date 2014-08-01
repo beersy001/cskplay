@@ -55,8 +55,12 @@ class PagesController extends AppController {
 		$title_for_layout = preg_replace('/(?<!^)([A-Z])/', ' \\1', $title_for_layout);
 
 
-		$this->set('title_for_page', $title_for_layout);
+		$this->set('title_for_page', strtolower($title_for_layout));
 		$this->set('pageId', $page);
+
+		if(strtolower($title_for_layout) == 'good causes'){
+			$this->set('title_for_page', 'this months charity');
+		}
 
 		if($title_for_layout == 'Home'){
 
