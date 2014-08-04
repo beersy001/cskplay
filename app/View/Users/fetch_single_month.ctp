@@ -8,9 +8,9 @@
 	$containsChoices = (sizeof($results)>0) ? true : false ;
 
 	?>
-	<div class="col3 clear">
+	<div class="col3 helper--clearfix">
 		<br>
-		<p class="clear">Game Balls played:
+		<p class="helper--clearfix">Game Balls played:
 			<span class="helper--highlight-text"><?=$numberOfBallsPlayed?></span>
 		</p>
 

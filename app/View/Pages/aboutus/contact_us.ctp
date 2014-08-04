@@ -46,19 +46,19 @@
 					
 					<div class="input_row">
 						<label id="ContactNameLabel" for="ContactName">name</label>
-						<input name="data[Contact][name]" maxlength="2000" type="text" id="ContactName" class="clear wide_input" onChange="validatename();">
+						<input name="data[Contact][name]" maxlength="2000" type="text" id="ContactName" class="helper--clearfix wide_input" onChange="validatename();">
 						<div id="check_name" class="tiny_text"></div>
 					</div>
 
 					<div class="input_row">
 						<label id="ContactEmailAddressLabel" for="ContactEmailAddress">email address</label>
-						<input name="data[Contact][emailAddress]" maxlength="2000" type="text" id="ContactEmailAddress" class="clear wide_input" onChange="validatename();">
+						<input name="data[Contact][emailAddress]" maxlength="2000" type="text" id="ContactEmailAddress" class="helper--clearfix wide_input" onChange="validatename();">
 						<div id="check_emailAddress" class="tiny_text"></div>
 					</div>
 
 					<div class="input_row">
 						<label id="ContactMessageLabel" for="ContactMessage">message</label>
-						<textarea name="data[Contact][message]" type="textarea" rows="10" id="ContactMessage" class="clear wide_input" onChange="validatename();"></textarea>
+						<textarea name="data[Contact][message]" type="textarea" rows="10" id="ContactMessage" class="helper--clearfix wide_input" onChange="validatename();"></textarea>
 						<div id="check_message" class="tiny_text"></div>
 					</div>
 

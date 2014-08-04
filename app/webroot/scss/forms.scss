@@ -1,0 +1,41 @@
+form{
+	label{
+		color: $paragraphTextColor;
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+
+		&:first-child{
+			margin-top: 0px;
+		}
+	}	
+
+	input, textarea{
+		margin: 5px 0 0 0;
+		padding: 10px 15px;
+		width: 100%;
+		clear: both;
+		display: block;
+		font-size: 16px;
+		background: rgba(70, 70, 70, 0.6);
+		border: none;
+	}	
+
+	input[type=submit] {
+		-webkit-appearance: none;
+		border: none;
+	}
+
+	ul{
+		li{
+			padding-top: 20px;
+		}
+
+	}
+}
+
+.fb-login-button{
+	width: 49%;
+	display: inline-block;
+	vertical-align: middle;
+}

@@ -114,7 +114,7 @@
 				<div class="col4 right last animation-step__element">
 					<?= $this->Html->image( 'quickLinks/logo_white.png', array('url' => array('controller' => 'pages', 'action' => 'csk')) ) ?>
 				</div>
-				<div class="clear"></div>
+				<div class="helper--clearfix"></div>
 			</div>
 
 
@@ -129,7 +129,7 @@
 				<div class="col4 left animation-step__element">
 					<?= $this->Html->image( 'quickLinks/celebs_white.png', array('url' => array('controller' => 'celebrities', 'action' => 'viewAll')) ) ?>
 				</div>
-				<div class="clear"></div>
+				<div class="helper--clearfix"></div>
 			</div>
 
 			<div class="info-wrapper__block animation-step" id="who-are-csk__step" data-animation-run="false">
@@ -143,7 +143,7 @@
 				<div class="col4 right last animation-step__element">
 					<?= $this->Html->image( 'quickLinks/charity_white.png', array('url' => array('controller' => 'game_balls', 'action' => 'checkResults'))) ?>
 				</div>
-				<div class="clear"></div>
+				<div class="helper--clearfix"></div>
 			</div>
 
 
@@ -159,7 +159,7 @@
 				<div class="col4 left animation-step__element">
 					<?= $this->Html->image( 'quickLinks/results_white.png', array('url' => array('controller' => 'game_balls', 'action' => 'checkResults'))) ?>
 				</div>
-				<div class="clear"></div>
+				<div class="helper--clearfix"></div>
 			</div>
 
 		</section>

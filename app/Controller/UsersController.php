@@ -38,7 +38,6 @@ class UsersController extends AppController {
 	 *		Login											*
 	 ********************************************************/
 	public function login(){
-		$this->set('title_for_page', 'login');
 		$this->set('pageId', 'login');
 		$this->set('month', date('Ym'));
 

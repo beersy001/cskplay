@@ -31,18 +31,18 @@ $this->Html->script( 'moveUserSelections', array('inline'=>false));
 						)
 					));
 				echo '<div class="input_row">';
-				echo $this->Form->label('Winner.xPos', 'x position',array('class' => 'clear'));
-				echo $this->Form->input('xPos',array('class' => 'clear', 'id'=>'x_input'));
+				echo $this->Form->label('Winner.xPos', 'x position',array('class' => 'helper--clearfix'));
+				echo $this->Form->input('xPos',array('class' => 'helper--clearfix', 'id'=>'x_input'));
 				echo '</div>';
 
 				echo '<div class="input_row">';
-				echo $this->Form->label('Winner.yPos', 'y position',array('class' => 'clear'));
-				echo $this->Form->input('yPos',array('class' => 'clear', 'id'=>'y_input'));
+				echo $this->Form->label('Winner.yPos', 'y position',array('class' => 'helper--clearfix'));
+				echo $this->Form->input('yPos',array('class' => 'helper--clearfix', 'id'=>'y_input'));
 				echo '</div>';
 
 				echo '<div class="input_row">';
-				echo $this->Form->label('Winner.month', 'month',array('class' => 'clear'));
-				echo $this->Form->input('month',array('class' => 'clear', 'id'=>'month_input'));
+				echo $this->Form->label('Winner.month', 'month',array('class' => 'helper--clearfix'));
+				echo $this->Form->input('month',array('class' => 'helper--clearfix', 'id'=>'month_input'));
 				echo '</div>';
 
 				echo $this->Form->end('submit');

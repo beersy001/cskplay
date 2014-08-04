@@ -21,16 +21,16 @@
 				echo $this->Form->label('videoLink1', 'video link 1');
 				echo $this->Form->label('videoLink2', 'video link 2');
 				echo $this->Form->label('videoLink3', 'video link 3');
-				echo $this->Form->input('name',array('class' => 'clear'));
+				echo $this->Form->input('name',array('class' => 'helper--clearfix'));
 				echo $this->Form->input('videoLink1');
 				echo $this->Form->input('videoLink2');
 				echo $this->Form->input('videoLink3');
 				echo '</div>';
 
 				echo '<div class="input_row">';
-				echo $this->Form->label('Partner.heading1', 'heading 1',array('class' => 'clear'));
+				echo $this->Form->label('Partner.heading1', 'heading 1',array('class' => 'helper--clearfix'));
 				echo $this->Form->label('Partner.textarea1', 'textarea 1');
-				echo $this->Form->input('heading1',array('class' => 'clear'));
+				echo $this->Form->input('heading1',array('class' => 'helper--clearfix'));
 				echo $this->Form->input('textarea1',array('type' => 'textarea', 'rows'=>'4', 'maxlength'=>'500'));
 				echo '</div>';
 

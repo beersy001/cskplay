@@ -10,7 +10,7 @@
 	echo $this->Form->create('User', array('controller'=>'Users', 'action' => 'purchaseGameBalls'));
 	echo '<div class="input_row">';
 	echo $this->Form->input('code',array(
-		'class' => 'clear wide_input ',
+		'class' => 'helper--clearfix wide_input ',
 		'label' => array(
 			'class' => 'tiny_text',
 			'text' => 'promo code'

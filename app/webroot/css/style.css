@@ -371,14 +371,74 @@ html, body {
   .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11 {
     float: none;
     width: 99%;
+    padding: 10px 0;
   }
 }
+/* highlight texts */
 .helper--highlight-text {
   color: #f9a31c;
 }
 
+/* widths */
 .helper--fullwidth {
   width: 100% !important;
+}
+
+/* text align */
+.helper--center-align {
+  text-align: center !important;
+}
+
+.helper--left-align {
+  text-align: left !important;
+}
+
+.helper--right-align {
+  text-align: right !important;
+}
+
+.helper--full-align {
+  text-align: justify !important;
+}
+
+/* overflows */
+.helper--overflow-hidden {
+  overflow: hidden !important;
+}
+
+/* clearfix */
+.helper--clearfix {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: auto;
+}
+
+/* horizontal dividing line */
+.helper--dividing-line {
+  line-height: 0.5;
+  text-align: center;
+  overflow: hidden;
+}
+.helper--dividing-line span {
+  display: inline-block;
+  position: relative;
+}
+.helper--dividing-line span:before, .helper--dividing-line span:after {
+  content: "";
+  position: absolute;
+  height: 18px;
+  border-bottom: 1px solid white;
+  top: 0;
+  width: 1600px;
+}
+.helper--dividing-line span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.helper--dividing-line span:after {
+  left: 100%;
+  margin-left: 15px;
 }
 
 *, *:before, *:after {
@@ -433,6 +493,39 @@ table {
   border-spacing: 0;
 }
 
+form label {
+  color: gainsboro;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+form label:first-child {
+  margin-top: 0px;
+}
+form input, form textarea {
+  margin: 5px 0 0 0;
+  padding: 10px 15px;
+  width: 100%;
+  clear: both;
+  display: block;
+  font-size: 16px;
+  background: rgba(70, 70, 70, 0.6);
+  border: none;
+}
+form input[type=submit] {
+  -webkit-appearance: none;
+  border: none;
+}
+form ul li {
+  padding-top: 20px;
+}
+
+.fb-login-button {
+  width: 49%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /** General Style Info **/
 * {
   font-family: 'Helvetica Neue', sans-serif;
@@ -444,8 +537,8 @@ html, body {
   max-width: 100%;
 }
 
-/* Headings */
-h1, h2, h3, a {
+/** Headings **/
+h1, h2, h3, a, input {
   color: white;
 }
 
@@ -469,7 +562,7 @@ h1 + h2, h1 + p, h2 + p, p + p, p + a, p + video, video + p {
   margin-top: 15px;
 }
 
-p, span, label {
+p, span {
   line-height: 1.2em;
   color: gainsboro;
 }
@@ -998,6 +1091,7 @@ select {
   clear: both;
   padding: 5px 0;
   display: inline-block;
+  cursor: pointer;
 }
 .cta + .cta {
   margin-left: 10px;
@@ -1010,6 +1104,9 @@ select {
 }
 .cta.cta--100 {
   width: 100px;
+}
+.cta.cta--45pc {
+  width: 45%;
 }
 .cta:hover {
   background: #505050;
@@ -1131,35 +1228,6 @@ select {
   width: 60px;
 }
 
-.clear {
-  clear: left;
-  display: block;
-}
-
-.right_align {
-  text-align: right;
-}
-
-.right_align p {
-  text-align: right;
-}
-
-.left_align {
-  text-align: left;
-}
-
-.center_align {
-  text-align: center;
-}
-
-.full_align {
-  text-align: justify;
-}
-
-.overflow_hidden {
-  overflow: hidden !important;
-}
-
 .crosshair {
   pointer-events: none;
   width: 15px;
@@ -1212,10 +1280,6 @@ select {
   z-index: 30;
   right: 100px;
   bottom: 145px;
-}
-
-#facebook_button {
-  width: 150px;
 }
 
 #login_page_form {
@@ -2337,31 +2401,6 @@ option {
 optgroup {
   color: white;
   background: #404041;
-}
-
-label {
-  float: left;
-  width: 175px;
-  margin-right: 18px;
-}
-
-.submit input {
-  text-decoration: underline;
-  color: white;
-  clear: both;
-  text-align: left;
-  background: #404041;
-  width: auto;
-  border: none;
-  font-size: 16px;
-  padding: 0;
-}
-
-.submit input:hover {
-  border: none;
-  text-decoration: underline;
-  color: #f9a31c;
-  cursor: pointer;
 }
 
 .submitButton:hover {

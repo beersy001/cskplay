@@ -22,21 +22,21 @@ $this->Html->script( "slideShow", array("inline"=>false));
 							)
 						));
 					echo '<div class="input_row">';
-					echo $this->Form->label('User.phoneNumberOne', '1st contact number',array('class' => 'clear'));
+					echo $this->Form->label('User.phoneNumberOne', '1st contact number',array('class' => 'helper--clearfix'));
 					echo $this->Form->label('User.phoneNumberTwo', '2nd contact number');
-					echo $this->Form->input('phoneNumberOne',array('class' => 'clear'));
+					echo $this->Form->input('phoneNumberOne',array('class' => 'helper--clearfix'));
 					echo $this->Form->input('phoneNumberTwo');
 					echo '</div>';
 
 					echo '<div class="input_row date_of_birth">';
-					echo $this->Form->label('User.dayOfBirth', 'date of birth',array('class' => 'clear'));
-					echo $this->Form->day('dayOfBirth', array('class'=>'clear', 'empty' => 'day'));
+					echo $this->Form->label('User.dayOfBirth', 'date of birth',array('class' => 'helper--clearfix'));
+					echo $this->Form->day('dayOfBirth', array('class'=>'helper--clearfix', 'empty' => 'day'));
 					echo $this->Form->month('monthOfBirth', array('empty' => 'month'));
 					echo $this->Form->year('yearOfBirth','2014','1901', array('empty' => 'year'));
 					echo '</div>';
 
 					echo '<div class="input_row">';
-					echo $this->Form->label('User.region', 'region',array('class' => 'clear'));
+					echo $this->Form->label('User.region', 'region',array('class' => 'helper--clearfix'));
 					echo $this->Form->input('region', array(
 						'options' => array(
 							'north east'=>'north east',
@@ -49,7 +49,7 @@ $this->Html->script( "slideShow", array("inline"=>false));
 							'scotland'=>'scotland',
 							'northern ireland'=>'northern ireland'
 							),
-						'class' => 'clear'
+						'class' => 'helper--clearfix'
 						));
 					echo '</div>';
 					echo $this->Form->end('submit');

@@ -54,7 +54,7 @@
 				echo $this->Form->create('GameBalls', array('action' => 'saveSelection'));
 				echo '<div class="input_row">';
 				echo $this->Form->input('code',array(
-					'class' => 'clear wide_input ',
+					'class' => 'helper--clearfix wide_input ',
 					'label' => array( 'text' => 'promo code' )
 				));
 				echo '</div>';

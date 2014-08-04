@@ -97,7 +97,7 @@
 		}
 		?>
 
-		<p class="clear" id="played_heading">saved</p>
+		<p class="helper--clearfix" id="played_heading">saved</p>
 
 		<?php
 		echo $this->Session->flash();
@@ -120,7 +120,7 @@
 			}
 			?>
 		</div>
-		<p id="toggle_selection_view_button" class="mock_link clear" onclick="toggleGameBalls()">
+		<p id="toggle_selection_view_button" class="mock_link helper--clearfix" onclick="toggleGameBalls()">
 			show gameballs
 		</p>
 	</div>

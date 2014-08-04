@@ -87,7 +87,7 @@ if($authUser){
 					?>
 				</div>
 
-				<p id="toggle_selection_view_button" class="mock_link clear" onclick="toggleGameBalls()">
+				<p id="toggle_selection_view_button" class="mock_link helper--clearfix" onclick="toggleGameBalls()">
 					show gameballs
 				</p>
 			<?php } ?>

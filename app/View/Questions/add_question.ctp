@@ -18,17 +18,17 @@
 
 				echo '<div class="input_row">';
 				echo $this->Form->label('Question.category', 'category');
-				echo $this->Form->input('category',array('class' => 'clear'));
+				echo $this->Form->input('category',array('class' => 'helper--clearfix'));
 				echo '</div>';
 
 				echo '<div class="input_row">';
 				echo $this->Form->label('Question.question', 'question');
-				echo $this->Form->input('question',array('class' => 'clear','type' => 'textarea', 'rows'=>'4'));
+				echo $this->Form->input('question',array('class' => 'helper--clearfix','type' => 'textarea', 'rows'=>'4'));
 				echo '</div>';
 
 				echo '<div class="input_row">';
 				echo $this->Form->label('Question.answer', 'answer');
-				echo $this->Form->input('answer',array('class' => 'clear','type' => 'textarea', 'rows'=>'4'));
+				echo $this->Form->input('answer',array('class' => 'helper--clearfix','type' => 'textarea', 'rows'=>'4'));
 				echo '</div>';
 
 				echo $this->Form->end('save');

@@ -8,20 +8,20 @@
 			
 			<div class="input_row">
 				<label for="GameCelebFirstName">celebrity</label>
-				<input name="data[Game][celebFirstName]" maxlength="2000" type="text" id="GameCelebFirstName" class="clear" required autofocus placeholder="e.g. James">
+				<input name="data[Game][celebFirstName]" maxlength="2000" type="text" id="GameCelebFirstName" class="helper--clearfix" required autofocus placeholder="e.g. James">
 				<input name="data[Game][celebSurname]" maxlength="2000" type="text" id="GameCelebSurname" required placeholder="e.g. Corden"> 
-				<label for="GameCelebFirstName" class="tiny_text clear">first name</label>
+				<label for="GameCelebFirstName" class="tiny_text helper--clearfix">first name</label>
 				<label for="GameCelebSurname" class="tiny_text" >last name</label>
 			</div>
 
 			<div class="input_row">
 				<label for="GameSport">sport</label>
-				<input name="data[Game][sport]" placeholder="e.g. football" maxlength="2000" id="GameSport" class="clear wide_input" required >
+				<input name="data[Game][sport]" placeholder="e.g. football" maxlength="2000" id="GameSport" class="helper--clearfix wide_input" required >
 			</div>
 			
 			<div class="input_row">
 				<label for="GameMonth">month of game</label>
-				<input name="data[Game][month]" maxlength="2000" type="text" id="GameMonth" class="clear wide_input" required>
+				<input name="data[Game][month]" maxlength="2000" type="text" id="GameMonth" class="helper--clearfix wide_input" required>
 			</div>
 
 			<div class="submit">

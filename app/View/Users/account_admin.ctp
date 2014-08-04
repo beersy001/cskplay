@@ -56,9 +56,9 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 				));
 
 				echo '<div class="input_row">';
-				echo $this->Form->label('User.firstName', 'first name',array('class' => 'clear'));
+				echo $this->Form->label('User.firstName', 'first name',array('class' => 'helper--clearfix'));
 				echo $this->Form->label('User.surname', 'surname');
-				echo $this->Form->input('firstName',array('class' => 'clear small_input', 'onChange'=>'validateFirstName();'));
+				echo $this->Form->input('firstName',array('class' => 'helper--clearfix small_input', 'onChange'=>'validateFirstName();'));
 				echo $this->Form->input('surname',array('class' => 'small_input'));
 				echo '<div id="check_name" class="input_row_validaion tiny_text"></div>';
 
@@ -66,13 +66,13 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 
 				echo '<div class="input_row">';
 				echo $this->Form->label('User.emailAddress', 'email address');
-				echo $this->Form->input('emailAddress',array('class' => 'clear medium_input'));
+				echo $this->Form->input('emailAddress',array('class' => 'helper--clearfix medium_input'));
 				echo '</div>';
 
 				echo '<div class="input_row">';
-				echo $this->Form->label('User.phoneNumberOne', '1st contact number',array('class' => 'clear'));
+				echo $this->Form->label('User.phoneNumberOne', '1st contact number',array('class' => 'helper--clearfix'));
 				echo $this->Form->label('User.phoneNumberTwo', '2nd contact number');
-				echo $this->Form->input('phoneNumberOne',array('class' => 'clear small_input'));
+				echo $this->Form->input('phoneNumberOne',array('class' => 'helper--clearfix small_input'));
 				echo $this->Form->input('phoneNumberTwo',array('class' => 'small_input'));
 				echo '</div>';
 
@@ -191,8 +191,8 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 							)
 						));
 					echo '<div class="input_row">';
-					echo $this->Form->label('Team.name', 'team name',array('class' => 'clear tiny_text'));
-					echo $this->Form->input('Team.name',array('class' => 'wide_input clear'));
+					echo $this->Form->label('Team.name', 'team name',array('class' => 'helper--clearfix tiny_text'));
+					echo $this->Form->input('Team.name',array('class' => 'wide_input helper--clearfix'));
 					echo '</div>';
 					echo '<div class="input_row">';
 					echo $this->Form->label('Team.pinNumber', 'team pin number',array('class' => 'tiny_text'));

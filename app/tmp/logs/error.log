@@ -44890,3 +44890,13 @@ Stack Trace:
 #3 C:\wamp\www\cskplay_dev\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-08-04 14:18:33 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\cskplay_dev\app\view\Users\login.ctp, line 20]
+2014-08-04 14:18:33 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cskplay_dev/users/login
+Stack Trace:
+#0 C:\wamp\www\cskplay_dev\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 20)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 20, Array)
+#2 C:\wamp\www\cskplay_dev\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 20, Array)
+#3 C:\wamp\www\cskplay_dev\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

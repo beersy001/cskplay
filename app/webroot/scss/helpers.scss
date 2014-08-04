@@ -1,2 +1,50 @@
+/* highlight texts */
 .helper--highlight-text{ color: rgb(249,163,28); }
+
+/* widths */
 .helper--fullwidth{ width: 100% !important; }
+
+/* text align */
+.helper--center-align{ text-align: center !important; }
+.helper--left-align{ text-align: left !important; }
+.helper--right-align{ text-align: right !important; }
+.helper--full-align{ text-align: justify !important; }
+
+/* overflows */
+.helper--overflow-hidden{ overflow: hidden !important; }
+
+/* clearfix */
+.helper--clearfix{ content: ""; display: table; clear: both; overflow: auto;}
+
+
+
+/* horizontal dividing line */
+.helper--dividing-line {
+	line-height: 0.5;
+	text-align: center;
+	overflow: hidden;
+
+	span {
+		display: inline-block;
+		position: relative;
+
+		&:before, &:after{
+			content: "";
+			position: absolute;
+			height: 18px;
+			border-bottom: 1px solid white;
+			top: 0;
+			width: 1600px;
+		}
+
+		&:before{
+			right: 100%;
+			margin-right: 15px;
+		}
+
+		&:after{
+			left: 100%;
+			margin-left: 15px;
+		}
+	}
+}
