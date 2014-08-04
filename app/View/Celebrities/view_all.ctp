@@ -32,15 +32,10 @@
 
 				foreach($celebrities as $celeb){
 					$celebMonth = $celeb['Celebrity']['month'];
-
-					$year = DateTime::createFromFormat('!Ym', $celebMonth)->format('Y');
-
 					$sortedCelebrities[$celebMonth] = $celeb['Celebrity'];
 				}
 
 				krsort($sortedCelebrities);
-				$preYear = 9999;	
-				$currentMonth = date('F Y');
 
 				foreach($sortedCelebrities as $celeb){
 
@@ -48,13 +43,6 @@
 					$fileName = ucfirst( strtolower($celeb['firstName']) ) . ucfirst( strtolower($celeb['surname']) );
 					$celebName = strtolower($celeb['firstName'] . ' ' . $celeb['surname']);
 					$realDate = DateTime::createFromFormat('!Ym', $celeb['month'])->format('F Y');
-					$year = DateTime::createFromFormat('!Ym', $celeb['month'])->format('Y');
-/*
-					if($preYear > $year){
-						echo '<div class="element_break"> <h2 class="border_bottom margin_bottom">' . $year . '</h2></div>';
-					}
-*/					
-					$preYear = $year;
 					?>
 
 					<div class="crossfade-wrapper crossfade-wrapper--width155">
@@ -79,7 +67,6 @@
 		</div>
 	</div>
 
-
 	<div class="onerow">
 		<div class="col3">
 			<?= $this->element('blocks/find_out_more_giving'); ?>
@@ -92,12 +79,10 @@
 
 		<div class="col3">
 			<?= $this->element('blocks/find_out_more_about_us'); ?>
-
 		</div>
 
 		<div class="col3 last">
 			<?= $this->element('blocks/find_out_more_prizes'); ?>
-
 		</div>
 	</div>
 </div>

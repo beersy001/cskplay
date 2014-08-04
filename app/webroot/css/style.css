@@ -2846,9 +2846,8 @@ blockquote:before {
   height: 155px;
   width: 155px;
 }
-.crossfade-wrapper.crossfade-wrapper--height {
-  height: 155px;
-  width: 155px;
+.crossfade-wrapper.crossfade-wrapper--width155 + .crossfade-wrapper--width155 {
+  margin-left: 20px;
 }
 .crossfade-wrapper .crossfade-wrapper__layer {
   position: absolute;
