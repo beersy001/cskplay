@@ -527,6 +527,18 @@ select{
 			}
 		}
 	}
+
+	.header__title-wrapper{
+		position: absolute;
+		bottom: -30px;
+		right: 142px;
+		z-index: 10;
+
+		.title-wrapper__page-title{
+			font-size: 28px;
+			color: rgb(249,163,28);
+		}
+	}
 }
 
 /********************************************************/
@@ -566,24 +578,7 @@ select{
 /*****												*****/
 /********************************************************/
 
-#page_title_banner{
-	position: absolute;
-	width: auto;
-	bottom: -1px;
-	left: 0px;
-	padding-left: 20px;
-	width: 100%;
-}
 
-.page_title{
-	position: absolute;
-	width: auto;
-	right: 150px;
-	top: 96px;
-	text-align: right;
-	font-size: 28px;
-	color: rgb(249,163,28);
-}
 
 #main_body{
 	padding-bottom:100px;
@@ -2368,204 +2363,71 @@ blockquote:before {
 /* **********************************************************************************/
 /*		Cross Fade																	*/
 /* **********************************************************************************/
-.crossfade{
+.crossfade-wrapper{
 	position:relative;
-	height: 155px;
-	width: 155px;
-	overflow: hidden;
-	margin: 5px;
-	overflow: visible;
-	border-radius: 50%;
-}
+	display: inline-block;
 
-.crossfade .fade_top{
-	position:absolute;
-	background: rgba(88,88,91,0.4);
-	width: 100%;
-	height: 100%;
-	@include allTransition300();
-}
+	&.crossfade-wrapper--width155{	
+		height: 155px;
+		width: 155px;
+	}
 
-.crossfade .fade_top span{
-	position: absolute;
-	top: 2px;
-	left: 22px;
-	font-size: 30px;
-}
+	&.crossfade-wrapper--width155{	
+		height: 155px;
+		width: 155px;
+	}
 
-.icon{
-	height: 50px;
-	max-width: 100px;
-	width: auto;
-	margin: 5px;
-	margin-left: auto;
-	margin-right: auto;
-	display: inline;
-}
+	.crossfade-wrapper__layer{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include allTransition300();
 
-.crossfade .fade_top > a{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
+		&.crossfade-wrapper__layer--circle{
+			border-radius: 50%;
+			overflow: hidden;
+		}
 
-.crossfade .fade_bottom{
-	position:absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+		&.crossfade-wrapper__layer--grey{
+			background: rgba(40,40,40,0.4);
+		}
 
-.crossfade:hover .fade_top{
-	background: transparent;
-}
+		&.crossfade-wrapper__layer--top{
+			&:hover{
+				opacity: 0;
+			}
+		}
 
-.crossfade .fade_top:hover ~ .footer span{
-	opacity: 0;
-}
+		&.crossfade-wrapper__layer--bottom{
 
-.crossfade_links{
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	min-height: 35px;
-	font-size: 15px;
-	opacity: 0;
-	padding: 10px 0px 10px 22px;
-	@include allTransition1000();
-}
+		}
 
-.crossfade_links > a{
-	position: relative;
-	width: auto;
-	height: auto;
-	padding-right: 10px;
-}
+		.layer__text-wrapper{
+			position: absolute;
+			top: 50%;
+			width: 100%;
 
-.crossfade_links:first-child{
-}
+			.text-wrapper__text{
+				display: block;
+				width: 100%;
+				text-align: center;
+				font-weight: bold;
+				padding: 0;
+				margin: 0;
+			}
 
-.crossfade .fade_top:hover .crossfade_links{
-	z-index: 10;
-	opacity: 1;
-}
-
-.crossfade .highlight{
-	background: rgba(255,255,255,0);
-}
-
-.crossfade .footer{
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	min-height: 35px;
-	font-size: 15px;
-	text-align: center;
-	background-color: rgb(88,88,81);
-	background-color: rgba(64,64,65,0.7);
-	pointer-events: none;
-}
-
-.crossfade .footer span{
-	text-align: center;
-	@include allTransition300();
-}
-
-.crossfade .crossfade_buttons div{
-	position: absolute;
-	height: 75px;
-	width: 100%;
-	background-color: rgb(88,88,91);
-	text-align: center;
-}
-
-.crossfade .crossfade_buttons div a{
-	text-decoration: none;
-}
-
-.crossfade .crossfade_buttons{
-	position: relative;
-	top: -999px;
-}
-
-.crossfade .fade_top:hover ~ .crossfade_buttons{
-	top: 0;
-}
-
-.crossfade_buttons:hover{
-	top: 0;
-}
-
-.top_button{
-	top: 0px;
-	left: 0px;
-	border-bottom: 5px solid rgb(64,64,65);
-}
-
-.bottom_button{
-	top: 80px;
-	left: 0px;
-}
-
-/* **********************************************************************************/
-/*		Crossfade Image																*/
-/* **********************************************************************************/
-
-
-.crossfade_image{
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.crossfade_container{
-	text-align: center;
-}
-
-.crossfade_container a{
-	text-decoration: none;
-	@include allTransition300();
-}
-
-.crossfade_container:hover .crossfade_container a{
-	color: rgb(249,163,28);
-}
-
-.crossfade_container:hover .crossfade_image .fade_top{
-	opacity: 0;
-}
-
-.fade_top{
-	position:absolute;
-	opacity: 1;
-	@include allTransition300();
-}
-
-.crossfade_image .fade_bottom img{
-	position:absolute;
-	left:0;
-	opacity: 1;
-}
-
-.crossfade_container:hover a{
-	color: rgb(249,163,28);
-	text-decoration: underline;
+			.text-wrapper__text+.text-wrapper__text{
+				padding-top: 5px;
+			}
+		}
+	}
 }
 
 /* **********************************************************************************/
 /*																				*/
 /* **********************************************************************************/
-
-#thumbnail_container{
-	overflow: auto;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 995px;
-	min-width: 100px;
-	padding-bottom: 30px;
-	clear: both;
-}
-
 
 @media all and (max-height: 700px){ 
 

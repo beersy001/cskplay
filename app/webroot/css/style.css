@@ -998,6 +998,16 @@ select {
   vertical-align: middle;
   display: table-cell;
 }
+.header .header__title-wrapper {
+  position: absolute;
+  bottom: -30px;
+  right: 142px;
+  z-index: 10;
+}
+.header .header__title-wrapper .title-wrapper__page-title {
+  font-size: 28px;
+  color: #f9a31c;
+}
 
 /********************************************************/
 /*****		CTA Links								*****/
@@ -1033,25 +1043,6 @@ select {
 /********************************************************/
 /*****												*****/
 /********************************************************/
-#page_title_banner {
-  position: absolute;
-  width: auto;
-  bottom: -1px;
-  left: 0px;
-  padding-left: 20px;
-  width: 100%;
-}
-
-.page_title {
-  position: absolute;
-  width: auto;
-  right: 150px;
-  top: 96px;
-  text-align: right;
-  font-size: 28px;
-  color: #f9a31c;
-}
-
 #main_body {
   padding-bottom: 100px;
   border-width: 3px;
@@ -2862,218 +2853,60 @@ blockquote:before {
 /* **********************************************************************************/
 /*		Cross Fade																	*/
 /* **********************************************************************************/
-.crossfade {
+.crossfade-wrapper {
   position: relative;
+  display: inline-block;
+}
+.crossfade-wrapper.crossfade-wrapper--width155 {
   height: 155px;
   width: 155px;
-  overflow: hidden;
-  margin: 5px;
-  overflow: visible;
+}
+.crossfade-wrapper.crossfade-wrapper--width155 {
+  height: 155px;
+  width: 155px;
+}
+.crossfade-wrapper .crossfade-wrapper__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+}
+.crossfade-wrapper .crossfade-wrapper__layer.crossfade-wrapper__layer--circle {
   border-radius: 50%;
+  overflow: hidden;
 }
-
-.crossfade .fade_top {
-  position: absolute;
-  background: rgba(88, 88, 91, 0.4);
-  width: 100%;
-  height: 100%;
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
+.crossfade-wrapper .crossfade-wrapper__layer.crossfade-wrapper__layer--grey {
+  background: rgba(40, 40, 40, 0.4);
 }
-
-.crossfade .fade_top span {
-  position: absolute;
-  top: 2px;
-  left: 22px;
-  font-size: 30px;
-}
-
-.icon {
-  height: 50px;
-  max-width: 100px;
-  width: auto;
-  margin: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline;
-}
-
-.crossfade .fade_top > a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.crossfade .fade_bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.crossfade:hover .fade_top {
-  background: transparent;
-}
-
-.crossfade .fade_top:hover ~ .footer span {
+.crossfade-wrapper .crossfade-wrapper__layer.crossfade-wrapper__layer--top:hover {
   opacity: 0;
 }
-
-.crossfade_links {
+.crossfade-wrapper .crossfade-wrapper__layer .layer__text-wrapper {
   position: absolute;
-  bottom: 0px;
+  top: 50%;
   width: 100%;
-  min-height: 35px;
-  font-size: 15px;
-  opacity: 0;
-  padding: 10px 0px 10px 22px;
-  transition: all 1000ms ease-in-out;
-  -o-transition: all 1000ms ease-in-out;
-  -ms-transition: all 1000ms ease-in-out;
-  -moz-transition: all 1000ms ease-in-out;
-  -webkit-transition: all 1000ms ease-in-out;
 }
-
-.crossfade_links > a {
-  position: relative;
-  width: auto;
-  height: auto;
-  padding-right: 10px;
-}
-
-.crossfade .fade_top:hover .crossfade_links {
-  z-index: 10;
-  opacity: 1;
-}
-
-.crossfade .highlight {
-  background: rgba(255, 255, 255, 0);
-}
-
-.crossfade .footer {
-  position: absolute;
-  bottom: 0px;
+.crossfade-wrapper .crossfade-wrapper__layer .layer__text-wrapper .text-wrapper__text {
+  display: block;
   width: 100%;
-  min-height: 35px;
-  font-size: 15px;
   text-align: center;
-  background-color: #585851;
-  background-color: rgba(64, 64, 65, 0.7);
-  pointer-events: none;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
 }
-
-.crossfade .footer span {
-  text-align: center;
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-}
-
-.crossfade .crossfade_buttons div {
-  position: absolute;
-  height: 75px;
-  width: 100%;
-  background-color: #58585b;
-  text-align: center;
-}
-
-.crossfade .crossfade_buttons div a {
-  text-decoration: none;
-}
-
-.crossfade .crossfade_buttons {
-  position: relative;
-  top: -999px;
-}
-
-.crossfade .fade_top:hover ~ .crossfade_buttons {
-  top: 0;
-}
-
-.crossfade_buttons:hover {
-  top: 0;
-}
-
-.top_button {
-  top: 0px;
-  left: 0px;
-  border-bottom: 5px solid #404041;
-}
-
-.bottom_button {
-  top: 80px;
-  left: 0px;
-}
-
-/* **********************************************************************************/
-/*		Crossfade Image																*/
-/* **********************************************************************************/
-.crossfade_image {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.crossfade_container {
-  text-align: center;
-}
-
-.crossfade_container a {
-  text-decoration: none;
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-}
-
-.crossfade_container:hover .crossfade_container a {
-  color: #f9a31c;
-}
-
-.crossfade_container:hover .crossfade_image .fade_top {
-  opacity: 0;
-}
-
-.fade_top {
-  position: absolute;
-  opacity: 1;
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-}
-
-.crossfade_image .fade_bottom img {
-  position: absolute;
-  left: 0;
-  opacity: 1;
-}
-
-.crossfade_container:hover a {
-  color: #f9a31c;
-  text-decoration: underline;
+.crossfade-wrapper .crossfade-wrapper__layer .layer__text-wrapper .text-wrapper__text + .text-wrapper__text {
+  padding-top: 5px;
 }
 
 /* **********************************************************************************/
 /*																				*/
 /* **********************************************************************************/
-#thumbnail_container {
-  overflow: auto;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 995px;
-  min-width: 100px;
-  padding-bottom: 30px;
-  clear: both;
-}
-
 @media all and (max-height: 700px) {
   #flash1 {
     top: 120px;

@@ -50,27 +50,26 @@
 				}
 				
 				$preYear = $year;
-				$highlight = $currentMonth == $realDate ? 'highlight' : ''; 
+				?>
 
-				echo '<div class="crossfade float_left">';
-					echo '<div class=" fade_bottom">';
-						echo $this->Html->image( 'celebrities/' . $fileName . '/' . $imageName );
-					echo '</div>';
-					echo '<div class="fade_top ' . $highlight .' ">';
-						echo $this->Html->link('',array('controller'=>'celebrities', 'action'=>'profile', 'month'=>$celeb['month']));
-						?>
-						<div class="crossfade_links">
-							<?=$this->Html->link('profile',array('controller'=>'celebrities', 'action'=>'profile', 'month'=>$celeb['month']))?>
-							<?=$this->Html->link('charity',array('controller'=>'charities', 'action'=>'profile', 'nameId'=>$celeb['charityNameId']))?>
+				<div class="crossfade-wrapper crossfade-wrapper--width155">
+					<a href="<?= $this->Html->url(array('controller'=>'celebrities', 'action'=>'profile', 'month'=>$celeb['month']))?>">
+
+						<div class="crossfade-wrapper__layer crossfade-wrapper__layer--bottom crossfade-wrapper__layer--circle">
+							<?= $this->Html->image( 'celebrities/' . $fileName . '/' . $imageName ); ?>
 						</div>
-						<?php
-					echo '</div>';
-					echo '<div class="footer "><span>' . $celebName . '</span><br><span>' . strtolower($realDate) . '</span></div>';
-					
 
-				echo '</div>';
+						<div class="crossfade-wrapper__layer crossfade-wrapper__layer--top crossfade-wrapper__layer--circle crossfade-wrapper__layer--grey">
+							<div class="layer__text-wrapper">
+								<p class="text-wrapper__text"><?=$celebName?></p>
+								<p class="text-wrapper__text"><?=strtolower($realDate)?></p>
+							</div>
+						</div>
+
+					</a>
+				</div>
+			<?php
 			}
-
 			?>
 		</div>
 	</div>

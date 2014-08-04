@@ -27,7 +27,9 @@
 	</div>
 	<?php
 	if(isset($title_for_page)){
-		echo '<h1 class="page_title">' . $title_for_page . '</h1>';
+		echo '<div class="header__title-wrapper">';
+			echo '<h1 class="title-wrapper__page-title">' . $title_for_page . '</h1>';
+		echo '</div>';
 	}
 	?>
 
