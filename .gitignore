@@ -2,3 +2,7 @@
 
 # CakePHP tmp files
 app/tmp/cache/
+app/tmp/logs/
+
+# SASS cache
+.sass-cache/

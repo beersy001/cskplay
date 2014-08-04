@@ -40,7 +40,7 @@ h1,h2,h3, a{ color: rgb(255,255,255); }
 
 h1{
 	font-weight: 200;
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
 h2{
@@ -84,14 +84,6 @@ a:hover{
 
 .game_instructions .centered_instruction{
 	text-align: center;
-}
-
-.about_section{
-	margin-bottom: 40px;
-}
-
-.about_section h1{
-	margin-bottom: 15px;
 }
 
 .basket__gameballs{
@@ -240,11 +232,13 @@ a:hover{
 	left: 8px;
 }
 
-
-
 body, #container{
 	background: rgb(80,80,80);
 	background: url('../img/grey_bg.jpg') repeat 0 0;
+}
+
+.alt-background{
+	background: url('../img/light_grey_bg.jpg') repeat 0 0;
 }
 
 img {
@@ -259,26 +253,8 @@ label a{
 	cursor: pointer;
 }
 
-section{
-	margin-bottom: 20px;
-	overflow: auto;
-}
-
 select{
 	color: rgb(64,64,65);
-}
-
-.large_page_paragraph p{
-	padding: 5px;
-	font-size: 20px;
-	color: white;
-	margin-bottom: 15px;
-}
-
-.small_page_paragraph{
-	font-size: 16px;
-	color: white;
-	margin-bottom: 10px;
 }
 
 #home_container{
@@ -381,24 +357,20 @@ select{
 			width: 100%;
 		}
 
-		h1{
-			font-size: 3em;
-		}
-
-		h2{
-			color: rgb(249,163,28);
-		}
-
 		h1, h2, p{
 			text-align: inherit;
 		}
 	}
 }
 
+/********************************************************/
+/*****												*****/
+/********************************************************/
+
 .body-wrapper{
 	width: 100%;
 	min-height: 100%;
-	padding-top: 170px;
+	padding-top: 135px;
 	top: 0px;
 	position: absolute;
 	overflow: hidden;
@@ -430,7 +402,7 @@ select{
 		}
 	}
 }
-
+/*
 .layered_background{
 	position: absolute;
 	top: 0;
@@ -446,7 +418,7 @@ select{
 	background-size: cover;
 	overflow: hidden;
 }
-
+/*
 /********************************************************/
 /*****		header									*****/
 /********************************************************/
@@ -1571,11 +1543,6 @@ th{
 	}
 }
 
-.call-to-action__center-container{
-	
-}
-
-
 /* **********************************************************************************/
 /*		Media Block																	*/
 /* **********************************************************************************/
@@ -1592,7 +1559,11 @@ th{
 	}
 }
 
-.media, .body-text
+.media, .body-text{
+	overflow: hidden;
+	_overflow: visible;
+	zoom: 1;
+}
 
 /* **********************************************************************************/
 /*		About Us Nav Bar															*/
@@ -2372,7 +2343,7 @@ blockquote:before {
 		width: 155px;
 	}
 
-	&.crossfade-wrapper--width155{	
+	&.crossfade-wrapper--height{	
 		height: 155px;
 		width: 155px;
 	}
@@ -2405,14 +2376,15 @@ blockquote:before {
 		}
 
 		.layer__text-wrapper{
-			position: absolute;
-			top: 50%;
+			display: table;
 			width: 100%;
+			height: 100%;
 
 			.text-wrapper__text{
-				display: block;
+				display: table-cell;
 				width: 100%;
 				text-align: center;
+				vertical-align: middle;
 				font-weight: bold;
 				padding: 0;
 				margin: 0;

@@ -254,12 +254,13 @@ html, body {
 }
 
 .grid {
-  padding-bottom: 255px;
-  max-width: 1300px;
-  width: 95%;
+  padding-bottom: 230px;
+  /*max-width: 1300px;
+  width: 95%;*/
   margin-right: auto;
   margin-left: auto;
   height: 100%;
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -276,9 +277,9 @@ html, body {
 .onerow {
   clear: both;
   float: left;
-  width: 98%;
-  padding-left: 1%;
-  padding-right: 1%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
   margin-right: auto;
   margin-left: auto;
   z-index: 2;
@@ -291,7 +292,7 @@ html, body {
   position: relative;
   float: left;
   margin: 0 3% 0 0;
-  padding: 20px 0;
+  padding: 80px 0;
   height: 100%;
 }
 
@@ -364,7 +365,7 @@ html, body {
  */
 @media all and (max-width: 768px) {
   .onerow {
-    margin: 0 0 100px;
+    margin: 0 0 0 0;
   }
 
   .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11 {
@@ -450,7 +451,7 @@ h1, h2, h3, a {
 
 h1 {
   font-weight: 200;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 h2 {
@@ -493,14 +494,6 @@ a:hover {
 
 .game_instructions .centered_instruction {
   text-align: center;
-}
-
-.about_section {
-  margin-bottom: 40px;
-}
-
-.about_section h1 {
-  margin-bottom: 15px;
 }
 
 .basket__gameballs {
@@ -747,6 +740,10 @@ body, #container {
   background: url("../img/grey_bg.jpg") repeat 0 0;
 }
 
+.alt-background {
+  background: url("../img/light_grey_bg.jpg") repeat 0 0;
+}
+
 img {
   text-decoration: none;
   border: 0px;
@@ -759,26 +756,8 @@ label a {
   cursor: pointer;
 }
 
-section {
-  margin-bottom: 20px;
-  overflow: auto;
-}
-
 select {
   color: #404041;
-}
-
-.large_page_paragraph p {
-  padding: 5px;
-  font-size: 20px;
-  color: white;
-  margin-bottom: 15px;
-}
-
-.small_page_paragraph {
-  font-size: 16px;
-  color: white;
-  margin-bottom: 10px;
 }
 
 #home_container {
@@ -873,20 +852,17 @@ select {
   position: relative;
   width: 100%;
 }
-.info-wrapper .animation-step h1 {
-  font-size: 3em;
-}
-.info-wrapper .animation-step h2 {
-  color: #f9a31c;
-}
 .info-wrapper .animation-step h1, .info-wrapper .animation-step h2, .info-wrapper .animation-step p {
   text-align: inherit;
 }
 
+/********************************************************/
+/*****												*****/
+/********************************************************/
 .body-wrapper {
   width: 100%;
   min-height: 100%;
-  padding-top: 170px;
+  padding-top: 135px;
   top: 0px;
   position: absolute;
   overflow: hidden;
@@ -917,22 +893,23 @@ select {
   /*background: rgba(88,88,88,0.4);*/
 }
 
-.layered_background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center 70%;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  overflow: hidden;
+/*
+.layered_background{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	background-repeat: no-repeat;
+	background-position: center 70%;
+	background-attachment: scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
 }
-
+/*
 /********************************************************/
 /*****		header									*****/
 /********************************************************/
@@ -2074,7 +2051,15 @@ th {
   display: block;
 }
 
-.media, .body-text
+.media, .body-text {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+}
+
+/* **********************************************************************************/
+/*		About Us Nav Bar															*/
+/* **********************************************************************************/
 #about_us_nav_bar li {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -2861,7 +2846,7 @@ blockquote:before {
   height: 155px;
   width: 155px;
 }
-.crossfade-wrapper.crossfade-wrapper--width155 {
+.crossfade-wrapper.crossfade-wrapper--height {
   height: 155px;
   width: 155px;
 }
@@ -2888,14 +2873,15 @@ blockquote:before {
   opacity: 0;
 }
 .crossfade-wrapper .crossfade-wrapper__layer .layer__text-wrapper {
-  position: absolute;
-  top: 50%;
+  display: table;
   width: 100%;
+  height: 100%;
 }
 .crossfade-wrapper .crossfade-wrapper__layer .layer__text-wrapper .text-wrapper__text {
-  display: block;
+  display: table-cell;
   width: 100%;
   text-align: center;
+  vertical-align: middle;
   font-weight: bold;
   padding: 0;
   margin: 0;
