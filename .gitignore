@@ -6,3 +6,6 @@ app/tmp/logs/
 
 # SASS cache
 .sass-cache/
+
+# Ignore .DS_Store
+.DS_Store
