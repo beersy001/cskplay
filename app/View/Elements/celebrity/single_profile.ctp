@@ -1,3 +1,10 @@
+<div class="video-bg-wrapper">
+	<iframe frameborder="0" height="100%" width="100%" 
+		src="https://www.youtube.com/embed/X6szaj4R1OY?autoplay=1&controls=0&loop=1&rel=0&showinfo=0&autohide=1&wmode=transparent&hd=1">
+	</iframe></div>
+
+
+
 <div class="onerow background_container">
 	<div class="col12">
 		<h1 class="border_bottom"><?=$realMonth . ' - ' . $celebName?></h1>

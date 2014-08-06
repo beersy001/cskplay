@@ -5,9 +5,9 @@
 
 	<script>var currentMonth = <?=$currentMonth?></script>
 
-	<div id="profile_container">
-		<?= $this->element('celebrity/single_profile'); ?>
-	</div>
+
+	<?= $this->element('celebrity/single_profile'); ?>
+
 </div>
 
 

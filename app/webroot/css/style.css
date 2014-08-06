@@ -278,8 +278,7 @@ html, body {
   clear: both;
   float: left;
   width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 80px 5%;
   margin-right: auto;
   margin-left: auto;
   z-index: 2;
@@ -288,11 +287,11 @@ html, body {
 /* 
  * Common columns definitions
  */
-.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .colcenter40 {
   position: relative;
   float: left;
+  display: block;
   margin: 0 3% 0 0;
-  padding: 80px 0;
   height: 100%;
 }
 
@@ -348,6 +347,13 @@ html, body {
   width: 99%;
 }
 
+.colcenter40 {
+  margin: auto;
+  width: 40%;
+  min-width: 400px;
+  float: none;
+}
+
 /* 
  * Disable padding left/right 10px if I'm 1024 or bigger - correct percentage math
  */
@@ -368,10 +374,11 @@ html, body {
     margin: 0 0 0 0;
   }
 
-  .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11 {
+  .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .colcenter40 {
     float: none;
     width: 99%;
     padding: 10px 0;
+    min-width: 0;
   }
 }
 /* highlight texts */
@@ -498,26 +505,79 @@ form label {
   display: inline-block;
   cursor: pointer;
   position: relative;
+  margin-bottom: 5px;
 }
 form label:first-child {
   margin-top: 0px;
 }
-form input, form textarea {
-  margin: 5px 0 0 0;
-  padding: 10px 15px;
+form input, form select, form textarea {
   width: 100%;
-  clear: both;
+  padding: 10px 25px 10px 15px;
   display: block;
   font-size: 16px;
   background: rgba(70, 70, 70, 0.6);
   border: none;
 }
+form input, form select, form .select-wrapper {
+  height: 40px;
+}
+form .select-wrapper {
+  position: relative;
+}
+form .select-wrapper.select-wrapper--third {
+  width: 33%;
+  height: 40px;
+  float: left;
+  width: calc((100% / 3) - 10px);
+  margin-right: 15px;
+}
+form .select-wrapper.select-wrapper--third:last-of-type {
+  margin-right: 0;
+}
+form select {
+  font-size: 16px;
+  background: rgba(70, 70, 70, 0.6);
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+form select::-ms-expand {
+  display: none;
+}
+form .select-wrapper:after {
+  position: absolute;
+  right: 7px;
+  bottom: 3px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f107";
+  font-size: 30px;
+  color: white;
+}
 form input[type=submit] {
   -webkit-appearance: none;
   border: none;
 }
+form .half {
+  width: calc((100% / 2) - 8px);
+  float: left;
+}
+form .half:first-of-type {
+  margin-right: 16px;
+}
+form .cta {
+  margin-top: 20px;
+}
 form ul li {
   padding-top: 20px;
+  overflow: hidden;
+  _overflow: visible;
 }
 
 .fb-login-button {
@@ -526,6 +586,9 @@ form ul li {
   vertical-align: middle;
 }
 
+/* 
+ * Small devices
+ */
 /** General Style Info **/
 * {
   font-family: 'Helvetica Neue', sans-serif;
@@ -538,7 +601,7 @@ html, body {
 }
 
 /** Headings **/
-h1, h2, h3, a, input {
+h1, h2, h3, a, input, select {
   color: white;
 }
 
@@ -849,10 +912,6 @@ label a {
   cursor: pointer;
 }
 
-select {
-  color: #404041;
-}
-
 #home_container {
   max-width: 100%;
   position: relative;
@@ -947,6 +1006,14 @@ select {
 }
 .info-wrapper .animation-step h1, .info-wrapper .animation-step h2, .info-wrapper .animation-step p {
   text-align: inherit;
+}
+
+/********************************************************/
+/*****		full video background					*****/
+/********************************************************/
+.video-bg-wrapper {
+  width: 100%;
+  height: 100%;
 }
 
 /********************************************************/
@@ -1105,8 +1172,8 @@ select {
 .cta.cta--100 {
   width: 100px;
 }
-.cta.cta--45pc {
-  width: 45%;
+.cta.cta--50pc {
+  width: 49%;
 }
 .cta:hover {
   background: #505050;
@@ -1267,10 +1334,6 @@ select {
   text-decoration: none;
 }
 
-.no_overflow {
-  overflow: none;
-}
-
 #home_padding {
   padding-bottom: 1200px;
 }
@@ -1328,14 +1391,12 @@ ul {
 .countdown_duration_container {
   display: inline-block;
   *display: inline;
-  zoom: 1;
   margin-right: 4px;
 }
 
 .countdown_digit {
   display: inline-block;
   *display: inline;
-  zoom: 1;
   height: 23px;
   width: 15px;
   margin-right: -2px;
@@ -1685,47 +1746,6 @@ ul {
 
 #game_sidebar_submit_instructions {
   min-height: 150px;
-}
-
-.sidebar_list_item {
-  clear: both;
-  margin-bottom: 10px;
-  overflow: auto;
-  cursor: pointer;
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-}
-
-.sidebar_list_item#active {
-  background: #59595b;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #59595b 43%, #404041 95%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(43%, #59595b), color-stop(95%, #404041));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #59595b 43%, #404041 95%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #59595b 43%, #404041 95%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #59595b 43%, #404041 95%);
-  /* IE10+ */
-  background: linear-gradient(to right, #59595b 43%, #404041 95%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59595b', endColorstr='#404041',GradientType=1 );
-  /* IE6-9 */
-}
-
-.sidebar_list_item:hover {
-  background: #59595b;
-}
-
-.sidebar_list_item img {
-  width: 110px;
-  float: left;
-  margin-right: 10px;
 }
 
 .game_image_container {
@@ -2118,7 +2138,6 @@ th {
 .media, .body-text {
   overflow: hidden;
   _overflow: visible;
-  zoom: 1;
 }
 
 /* **********************************************************************************/
@@ -2277,114 +2296,6 @@ th {
 /* **********************************************************************************/
 /*		Form CSS																	*/
 /* **********************************************************************************/
-.all_celebs form {
-  clear: both;
-}
-
-.all_celebs label {
-  float: left;
-  width: 175px;
-  height: 25px;
-  text-align: right;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-.all_celebs input {
-  float: left;
-}
-
-.all_celebs textarea {
-  float: left;
-}
-
-.all_celebs .input {
-  clear: both;
-  overflow: auto;
-}
-
-.all_celebs .submit {
-  clear: both;
-  width: 100%;
-  overflow: auto;
-  text-align: center;
-}
-
-.submit_button {
-  text-decoration: underline;
-  float: none;
-  color: white;
-  font-size: 14px;
-  font-weight: 100;
-  background: #404041;
-}
-
-.input_row {
-  clear: both;
-  margin-bottom: 10px;
-  overflow: auto;
-  position: relative;
-}
-
-.input_row_validaion {
-  position: absolute;
-  top: 21px;
-  right: 118px;
-}
-
-.wide_input {
-  width: 90%;
-}
-
-.small_input {
-  width: 175px;
-}
-
-.medium_input {
-  width: 369px;
-}
-
-.dob_field {
-  width: 119px;
-  margin-right: 10px;
-  float: left;
-}
-
-.date_of_birth select, .date_of_birth label {
-  float: left;
-  width: 117px;
-  margin-right: 10px;
-}
-
-.form_container input {
-  color: #f9a31c;
-  background: #58585b;
-  border-style: none;
-  float: left;
-  margin-bottom: 5px;
-  margin-right: 10px;
-  padding: 3px;
-}
-
-select {
-  float: left;
-  width: 188px;
-  margin-bottom: 5px;
-  margin-right: 10px;
-  padding: 3px;
-}
-
-textarea {
-  color: #f9a31c;
-  background: #58585b;
-  border-style: none;
-  float: left;
-  width: 860px;
-  margin-bottom: 5px;
-  margin-right: 10px;
-  padding: 3px;
-}
-
 .highlight_input {
   border-color: #f9a31c;
 }
@@ -2401,27 +2312,6 @@ option {
 optgroup {
   color: white;
   background: #404041;
-}
-
-.submitButton:hover {
-  text-decoration: underline;
-  color: #f9a31c;
-}
-
-#UserLoginForm label {
-  text-align: left;
-}
-
-button {
-  text-decoration: underline;
-  color: white;
-  border: none;
-  background: rgba(255, 255, 255, 0);
-}
-
-button:hover {
-  text-decoration: underline;
-  color: #f9a31c;
 }
 
 #cancel_submition {
@@ -2446,16 +2336,6 @@ button:hover {
   -ms-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
-}
-
-.form_container:hover .input_row input, .form_container:hover .input_row textarea {
-  border-color: transparent;
-  background: #58585b;
-}
-
-.form_container .input_row input:focus, .form_container .input_row textarea:focus {
-  border-color: transparent;
-  background: #58585b;
 }
 
 /* **********************************************************************************/

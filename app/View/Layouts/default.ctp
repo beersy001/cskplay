@@ -7,8 +7,9 @@
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 		<script>var rootDir = "<?=basename(dirname(APP));?>"</script>
 
-		<link href='http://fonts.googleapis.com/css?family=Chivo:400,900' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Chivo:400,900" rel="stylesheet" type="stylesheet">
+		<link href="http://fonts.googleapis.com/css?family=Alegreya+Sans:100" rel="stylesheet" type="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 		<?php
 			echo $this->Html->charset(); 

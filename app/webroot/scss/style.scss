@@ -19,10 +19,13 @@ $paragraphTextColor: rgb(220,220,220);
 }
 
 @import 'cake.generic';
-@import 'grid_layout';
+@import 'grid';
+@import 'grid_responsive';
 @import 'helpers';
 @import 'reset';
 @import 'forms';
+@import 'forms_responsive';
+@import 'style_responsive';
 
 
 /** General Style Info **/
@@ -39,7 +42,7 @@ html, body {
 
 
 /** Headings **/
-h1,h2,h3,a,input{ color: rgb(255,255,255); }
+h1, h2, h3, a, input, select{ color: rgb(255,255,255); }
 
 h1{
 	font-weight: 200;
@@ -70,7 +73,6 @@ a:hover{
 	text-decoration:underline;
 	color: rgb(249,163,28);
 }
-
 
 .round_number{
 	border: 2px solid white;
@@ -256,10 +258,6 @@ label a{
 	cursor: pointer;
 }
 
-select{
-	color: rgb(64,64,65);
-}
-
 #home_container{
 	max-width: 100%;
 	position:relative;
@@ -365,6 +363,16 @@ select{
 		}
 	}
 }
+
+/********************************************************/
+/*****		full video background					*****/
+/********************************************************/
+.video-bg-wrapper{
+	width: 100%;
+	height: 100%;
+
+}
+
 
 /********************************************************/
 /*****												*****/
@@ -542,7 +550,7 @@ select{
 	}
 
 	&.cta--100{ width: 100px; }
-	&.cta--45pc{ width: 45%; }
+	&.cta--50pc{ width: 49%; }
 
 	&:hover{
 		background: rgb(80,80,80);
@@ -710,11 +718,6 @@ select{
 	text-decoration: none;
 }
 
-.no_overflow{
-	overflow: none;
-}
-
-
 #home_padding{
 	padding-bottom: 1200px;
 }
@@ -775,14 +778,12 @@ ul{
 .countdown_duration_container{
 	display: inline-block;
 	*display: inline;
-	zoom: 1;
 	margin-right: 4px;
 }
 
 .countdown_digit{
 	display: inline-block;
 	*display: inline;
-	zoom: 1;
 	height: 23px;
 	width: 15px;
 	margin-right: -2px;
@@ -1115,35 +1116,6 @@ ul{
 
 #game_sidebar_submit_instructions{
 	min-height: 150px;
-}
-
-.sidebar_list_item{
-	clear: both;
-	margin-bottom: 10px;
-	overflow: auto;
-	cursor: pointer;
-	@include allTransition300();
-}
-
-.sidebar_list_item#active{
-	background: #59595b; /* Old browsers */
-	background: -moz-linear-gradient(left,  #59595b 43%, #404041 95%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(43%,#59595b), color-stop(95%,#404041)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  #59595b 43%,#404041 95%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  #59595b 43%,#404041 95%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  #59595b 43%,#404041 95%); /* IE10+ */
-	background: linear-gradient(to right,  #59595b 43%,#404041 95%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59595b', endColorstr='#404041',GradientType=1 ); /* IE6-9 */
-}
-
-.sidebar_list_item:hover{
-	background: rgb(89,89,91);
-}
-
-.sidebar_list_item img{
-	width: 110px;
-	float:	left;
-	margin-right: 10px;
 }
 
 .game_image_container{
@@ -1539,7 +1511,6 @@ th{
 .media, .body-text{
 	overflow: hidden;
 	_overflow: visible;
-	zoom: 1;
 }
 
 /* **********************************************************************************/
@@ -1700,113 +1671,7 @@ th{
 /*		Form CSS																	*/
 /* **********************************************************************************/
 
-.all_celebs form{
-	clear: both;
-}
 
-.all_celebs label{
-	float: left;
-	width: 175px;
-	height: 25px;
-	text-align: right;
-	margin-right: 5px;
-	vertical-align: middle;
-}
-
-.all_celebs input{
-	float: left;
-}
-
-.all_celebs textarea{
-	float: left;
-}
-
-.all_celebs .input{
-	clear: both;
-	overflow: auto;
-}
-
-.all_celebs .submit{
-	clear: both;
-	width: 100%;
-	overflow: auto;
-	text-align: center;
-}
-
-.submit_button{
-	text-decoration:underline;
-	float: none;
-	color: rgb(255,255,255);
-	font-size: 14px;
-	font-weight: 100;
-	background: rgb(64,64,65);
-}
-
-.input_row{
-	clear: both;
-	margin-bottom: 10px;
-	overflow: auto;
-	position: relative;
-}
-
-.input_row_validaion{
-	position: absolute;
-	top: 21px;
-	right: 118px;
-}
-
-.wide_input{
-	width: 90%;
-}
-
-.small_input{
-	width: 175px;
-}
-
-.medium_input{
-	width: 369px;
-}
-
-.dob_field{
-	width:119px;
-	margin-right: 10px;
-	float: left;
-}
-
-.date_of_birth select, .date_of_birth label{
-	float: left;
-	width: 117px;
-	margin-right: 10px;
-}
-
-.form_container input{
-	color: rgb(249,163,28);
-	background: rgb(88,88,91);
-	border-style: none;
-	float: left;
-	margin-bottom: 5px;
-	margin-right: 10px;
-	padding: 3px;
-}
-
-select{
-	float: left;
-	width: 188px;
-	margin-bottom: 5px;
-	margin-right: 10px;
-	padding: 3px;
-}
-
-textarea{
-	color: rgb(249,163,28);
-	background: rgb(88,88,91);
-	border-style: none;
-	float: left;
-	width: 860px;
-	margin-bottom: 5px;
-	margin-right: 10px;
-	padding: 3px;
-}
 
 .highlight_input{
 	border-color: rgb(249,163,28);
@@ -1826,26 +1691,6 @@ optgroup{
 	background: rgb(64,64,65);
 }
 
-.submitButton:hover{
-	text-decoration:underline;
-	color: rgb(249,163,28);
-}
-
-#UserLoginForm label{
-	text-align: left;
-}
-
-button{
-	text-decoration:underline;
-	color: rgb(255,255,255);
-	border: none;
-	background: rgba(255,255,255,0);
-}
-
-button:hover{
-	text-decoration:underline;
-	color: rgb(249,163,28);
-}
 
 #cancel_submition{
 	margin-left: 10px;
@@ -1868,15 +1713,7 @@ button:hover{
 	@include allTransition300();
 }
 
-.form_container:hover .input_row input, .form_container:hover .input_row textarea{
-	border-color: transparent;
-	background: rgb(88,88,91);
-}
 
-.form_container .input_row input:focus, .form_container .input_row textarea:focus{
-	border-color: transparent;
-	background: rgb(88,88,91);
-}
 
 /* **********************************************************************************/
 /*		Outtakes Page																*/

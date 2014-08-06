@@ -8,10 +8,10 @@
 		<div class="col5">
 
 		<?= $this->Html->image( 'logo_grey.png', array('id'=>'main_logo_small', 'url' => array('controller' => 'pages', 'action' => 'home')) ) ?>
-		</br>
-		</br>
+		<br />
+		<br />
 		<?= $this->Html->image( 'under_16.png', array('id'=>'under_16_image', 'class' => 'middle_image') ) ?>
-			<span class="light_background">You must be 16 or over to play or claim a prize<span>
+			<span class="light_background">You must be 16 or over to play or claim a prize</span>
 		</div>
 
 		<div class="col7 last">

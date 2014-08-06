@@ -6,14 +6,12 @@
 <div class="grid" id="main_grid">
 	<div class="onerow">
 
-		<div class="col4"></div>
 
-		<div class="col4">
+		<div class="colcenter40">
 			<h1 class="helper--center-align">login</h1>			
 
-			<?= $this->Form->create('User',
+			<?= $this->Form->create( 'User',
 				array(
-					'controller'=>'Users',
 					'action' => 'login',
 					'inputDefaults' => array(
 						'label' => false,
@@ -37,13 +35,12 @@
 				</li>
 				<li>
 					<?= $this->Html->image( 'facebook_login_image.png', array('class'=>'fb-login-button', 'url' => $fb_login_url) ); ?>
-					<?= $this->Html->link('register', array('controller'=>'Users', 'action'=>'add'),array('class' => 'cta cta--45pc cta--highlight' )); ?>
+					<?= $this->Html->link('register', array('controller'=>'Users', 'action'=>'add'),array('class' => 'cta cta--50pc cta--highlight' )); ?>
 				</li>
 			</ul>
-
+			<?php echo $this->Form->end(); ?>
 			
 			<?php echo $this->Session->flash(); ?>
 		</div>
-		<div class="col4 last"></div>
 	</div>
 </div>
