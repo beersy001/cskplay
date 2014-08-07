@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 $paragraphTextColor: rgb(220,220,220);
+$totalHeaderHeight: 135px;
 
 @mixin allTransition1000() {
 	transition: all 1000ms ease-in-out;
@@ -60,7 +61,7 @@ h3{
 	clear: both;
 }
 
-h1+h2, h1+p, h2+p, p+p, p+a, p+video, video+p{
+h1+div, h1+h2, h1+p, h2+p, p+p, p+a, p+video, video+p{
 	margin-top: 15px;
 }
 
@@ -264,18 +265,6 @@ label a{
 	overflow: hidden;
 }
 
-#homepage-cta-scroll-link{
-	position: absolute;
-	left: 50%;
-	width: 200px;
-	margin-left: -100px;
-	display: block;
-	bottom: 25px;
-	z-index: 50;
-	background: white;
-	cursor: pointer;
-}
-
 /********************************************************/
 /*****		info-wrapper							*****/
 /********************************************************/
@@ -368,20 +357,63 @@ label a{
 /*****		full video background					*****/
 /********************************************************/
 .video-bg-wrapper{
+	position: relative;
 	width: 100%;
 	height: 100%;
+	margin-top: -$totalHeaderHeight; 
+	
+	.video-bg-wrapper__video{
+		width: 100%;
+		height: 100%;
+	}
+
+	.video-bg-wrapper__overlay{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(50,50,50,0.7);
+
+		.overlay__content-wrapper{
+			position: relative;
+			top: 40%;
+
+			.content-wrapper__heading{
+				text-align: center;
+				font-size: 75px;
+			}
+		}
+	}
 
 }
 
 
 /********************************************************/
-/*****												*****/
+/*****	scroll wrapper								*****/
 /********************************************************/
+
+.scroll-wrapper{
+	position: absolute;
+	bottom: 0px;
+	padding-top: 5px;
+	width: 100%;
+	background: rgba(50,50,50,0.9);
+	p{
+		text-align: center;
+		font-size: 20px;
+		color: white;
+	}
+	i{
+		text-align: center;
+		width: 100%;
+		font-size: 30px;
+		color: white;
+	}
+}
 
 .body-wrapper{
 	width: 100%;
 	min-height: 100%;
-	padding-top: 135px;
+	padding-top: $totalHeaderHeight;
 	top: 0px;
 	position: absolute;
 	overflow: hidden;
@@ -746,7 +778,7 @@ ul{
 	position: absolute;
 	right: 45px;
 	padding: 5px;
-	bottom: 32px;
+	bottom: 5px;
 	color: white;
 	overflow: hidden;
 	width: auto;
@@ -755,8 +787,9 @@ ul{
 #countdown_text{
 	position: absolute;
 	display: none;
-	bottom: 15px;
-	right: 45px;
+	bottom: 0px;
+	right: 210px;
+	padding: 20px;
 	z-index: 12;
 }
 
@@ -1355,88 +1388,19 @@ th{
 
 .home_button_container{
 	position: absolute;
-	bottom: 105px;
-	overflow: hidden;
-}
-
-#win_button_container{
-	position: absolute;
-	z-index: 30;
-	right: 350px;
-}
-
-#play_button_container{
-	position: absolute;
-	z-index: 30;
-	right: 55px;
+	bottom: 90px;
+	right: 30px;
 }
 
 .main_button{
 	font-size: 140px;
 	text-decoration: none;
-	color: rgb(255,255,255);
+
+	&:hover{
+		text-decoration: none;
+	}
 }
 
-.main_button:hover{
-	color: rgb(249,163,28);
-	text-decoration: none;
-}
-
-.left_button{
-	font-size: 20px;
-	color: rgb(255,255,255);
-	text-decoration: none;
-	position: absolute;
-	left: -9999px;
-}
-
-.right_button{
-	font-size: 20px;
-	color: rgb(255,255,255);
-	text-decoration: none;
-	position: absolute;
-	text-align: right;
-	width: 100px;
-	right: -9999px;
-}
-
-.home_button_container:hover{
-	overflow: visible;
-}
-
-.home_button_container:hover .main_button{
-	font-weight: 200;
-	color: rgb(249,163,28);
-
-}
-
-.home_button_container:hover .left_button{
-	left: 0px;
-	top: 10px;
-}
-
-.home_button_container:hover .left_button:hover{
-	text-decoration: none;
-	color: rgb(249,163,28);
-	font-size: 36px;
-	top: -10px;
-	font-weight: 200;
-}
-
-.home_button_container:hover .right_button{
-	right: 0px;
-	top: 10px;
-	text-align: right;
-}
-
-.home_button_container:hover .right_button:hover{
-	text-decoration: none;
-	color: rgb(249,163,28);
-	font-size: 36px;
-	font-weight: 200;
-	width: 170px;
-	top: -10px;
-}
 
 /* **********************************************************************************/
 /*		blocks																		*/
@@ -1967,28 +1931,6 @@ blockquote:before {
 	background: rgb(255,255,255);
 }
 
-.page_container_info{
-	position: absolute;
-	overflow: hidden;
-}
-
-.page_container_info_header{
-	height:30px;
-	padding: 10px;
-}
-
-.page_container_info_content{
-	overflow: auto;
-	max-height: 40%;
-}
-
-.element_break{
-	padding-top: 10px;
-	clear: both;
-	display: block;
-	width: 100%;
-}
-
 .ajax_loading_pannel{
 	position: absolute;
 	left: -9999px;
@@ -2016,47 +1958,6 @@ blockquote:before {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-}
-
-#slideshow {
-    position:relative;
-    height: 350px;
-}
-
-#slideshow img {
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:1;
-	display: block;
-}
-
-#slideshow img.active {
-    z-index:10;
-}
-
-#slideshow img.last-active {
-    z-index:9;
-}
-
-.multi_slideshow_container{
-	width: 100%;
-	position: relative;
-}
-
-.single_slideshow{
-	width: 250px;
-	height: 165px;
-	position: relative;
-	float: left;
-}
-
-.single_slideshow img {
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:1;
-	width: 100%;
 }
 
 .section{

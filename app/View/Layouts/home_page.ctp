@@ -5,6 +5,8 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 		<link href='http://fonts.googleapis.com/css?family=Chivo:400,900' rel='stylesheet' type='text/css'>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
 		<?php
 			echo $this->Html->charset(); 
 			echo $this->Html->meta('icon');
@@ -98,6 +100,11 @@
 			<div id="countdown_text">
 				<?= $this->Html->link('until our next winners!',array('controller' => 'games', 'action' => 'displayGame'),array()) ?>
 			</div>
+
+			<div class="scroll-wrapper">
+				<p>scroll down</p>
+			<i class="fa fa-3 fa-angle-down"></i>
+		</div>
 		</section>
 
 		

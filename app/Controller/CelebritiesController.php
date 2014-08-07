@@ -68,8 +68,6 @@ class CelebritiesController extends AppController {
 			
 			$charityNameId = $charity['Charity']['nameId'];
 
-
-			$this->set('title_for_page', strtolower($celeb['Celebrity']['firstName'] . ' ' . $celeb['Celebrity']['surname']));
 			$this->set('pageId', 'celebrityProfile');
 			$this->set('charityNameId', $charityNameId);
 			$this->set('charityName', $charity['Charity']['name']);

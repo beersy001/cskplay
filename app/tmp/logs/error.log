@@ -44972,3 +44972,75 @@ Request URL: /cskplay_dev/img/gameImages/201408/front_small.jpg
 Stack Trace:
 #0 C:\wamp\www\cskplay_dev\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-08-07 13:10:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-07 13:10:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_small.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-07 13:20:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-07 13:20:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/rear_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-07 13:20:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_small.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-07 13:22:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/rear_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-07 13:22:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-07 13:22:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_small.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
