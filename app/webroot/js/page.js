@@ -31,8 +31,13 @@ window.onload = function() {
 		playMode = true;
 	}
 
-	if(pageId == 'celebrityProfile' || pageId == 'csk'){
-		$('.video-bg-wrapper').parallax({ "coeff" : -0.7 });
+	if(pageId == 'celebrityProfile'){
+		$('.parallax--top-position').parallax({ "coeff" : 0.7 });
+		$('.parallax--bg-position').parallax({ "coeff" : 0.7, "type" : "background-position" });
+	}
+
+	if(pageId == 'csk'){
+		$('.video-bg-wrapper').parallax({ "coeff" : 0.7 });
 	}
 
 };

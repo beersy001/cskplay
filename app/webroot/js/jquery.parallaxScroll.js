@@ -5,27 +5,49 @@
 	
 		offset = $$.offset();
 		var defaults = {
-			"start": 0,
+			"start": offset.top,
 			"stop": offset.top + $$.height(),
 			"coeff": 0.95,
 			"type": "top"
 		};
 
 		var opts = $.extend(defaults, options);
-		var i = 0;
+		
 		return this.each(function(){
 
 			$(window).bind('scroll mousewheel', function(event) {
 
-				windowTop = $(window).scrollTop();
-				if((windowTop >= opts.start) && (windowTop <= opts.stop)) {
-					newCoord = windowTop * opts.coeff;
+				var scrollTop = $(window).scrollTop();
+				var scrollBottom = $(window).scrollTop() + $(window).height();
+				var windowHeight = scrollBottom - scrollTop;
+
+				if((scrollBottom >= opts.start) && (scrollTop <= opts.stop)) {
+					
+					newCoord = scrollTop * opts.coeff;
+
 					switch(opts.type){
 						case "top":
-							$$.css({"top" : -parseFloat(newCoord) + "px"});
+							$$.css({"top" : parseFloat(newCoord) + "px"});
 							break;
 						case "background-position":
-							$$.css({"background-position" : "50% " + -parseFloat(newCoord) + "px"});
+
+							var imageSrc = $$.css("background-image").replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0];
+       						
+       						var image = new Image();
+							image.src = imageSrc;
+
+							var width = image.width;
+							var height = image.height;
+							var aspectRatio = width / height;
+							var divWidth = $$.width();
+							var divHeight = $$.height();
+							var imageHeight = divWidth / aspectRatio;
+							var scrollNumber = scrollBottom - offset.top;
+
+							coeff = imageHeight >= windowHeight ? 0.95 : 0.65;
+							newCoord = (divHeight + scrollNumber) * coeff;
+
+							$$.css({"background-position" : "50% " + parseFloat(newCoord) + "px"});
 							break;
 					}
 				}

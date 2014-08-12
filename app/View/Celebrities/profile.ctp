@@ -2,7 +2,7 @@
 
 	<script>var currentMonth = <?=$currentMonth?></script>
 
-	<div id="video-wrapper" class="video-bg-wrapper helper--minus-header-margin">
+	<div id="video-wrapper" class="video-bg-wrapper helper--minus-header-margin parallax--top-position">
 		<div class="video-bg-wrapper__overlay">
 			<div class="overlay__content-wrapper">
 				<h1 class="content-wrapper__heading"><?=$celebName?></h1>
@@ -52,6 +52,9 @@
 			<?= $this->Html->image( $charityImage, array('class'=>'headshot_image', 'align'=>'left') ) ?>
 			<p><?=$profileTextarea2?></p>
 		</div>
+	</div>
+
+	<div class="onerow helper--no-pad parallax parallax--bg-position" style="background-image:url(/cskplay/img/celebrities/RyanGiggs/banner.jpg)">
 	</div>
 
 	<div class="onerow">
