@@ -55,6 +55,7 @@ class CelebritiesController extends AppController {
 	public function profile() {
 
 		$this->loadModel('Charity');
+		$this->set('pageId', 'celebrityProfile');
 
 		$month = $this->request->params['named']['month'];
 
@@ -68,7 +69,6 @@ class CelebritiesController extends AppController {
 			
 			$charityNameId = $charity['Charity']['nameId'];
 
-			$this->set('pageId', 'celebrityProfile');
 			$this->set('charityNameId', $charityNameId);
 			$this->set('charityName', $charity['Charity']['name']);
 			$this->set('celeb', $celeb);

@@ -1,13 +1,57 @@
 <div class="grid" id="main_grid">
 
-	<div class="onerow background_container">
-		<div class="col3">
+	<div id="video-wrapper" class="video-bg-wrapper helper--minus-header-margin">
+		<div class="video-bg-wrapper__overlay">
+			<div class="overlay__content-wrapper">
+				<h1 class="content-wrapper__heading">Celebrity Spot Kick</h1>
+				<p class="helper--center-align">Scroll down to find out more about us!</p>
+			</div>
+
+			<div class="scroll-wrapper">
+				<a href="#first-scroll-content">scroll down</a>
+				<i class="fa fa-3 fa-angle-down"></i>
+			</div>
 		</div>
 
-		<div class="col9 last">
-			<h1>Celebrity Spot Kick</h1>
+		<script>
+			$('#video-wrapper').tubular({videoId: 'IAb-OD-5JFI'});
+		</script>
+	</div>
+
+	<div id="first-scroll-content" class="onerow">
+		<div class="col12">
+			<h1>about us</h1>
 		</div>
 	</div>
+
+	<div class="onerow helper--no-pad-top">
+		<div class="col4">
+			<p>We are a team of professionals from all walks of life and industries, including sports, marketing, finance, charity and social media, brought together by two individuals wanting to make a difference.</p>
+		</div>
+
+		<div class="col4">
+			<p>We are all pulling in the same direction to create a long-lasting legacy of giving and providing a platform to give underprivileged children in this Country the ability to play and take part in many different sports.</p>
+		</div>
+
+		<div class="col4 last">
+			<p>Our mission is to raise money for charities, good causes and Celebrity Spot Kick’s Sporting Programmes, through sport orientated online competitions. Our aim is to ensure each competition is both fun and worthwhile for you as our players and supporters and charities alike.</p>
+		</div>
+
+
+
+	</div>
+
+
+	<div class="onerow alt-background">
+		<div class="col6">
+			<p>We are a team of professionals from all walks of life and industries, including sports, marketing, finance, charity and social media, brought together by two individuals wanting to make a difference.</p>
+		</div>
+
+		<div class="col6 last">
+			<p>We are all pulling in the same direction to create a long-lasting legacy of giving and providing a platform to give underprivileged children in this Country the ability to play and take part in many different sports.</p>
+		</div>
+	</div>
+
 
 	<div class="onerow background_container margin_bottom">
 		<div id="side_menu" class="col3">
@@ -19,9 +63,9 @@
 			<div class="about_section">
 				<h1>about us</h1>
 
-				<p>We are a team of professionals from all walks of life and industries, including sports, marketing, finance, charity and social media, brought together by two individuals wanting to make a difference.</p>
+				
 
-				<p>We are all pulling in the same direction to create a long-lasting legacy of giving and providing a platform to give underprivileged children in this Country the ability to play and take part in many different sports.</p>
+				
 
 				<?=$this->Html->link('read more',array('controller' => 'pages', 'action' => 'aboutus/about_us'));?>
 			</div>

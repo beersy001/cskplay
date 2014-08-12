@@ -10,6 +10,7 @@
 			<ul>
 				<li><?=$this->Html->link('layouts', array('action'=>'layouts'))?></li>
 				<li><?=$this->Html->link('forms', array('action'=>'forms'))?></li>
+				<li><?=$this->Html->link('video background', array('action'=>'videoBackground'))?></li>
 			</ul>
 		</div>
 	</div>

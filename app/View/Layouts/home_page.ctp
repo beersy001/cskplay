@@ -14,12 +14,14 @@
 			echo $this->Html->css('grid_layout');
 			echo $this->Html->css('style');
 			echo $this->Html->script('jquery');
+			echo $this->Html->script('jquery.parallaxScroll');
 			echo $this->Html->script('countdown');
 			echo $this->Html->script('changeActiveMenu');
 			echo $this->Html->script('page');
 			echo $this->Html->script('facebook');
 			echo $this->Html->script('cameraFlashes');
 			echo $this->Html->script('scrollingAnimation');
+			echo $this->Html->script('smoothAnchorScrolling');
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
@@ -37,39 +39,41 @@
 		
 		<section class="home-bg-wrapper">
 			<div class="home-bg-wrapper__image-bg">
-				<div class="image-bg__transparent-overlay"></div>
+				<div class="home_button_container" id="play_button_container">
+					<?= $this->Html->link('play',array('controller' => 'games', 'action' => 'displayGame'),array( 'id' => 'play_button', 'class' => 'main_button')) ?>
+				</div>
+
+				<div class="home-bg-wrapper__starbursts">
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash1') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash2') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash3') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash4') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash5') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash6') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash7') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash8') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash9') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash10') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash11') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash12') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash13') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash14') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash15') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash16') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash17') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash18') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash19') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash20') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash21') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash22') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash23') ) ?>
+					<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash24') ) ?>
+				</div>
 			</div>
 
-			<div class="home-bg-wrapper__starbursts">
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash1') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash2') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash3') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash4') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash5') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash6') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash7') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash8') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash9') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash10') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash11') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash12') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash13') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash14') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash15') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash16') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash17') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash18') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash19') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash20') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash21') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash22') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash23') ) ?>
-				<?= $this->Html->image( 'starburst.png', array('class'=>'flash', 'id'=>'flash24') ) ?>
-			</div>
+			
 
-			<div class="home_button_container" id="play_button_container">
-				<?= $this->Html->link('play',array('controller' => 'games', 'action' => 'displayGame'),array( 'id' => 'play_button', 'class' => 'main_button')) ?>
-			</div>
+			
 
 			<div id='countdown'>
 				<div class="countdown_duration_container">
@@ -102,13 +106,13 @@
 			</div>
 
 			<div class="scroll-wrapper">
-				<p>scroll down</p>
+				<a href="#first-scroll-content">scroll down</a>
 			<i class="fa fa-3 fa-angle-down"></i>
 		</div>
 		</section>
 
 		
-		<section class="info-wrapper">
+		<section id="first-scroll-content" class="info-wrapper">
 
 			<div class="info-wrapper__block animation-step" id="who-are-csk__step" data-animation-run="false">
 				<div class="col8 left animation-step__element">

@@ -267,12 +267,8 @@ html, body {
   max-width: 100%;
 }
 
-#game_grid {
-  max-width: 100%;
-  width: 1150px;
-}
-
 .onerow {
+  position: relative;
   clear: both;
   float: left;
   width: 100%;
@@ -417,6 +413,55 @@ html, body {
   display: table;
   clear: both;
   overflow: auto;
+}
+
+/* marging */
+.helper--minus-header-margin {
+  margin-top: -135px;
+}
+
+/* floats */
+.helper--float-left {
+  float: left !important;
+}
+
+.helper--float-right {
+  float: right !important;
+}
+
+/* padding */
+.helper--no-pad {
+  padding: 0 !important;
+}
+
+.helper--no-pad-top {
+  padding-top: 0 !important;
+}
+
+.helper--no-pad-bottom {
+  padding-bottom: 0 !important;
+}
+
+.helper--no-pad-left {
+  padding-left: 0 !important;
+}
+
+.helper--no-pad-right {
+  padding-right: 0 !important;
+}
+
+/* rounded number */
+.helper--round-number {
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 4px 8px;
+  font-weight: bold;
 }
 
 /* horizontal dividing line */
@@ -632,22 +677,8 @@ a:hover {
   text-decoration: underline;
   color: #f9a31c;
 }
-
-.round_number {
-  border: 2px solid white;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  padding: 4px 8px;
-  font-weight: bold;
-}
-
-.game_instructions .centered_instruction {
-  text-align: center;
+a:hover + i {
+  color: #f9a31c;
 }
 
 .basket__gameballs {
@@ -889,7 +920,7 @@ a:hover {
   left: 8px;
 }
 
-body, #container {
+body, #container, .onerow {
   background: #505050;
   background: url("../img/grey_bg.jpg") repeat 0 0;
 }
@@ -1000,8 +1031,9 @@ label a {
 .video-bg-wrapper {
   position: relative;
   width: 100%;
-  height: 100%;
-  margin-top: -135px;
+  height: 100vh;
+  /* using viewport height so video can be full screen in middle of the page */
+  overflow: hidden;
 }
 .video-bg-wrapper .video-bg-wrapper__video {
   width: 100%;
@@ -1016,6 +1048,10 @@ label a {
 .video-bg-wrapper .video-bg-wrapper__overlay .overlay__content-wrapper {
   position: relative;
   top: 40%;
+  width: 50%;
+  min-width: 400px;
+  margin: auto;
+  float: none;
 }
 .video-bg-wrapper .video-bg-wrapper__overlay .overlay__content-wrapper .content-wrapper__heading {
   text-align: center;
@@ -1032,10 +1068,12 @@ label a {
   width: 100%;
   background: rgba(50, 50, 50, 0.9);
 }
-.scroll-wrapper p {
+.scroll-wrapper a, .scroll-wrapper p {
+  width: 100%;
   text-align: center;
   font-size: 20px;
-  color: white;
+  display: block;
+  text-decoration: none;
 }
 .scroll-wrapper i {
   text-align: center;
@@ -1060,11 +1098,12 @@ label a {
   overflow: hidden;
 }
 .home-bg-wrapper .home-bg-wrapper__image-bg {
+  position: relative;
   width: 100%;
   height: 100%;
   background: url("../img/homePage/backdrop.png");
   background-repeat: no-repeat;
-  background-position: center 70%;
+  background-position: 50% 70%;
   background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1233,7 +1272,6 @@ label a {
 }
 
 #small_footer {
-  background: white;
   position: absolute;
   bottom: 0;
   padding-top: 10px;
@@ -1244,6 +1282,10 @@ label a {
   font-size: 14px;
   z-index: 30;
 }
+#small_footer .onerow {
+  padding: 20px;
+  background: white;
+}
 
 #small_footer a {
   color: #404041;
@@ -1252,12 +1294,6 @@ label a {
 #small_footer a:hover {
   text-decoration: underline;
   color: #f9a31c;
-}
-
-.page_background_container {
-  width: 100%;
-  /*background: rgb(64,64,65);*/
-  overflow: visible;
 }
 
 .panel_icon {
@@ -1689,17 +1725,6 @@ ul {
 /***********************************************************************************
  *		Game
  ***********************************************************************************/
-#game_instructions {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1150px;
-  height: 200px;
-  overflow: hidden;
-  background: #404041;
-  margin-bottom: 20px;
-}
-
 #game_and_pannel_container {
   position: relative;
   margin-left: auto;
@@ -2330,78 +2355,6 @@ blockquote:before {
 }
 
 /* **********************************************************************************/
-/*		Good Causes Page															*/
-/* **********************************************************************************/
-.video_container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-}
-
-.video_container iframe,
-.video_container object,
-.video_container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 99.6%;
-  height: 95%;
-}
-
-/* **********************************************************************************/
-/*		profile switch																*/
-/* **********************************************************************************/
-#switch_profile_right_container {
-  right: 0;
-}
-
-#switch_profile_left_container {
-  left: 0;
-}
-
-.switch_container {
-  position: absolute;
-  top: 173px;
-  height: 100%;
-  width: 250px;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-.switch_arrow {
-  position: absolute;
-  top: 300px;
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: 80px;
-  cursor: pointer;
-  display: inline-block;
-  transform: scale(2, 3);
-  /* W3C */
-  -webkit-transform: scale(2, 3);
-  /* Safari and Chrome */
-  -moz-transform: scale(2, 3);
-  /* Firefox */
-  -ms-transform: scale(2, 3);
-  /* IE 9 */
-  -o-transform: scale(2, 3);
-  /* Opera */
-}
-
-.switch_arrow:hover {
-  color: #f9a31c;
-}
-
-#switch_arrow_right {
-  left: 20%;
-}
-
-#switch_arrow_left {
-  right: 20%;
-}
-
-/* **********************************************************************************/
 /*		Media Queries																*/
 /* **********************************************************************************/
 @media all and (max-width: 970px) {
@@ -2475,38 +2428,6 @@ blockquote:before {
   color: #f9a31c;
 }
 
-.small_orange_flash {
-  color: #f9a31c;
-  font-size: 15px;
-}
-
-.dark_background {
-  color: white;
-}
-
-.light_background {
-  color: #404041;
-}
-
-.background_container {
-  /*background: rgb(64,64,65);*/
-}
-
-.text_box {
-  background: rgba(230, 0, 0, 0.8);
-  color: white;
-  padding: 10px;
-  min-height: 100%;
-}
-
-.float_left {
-  float: left;
-}
-
-.float_right {
-  float: right;
-}
-
 .indent_list {
   margin-left: 50px;
   margin-bottom: 10px;
@@ -2515,14 +2436,6 @@ blockquote:before {
 .indent_list li {
   margin-top: 3px;
   margin-bottom: 3px;
-}
-
-.no_padding {
-  padding: 0;
-}
-
-.no_pad_top {
-  padding-top: 0;
 }
 
 .no_margin {

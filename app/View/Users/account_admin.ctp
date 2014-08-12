@@ -142,88 +142,11 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 		</div>
 
 		<div class="col6 last">
-			<?= $this->Html->image( 'user_white.png', array('class'=>'user_title_image', 'align'=>'left') ) ?>
-			<h2 class="large_indent">purchase gameballs</h2>
-			<div class="large_indent">
-				<?= $this->element('paypal'); ?>
-			</div>
+
 		</div>
 
 	</div>
 
-	<div class="onerow background_container <?php if (sizeof($distinctMonths) <= 0) { echo 'margin_bottom'; } ?>">
-
-		<div class="col4">
-			<?= $this->Html->image( 'team_white.png', array('class'=>'team_title_image', 'align'=>'left') ) ?>
-			<h2 class="large_indent">create a team</h2>
-			<div class="large_indent form_container">
-				<?php
-					echo $this->Form->create('Team', array(
-						'controller'=>'Teams',
-						'action' => 'createTeam',
-						'inputDefaults' => array(
-							'label' => false,
-							'div' => false
-							)
-						));
-					echo '<div class="input_row">';
-					echo $this->Form->label('Team.name', 'team name',array('class' => 'tiny_text'));
-					echo $this->Form->input('Team.name',array('class' => 'wide_input'));
-					echo '</div>';
-					echo $this->Form->end('submit');
-				?>
-			</div>
-		</div>	
-
-		<div class="col4">
-			<?= $this->Html->image( 'team_white.png', array('class'=>'title_image team_title_image', 'align'=>'left') ) ?>
-			<h2 class="large_indent">join a team</h2>
-			<div class="large_indent form_container">
-				<?php echo $this->Session->flash('joinTeam'); ?>
-
-				<?php
-					echo $this->Form->create('User', array(
-						'controller'=>'Users',
-						'action' => 'joinTeam',
-						'inputDefaults' => array(
-							'label' => false,
-							'div' => false
-							)
-						));
-					echo '<div class="input_row">';
-					echo $this->Form->label('Team.name', 'team name',array('class' => 'helper--clearfix tiny_text'));
-					echo $this->Form->input('Team.name',array('class' => 'wide_input helper--clearfix'));
-					echo '</div>';
-					echo '<div class="input_row">';
-					echo $this->Form->label('Team.pinNumber', 'team pin number',array('class' => 'tiny_text'));
-					echo $this->Form->input('Team.pinNumber',array('class' => 'wide_input', 'type' => 'number'));
-					echo '</div>';
-					echo $this->Form->end('submit');
-				?>
-			</div>
-		</div>
-			
-		<div class="col4 last">
-			<?= $this->Html->image( 'team_white.png', array('class'=>'title_image team_title_image', 'align'=>'left') ) ?>
-			<h2 class="large_indent">my teams</h2>	
-			<div class="large_indent">
-				<?php
-				if(isset($currentUser['User']['teams'])){
-					foreach ($currentUser['User']['teams'] as $teamName => $teamDetails) {
-
-						echo '<p>';
-						echo $this->Html->link($teamName,array('controller'=>'teams', 'action'=>'viewTeam', 'id'=>$teamDetails['id']));
-						echo '</p>';
-						if(sizeof($currentUser['User']['teams']) > 1 ){	
-						}
-					}
-				}else{
-					echo '<p class="tiny_text">you are not currently in a team. <a href="#teamName">create</a> or <a href="#joinTeamName">join</a> a team</p>';
-				}
-				?>
-			</div>
-		</div>
-	</div>
 
 	<?php
 	if (sizeof($distinctMonths) > 0) {
@@ -249,5 +172,3 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 	}
 	?>
 </div>
-
-<?= $this->element('quick_links'); ?>

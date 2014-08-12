@@ -16,7 +16,33 @@
 /* clearfix */
 .helper--clearfix{ content: ""; display: table; clear: both; overflow: auto;}
 
+/* marging */
+.helper--minus-header-margin{ margin-top: -$totalHeaderHeight; }
 
+/* floats */
+.helper--float-left{ float: left !important; }
+.helper--float-right{ float: right !important; }
+
+/* padding */
+.helper--no-pad{ padding: 0 !important; }
+.helper--no-pad-top{ padding-top: 0 !important; }
+.helper--no-pad-bottom{ padding-bottom: 0 !important; }
+.helper--no-pad-left{ padding-left: 0 !important; }
+.helper--no-pad-right{ padding-right: 0 !important; }
+
+/* rounded number */
+.helper--round-number{
+	border: 2px solid white;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	padding: 4px 8px;
+	font-weight: bold;
+}
 
 /* horizontal dividing line */
 .helper--dividing-line {

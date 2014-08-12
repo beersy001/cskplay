@@ -3,25 +3,24 @@ $this->Html->script( 'gamePlay', array('inline'=>false));
 $this->Html->script( 'ajaxGetSelections', array('inline'=>false));
 $this->Html->script( 'moveUserSelections', array('inline'=>false));
 ?>
-<div class="grid" id="game_grid">
+
+<div class="grid">
 	<div id="loupe" oncontextmenu="toggleLoupe();return false;">
 		<?= $this->element('game/game_loupe'); ?>
 	</div>
 
-	<div class="game_instructions">
-		<div class="onerow background_container margin_bottom">
-			<div class="col4">
-				<p class="round_number">1</p>
-				<p class="centered_instruction">Click on an area in the photo where you think the ball is!!</p>
-			</div>
-			<div class="col4">
-				<p class="round_number">2</p>
-				<p class="centered_instruction">Click on the magnifying glass to choose your actual location</p>
-			</div>
-			<div class="col4 last">
-				<p class="round_number">3</p>
-				<p class="centered_instruction">Click again to choose more than one location then submit</p>
-			</div>
+	<div class="onerow">
+		<div class="col4">
+			<p class="helper--round-number">1</p>
+			<p class="helper--center-align">Click on an area in the photo where you think the ball is!!</p>
+		</div>
+		<div class="col4">
+			<p class="helper--round-number">2</p>
+			<p class="helper--center-align">Click on the magnifying glass to choose your actual location</p>
+		</div>
+		<div class="col4 last">
+			<p class="helper--round-number">3</p>
+			<p class="helper--center-align">Click again to choose more than one location then submit</p>
 		</div>
 
 	</div>
@@ -75,7 +74,7 @@ $this->Html->script( 'moveUserSelections', array('inline'=>false));
 		</div>
 	</div>
 
-	<div class="onerow no_padding">
+	<div class="onerow">
 		<div class="col3">
 			<?= $this->element('blocks/find_out_more_giving'); ?>
 		</div>
@@ -283,5 +282,3 @@ $this->Html->script( 'moveUserSelections', array('inline'=>false));
 	
 </script>
 </div>
-
-<?= $this->element('quick_links'); ?>

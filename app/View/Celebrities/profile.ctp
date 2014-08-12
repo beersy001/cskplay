@@ -2,55 +2,25 @@
 
 	<script>var currentMonth = <?=$currentMonth?></script>
 
-	<div class="video-bg-wrapper">
+	<div id="video-wrapper" class="video-bg-wrapper helper--minus-header-margin">
 		<div class="video-bg-wrapper__overlay">
-			<div class="colcenter40 overlay__content-wrapper">
+			<div class="overlay__content-wrapper">
 				<h1 class="content-wrapper__heading"><?=$celebName?></h1>
-				<p></p>
+				<p class="helper--center-align"><?=$celebName?> was a great sport, scroll down to see how they got on and take a look at their outtakes</p>
 			</div>
+
 			<div class="scroll-wrapper">
-				<p>scroll down</p>
-				<i class="fa fa-angle-down"></i>
+				<a href="#first-scroll-content">scroll down</a>
+				<i class="fa fa-3 fa-angle-down"></i>
 			</div>
 		</div>
 
-		<div id="player" class="video-bg-wrapper__video">
-			<p></p>
-		</div>
 		<script>
-			var tag = document.createElement('script');
-			tag.src = "http://www.youtube.com/player_api";
-			var firstScriptTag = document.getElementsByTagName('script')[0];
-			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-			var player;
-			function onYouTubePlayerAPIReady() {
-				player = new YT.Player('player', {
-					playerVars: {
-						'autoplay': 1,
-						'controls': 0,
-						'autohide': 1,
-						'wmode':'transparent',
-						'loop' : 1,
-						'hd' : 1,
-						'rel' : 0,
-						'showinfo' : 0,
-						'playlist' : 'IAb-OD-5JFI'
-					},
-					videoId: 'IAb-OD-5JFI',
-					widthstr: '100%',
-					events: {
-						'onReady': onPlayerReady}
-				});
-			}
-
-			function onPlayerReady(event) {
-				event.target.mute();
-			}
+			$('#video-wrapper').tubular({videoId: 'IAb-OD-5JFI'});
 		</script>
 	</div>
 
-	<div class="onerow">
+	<div id="first-scroll-content" class="onerow">
 		<div class="col2">
 			<?= $this->Html->image( $image1 ) ?>
 		</div>

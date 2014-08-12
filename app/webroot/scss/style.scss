@@ -73,24 +73,13 @@ p, span{
 a:hover{
 	text-decoration:underline;
 	color: rgb(249,163,28);
+
+	&+i{
+		color: rgb(249,163,28);
+	}
 }
 
-.round_number{
-	border: 2px solid white;
-	border-radius: 50%;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	width: 30px;
-	height: 30px;
-	text-align: center;
-	padding: 4px 8px;
-	font-weight: bold;
-}
 
-.game_instructions .centered_instruction{
-	text-align: center;
-}
 
 .basket__gameballs{
 	width: 200px;
@@ -238,7 +227,7 @@ a:hover{
 	left: 8px;
 }
 
-body, #container{
+body, #container, .onerow{
 	background: rgb(80,80,80);
 	background: url('../img/grey_bg.jpg') repeat 0 0;
 }
@@ -359,8 +348,8 @@ label a{
 .video-bg-wrapper{
 	position: relative;
 	width: 100%;
-	height: 100%;
-	margin-top: -$totalHeaderHeight; 
+	height: 100vh; /* using viewport height so video can be full screen in middle of the page */
+	overflow: hidden;
 	
 	.video-bg-wrapper__video{
 		width: 100%;
@@ -376,6 +365,10 @@ label a{
 		.overlay__content-wrapper{
 			position: relative;
 			top: 40%;
+			width: 50%;
+			min-width: 400px;
+			margin: auto;
+			float: none;
 
 			.content-wrapper__heading{
 				text-align: center;
@@ -383,7 +376,6 @@ label a{
 			}
 		}
 	}
-
 }
 
 
@@ -397,10 +389,12 @@ label a{
 	padding-top: 5px;
 	width: 100%;
 	background: rgba(50,50,50,0.9);
-	p{
+	a, p{
+		width: 100%;
 		text-align: center;
 		font-size: 20px;
-		color: white;
+		display: block;
+		text-decoration: none;
 	}
 	i{
 		text-align: center;
@@ -426,11 +420,12 @@ label a{
 	overflow: hidden;
 
 	.home-bg-wrapper__image-bg{
+		position: relative;
 		width: 100%;
 		height: 100%;
 		background: url("../img/homePage/backdrop.png");	
 		background-repeat: no-repeat;
-		background-position: center 70%;
+		background-position: 50% 70%;
 		background-attachment: scroll;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -622,9 +617,8 @@ label a{
 }
 
 #small_footer{
-	background: rgb(255,255,255);
 	position:absolute;
-	bottom:0;
+	bottom: 0;
 	padding-top: 10px;
 	overflow: hidden;
 	width:100%;
@@ -632,6 +626,11 @@ label a{
 	color: rgb(0,0,0);
 	font-size: 14px;
 	z-index: 30;
+
+	.onerow{
+		padding: 20px;
+		background: white;
+	}
 }
 
 #small_footer a{
@@ -641,12 +640,6 @@ label a{
 #small_footer a:hover{
 	text-decoration: underline;
 	color: rgb(249,163,28);
-}
-
-.page_background_container{
-	width: 100%;
-	/*background: rgb(64,64,65);*/
-	overflow: visible;
 }
 
 .panel_icon{
@@ -1070,16 +1063,7 @@ ul{
 /***********************************************************************************
  *		Game
  ***********************************************************************************/
-#game_instructions{
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	width: 1150px;
-	height: 200px;
-	overflow: hidden;
-	background: rgb(64,64,65);
-	margin-bottom: 20px;
-}
+
 
 #game_and_pannel_container{
 	position: relative;
@@ -1715,75 +1699,6 @@ blockquote:before {
 }
 
 /* **********************************************************************************/
-/*		Good Causes Page															*/
-/* **********************************************************************************/
-.video_container {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
-}
- 
-.video_container iframe,
-.video_container object,
-.video_container embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 99.6%;
-	height: 95%;
-}
-
-/* **********************************************************************************/
-/*		profile switch																*/
-/* **********************************************************************************/
-#switch_profile_right_container{
-	right: 0;
-}
-
-#switch_profile_left_container{
-	left: 0;
-}
-
-.switch_container{
-	position: absolute;
-	top: 173px;
-	height: 100%;
-	width: 250px;
-	margin-left: 30px;
-	margin-right: 30px;
-}
-
-.switch_arrow{
-	position: absolute;
-	top: 300px;
-	font-family: 'Alegreya Sans', sans-serif;
-	font-size: 80px;
-	cursor: pointer;
-	display:inline-block;
-	transform:scale(2,3); /* W3C */
-	-webkit-transform:scale(2,3); /* Safari and Chrome */
-	-moz-transform:scale(2,3); /* Firefox */
-	-ms-transform:scale(2,3); /* IE 9 */
-	-o-transform:scale(2,3); /* Opera */
-}
-
-.switch_arrow:hover{
-	color: rgb(249,163,28);
-}
-
-#switch_arrow_right{
-	left: 20%;
-}
-
-#switch_arrow_left{
-	right: 20%;
-}
-
-
-
-/* **********************************************************************************/
 /*		Media Queries																*/
 /* **********************************************************************************/
 @media all and (max-width: 970px) {
@@ -1857,37 +1772,6 @@ blockquote:before {
 	color: rgb(249,163,28);
 }
 
-.small_orange_flash{
-	color: rgb(249,163,28);
-	font-size: 15px;
-}
-
-.dark_background{
-	color: rgb(255,255,255);
-}
-
-.light_background{
-	color: rgb(64,64,65);
-}
-
-.background_container{
-	/*background: rgb(64,64,65);*/
-}
-
-.text_box{
-	background: rgba(230,0,0,0.8);
-	color: rgb(255,255,255);
-	padding: 10px;
-	min-height: 100%;
-}
-
-.float_left{
-	float: left;
-}
-
-.float_right{
-	float: right;
-}
 
 .indent_list{
 	margin-left: 50px;
@@ -1897,14 +1781,6 @@ blockquote:before {
 .indent_list li{
 	margin-top: 3px;
 	margin-bottom: 3px;
-}
-
-.no_padding{
-	padding: 0;
-}
-
-.no_pad_top{
-	padding-top: 0;
 }
 
 .no_margin{

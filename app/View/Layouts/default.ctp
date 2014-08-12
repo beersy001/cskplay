@@ -16,8 +16,11 @@
 			echo $this->Html->meta('icon');
 			echo $this->Html->css('style');
 			echo $this->Html->css('jquery-ui-1.10.3.custom');
+			echo $this->Html->script('jquery.parallaxScroll');
+			echo $this->Html->script('jquery.tubular');
 			echo $this->Html->script('countdown');
 			echo $this->Html->script('changeActiveMenu');
+			echo $this->Html->script('smoothAnchorScrolling');
 			echo $this->Html->script('page');
 			echo $this->Html->meta('icon', $this->Html->url('/favicon.ico'));
 			echo $this->fetch('meta');

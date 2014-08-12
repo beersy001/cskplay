@@ -32,6 +32,14 @@ class ToolkitsController extends AppController {
 		$this->set('title_for_page', 'Toolkit - Forms');
 		$this->set('pageId', 'Toolkit Forms');
 	}
+
+	/********************************************************
+	 *		Video Background								*
+	 ********************************************************/
+	public function videoBackground(){
+		$this->set('title_for_page', 'Toolkit - Video Background');
+		$this->set('pageId', 'Toolkit Video Background');
+	}
 }
 
 ?>
