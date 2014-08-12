@@ -20,44 +20,22 @@
 		</script>
 	</div>
 
-	<div id="first-scroll-content" class="onerow">
-		<div class="col2">
-			<?= $this->Html->image( $image1 ) ?>
-		</div>
-		<div class="col2">
-			<?= $this->Html->image( $image2 ) ?>
-		</div>
-		<div class="col2">
-			<?= $this->Html->image( $image3 ) ?>
-		</div>
-		<div class="col2">
-			<?= $this->Html->image( $image4) ?>
-		</div>
-		<div class="col2">
-			<?= $this->Html->image( $image5 ) ?>
-		</div>
-		<div class="col2 last">
-			<?= $this->Html->image( $image6 ) ?>
-		</div>
-	</div>
 
-	<div class="onerow alt-background">
+	<div id="first-scroll-content" class="onerow">
 		<div class="col6">
-			<h1 class="border_bottom margin_bottom"><?=$profileHeading1?></h1>
+			<h1><?=$profileHeading1?></h1>
+			<h2 class="helper--highlight-text"><?=$profileSubHeading1?></h2>
 			<?= $this->Html->image( $image7, array('class'=>'headshot_image', 'align'=>'left') ) ?>
 			<p><?=$profileTextarea1?></p>
 		</div>
 		<div class="col6 last">
-			<h1 class="border_bottom margin_bottom"><?=$profileHeading2?></h1>
+			<h1><?=$profileHeading2?></h1>
 			<?= $this->Html->image( $charityImage, array('class'=>'headshot_image', 'align'=>'left') ) ?>
 			<p><?=$profileTextarea2?></p>
 		</div>
 	</div>
 
-	<div class="onerow helper--no-pad parallax parallax--bg-position" style="background-image:url(/cskplay/img/celebrities/RyanGiggs/banner.jpg)">
-	</div>
-
-	<div class="onerow">
+	<div class="onerow alt-background">
 		<div class="col6">
 			<blockquote>​​<?=$outtakesQuote1?></blockquote>​
 		</div>
@@ -67,6 +45,32 @@
 				<iframe class="youtube_video" src="<?=$outtakesVideoLink1?>?controls=0&showinfo=0&rel=0" allowfullscreen frameborder="0"></iframe>
 			</div>
 			
+		</div>
+	</div>
+
+	<div class="onerow helper--no-pad parallax parallax--bg-position" style="background-image:url(/cskplay/img/celebrities/<?=$celeb['Celebrity']['nameId']?>/banner.jpg)">
+	</div>
+
+	<div class="onerow">
+		<div class="image-gallery">
+			<div class="image-gallery__col">
+				<?= $this->Html->image( $image1, array("class" => "col__img") ) ?>
+			</div>
+			<div class="image-gallery__col">
+				<?= $this->Html->image( $image2, array("class" => "col__img") ) ?>
+			</div>
+			<div class="image-gallery__col">
+				<?= $this->Html->image( $image3, array("class" => "col__img") ) ?>
+			</div>
+			<div class="image-gallery__col">
+				<?= $this->Html->image( $image4, array("class" => "col__img") ) ?>
+			</div>
+			<div class="image-gallery__col">
+				<?= $this->Html->image( $image5, array("class" => "col__img") ) ?>
+			</div>
+			<div class="image-gallery__col">
+				<?= $this->Html->image( $image6, array("class" => "col__img") ) ?>
+			</div>
 		</div>
 	</div>
 

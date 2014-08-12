@@ -36,9 +36,6 @@
 		<div class="col4 last">
 			<p>Our mission is to raise money for charities, good causes and Celebrity Spot Kick’s Sporting Programmes, through sport orientated online competitions. Our aim is to ensure each competition is both fun and worthwhile for you as our players and supporters and charities alike.</p>
 		</div>
-
-
-
 	</div>
 
 

@@ -10,7 +10,7 @@ window.onload = function() {
 		runCameraFlashes(300);
 		runCameraFlashes(500);
 		var timer = setInterval(countdown, 1000);
-		$('.home-bg-wrapper__image-bg').parallax({ "coeff" :-0.7 });
+		$('.home-bg-wrapper__image-bg').parallax({ "coeff" : 0.7 });
 	}
 
 	if(pageId == 'viewTeam'){

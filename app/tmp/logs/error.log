@@ -45655,3 +45655,939 @@ Request URL: /cskplay/img/celebrities/keiraknightley/image7.jpg
 Stack Trace:
 #0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-08-12 13:27:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:27:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:28:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:28:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:34:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:34:36 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:36:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:36:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:36:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:40:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:40:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:40:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:40:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:41:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:41:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:41:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:41:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:43:26 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:45:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 13:46:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:02:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:07:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:08:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:08:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:08:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:09:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:09:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/celebrities/mirandakerr/banner.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:09:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/celebrities/mirandakerr/banner.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:10:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/celebrities/mirandakerr/banner.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:10:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/celebrities/mirandakerr/banner.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:10:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/celebrities/mirandakerr/banner.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:10:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/celebrities/mirandakerr/banner.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:10:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/celebrities/mirandakerr/banner.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:10:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/celebrities/mirandakerr/banner.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:10:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:10:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:10:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:11:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:12:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/greatormondstreethospital/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:12:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/lesedilabatho/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:12:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:12:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:12:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/greatormondstreethospital/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:12:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:13:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:14:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:15:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:15:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:16:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:16:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:16:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:18:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:20:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:20:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:21:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:22:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:23:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:23:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:23:36 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:25:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:27:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:29:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:30:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:30:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:30:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:30:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:30:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:31:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:31:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:33:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:33:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:39:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:39:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:40:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:40:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:40:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:46:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:46:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:51:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:51:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:54:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:54:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:54:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 14:56:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 15:06:18 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [C:\wamp\www\cskplay\app\Model\Celebrity.php, line 7]
+2014-08-12 15:06:18 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /cskplay/celebrities/profile/month:201402
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 7, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 7, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-12 15:11:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 15:11:52 Error: [MissingActionException] Action CelebritiesController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'CelebritiesController',
+  'action' => 'add',
+)
+Request URL: /cskplay/celebrities/add
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CelebritiesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-12 15:17:15 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in [C:\wamp\www\cskplay\app\View\Celebrities\add.ctp, line 28]
+2014-08-12 15:17:15 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')'
+Request URL: /cskplay/celebrities/add
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 28, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 28, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-12 15:18:00 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in [C:\wamp\www\cskplay\app\View\Celebrities\add.ctp, line 32]
+2014-08-12 15:18:00 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')'
+Request URL: /cskplay/celebrities/add
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\csk...', 32, Array)
+#2 C:\wamp\www\cskplay\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\csk...', 32, Array)
+#3 C:\wamp\www\cskplay\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-12 15:34:04 Error: [MissingActionException] Action CelebritiesController::editCelebrity() could not be found.
+Exception Attributes: array (
+  'controller' => 'CelebritiesController',
+  'action' => 'editCelebrity',
+)
+Request URL: /cskplay/celebrities/editCelebrity
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(CelebritiesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-12 15:49:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/lesedilabatho/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 15:49:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/prostatecanceruk/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 15:49:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/macmillancancersupport/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 15:49:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/charities/greatormondstreethospital/logo.png
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 15:53:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/css/grid_layout.css
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 16:25:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 16:25:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_small.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 16:25:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/rear_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 16:25:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 16:26:04 Error: [MissingActionException] Action GamesController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'GamesController',
+  'action' => 'add',
+)
+Request URL: /cskplay/games/add
+Stack Trace:
+#0 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cskplay\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GamesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-12 16:26:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 16:26:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/rear_large.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-12 16:26:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /cskplay/img/gameImages/201408/front_small.jpg
+Stack Trace:
+#0 C:\wamp\www\cskplay\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

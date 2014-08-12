@@ -66,7 +66,7 @@ h1+div, h1+h2, h1+p, h2+p, p+p, p+a, p+video, video+p{
 }
 
 p, span{
-	line-height: 1.2em;
+	line-height: 1.5em;
 	color: $paragraphTextColor;
 }
 
@@ -248,6 +248,8 @@ label a{
 	cursor: pointer;
 }
 
+
+
 #home_container{
 	max-width: 100%;
 	position:relative;
@@ -384,6 +386,24 @@ label a{
 .parallax{
 	min-height: 250px;
 	background-size: cover;
+}
+
+/********************************************************/
+/*****	image gallery								*****/
+/********************************************************/
+.image-gallery{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+
+	.image-gallery__col{
+		display: table-cell;
+
+		.col__img{
+			border-radius: 50%;
+			padding: 20px;
+		}
+	}
 }
 
 /********************************************************/
@@ -666,26 +686,9 @@ label a{
 	width: 125px;
 }
 
-#check_results_button{
-	width: 110px;
-}
-
-#outtakes_button{
-	width: 120px;
-}
-
-.large{
-	width: 66%;
-}
-
-.medium{
-	width: 80%;
-}
-
 #paypal_image{
 	width: 60px;
 }
-
 
 
 .crosshair{
@@ -712,41 +715,6 @@ label a{
 
 .adaptive_text{
 	width: 100%;
-}
-
-.rel_pos_bottom{
-	position: relative;
-	bottom: 0;
-}
-
-.no_decoration{
-	text-decoration: none;
-}
-
-.no_decoration:hover{
-	text-decoration: none;
-}
-
-#home_padding{
-	padding-bottom: 1200px;
-}
-
-#home_buttons{
-	position: absolute;
-	z-index: 30;
-	right: 100px;
-	bottom: 145px;
-}
-
-
-
-#login_page_form{
-	position: relative;
-	height: 100%;
-}
-
-ul{
-    list-style-type: none;
 }
 
 #countdown{

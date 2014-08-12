@@ -64,13 +64,6 @@ class CelebritiesController extends AppController {
 		if(!empty($celeb)){
 			$celebNameId = $celeb['Celebrity']['nameId'];
 			
-			$charity = $this->Charity->getCharityByCelebrity($celebNameId);
-
-			
-			$charityNameId = $charity['Charity']['nameId'];
-
-			$this->set('charityNameId', $charityNameId);
-			$this->set('charityName', $charity['Charity']['name']);
 			$this->set('celeb', $celeb);
 			$this->set('celebName', strtolower($celeb['Celebrity']['firstName'] . ' ' . $celeb['Celebrity']['surname']));
 			$this->set('realMonth', strtolower(DateTime::createFromFormat('!Ym', $month)->format('F Y')));
@@ -106,15 +99,7 @@ class CelebritiesController extends AppController {
 			$this->set('currentMonth', $celeb['Celebrity']['month']);
 
 
-
-			$this->set('charityImage', 'charities/' . $charityNameId . '/logo.png');	
-
-			if($this->RequestHandler->isAjax()){
-				$this->view = '/Elements/celebrity/single_profile';
-				//$this->render('profile');
-			}else{
-				$this->render('profile');
-			}
+			$this->render('profile');
 		}
 	}
 
@@ -142,7 +127,7 @@ class CelebritiesController extends AppController {
 	 *		Add Celebrity 									*
 	 ********************************************************/
 
-	public function addCelebrity(){
+	public function add(){
 		$this->set('title_for_page', 'add celebrity');
 		$this->set('pageId', 'addCelebrity');
 
@@ -167,7 +152,7 @@ class CelebritiesController extends AppController {
 	 *		Edit Celebrity 									*
 	 ********************************************************/
 
-	public function editCelebrity(){
+	public function edit(){
 		$this->set('title_for_page', 'edit celebrity');
 		$this->set('pageId', 'editCelebrity');
 

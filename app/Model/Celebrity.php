@@ -1,5 +1,4 @@
 <?php
-
 class Celebrity extends AppModel{
 
 	var $order = array('Celebrity.month' => 'DESC');
@@ -7,9 +6,10 @@ class Celebrity extends AppModel{
 	public function getCurrentCelebrity(){
 		$month = date('Y-m');
 
-		$results = $this->find($type = 'all', array('conditions' => array('Celebrity.month' => $month)));
+		$results = $this->find($type = 'first', array('conditions' => array('Celebrity.month' => $month)));
 
-		return $results[0]['Celebrity'];
+
+		return $results;
 	}
 
 	public function getAllCelebrities(){
