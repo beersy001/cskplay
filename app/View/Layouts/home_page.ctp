@@ -11,7 +11,6 @@
 			echo $this->Html->charset(); 
 			echo $this->Html->meta('icon');
 			echo $this->Html->css('cake.generic');
-			echo $this->Html->css('grid_layout');
 			echo $this->Html->css('style');
 			echo $this->Html->script('jquery');
 			echo $this->Html->script('jquery.parallaxScroll');
