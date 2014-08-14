@@ -32,11 +32,11 @@ function registerSelectClick(event,date) {
 	var imageX = Math.round((event.pageX - totalOffsetX),0);
 	var imageY = Math.round((event.pageY - totalOffsetY),0);
 	
-	var coords = reverseCalculateCoords(imageX,imageY,date);
+	var coords = calculateScaledCoords(imageX,imageY,date);
 	var screenX = coords[0];
 	var screenY = coords[1];	
 	
-	setSelection(screenX,screenY,"game_grid","single_crosshair_" + selectionId);
+	setSelection(screenX,screenY,"game-img-wrapper","single_crosshair_" + selectionId);
 	setSelection(imageX,imageY,"loupe_image_container","loupe_crosshair_" + selectionId);
 
 	//document.getElementById("x_input").value = imageX;
@@ -82,29 +82,15 @@ function calculateCoords(event,date){
 }
 
 
-function reverseCalculateCoords(x,y,date){
+function calculateScaledCoords(x,y,date){
 	var defaultImage = document.getElementById('hidden_image')
 	var currentElement = document.getElementById('mainImage');
-
-	var imageX = 0;
-	var imageY = 0;
-
 	var previousWidth = defaultImage.width;
-	var previousHeight = defaultImage.height;
-
-	var totalOffsetX = 0;
-	var totalOffsetY = 0;
-				
-	var widthRatio = currentElement.offsetWidth / previousWidth;
-	var heightRatio = currentElement.offsetHeight / previousHeight;
-
-	do {
-		totalOffsetX += currentElement.offsetLeft;
-		totalOffsetY += currentElement.offsetTop;
-	} while (currentElement = currentElement.offsetParent)
+	var previousHeight = defaultImage.height;		
+	var aspectRatio = currentElement.offsetWidth / previousWidth;
 	
-	imageX = Math.round(totalOffsetX + (x * widthRatio),0);
-	imageY = Math.round(totalOffsetY + (y * heightRatio),0);
+	var imageX = Math.round((x * aspectRatio),2);
+	var imageY = Math.round((y * aspectRatio),2);
 
 	return [imageX, imageY];
 }

@@ -1659,123 +1659,6 @@ label a {
 /***********************************************************************************
  *		Game
  ***********************************************************************************/
-#game_and_pannel_container {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1150px;
-  height: 566px;
-  overflow: hidden;
-  background: #404041;
-}
-
-#game_sidebar p {
-  margin-bottom: 5px;
-}
-
-#game_sidebar {
-  width: 300px;
-  float: left;
-  position: relative;
-  z-index: 20;
-  background: #404041;
-  border-top: 2px solid #404041;
-  border-left: 2px solid #404041;
-  transition: all 1000ms ease-in-out;
-  -o-transition: all 1000ms ease-in-out;
-  -ms-transition: all 1000ms ease-in-out;
-  -moz-transition: all 1000ms ease-in-out;
-  -webkit-transition: all 1000ms ease-in-out;
-}
-
-#game_sidebar_tabs {
-  height: 30px;
-}
-
-#game_sidebar_tabs .tab {
-  width: 149px;
-  height: 28px;
-  float: left;
-  padding: 5px;
-  cursor: pointer;
-}
-
-#game_sidebar_tabs .tab:hover p {
-  color: #f9a31c;
-}
-
-#left_tab {
-  background: #404041;
-}
-
-#right_tab {
-  background: #59595b;
-}
-
-#game_sidebar_competition {
-  position: absolute;
-  left: 0;
-}
-
-#game_sidebar_practice {
-  position: absolute;
-  left: -9999px;
-  height: 534px;
-  width: 298px;
-  overflow-y: scroll;
-}
-
-#game_sidebar_tabs .tab p {
-  text-align: center;
-}
-
-#game_sidebar_submit_instructions {
-  min-height: 150px;
-}
-
-.game_image_container {
-  float: right;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  width: 850px;
-  position: relative;
-  height: 100%;
-}
-
-#purchase_gameballs_sidebar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 10px;
-  background: #404041;
-  z-index: 1;
-  transition: all 1000ms ease-in-out;
-  -o-transition: all 1000ms ease-in-out;
-  -ms-transition: all 1000ms ease-in-out;
-  -moz-transition: all 1000ms ease-in-out;
-  -webkit-transition: all 1000ms ease-in-out;
-}
-
-#purchase_gameballs_sidebar div {
-  float: right;
-  right: 0;
-  margin-left: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 270px;
-}
-
-#purchase_gameballs_sidebar p {
-  padding-right: 10px;
-}
-
-#purchase_gameballs_sidebar h2 {
-  position: relative;
-  left: -20px;
-}
-
 .game_image {
   width: 100%;
   cursor: crosshair;
@@ -1816,21 +1699,6 @@ img.game_ball_image {
   width: 15px;
   height: 15px;
   vertical-align: middle;
-}
-
-#GameBasketForm {
-  height: 200px;
-}
-
-#GameBasketForm input {
-  width: 75px;
-  background: transparent;
-  border: none;
-}
-
-#GameBasketForm .cancel_gameball {
-  cursor: pointer;
-  color: orange;
 }
 
 .game_ball {
@@ -2396,54 +2264,6 @@ blockquote:before {
   background: white;
 }
 
-.ajax_loading_pannel {
-  position: absolute;
-  left: -9999px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background: #58585b;
-  background: rgba(88, 88, 91, 0.9);
-  z-index: 40;
-}
-
-.ajax_loading_pannel_inner {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: 25%;
-  width: 50%;
-  background: #404041;
-  padding: 10px;
-}
-
-.ajax_loading_pannel h1, .ajax_loading_pannel p, .ajax_loading_pannel a, .ajax_loading_pannel h2 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.section {
-  padding-bottom: 5px;
-  padding-top: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: relative;
-  left: 0px;
-  width: 270px;
-  z-index: 10;
-  background: #404041;
-  transition: all 1000ms ease-in-out;
-  -o-transition: all 1000ms ease-in-out;
-  -ms-transition: all 1000ms ease-in-out;
-  -moz-transition: all 1000ms ease-in-out;
-  -webkit-transition: all 1000ms ease-in-out;
-}
-
 .toggle_section {
   position: absolute;
   top: 0px;
@@ -2456,27 +2276,6 @@ blockquote:before {
   -ms-transition: all 1000ms ease-in-out;
   -moz-transition: all 1000ms ease-in-out;
   -webkit-transition: all 1000ms ease-in-out;
-}
-
-#gameballs_section p {
-  float: left;
-  width: 75px;
-}
-
-#game_input_form_section {
-  left: -180px;
-}
-
-#game_instructions_section {
-  left: 0px;
-}
-
-#create_team_section {
-  min-height: 90px;
-}
-
-#join_team_section {
-  min-height: 90px;
 }
 
 #my_details_section {

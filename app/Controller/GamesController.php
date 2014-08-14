@@ -180,9 +180,9 @@ class GamesController extends AppController {
 	}
 
 
-	public function addGame(){
+	public function add(){
 		$this->set('title_for_page', 'new game');
-		$this->set('pageId', 'newGame');
+		$this->set('pageId', 'addGame');
 
 		if($this->request->is('post')) {
 			$this->Game->save($this->request->data);

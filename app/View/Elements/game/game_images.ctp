@@ -19,27 +19,18 @@
 
 		echo $this->Html->image( 'winning_spot_grey.png', array('class'=>'winning_selection','id' => 'unselected_win_' . $month . '_normal', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px" ) );
 	}
-?>
+	?>
 </div>
 
-<?php
-if($typeOfGame == 'competition'){
-
+<div>
+	<?php
 	$compFrontLarge = 'gameImages/' . $month . '/front_large.jpg';
 	$compRearLarge = 'gameImages/' . $month . '/rear_large.jpg';
 	$compFrontSmall = 'gameImages/' . $month . '/front_small.jpg';
 
-}else if( $typeOfGame == 'practice'){
-	$compFrontLarge = 'practiceImages/' . $month . '_0_front_large.jpg';
-	$compRearLarge = 'practiceImages/' . $month . '_0_rear_large.jpg';
-	$compFrontSmall = 'practiceImages/' . $month . '_0_front_small.jpg';
-}else{
-	$compFrontLarge = 'gameImages/' . $month . '/front_large.jpg';
-}
-
-echo $this->Html->image( $compFrontLarge, array('class'=>'main_game_image game_image no_padding no_margin', 'id'=> 'mainImage') );
-echo $this->Html->image( $compRearLarge, array('class'=>'game_image  display_none', 'id'=>'game_image_alt') );
-echo $this->Html->image( $compFrontSmall, array('class'=>'game_image_inlay display_none', 'id'=>'game_image_main_inlay') );
-echo $this->Html->image( $compFrontLarge, array('id'=>'hidden_image','style'=>'display: none; position: absolute'));
-
-?>
+	echo $this->Html->image( $compFrontLarge, array('class'=>'main_game_image game_image no_padding no_margin', 'id'=> 'mainImage') );
+	echo $this->Html->image( $compRearLarge, array('class'=>'game_image  display_none', 'id'=>'game_image_alt') );
+	echo $this->Html->image( $compFrontSmall, array('class'=>'game_image_inlay display_none', 'id'=>'game_image_main_inlay') );
+	echo $this->Html->image( $compFrontLarge, array('id'=>'hidden_image','style'=>'display: none; position: absolute'));
+	?>
+</div>

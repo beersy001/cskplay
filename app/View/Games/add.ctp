@@ -46,9 +46,6 @@
 			echo $this->Form->input('videoId',array('class' => 'helper--clearfix'));
 			echo '</div>';
 
-
-
-			
 			echo $this->Form->end('submit');
 			?>
 		</div>
