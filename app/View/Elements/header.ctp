@@ -7,7 +7,7 @@
 		</a>
 	</div>
 
-	<div class="header__login-wrapper">
+	<div class="header__login-wrapper helper--desktop-tablet-only">
 		<?php
 			if(!$authUser){
 				echo $this->Html->link('login', array('controller'=>'Users', 'action'=>'login'),array('class' => 'cta cta--100' ));
@@ -33,7 +33,11 @@
 	}
 	?>
 
-	<div class="header__nav-wrapper">
+
+	<i class="header__hamburger-icon fa fa-bars helper--mobile-only helper--font-color"></i>
+
+	<div class="header__nav-wrapper ">
 		<?= $this->element('simple_nav_bar'); ?>
 	</div>
+
 </div>

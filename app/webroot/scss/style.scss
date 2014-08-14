@@ -2,6 +2,7 @@
 
 $paragraphTextColor: rgb(220,220,220);
 $totalHeaderHeight: 135px;
+$highlightColor: rgb(249,163,28);
 
 @mixin allTransition1000() {
 	transition: all 1000ms ease-in-out;
@@ -19,14 +20,13 @@ $totalHeaderHeight: 135px;
 	-webkit-transition: all 300ms ease-in-out;
 }
 
+/* responsive imports at the bottom of the sheet */
 @import 'cake.generic';
 @import 'grid';
-@import 'grid_responsive';
 @import 'helpers';
 @import 'reset';
 @import 'forms';
-@import 'forms_responsive';
-@import 'style_responsive';
+
 
 
 /** General Style Info **/
@@ -48,6 +48,10 @@ h1, h2, h3, a, input, select{ color: rgb(255,255,255); }
 h1{
 	font-weight: 200;
 	font-size: 2.5em;
+
+	span{
+		font-weight: 200;
+	}
 }
 
 h2{
@@ -260,6 +264,7 @@ label a{
 /*****		info-wrapper							*****/
 /********************************************************/
 .info-wrapper{
+	overflow: hidden;
 
 	.info-wrapper__block{
 		display: block;
@@ -483,7 +488,7 @@ label a{
 		.logo-wrapper__text{
 			position: absolute;
 			right: 145px;
-			top: 16px;
+			top: 5px;
 			font-size: 65px;
 		}
 
@@ -1914,40 +1919,6 @@ blockquote:before {
 	}
 }
 
-/* **********************************************************************************/
-/*																				*/
-/* **********************************************************************************/
-
-@media all and (max-height: 700px){ 
-
-	#flash1{	top:120px;		right: 50%;}
-	#flash2{	top:120px;		right: 65%;}
-	#flash3{	top:300px;		right: 95%;}
-	#flash4{	top:120px;		right: 35%;}
-	#flash5{	top:300px;		right: 25%;}
-	#flash6{	top:120px;		right: 15%;}
-	#flash7{	top:120px;		right: 5%;}
-	#flash8{ 	top:200px;		right: 70%;}
-	#flash9{	top:200px;		right: 60%;}
-	#flash10{	top:200px;		right: 95%;}
-	#flash11{	top:300px;		right: 35%;}
-	#flash12{	top:175px;		right: 30%;}
-	#flash13{	top:175px;		right: 20%;}
-	#flash14{	top:175px;		right: 10%;}
-	#flash15{	top:225px;		right: 25%;}
-	#flash16{	top:225px;		right: 15%;}
-	#flash17{	top:225px;		right: 5%;}
-	#flash18{	top:300px;		right: 30%;}
-	#flash19{	top:300px;		right: 20%;}
-	#flash20{	top:300px;		right: 10%;}
-	#flash21{	top:225px;		right: 35%;}
-	#flash22{	top:300px;		right: 25%;}
-	#flash23{	top:300px;		right: 15%;}
-	#flash24{	top:300px;		right: 5%;}
-}
-
-@media all and (min-width: 1300px){ 
-
-	#flash2{	top:120px;		right: 65%;}
-	#flash10{	top:200px;		right: 95%;}
-}
+@import 'grid_responsive';
+@import 'forms_responsive';
+@import 'style_responsive';

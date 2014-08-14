@@ -12,11 +12,6 @@
 
 ;(function ($, window) {
 
-	// test for feature support and return if failure
-
-	// kill for mobile devices
-	var deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-	
 	// defaults
 	var defaults = {
 		ratio: 16/9, // usually either 4/3 or 16/9 -- tweak as needed
@@ -37,8 +32,8 @@
 	};
 
 	// methods
-
 	var tubular = function(node, options) { // should be called on the wrapper div
+
 		var options = $.extend({}, defaults, options),
 			$body = $('body') // cache body node
 			$node = $(node); // cache wrapper node
@@ -131,7 +126,6 @@
 	}
 
 	// load yt iframe js api
-
 	var tag = document.createElement('script');
 	tag.src = "//www.youtube.com/iframe_api";
 	var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -141,13 +135,6 @@
 
 	$.fn.tubular = function (options) {
 		tubular(this, options);
-		/*
-		return this.each(function () {
-			if (!$.data(this, 'tubular_instantiated')) { // let's only run one
-				$.data(this, 'tubular_instantiated',tubular(this, options));
-			}
-		});
-		*/
 	}
 
 })(jQuery, window);

@@ -1,21 +1,7 @@
 /* 
- * Disable padding left/right 10px if I'm 1024 or bigger - correct percentage math
- */
-@media all and (min-width: 1024px) {
-	.onepcssgrid-1000 {
-		max-width: 1000px;
-	}
-
-	.onepcssgrid-1000 .onerow {
-		padding: 0;
-	}
-}
-
-
-/* 
  * Small devices
  */
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
 	.onerow {
 		margin: 0 0 0 0;
 	}

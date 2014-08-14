@@ -2,7 +2,9 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
 
 		<link href='http://fonts.googleapis.com/css?family=Chivo:400,900' rel='stylesheet' type='text/css'>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -11,24 +13,28 @@
 			echo $this->Html->charset(); 
 			echo $this->Html->meta('icon');
 			echo $this->Html->css('cake.generic');
-			echo $this->Html->css('grid_layout');
-			echo $this->Html->css('style');
+			echo $this->Html->css('style.min');
 			echo $this->Html->script('jquery');
+			echo $this->Html->script('modernizr');
 			echo $this->Html->script('jquery.parallaxScroll');
+			echo $this->Html->script('jquery.toggleDiv');
 			echo $this->Html->script('countdown');
 			echo $this->Html->script('changeActiveMenu');
-			echo $this->Html->script('page');
 			echo $this->Html->script('facebook');
 			echo $this->Html->script('cameraFlashes');
 			echo $this->Html->script('scrollingAnimation');
 			echo $this->Html->script('smoothAnchorScrolling');
+			echo $this->Html->script('mobile-detect.min');
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 			echo $this->Js->writeBuffer(array('cache'=>FALSE));
+			
+			echo $this->Html->script('page');
 		?>
 
 		<title><?= $pageId ?></title>
+
 		
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	</head>
@@ -75,7 +81,7 @@
 
 			
 
-			<div id='countdown'>
+			<div id='countdown' class="helper--desktop-tablet-only">
 				<div class="countdown_duration_container">
 					<div class="countdown_digit" id="days_first"></div>
 					<div class="countdown_digit marg" id="days_second"></div>

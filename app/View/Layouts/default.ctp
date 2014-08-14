@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 		<script src="http://code.jquery.com/jquery-1.11.0-beta2.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -12,21 +13,25 @@
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 		<?php
+
 			echo $this->Html->charset(); 
 			echo $this->Html->meta('icon');
-			echo $this->Html->css('style');
+			echo $this->Html->css('style.min');
 			echo $this->Html->css('jquery-ui-1.10.3.custom');
+			echo $this->Html->script('mobile-detect.min');
 			echo $this->Html->script('jquery.parallaxScroll');
 			echo $this->Html->script('jquery.tubular');
+			echo $this->Html->script('jquery.toggleDiv');
 			echo $this->Html->script('countdown');
 			echo $this->Html->script('changeActiveMenu');
 			echo $this->Html->script('smoothAnchorScrolling');
-			echo $this->Html->script('page');
 			echo $this->Html->meta('icon', $this->Html->url('/favicon.ico'));
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 			echo $this->Js->writeBuffer(array('cache'=>FALSE));
+			
+			echo $this->Html->script('page');
 		?>
 		
 		<title><?= $pageId ?></title>

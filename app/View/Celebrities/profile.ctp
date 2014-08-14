@@ -14,23 +14,21 @@
 				<i class="fa fa-3 fa-angle-down"></i>
 			</div>
 		</div>
-
-		<script>
-			$('#video-wrapper').tubular({videoId: 'IAb-OD-5JFI'});
-		</script>
 	</div>
+
+	<script>
+		$('#video-wrapper').tubular({videoId: 'IAb-OD-5JFI'});
+	</script>
 
 
 	<div id="first-scroll-content" class="onerow">
 		<div class="col6">
 			<h1><?=$profileHeading1?></h1>
-			<h2 class="helper--highlight-text"><?=$profileSubHeading1?></h2>
 			<?= $this->Html->image( $image7, array('class'=>'headshot_image', 'align'=>'left') ) ?>
 			<p><?=$profileTextarea1?></p>
 		</div>
 		<div class="col6 last">
 			<h1><?=$profileHeading2?></h1>
-			<?= $this->Html->image( $charityImage, array('class'=>'headshot_image', 'align'=>'left') ) ?>
 			<p><?=$profileTextarea2?></p>
 		</div>
 	</div>
@@ -77,17 +75,17 @@
 	<div class="onerow alt-background">
 
 		<div class="col4">
-			<h1><?=$outtakesHeading1;?></h1>
+			<h1><?=$outtakesHeading2;?></h1>
 			<div class="video_container">
-				<iframe class="youtube_video" src="<?=$outtakesVideoLink2?>?controls=0&showinfo=0&rel=0" allowfullscreen frameborder="0"></iframe>
+				<iframe class="youtube_video" type="text/html" src="<?=$outtakesVideoLink3?>?controls=0&showinfo=0&rel=0&wmode=opaque" allowfullscreen frameborder="0"></iframe>
 			</div>
-			<p><?=$outtakesTextarea2;?></p>
+			<p><?=$outtakesTextarea1;?></p>
 		</div>
 
 		<div class="col4">
 			<h1><?=$outtakesHeading2;?></h1>
 			<div class="video_container">
-				<iframe class="youtube_video" src="<?=$outtakesVideoLink3?>?controls=0&showinfo=0&rel=0" allowfullscreen frameborder="0"></iframe>
+				<iframe class="youtube_video" type="text/html" src="<?=$outtakesVideoLink3?>?controls=0&showinfo=0&rel=0&wmode=opaque" allowfullscreen frameborder="0"></iframe>
 			</div>
 			<p><?=$outtakesTextarea1;?></p>
 		</div>
@@ -95,7 +93,7 @@
 		<div class="col4 last">
 			<h1 class=""><?=$outtakesHeading3;?></h1>
 			<div class="video_container">
-				<iframe class="youtube_video" src="<?=$outtakesVideoLink4?>?controls=0&showinfo=0&rel=0" allowfullscreen frameborder="0"></iframe>
+				<iframe class="youtube_video" type="text/html" src="<?=$outtakesVideoLink4?>?controls=0&showinfo=0&rel=0&wmode=opaque" allowfullscreen frameborder="0"></iframe>
 			</div>
 			<p><?=$outtakesTextarea3;?></p>
 		</div>
