@@ -30,6 +30,15 @@
 .helper--no-pad-left{ padding-left: 0 !important; }
 .helper--no-pad-right{ padding-right: 0 !important; }
 
+/* layout helpers */
+.helper--desktop-only{  }
+.helper--tablet-only{ display: none !important; }
+.helper--mobile-only{ display: none !important; }
+.helper--mobile-only-inline{ display: none !important; }
+
+/* colors */
+.helper--font-color{ color: rgb(255,255,255) };
+
 /* rounded number */
 .helper--round-number{
 	border: 2px solid white;

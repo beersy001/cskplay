@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 
 	// npm install -g grunt-cli
 	// npm update -g
-	// npm install grunt-contrib-cssmin
+	// npm install grunt-contrib-cssmin --save-dev
 	// npm install grunt-contrib-sass
 	// npm install grunt-contrib-clean
 	// npm install grunt-contrib-uglify
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 		watch: {
 			scripts: {
 				files: ['app/webroot/scss/*.scss'],
-				tasks: ['sass'],
+				tasks: ['sass', 'cssmin'],
 				options: {
 					spawn: false,
 				},
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
 					style: 'expanded'
 				},
 				files: {
-					'app/webroot/css/style.css': 'app/webroot/scss/style.scss'
+					'app/webroot/scss/compiled/style.css': 'app/webroot/scss/style.scss'
 				}
 			}
 		},
@@ -44,9 +44,9 @@ module.exports = function (grunt) {
 		cssmin: {
 		  minify: {
 			expand: true,
-			cwd: 'nero/JKR.Web/Build Assets/stylesheets/lib',
+			cwd: 'app/webroot/scss/compiled',
 			src: ['*.css', '!*.min.css'],
-			dest: 'nero/JKR.Web/assets/css',
+			dest: 'app/webroot/css',
 			ext: '.min.css'
 		  }
 		},
@@ -89,5 +89,5 @@ module.exports = function (grunt) {
 
 	// Default build tasks
 	//grunt.registerTask('default', ['sass', 'cssmin', 'uglify', 'clean', 'copy']);
-	grunt.registerTask('default', ['sass']);
+	grunt.registerTask('default', ['sass', 'cssmin']);
 };
