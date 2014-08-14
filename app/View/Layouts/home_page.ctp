@@ -17,6 +17,7 @@
 			echo $this->Html->script('jquery');
 			echo $this->Html->script('modernizr');
 			echo $this->Html->script('jquery.parallaxScroll');
+			echo $this->Html->script('jquery.toggleDiv');
 			echo $this->Html->script('countdown');
 			echo $this->Html->script('changeActiveMenu');
 			echo $this->Html->script('facebook');

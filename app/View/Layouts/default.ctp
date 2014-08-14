@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php
-			
-		?>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -24,6 +21,7 @@
 			echo $this->Html->script('mobile-detect.min');
 			echo $this->Html->script('jquery.parallaxScroll');
 			echo $this->Html->script('jquery.tubular');
+			echo $this->Html->script('jquery.toggleDiv');
 			echo $this->Html->script('countdown');
 			echo $this->Html->script('changeActiveMenu');
 			echo $this->Html->script('smoothAnchorScrolling');
@@ -32,9 +30,6 @@
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 			echo $this->Js->writeBuffer(array('cache'=>FALSE));
-
-
-
 			
 			echo $this->Html->script('page');
 		?>

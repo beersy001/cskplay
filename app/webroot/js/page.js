@@ -6,6 +6,9 @@ window.onload = function() {
 	var md = new MobileDetect(window.navigator.userAgent);
 	var mobile = md.mobile();
 
+	$(".header__hamburger-icon").toggleElement({"targetElem" : ".header__nav-wrapper"});
+	$(".nav-bar__close-btn").toggleElement({"targetElem" : ".header__nav-wrapper"});
+
 
 	changeActiveMenu( controller );
 

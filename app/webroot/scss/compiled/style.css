@@ -2636,6 +2636,10 @@ blockquote:before {
     display: inline-block !important;
   }
 
+  .body-wrapper {
+    padding-top: 50px;
+  }
+
   .header {
     height: 50px;
   }
