@@ -1194,6 +1194,29 @@ label a {
 }
 
 /********************************************************/
+/*****		full width banners						*****/
+/********************************************************/
+.banner-wapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(50, 50, 50, 0.7);
+}
+.banner-wapper .banner-wapper__text-wrapper {
+  position: absolute;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.banner-wapper .banner-wapper__text-wrapper .text-wrapper__link {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 150px;
+  text-decoration: none;
+}
+
+/********************************************************/
 /*****		CTA Links								*****/
 /********************************************************/
 .cta {

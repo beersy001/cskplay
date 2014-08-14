@@ -47,6 +47,11 @@
 	</div>
 
 	<div class="onerow helper--no-pad parallax parallax--bg-position" style="background-image:url(/cskplay/img/celebrities/<?=$celeb['Celebrity']['nameId']?>/banner.jpg)">
+		<div class="banner-wapper">
+			<div class="banner-wapper__text-wrapper">
+				<?= $this->Html->link('Play Now',array('controller' => 'games', 'action' => 'displayGame'),array( 'class' => 'text-wrapper__link')) ?>
+			</div>
+		</div>
 	</div>
 
 	<div class="onerow">
