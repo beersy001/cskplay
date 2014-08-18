@@ -21,6 +21,8 @@
 				var scrollBottom = $(window).scrollTop() + $(window).height();
 				var windowHeight = scrollBottom - scrollTop;
 
+
+
 				if((scrollBottom >= opts.start) && (scrollTop <= opts.stop)) {
 					
 					newCoord = scrollTop * opts.coeff;
@@ -44,8 +46,18 @@
 							var imageHeight = divWidth / aspectRatio;
 							var scrollNumber = scrollBottom - offset.top;
 
-							coeff = imageHeight >= windowHeight ? 0.95 : 0.65;
+							
+
+							coeff = imageHeight >= windowHeight + divHeight ? 0.9 : imageHeight / (windowHeight + divHeight);
 							newCoord = (divHeight + scrollNumber) * coeff;
+
+							console.log("divHeight: " + divHeight);
+							console.log("windowHeight: " + windowHeight);
+							console.log("imageHeight: " + imageHeight);
+							console.log("scrollNumber: " + scrollNumber);
+							console.log("coeff: " + coeff);
+							console.log("newCoord: " + newCoord);
+							console.log("----------------------------------");
 
 							$$.css({"background-position" : "50% " + parseFloat(newCoord) + "px"});
 							break;

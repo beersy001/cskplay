@@ -2,6 +2,8 @@ var frontView = "front view";
 var rearView = "rear view";
 var permanentlyShowGameBalls = false;
 var tempHideGameBalls = false;
+var loupeContainerId = "#loupe_image_container";
+var mainContainerId = "#game-img-wrapper";
 
 var playMode = true;
 var viewMode = "none";
@@ -34,15 +36,21 @@ function registerSelectClick(event,date) {
 	
 	var coords = calculateScaledCoords(imageX,imageY,date);
 	var screenX = coords[0];
-	var screenY = coords[1];	
+	var screenY = coords[1];
+
+	var gameball = {
+		id: selectionId,
+		trueX: imageX,
+		trueY: imageY,
+		screenX: screenX,
+		screenY: screenY,
+		loupeContainerId: loupeContainerId,
+		loupeCrosshairId: "loupe_crosshair_" + selectionId,
+		mainContainerId: mainContainerId,
+		mainCrosshairId: "single_crosshair_" + selectionId
+	};
 	
-	setSelection(screenX,screenY,"game-img-wrapper","single_crosshair_" + selectionId);
-	setSelection(imageX,imageY,"loupe_image_container","loupe_crosshair_" + selectionId);
-
-	//document.getElementById("x_input").value = imageX;
-	//document.getElementById("y_input").value = imageY;
-
-	addgameball(selectionId,imageX,imageY);
+	addgameball(gameball);
 
 	previousSelection = selectionId;
 	selectionId++;
@@ -62,21 +70,19 @@ function calculateCoords(event,date){
 	var imageY = 0;
 
 	var previousWidth = defaultImage.width;
-	var previousHeight = defaultImage.height;
 
 	var totalOffsetX = 0;
 	var totalOffsetY = 0;
 				
-	var widthRatio = currentElement.offsetWidth / previousWidth;
-	var heightRatio = currentElement.offsetHeight / previousHeight;
+	var aspectRatio = currentElement.offsetWidth / previousWidth;
 
 	do {
 		totalOffsetX += currentElement.offsetLeft;
 		totalOffsetY += currentElement.offsetTop;
 	} while (currentElement = currentElement.offsetParent)
 
-	imageX = Math.round((event.pageX - totalOffsetX) / widthRatio,0);
-	imageY = Math.round((event.pageY - totalOffsetY) / heightRatio,0);
+	imageX = Math.round((event.pageX - totalOffsetX) / aspectRatio,0);
+	imageY = Math.round((event.pageY - totalOffsetY) / aspectRatio,0);
 
 	return [imageX, imageY];
 }
@@ -96,31 +102,46 @@ function calculateScaledCoords(x,y,date){
 }
 
 
-
-function setSelection(x,y,container,crosshairID){
+/**
+ * Creates crosshairs in the correct containers at the supplied X and Y coords
+ * @param {Object} gameball (contains all the information regarding a gameball)
+ * @returns {null}
+ * @public
+ */
+function setSelection(gameball, type){
 
 	var	width = 18;
 	var iconOffset = width / 2;
 
-	var crosshair=document.createElement("img");
+	console.log(gameball);
+
+	if (type == "loupe") {
+		var crosshairId = gameball.loupeCrosshairId;
+		var containerId = gameball.loupeContainerId;
+		var xCoord = gameball.trueX;
+		var yCoord = gameball.trueY;
+		var bespokeClass = "crosshair--loupe";
+	}else{
+		var crosshairId = gameball.mainCrosshairId;
+		var containerId = gameball.mainContainerId;
+		var xCoord = gameball.screenX;
+		var yCoord = gameball.screenY;
+		var bespokeClass = "crosshair--main";
+	};
+
+	var crosshair = document.createElement("img");
 	crosshair.src = "/" + rootDir + "/app/webroot/img/logo_orange.png";
-	crosshair.id = crosshairID;
-	crosshair.className= "auto_crosshair";
+	crosshair.id = crosshairId;
+	crosshair.className = "crosshair--auto crosshair " + bespokeClass;
 	crosshair.style.pointerEvents = "none";
 	crosshair.style.width = width + "px";
 	crosshair.style.position ="absolute";
-	crosshair.style.left = x - iconOffset + "px";
-	crosshair.style.top = y - iconOffset + "px";
+	crosshair.style.left = xCoord - iconOffset + "px";
+	crosshair.style.top = yCoord - iconOffset + "px";
 	crosshair.style.zIndex = 3;
+	$(crosshair).attr("data-x", gameball.trueX).attr("data-y", gameball.trueY);
 
-	var container = document.getElementById(container);
-
-	if(document.getElementById(crosshairID)){
-		var oldCrosshair = document.getElementById(crosshairID);
-		container.removeChild(oldCrosshair);
-	}
-	
-	container.appendChild(crosshair);
+	$(containerId).append(crosshair);
 }
 
 
@@ -187,22 +208,10 @@ function findMouseWithinLoupe(event,date) {
 
 function toggleInLayImageIn(){
 	$("#game_image_main_inlay").show('slide',{direction:'left'},400);
-
-	if(document.getElementById("mainImage").style.display != "none"){
-		document.getElementById("swap_game_image_button").innerHTML = rearView;
-	}else{
-		document.getElementById("swap_game_image_button").innerHTML = frontView;
-	}
 };
 
 function toggleInLayImageOut(){
 	$("#game_image_main_inlay").hide('slide',{direction:'left'},200);
-
-	if(document.getElementById("mainImage").style.display == "none"){
-		document.getElementById("swap_game_image_button").innerHTML = rearView;
-	}else{
-		document.getElementById("swap_game_image_button").innerHTML = frontView;
-	}
 };
 
 function swapGameImage(){
@@ -214,7 +223,6 @@ function swapGameImage(){
 		document.getElementById("game_image_main_inlay").src = "/" + rootDir + "/img/gameImages/" + date + "/front_small.jpg";
 		document.getElementById("mainImage").style.display = "none";
 		document.getElementById("game_image_alt").style.display = "inline";
-		document.getElementById("swap_game_image_button").innerHTML = rearView;
 		$( "#toggle_selection_view_button" ).css( "color", "rgb(89,89,91)");
 
 	if(document.contains(document.getElementById("single_crosshair"))){
@@ -228,7 +236,6 @@ function swapGameImage(){
 		playMode = true;
 		document.getElementById("game_image_main_inlay").src = "/" + rootDir + "/img/gameImages/" + date + "/rear_small.jpg";
 		document.getElementById("mainImage").style.display = "inline";
-		document.getElementById("swap_game_image_button").innerHTML = frontView;
 		document.getElementById("game_image_alt").style.display = "none";
 		if(playMode == true){
 			$( "#toggle_selection_view_button" ).css( "color", "rgb(255,255,255)");
@@ -338,8 +345,6 @@ function toggleLoupe(){
 }
 
 function removeLoupe(){
-
-
 	if(playMode == true){
 
 		if(viewMode == "loupe"){
@@ -443,32 +448,34 @@ function updateNumberOfBallsPlayed(){
 }
 
 
-function addgameball(id,x,y){
+function addgameball(gameball){
+
+	setSelection(gameball, "loupe");
+	setSelection(gameball, "main");
 
 	var form = document.getElementById("GameBasketForm");
 	
-
 	var inputRow = document.createElement("div");
 	inputRow.className = "input_row";
-	inputRow.id = id + "_input_row"
+	inputRow.id = gameball.id + "_input_row"
 
 	form.appendChild(inputRow);
 
 	var xInput = document.createElement("input");
-	xInput.name = "Selection[" + id + "][x]";
-	xInput.id = id + "_x_input";
-	xInput.value = x;
+	xInput.name = "Selection[" + gameball.id + "][x]";
+	xInput.id = gameball.id + "_x_input";
+	xInput.value = gameball.trueX;
 	xInput.readOnly = "readonly";
 
 	var yInput = document.createElement("input");
-	yInput.name = "Selection[" + id + "][y]";
-	yInput.id = id + "_y_input";
-	yInput.value = y;
+	yInput.name = "Selection[" + gameball.id + "][y]";
+	yInput.id = gameball.id + "_y_input";
+	yInput.value = gameball.trueY;
 	yInput.readOnly = "readonly";
 
 	var cancelSpan = document.createElement("span")
 	cancelSpan.className = "cancel_gameball";
-	cancelSpan.id = id + "_cancel_span";
+	cancelSpan.id = gameball.id + "_cancel_span";
 	cancelSpan.innerHTML = "x";
 	cancelSpan.onclick = function(){ removeSpecificGameball(this); };
 
@@ -479,7 +486,7 @@ function addgameball(id,x,y){
 }
 
 function removeAllGameballs(){
-	$(".auto_crosshair").remove();
+	$(".crosshair--auto").remove();
 }
 
 
@@ -491,7 +498,27 @@ function removeSpecificGameball(element){
 
 	$("#" + splitId[0] + "_input_row").remove();
 	$("#single_crosshair_" + splitId[0]).remove();
+}
 
 
+function moveUserSelections(month) {
 
+	var crosshairs = $(".crosshair--main");
+	var crossHairOffset = 7.5;
+	var gameImage = $("#mainImage");
+	var defaultImage = document.getElementById('hidden_image')
+	var previousWidth = defaultImage.width;
+	var aspectRatio = gameImage.width() / previousWidth;
+	
+	for(var j=0; j < crosshairs.length; j++){
+
+		var left = $(crosshairs[j]).attr("data-x");
+		var top = $(crosshairs[j]).attr("data-y");
+
+		var imageX = Math.round((left * aspectRatio) ,0);
+		var imageY = Math.round((top * aspectRatio) ,0);
+
+		crosshairs[j].style.left = imageX - crossHairOffset + "px";
+		crosshairs[j].style.top = imageY - crossHairOffset + "px";
+	}
 }

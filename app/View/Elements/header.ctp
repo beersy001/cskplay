@@ -10,8 +10,8 @@
 	<div class="header__login-wrapper helper--desktop-tablet-only">
 		<?php
 			if(!$authUser){
-				echo $this->Html->link('login', array('controller'=>'Users', 'action'=>'login'),array('class' => 'cta cta--100' ));
-				echo $this->Html->link('register', array('controller'=>'Users', 'action'=>'add'),array('class' => 'cta cta--100 cta--highlight' ));
+				echo $this->Html->link('login', array('controller'=>'Users', 'action'=>'login'),array('class' => 'cta cta--100px' ));
+				echo $this->Html->link('register', array('controller'=>'Users', 'action'=>'add'),array('class' => 'cta cta--100px cta--highlight' ));
 			} else {
 				if($authUser['facebook'] == true){
 					echo "<img class='login-wrapper__profile-picture' src='https://graph.facebook.com/$facebookUserId/picture'> ";

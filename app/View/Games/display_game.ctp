@@ -1,7 +1,6 @@
 <?php
 $this->Html->script( 'gamePlay', array('inline'=>false));
 $this->Html->script( 'ajaxGetSelections', array('inline'=>false));
-$this->Html->script( 'moveUserSelections', array('inline'=>false));
 ?>
 
 <div class="grid">
@@ -36,10 +35,12 @@ $this->Html->script( 'moveUserSelections', array('inline'=>false));
 		-->
 
 		<div class="col4">
+			<h1>Your Gameballs</h1>
 			<?= $this->element('game/game_sidebar'); ?>
 		</div>
 
-		<div id="game-img-wrapper" class="col8 last" oncontextmenu="toggleLoupe();return false;" onmouseout="removeLoupe()">
+		<div class="col8 last">
+			<h1>Celeb Name - Football</h1>
 			<?= $this->element('game/game_images'); ?>
 		</div>
 	</div>

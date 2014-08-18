@@ -28,6 +28,11 @@ window.onload = function() {
 	if(pageId == 'displayGame'){
 		moveUserSelections(date);
 		$(".crosshairs").css("display","none");
+
+		$(window).resize(function(){
+			moveUserSelections(date);
+		});
+
 	}
 
 	if(pageId == 'my gameballs'){
@@ -44,9 +49,6 @@ window.onload = function() {
 			$('.parallax--top-position').parallax({ "coeff" : 0.7 });
 			$('.parallax--bg-position').parallax({ "coeff" : 0.7, "type" : "background-position" });
 		}
-		
-		
-
 	}
 
 	if(pageId == 'csk'){

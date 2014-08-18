@@ -1149,7 +1149,7 @@ label a {
   position: absolute;
   left: 25px;
   top: 25px;
-  font: 15px;
+  font-size: 15px;
   text-decoration: none;
   overflow: visible;
 }
@@ -1239,7 +1239,7 @@ label a {
 .cta.cta--highlight:hover {
   background: #e58f08;
 }
-.cta.cta--100 {
+.cta.cta--100px {
   width: 100px;
 }
 .cta.cta--50pc {
@@ -1686,6 +1686,11 @@ label a {
   width: 100%;
   cursor: crosshair;
   display: block;
+}
+
+#game-img-wrapper {
+  position: relative;
+  margin-top: 15px;
 }
 
 #game_image_alt {

@@ -505,7 +505,7 @@ label a{
 		position: absolute;
 		left: 25px;
 		top: 25px;
-		font: 15px;
+		font-size: 15px;
 		text-decoration: none;
 		overflow: visible;
 
@@ -610,7 +610,7 @@ label a{
 		}
 	}
 
-	&.cta--100{ width: 100px; }
+	&.cta--100px{ width: 100px; }
 	&.cta--50pc{ width: 49%; }
 
 	&:hover{
@@ -1049,6 +1049,11 @@ label a{
 	width: 100%;
 	cursor: crosshair;
 	display: block;
+}
+
+#game-img-wrapper{
+	position: relative;
+	margin-top: 15px;
 }
 
 #game_image_alt{

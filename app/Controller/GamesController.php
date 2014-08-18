@@ -19,6 +19,9 @@ class GamesController extends AppController {
 
 	public function displayGame() {
 
+		$this->set('title_for_page', 'play now');
+		$this->set('pageId', 'displayGame');
+
 		echo '<script>var date = "' . date('Ym') . '"</script>';
 		
 		$this->loadModel('User');
@@ -32,32 +35,13 @@ class GamesController extends AppController {
 		$this->set('month', $month);
 		$this->set('realMonth', strtolower(DateTime::createFromFormat('!Ym', $month)->format('F')));
 
-		//if($user['User']['completeProfile'] == 1){
-
 		$numberOfBallsRemaining = $this->User->getNumberOfAttemptsRemaining($username);
 		$results = $this->GameBall->getUsersResults($username,date('Ym'));
 		$teams = $this->User->getTeams($username);
-		$practiceGames = $this->Game->getPracticeGames();
 		$competition = $this->Game->getCurrentCompetition();
 
 		$this->set('results', $results);
-		$this->set('ballsRemaining', $numberOfBallsRemaining);
-		$this->set('teams', $teams);
-		$this->set('title_for_page', 'play now');
-		$this->set('pageId', 'displayGame');
-		$this->set('month', date('Ym'));
-		$this->set('typeOfGame', 'competition');
-		$this->set('practiceGames',$practiceGames);
-		$this->set('competition',$competition);
-
-
-		//	if($this->request->is('ajax')){
-		//		$this->redirect(array('action' => 'fetchGameSidebar'));
-		//	}
-	//	}
-	//	}else{
-	//		$this->redirect(array('controller'=>'users', 'action' => 'addDetails'));
-	//	}
+		$this->set('competition', $competition);
 	}
 
 	public function displayDemo() {

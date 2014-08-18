@@ -1,38 +1,20 @@
-
 <div id="gameballs_section">
-	<h2>gameballs</h2>
-	<div class="small_indent">
-		<p>x</p>
-		<p>y</p>
-		<p>delete</p>
-		<?php		
 
-		echo $this->Form->create('Game', array(
-			'controller'=>'Games',
-			'action' => 'basket',
-			'inputDefaults' => array(
-				'label' => false,
-				'div' => false
-				)
-			));
-		//echo $this->Form->submit('selections_submit_form_submit');
+	<?= $this->Form->create('Game', array(
+		'controller'=>'Games',
+		'action' => 'basket',
+		'inputDefaults' => array(
+			'label' => false,
+			'div' => false
+			)
+		)); ?>
 
-		$options = array(
-			'label' => 'submit',
-			'id' => 'selections_submit_form_submit'
-		);
-
-		echo $this->Form->end($options);
-
-		?>
-	</div>
-
-
+	<?= $this->Form->end(); ?>
 
 <?php
 if($authUser){
 ?>
-	<div class="section">
+	<div>
 		<h2>my gameballs</h2>
 
 		<div class="small_indent">
@@ -68,19 +50,16 @@ if($authUser){
 
 <?php } ?>	
 
-	<div id="game_sidebar_view" class="section">
+	<div id="game_sidebar_view">
 		<h2  id="view_heading">view</h2>
-		<div class="small_indent">
 			<p id="game_mode_description" class="tiny_text">
 				left click to select. right click to zoom
 			</p>
 			
-			<span id="swap_game_image_button" class="mock_link" onmouseover="toggleInLayImageIn()" onmouseout="toggleInLayImageOut()" onclick="swapGameImage()">
-				front view
-			</span>
-			<br>
-			<span class="mock_link" onclick="toggleVideoPlayer()">show/hide video</span>
+			<p id="swap_game_image_button" class="cta cta--50pc" onmouseover="toggleInLayImageIn()" onmouseout="toggleInLayImageOut()" onclick="swapGameImage()">
+				change view
+			</p>
+			<p class="cta cta--50pc" onclick="toggleVideoPlayer()">show/hide video</p>
 
-		</div>
 	</div>
 </div>

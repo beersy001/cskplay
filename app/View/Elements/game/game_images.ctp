@@ -22,7 +22,7 @@
 	?>
 </div>
 
-<div>
+<div id="game-img-wrapper" oncontextmenu="toggleLoupe();return false;" onmouseout="removeLoupe()">
 	<?php
 	$compFrontLarge = 'gameImages/' . $month . '/front_large.jpg';
 	$compRearLarge = 'gameImages/' . $month . '/rear_large.jpg';
