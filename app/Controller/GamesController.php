@@ -28,20 +28,16 @@ class GamesController extends AppController {
 		$this->loadModel('GameBall');
 
 		$username = $this->Session->read('Auth.User.username');
-		$user = $this->User->read(null, $username);
-
 		$month = date('Ym');
 
 		$this->set('month', $month);
 		$this->set('realMonth', strtolower(DateTime::createFromFormat('!Ym', $month)->format('F')));
 
-		$numberOfBallsRemaining = $this->User->getNumberOfAttemptsRemaining($username);
-		$results = $this->GameBall->getUsersResults($username,date('Ym'));
-		$teams = $this->User->getTeams($username);
-		$competition = $this->Game->getCurrentCompetition();
+		//$results = $this->GameBall->getUsersResults($username,date('Ym'));
+		$currentCompetition = $this->Game->getCurrentCompetition();
 
-		$this->set('results', $results);
-		$this->set('competition', $competition);
+		//$this->set('results', $results);
+		$this->set('currentCompetition', $currentCompetition);
 	}
 
 	public function displayDemo() {

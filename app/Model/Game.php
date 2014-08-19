@@ -56,7 +56,6 @@ class Game extends AppModel{
 	public function getCurrentCompetition(){
 
 		$result = $this->find($type = 'first', array('conditions' => array('Game.typeOfGame' => 'competition', 'Game.month' => date('Ym'))));
-		//$result = $this->find($type = 'first', array('conditions' => array('Game.typeOfGame' => 'competition', 'Game.ended !='=>true)));
 
 		return $result;
 	}
