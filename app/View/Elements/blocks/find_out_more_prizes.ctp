@@ -2,5 +2,5 @@
 	<h1>the prizes!</h1>
 	<?= $this->Html->image( 'blocks/prize/image1.png' ); ?>
 	<p>take a look at what you can win, whether it's in a team or on your own</p>
-	<?=$this->Html->link('more info',array('controller' => 'pages', 'action' => 'aboutus/prizes'));?>
+	<?=$this->Html->link('more info',array('controller' => 'pages', 'action' => 'aboutus/prizes'), array( 'class' => 'cta cta--100pc'));?>
 </div>

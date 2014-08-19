@@ -12,13 +12,60 @@ var compertitionMode = true;
 var selectionId = 0;
 var previousSelection = 0;
 var numberOfBallsPlayed = 0;
+var allGameballs = [];
+
+function addGameballToArray(gameball){
+
+	for (var i = 0; i < allGameballs.length; i++) {
+		if(allGameballs[i].trueX == gameball.trueX && allGameballs[i].trueY == gameball.trueY){
+			return false;
+		}
+	};
+
+	allGameballs.push(gameball);
+	return true;
+}
+
+function removeGameball(gameballId){
+
+	for (var i = 0; i < allGameballs.length; i++) {
+		if(allGameballs[i].id == gameballId){
+
+			$("#input-row--" + gameballId).remove();
+			$("#single_crosshair_" + gameballId).remove();
+			$("#loupe_crosshair_" + gameballId).remove();
+
+			 calculateDiscount();
+
+			numberOfBallsPlayed--;
+			previousSelection--;
+			return true;
+		};
+	};
+}
+
+function calculateDiscount(){
+	var price = 0;
+
+	var priceFields = $(".price-input");
+
+	for (var i = 1; i <= priceFields.length; i++) {
+
+		if(i % 3 == 0){
+			priceFields[i-1].value = "free";
+		}else{
+			priceFields[i-1].value = "£1";
+			price++;
+		}
+	};
+
+	$("#total-price").html("£" + price);
+}
 
 
 function registerSelectClick(event,date) {
 
 	var loupeContainer = document.getElementById('loupe_image_container');
-
-	console.log("loupe click");
 
 	var imageX = 0;
 	var imageY = 0;
@@ -48,15 +95,23 @@ function registerSelectClick(event,date) {
 		loupeCrosshairId: "loupe_crosshair_" + selectionId,
 		mainContainerId: mainContainerId,
 		mainCrosshairId: "single_crosshair_" + selectionId
-	};
+	};	
 	
-	addgameball(gameball);
+	if(addGameballToArray(gameball)){
 
-	previousSelection = selectionId;
-	selectionId++;
-	numberOfBallsPlayed++;
+		$("#selections-form__blank-input").remove();
+		
+		setSelection(gameball, "loupe");
+		setSelection(gameball, "main");
 
-	updateNumberOfBallsPlayed();
+		addgameballToScreen(gameball);
+
+		calculateDiscount();
+
+		previousSelection = selectionId;
+		selectionId++;
+		numberOfBallsPlayed++;
+	}
 }
 
 
@@ -112,8 +167,6 @@ function setSelection(gameball, type){
 
 	var	width = 18;
 	var iconOffset = width / 2;
-
-	console.log(gameball);
 
 	if (type == "loupe") {
 		var crosshairId = gameball.loupeCrosshairId;
@@ -298,19 +351,6 @@ function toggleGameBalls(){
 /************************************************************************
  *		Toggle submit mode on and off										*
  ************************************************************************/
-function removeGameball(){
-
-	$( "#single_crosshair_" + previousSelection).remove();
-	$( "#loupe_crosshair_" + previousSelection).remove();
-	$( "#" + previousSelection + "_input_row" ).remove();
-
-	numberOfBallsPlayed--;
-	selectionId--;
-	previousSelection--;
-
-	updateNumberOfBallsPlayed();
-}
-
 function toggleLoupe(){
 
 	if(playMode == true){
@@ -363,9 +403,7 @@ function removeLoupe(){
 }
 
 function enterSelectMode() {
-
 	viewMode = "select";
-
 	$("#loupe").css("pointer-events","auto");
 	$("#loupe").css("display", "block");
 	$("#loupe").css("cursor","crosshair");
@@ -382,84 +420,33 @@ function showLoupeTeamSlider(event,date){
 
 	if( imageX > (fullWidth / 2) ){
 
-		$("#loupe_teams_slider").css("left", "-250px");
-		$("#loupe_teams_slider").css("padding-right", "110px");
-		$("#loupe_teams_slider").css("padding-left", "10px");
+		$("#loupe_teams_slider").removeClass("right");
+		$("#loupe_teams_slider").addClass("left");
 
 	}else if( imageX < (fullWidth / 2) ){
 
-		$("#loupe_teams_slider").css("right", "-250px");
-		$("#loupe_teams_slider").css("padding-left", "110px");
-		$("#loupe_teams_slider").css("padding-right", "10px");
-
+		$("#loupe_teams_slider").removeClass("left");
+		$("#loupe_teams_slider").addClass("right");
 	}
 }
 
 function hideLoupeTeamSlider(){
 
-	if( $("#loupe_teams_slider").css("left") < "100px" ){
-		$("#loupe_teams_slider").css("left", "100px");
-	}else if( $("#loupe_teams_slider").css("right") < "100px" ){
-		$("#loupe_teams_slider").css("right", "100px");
-	}
-}
-
-function toggleTabs(){
-	console.log("toggleTabs");
-	if( $("#game_sidebar_competition").css("left") == "0px" ){
-
-		$("#game_sidebar_competition").css("left","-9999px");
-		$("#game_sidebar_practice").css("left", "0px");
-		$("#right_tab").css("background","rgb(64,64,65)");
-		$("#left_tab").css("background","rgb(89,89,91)");
-
-		ajaxFetchPractice("201402");
-
-	}else{
-		$("#game_sidebar_competition").css("left","0px");
-		$("#game_sidebar_practice").css("left", "-9999px");
-		$("#right_tab").css("background","rgb(89,89,91)");
-		$("#left_tab").css("background","rgb(64,64,65)");
-
-		ajaxFetchCurrentCompetition();		
-	}
-
-	permanentlyShowGameBalls = false;
-	tempHideGameBalls = false;
-
-	playMode = true;
-	compertitionMode = true;
-}
-
-function toggleCompAndPracticeMode(){
-
-	if( compertitionMode == true ){
-		compertitionMode = false;
-		console.log(date);
-	}else{
-		compertitionMode = true;
-	}
-}
-
-function updateNumberOfBallsPlayed(){
-	console.log("update No Of Balls: " + selectionId);
-	$("#number_of_balls_played").html(selectionId);
-
+	$("#loupe_teams_slider").removeClass("right");
+	$("#loupe_teams_slider").removeClass("left");
 }
 
 
-function addgameball(gameball){
 
-	setSelection(gameball, "loupe");
-	setSelection(gameball, "main");
+function addgameballToScreen(gameball){
 
-	var form = document.getElementById("GameBasketForm");
+	var $form = $("#selections-form");
+	var $formUL = $form.children("ul");
 	
-	var inputRow = document.createElement("div");
-	inputRow.className = "input_row";
-	inputRow.id = gameball.id + "_input_row"
+	var inputRow = document.createElement("li");
+	inputRow.id = "input-row--" + gameball.id;
 
-	form.appendChild(inputRow);
+	$formUL.append(inputRow);
 
 	var xInput = document.createElement("input");
 	xInput.name = "Selection[" + gameball.id + "][x]";
@@ -473,33 +460,26 @@ function addgameball(gameball){
 	yInput.value = gameball.trueY;
 	yInput.readOnly = "readonly";
 
-	var cancelSpan = document.createElement("span")
-	cancelSpan.className = "cancel_gameball";
-	cancelSpan.id = gameball.id + "_cancel_span";
-	cancelSpan.innerHTML = "x";
-	cancelSpan.onclick = function(){ removeSpecificGameball(this); };
+	var priceInput = document.createElement("input");
+	priceInput.id = gameball.id + "_price";
+	priceInput.className = "price-input"
+	priceInput.value = "£1";
+	priceInput.readOnly = "readonly";
+
+	var cancelSpan = document.createElement("i")
+	cancelSpan.className = "cancel-btn fa fa-times helper--font-color";
+	cancelSpan.id = gameball.id + "_cancel-btn";
+	$(cancelSpan).attr("data-gameballid", gameball.id)
 
 	inputRow.appendChild(xInput);
 	inputRow.appendChild(yInput);
+	inputRow.appendChild(priceInput);
 	inputRow.appendChild(cancelSpan);
-	
 }
 
 function removeAllGameballs(){
 	$(".crosshair--auto").remove();
 }
-
-
-function removeSpecificGameball(element){
-
-	console.log( $(element).attr("id"));
-
-	splitId = $(element).attr("id").split("_");
-
-	$("#" + splitId[0] + "_input_row").remove();
-	$("#single_crosshair_" + splitId[0]).remove();
-}
-
 
 function moveUserSelections(month) {
 

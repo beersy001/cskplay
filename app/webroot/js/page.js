@@ -33,6 +33,26 @@ window.onload = function() {
 			moveUserSelections(date);
 		});
 
+		$( document )
+			.on("click", ".main_game_image", function(event) {
+				enterSelectMode();
+			})
+			.on("mousemove", ".main_game_image", function(event) {
+				findMouse(event,date);
+			})
+			.on("click", "#loupe_image_container", function(event) {
+				registerSelectClick(event,date);
+				showLoupeTeamSlider(event,date);
+			})
+			.on("mousemove", "#loupe_image_container", function(event) {
+				findMouseWithinLoupe(event,date);
+			})
+			.on("click", ".cancel-btn", function(event) {
+				removeGameball($(this).data("gameballid"));
+			});
+
+
+			
 	}
 
 	if(pageId == 'my gameballs'){

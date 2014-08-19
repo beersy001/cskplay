@@ -4,5 +4,5 @@
 		<?= $this->Html->image( 'blocks/sporting_foundation/image1.png' ); ?>
 		<p>we love to give to those who need it, find out more in our giving pages</p>
 	</div>
-	<?=$this->Html->link('more info',array('controller' => 'pages', 'action' => 'aboutus/giving'));?>
+	<?=$this->Html->link('more info',array('controller' => 'pages', 'action' => 'aboutus/giving'), array( 'class' => 'cta cta--100pc'));?>
 </div>

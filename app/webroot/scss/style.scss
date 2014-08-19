@@ -20,14 +20,20 @@ $highlightColor: rgb(249,163,28);
 	-webkit-transition: all 300ms ease-in-out;
 }
 
+@mixin noUserSelect(){
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none; 
+}
+
 /* responsive imports at the bottom of the sheet */
 @import 'cake.generic';
 @import 'grid';
 @import 'helpers';
 @import 'reset';
 @import 'forms';
-
-
 
 /** General Style Info **/
 *{
@@ -65,7 +71,7 @@ h3{
 	clear: both;
 }
 
-h1+div, h1+h2, h1+p, h2+p, p+p, p+a, p+video, video+p{
+h1+div, h1+h2, h1+p, h2+p, p+p, p+a, p+video, video+p, ul+p, form+p{
 	margin-top: 15px;
 }
 
@@ -83,27 +89,8 @@ a:hover{
 	}
 }
 
-
-
-.basket__gameballs{
-	width: 200px;
-}
-
-.basket__gameballs th, .basket__gameballs td{
-	width: 100px;
-}
-
-.confirmation__table{
-	table-layout: fixed;
-	width: auto;
-}
-
-.confirmation__table .id{
-	width: 285px;
-}
-
-.confirmation__table .coord{
-	width: 80px;
+.fa{
+	@include noUserSelect();
 }
 
 .flash{
@@ -142,8 +129,6 @@ a:hover{
 #flash22{	top:350px;		right: 25%;}
 #flash23{	top:350px;		right: 15%;}
 #flash24{	top:350px;		right: 5%;}
-
-
 
 .inline_title_image{
 	width: 35px;
@@ -258,6 +243,22 @@ label a{
 	max-width: 100%;
 	position:relative;
 	overflow: hidden;
+}
+/********************************************************/
+/*****		Custom Scroll Bar						*****/
+/********************************************************/
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
 /********************************************************/
@@ -477,6 +478,9 @@ label a{
 	height: 100px;
 
 	.header__logo-wrapper{
+		a{
+			text-decoration: none;
+		}
 
 		.logo-wrapper__img{
 			width: 80px;
@@ -593,29 +597,27 @@ label a{
 	text-align: center;
 	text-decoration: none;
 	line-height: 35px;
-	background: rgb(100,100,100);
+	background: rgb(80,80,80);
 	clear: both;
 	padding: 5px 0;
 	display: inline-block;
 	cursor: pointer;
-
-	&+.cta{
-		margin-left: 10px;
-	}
+	@include noUserSelect();
 
 	&.cta--highlight{
-		background: rgb(249,163,28);
+		background: rgb(229,143,008);
 		&:hover{
-			background: rgb(229,143,008);
+			background: rgb(249,163,28);
 		}
 	}
 
 	&.cta--100px{ width: 100px; }
 	&.cta--50pc{ width: 49%; }
+	&.cta--100pc{ width: 100%; }
 
 	&:hover{
-		background: rgb(80,80,80);
 		text-decoration: none;
+		background: rgb(100,100,100);
 		color: rgb(255,255,255);
 	}
 }
@@ -719,7 +721,6 @@ label a{
 #paypal_image{
 	width: 60px;
 }
-
 
 .crosshair{
 	pointer-events: none;
@@ -1009,7 +1010,7 @@ label a{
 	width: 100%;
 	height: 40px;
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 3px;
 	background: rgb(64,64,65);
 	background: rgba(64,64,65,0.8);
 	z-index: 4;
@@ -1030,16 +1031,25 @@ label a{
 	border-color: rgb(249,163,28);
 	height: 202px;
 	padding: 20px;
-	padding-top: 44px;
 	overflow: hidden;
-}
-
-
-
-#loupe_teams_slider{
-	left: 100px;
-	right: 100px;
+	opacity: 0;
 	@include allTransition1000();
+
+	&.left{
+		right: 100px;
+		left: -250px;
+		padding-right: 110px;
+		padding-left: 10px;
+		opacity: 1;
+	}
+
+	&.right{
+		left: 100px;
+		right: -250px;
+		padding-left: 110px;
+		padding-right: 10px;
+		opacity: 1;
+	}
 }
 
 /***********************************************************************************
@@ -1255,7 +1265,6 @@ th{
 	position: relative;
 	width: 100%;
 	padding: 15px;
-	/*background: rgb(64,64,65);*/
 	min-height: 215px;
 }
 
@@ -1281,24 +1290,6 @@ th{
 	float: left;
 	width: 30%;
 	margin: 0 15px 15px 0;
-}
-
-.call-to-action a{
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	line-height: 35px;
-	background: rgb(110,110,110);
-	clear: both;
-
-	&:hover{
-		color: white;
-		background: rgb(85,85,85);
-	}
 }
 
 /* **********************************************************************************/
@@ -1582,37 +1573,8 @@ blockquote:before {
 /* **********************************************************************************/
 /*		Common Elements																*/
 /* **********************************************************************************/
-
-.six_video{
-	@include allTransition300();
-}
-
-.hidden_overflow{
-	overflow: hidden;
-}
-
 .unavaliable_text{
 	color: rgb(89,89,91);
-}
-
-.large_text{
-	/* font-size: 20px; */
-	color: rgb(255,255,255);
-}
-
-.tiny_text{
-	font-size: 10px;
-	text-align: left;
-}
-
-.border_bottom{
-	/*
-	padding-bottom: 3px;
-	margin-bottom: 5px;
-	border-bottom: solid;
-	border-bottom-color: orange;
-	border-bottom-width: 1px;
-	*/
 }
 
 .mock_link{
@@ -1631,34 +1593,6 @@ blockquote:before {
 
 .hidden_link:hover{
 	color: rgb(249,163,28);
-}
-
-
-.indent_list{
-	margin-left: 50px;
-	margin-bottom: 10px;
-}
-
-.indent_list li{
-	margin-top: 3px;
-	margin-bottom: 3px;
-}
-
-.no_margin{
-	margin: 0;
-}
-
-.margin_bottom{
-	margin-bottom: 20px;
-}
-
-.large_indent{
-	padding-left: 48px;
-	position: relative;
-}
-
-.small_indent{
-	padding-left: 20px;
 }
 
 .page_container{

@@ -345,7 +345,7 @@ pre {
   width: 100% !important;
 }
 
-/* text align */
+/* text */
 .helper--center-align {
   text-align: center !important;
 }
@@ -360,6 +360,11 @@ pre {
 
 .helper--full-align {
   text-align: justify !important;
+}
+
+.helper--subscript {
+  font-size: 11px !important;
+  margin-top: 0 !important;
 }
 
 /* overflows */
@@ -601,6 +606,31 @@ form ul li {
   _overflow: visible;
 }
 
+.float-form ul {
+  overflow: hidden;
+  _overflow: visible;
+}
+.float-form ul li {
+  padding-top: 5px;
+}
+.float-form ul li input, .float-form ul li label, .float-form ul li .mock-input {
+  float: left;
+  width: 30%;
+  margin-right: 1%;
+  padding-top: 10px;
+  padding-right: 0;
+}
+.float-form ul li i {
+  float: left;
+  width: 7%;
+  padding: 12px 0;
+  cursor: pointer;
+  text-align: right;
+}
+.float-form ul li i:hover {
+  color: #f9a31c;
+}
+
 .fb-login-button {
   width: 49%;
   display: inline-block;
@@ -642,7 +672,7 @@ h3 {
   clear: both;
 }
 
-h1 + div, h1 + h2, h1 + p, h2 + p, p + p, p + a, p + video, video + p {
+h1 + div, h1 + h2, h1 + p, h2 + p, p + p, p + a, p + video, video + p, ul + p, form + p {
   margin-top: 15px;
 }
 
@@ -659,25 +689,12 @@ a:hover + i {
   color: #f9a31c;
 }
 
-.basket__gameballs {
-  width: 200px;
-}
-
-.basket__gameballs th, .basket__gameballs td {
-  width: 100px;
-}
-
-.confirmation__table {
-  table-layout: fixed;
-  width: auto;
-}
-
-.confirmation__table .id {
-  width: 285px;
-}
-
-.confirmation__table .coord {
-  width: 80px;
+.fa {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .flash {
@@ -926,6 +943,23 @@ label a {
 }
 
 /********************************************************/
+/*****		Custom Scroll Bar						*****/
+/********************************************************/
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/********************************************************/
 /*****		info-wrapper							*****/
 /********************************************************/
 .info-wrapper {
@@ -1127,6 +1161,9 @@ label a {
   width: 100%;
   height: 100px;
 }
+.header .header__logo-wrapper a {
+  text-decoration: none;
+}
 .header .header__logo-wrapper .logo-wrapper__img {
   width: 80px;
   position: absolute;
@@ -1224,20 +1261,22 @@ label a {
   text-align: center;
   text-decoration: none;
   line-height: 35px;
-  background: #646464;
+  background: #505050;
   clear: both;
   padding: 5px 0;
   display: inline-block;
   cursor: pointer;
-}
-.cta + .cta {
-  margin-left: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 .cta.cta--highlight {
-  background: #f9a31c;
+  background: #e58f08;
 }
 .cta.cta--highlight:hover {
-  background: #e58f08;
+  background: #f9a31c;
 }
 .cta.cta--100px {
   width: 100px;
@@ -1245,9 +1284,12 @@ label a {
 .cta.cta--50pc {
   width: 49%;
 }
+.cta.cta--100pc {
+  width: 100%;
+}
 .cta:hover {
-  background: #505050;
   text-decoration: none;
+  background: #646464;
   color: white;
 }
 
@@ -1644,7 +1686,7 @@ label a {
   width: 100%;
   height: 40px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 3px;
   background: #404041;
   background: rgba(64, 64, 65, 0.8);
   z-index: 4;
@@ -1665,18 +1707,27 @@ label a {
   border-color: #f9a31c;
   height: 202px;
   padding: 20px;
-  padding-top: 44px;
   overflow: hidden;
-}
-
-#loupe_teams_slider {
-  left: 100px;
-  right: 100px;
+  opacity: 0;
   transition: all 1000ms ease-in-out;
   -o-transition: all 1000ms ease-in-out;
   -ms-transition: all 1000ms ease-in-out;
   -moz-transition: all 1000ms ease-in-out;
   -webkit-transition: all 1000ms ease-in-out;
+}
+.loupe_slider.left {
+  right: 100px;
+  left: -250px;
+  padding-right: 110px;
+  padding-left: 10px;
+  opacity: 1;
+}
+.loupe_slider.right {
+  left: 100px;
+  right: -250px;
+  padding-left: 110px;
+  padding-right: 10px;
+  opacity: 1;
 }
 
 /***********************************************************************************
@@ -1887,7 +1938,6 @@ th {
   position: relative;
   width: 100%;
   padding: 15px;
-  /*background: rgb(64,64,65);*/
   min-height: 215px;
 }
 
@@ -1913,23 +1963,6 @@ th {
   float: left;
   width: 30%;
   margin: 0 15px 15px 0;
-}
-
-.call-to-action a {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  line-height: 35px;
-  background: #6e6e6e;
-  clear: both;
-}
-.call-to-action a:hover {
-  color: white;
-  background: #555555;
 }
 
 /* **********************************************************************************/
@@ -2204,40 +2237,8 @@ blockquote:before {
 /* **********************************************************************************/
 /*		Common Elements																*/
 /* **********************************************************************************/
-.six_video {
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-}
-
-.hidden_overflow {
-  overflow: hidden;
-}
-
 .unavaliable_text {
   color: #59595b;
-}
-
-.large_text {
-  /* font-size: 20px; */
-  color: white;
-}
-
-.tiny_text {
-  font-size: 10px;
-  text-align: left;
-}
-
-.border_bottom {
-  /*
-  padding-bottom: 3px;
-  margin-bottom: 5px;
-  border-bottom: solid;
-  border-bottom-color: orange;
-  border-bottom-width: 1px;
-  */
 }
 
 .mock_link {
@@ -2256,33 +2257,6 @@ blockquote:before {
 
 .hidden_link:hover {
   color: #f9a31c;
-}
-
-.indent_list {
-  margin-left: 50px;
-  margin-bottom: 10px;
-}
-
-.indent_list li {
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
-
-.no_margin {
-  margin: 0;
-}
-
-.margin_bottom {
-  margin-bottom: 20px;
-}
-
-.large_indent {
-  padding-left: 48px;
-  position: relative;
-}
-
-.small_indent {
-  padding-left: 20px;
 }
 
 .page_container {

@@ -11,11 +11,11 @@ $this->Html->script( 'ajaxGetSelections', array('inline'=>false));
 	<div class="onerow">
 		<div class="col4">
 			<p class="helper--round-number">1</p>
-			<p class="helper--center-align">Click on an area in the photo where you think the ball is!!</p>
+			<p class="helper--center-align">Click an area in the photo where you think the ball is</p>
 		</div>
 		<div class="col4">
 			<p class="helper--round-number">2</p>
-			<p class="helper--center-align">Click on the magnifying glass to choose your actual location</p>
+			<p class="helper--center-align">Then click inside the magnifying glass to pinpoint your selection</p>
 		</div>
 		<div class="col4 last">
 			<p class="helper--round-number">3</p>
@@ -118,45 +118,6 @@ $this->Html->script( 'ajaxGetSelections', array('inline'=>false));
 </div>
 
 <script>
-
-
-		
-	$( document ).on("click", ".main_game_image", function(event) {
-		enterSelectMode();
-	});
-	
-	$( document ).on("click", "#loupe_image_container", function(event) {
-		registerSelectClick(event,date);
-		showLoupeTeamSlider(event,date);
-	});
-
-	$( document ).on("mousemove", ".main_game_image", function(event) {
-		findMouse(event,date);
-	});
-	
-	$( document ).on("mousemove", "#loupe_image_container", function(event) {
-		findMouseWithinLoupe(event,date);
-	});
-
-	$( document ).on("click", ".purchase_link", function(event) {
-		console.log("purchase");
-		$("#purchase_gameballs_sidebar").css("width","630px");
-	});
-
-	$( document ).on("click", ".cancel", function(event) {
-		$("#purchase_gameballs_sidebar").css("width","100px");
-	});
-
-	$( document ).on("click", "#remove_selection_confirmation", function(event) {
-		$("#saved_pannel_outer").css("left","-9999px");
-	});
-
-	$( document ).on("click", ".tab", function(event) {
-		toggleTabs();
-		toggleCompAndPracticeMode();
-	});
-
-
 
 	function ajaxFetchCurrentCompetition(){
 		removeAllGameballs();

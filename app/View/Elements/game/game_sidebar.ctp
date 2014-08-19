@@ -1,23 +1,48 @@
-<div id="gameballs_section">
+<div id="selections-form-wrapper">
 
 	<?= $this->Form->create('Game', array(
 		'controller'=>'Games',
 		'action' => 'basket',
+		'id' => 'selections-form',
+		'class' => 'float-form',
 		'inputDefaults' => array(
 			'label' => false,
 			'div' => false
 			)
 		)); ?>
 
+		<ul>
+			<li>
+				<label>X Coordinate</label>
+				<label>X Coordinate</label>
+				<label>Price</label>
+			</li>
+			<li id="selections-form__blank-input">
+				<input readonly>
+				<input readonly>
+				<input readonly>
+			</li>
+		</ul>
+
+		<p>Total Price: <span id="total-price">£0</span></p>
+		<p class="helper--subscript">(promo codes entered at checkout)</p>
+
+		<?= $this->Form->input('go to checkout',array('type' => 'submit', 'class' => 'cta cta--highlight')); ?>
+
 	<?= $this->Form->end(); ?>
 
+	<p id="swap_game_image_button" class="cta cta--100pc" onmouseover="toggleInLayImageIn()" onmouseout="toggleInLayImageOut()" onclick="swapGameImage()">
+		change view
+	</p>
+
 <?php
+/*
 if($authUser){
 ?>
 	<div>
 		<h2>my gameballs</h2>
 
-		<div class="small_indent">
+		<div>
 			<?php
 			if(sizeof($results) <= 0){
 				echo "<span class='tiny_text'>no gameballs played yet</span><br><br>";
@@ -48,6 +73,8 @@ if($authUser){
 		</div>
 	</div>
 
+
+
 <?php } ?>	
 
 	<div id="game_sidebar_view">
@@ -56,10 +83,9 @@ if($authUser){
 				left click to select. right click to zoom
 			</p>
 			
-			<p id="swap_game_image_button" class="cta cta--50pc" onmouseover="toggleInLayImageIn()" onmouseout="toggleInLayImageOut()" onclick="swapGameImage()">
-				change view
-			</p>
-			<p class="cta cta--50pc" onclick="toggleVideoPlayer()">show/hide video</p>
+			
+			<p class="cta cta--100pc" onclick="toggleVideoPlayer()">show/hide video</p>
 
 	</div>
+	*/?>
 </div>

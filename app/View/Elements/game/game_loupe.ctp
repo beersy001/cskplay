@@ -2,12 +2,10 @@
 
 <div id="loupe_teams_slider" class="loupe_slider">
 
-	<p>your gameball has been added to the basket</p>
+	<p>Your gameball has been added to the basket.</p>
 
-	<a id="cancel_link" class="mock_link" onclick="removeGameball()">remove gameball</a>
-	<br>
-	<br>
-	<a id="cancel_link" class="mock_link" onclick="$('#GameBasketForm').submit();">submit current gameballs</a>
+	<a id="cancel_link" class="cta cta--100pc cta--highlight" onclick="$('#selections-form').submit();">go to checkout</a>
+	<a id="cancel_link" class="cta cta--100pc" onclick="removeGameball()">remove gameball</a>
 
 
 </div>

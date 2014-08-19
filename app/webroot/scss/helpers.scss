@@ -4,11 +4,12 @@
 /* widths */
 .helper--fullwidth{ width: 100% !important; }
 
-/* text align */
+/* text */
 .helper--center-align{ text-align: center !important; }
 .helper--left-align{ text-align: left !important; }
 .helper--right-align{ text-align: right !important; }
 .helper--full-align{ text-align: justify !important; }
+.helper--subscript{ font-size: 11px !important; margin-top: 0 !important; }
 
 /* overflows */
 .helper--overflow-hidden{ overflow: hidden !important; }
