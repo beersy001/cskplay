@@ -34,6 +34,8 @@ $highlightColor: rgb(249,163,28);
 @import 'helpers';
 @import 'reset';
 @import 'forms';
+@import 'keyframeAnimation';
+
 
 /** General Style Info **/
 *{
@@ -237,12 +239,17 @@ label a{
 	cursor: pointer;
 }
 
-
-
 #home_container{
 	max-width: 100%;
 	position:relative;
 	overflow: hidden;
+}
+
+#main-wrapper{
+	overflow: hidden;
+	_overflow: visible;
+	width: 100%;
+	height: 100%;
 }
 /********************************************************/
 /*****		Custom Scroll Bar						*****/
@@ -1312,6 +1319,8 @@ th{
 	overflow: hidden;
 	_overflow: visible;
 }
+
+
 
 /* **********************************************************************************/
 /*		About Us Nav Bar															*/

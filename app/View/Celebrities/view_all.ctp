@@ -1,5 +1,5 @@
-<div class="grid" id="main_grid">
-	<div class="onerow">
+<div class="grid scene" id="main_grid">
+	<div class="onerow scene__element scene__element--fadeinup">
 
 		<div class="col4">
 			<h1>our celebrities</h1>
@@ -24,7 +24,7 @@
 		</div>
 	</div>
 
-	<div class="onerow alt-background">
+	<div class="onerow alt-background scene__element scene__element--fadeinup">
 		<div class="col12">
 
 			<div id="thumbnail_container">

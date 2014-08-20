@@ -13,6 +13,10 @@
 		<?=$this->Html->link('celebrities',array('controller' => 'celebrities', 'action' => 'viewAll'), array('class' => 'link-wrapper__link'));?>
 	</li>
 
+	<li class="nav-bar__link-wrapper" id="celebrities_menu_item">
+		<?=$this->Html->link('list all',array('controller' => 'celebrities', 'action' => 'listAll'), array('class' => 'link-wrapper__link'));?>
+	</li>
+
 	<li class="nav-bar__link-wrapper" id="charities_menu_item">
 		<?=$this->Html->link('charities',array('controller' => 'charities', 'action' => 'viewAll'), array('class' => 'link-wrapper__link'));?>
 	</li>
@@ -25,11 +29,11 @@
 		<?=$this->Html->link('play',array('controller' => 'games', 'action' => 'displayGame'), array('class' => 'link-wrapper__link')); ?>
 	</li>
 
-	<li class="nav-bar__link-wrapper" id="play_menu_item">
+	<li class="nav-bar__link-wrapper" id="login_menu_item">
 		<?=$this->Html->link('login',array('controller' => 'users', 'action' => 'login'), array('class' => 'link-wrapper__link helper--mobile-only')); ?>
 	</li>
 
-	<li class="nav-bar__link-wrapper" id="play_menu_item">
+	<li class="nav-bar__link-wrapper" id="register_menu_item">
 		<?=$this->Html->link('register',array('controller' => 'users', 'action' => 'add'), array('class' => 'link-wrapper__link helper--mobile-only')); ?>
 	</li>
 

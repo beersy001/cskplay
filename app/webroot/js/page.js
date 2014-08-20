@@ -1,4 +1,25 @@
+//window onload events
 window.onload = function() {
+
+
+var $body = $('html, body'), // Define jQuery collection 
+      content = $('#main').smoothState({
+      	prefetch: true,
+      	development: true,
+        onStart : {
+          duration: 250,
+          render: function () {
+            content.toggleAnimationClass('is-exiting');
+            console.log("rendering");
+            // Scroll user to the top
+            $body.animate({ 'scrollTop': 0 });
+
+          }
+        }
+      }).data('smoothState');
+
+
+
 
 	var pageId = document.title;
 	var path = window.location.pathname.split("/");

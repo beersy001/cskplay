@@ -186,7 +186,7 @@ class CelebritiesController extends AppController {
 		$this->set('title_for_page', 'our celebrities');
 		$this->set('pageId','viewAll');
 
-		$this->set('celebrities', $this->Celebrity->getAllCelebrities());
+		$this->layout= 'blank';
 	}
 
 

@@ -1,4 +1,4 @@
-<div class="header">
+<div id="header-wrapper" class="header">
 
 	<div class="header__logo-wrapper">
 		<a href="<?=$this->Html->url(array('controller' => 'pages', 'action' => 'home'));?>">

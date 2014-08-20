@@ -1,0 +1,105 @@
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@-webkit-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translate3d(100%, 0, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@-webkit-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translate3d(100%, 0, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.scene {
+	/** Basic styles for an animated element */
+	.scene__element {
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;
+		-webkit-transition-timing-function: ease-in;
+		transition-timing-function: ease-in;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+
+	}
+
+	/** An element that fades in */
+	.scene__element--fadein {
+		animation-name: fadeIn;
+		-webkit-animation-name: fadeIn;
+	}
+
+	/** An element that fades in and slides up */
+	.scene__element--fadeinup {
+		animation-name: fadeInUp;
+		-webkit-animation-name: fadeInUp;
+	}
+
+	/** An element that fades in and slides from the right */
+	.scene__element--fadeinright {
+		animation-name: fadeInRight;
+		-webkit-animation-name: fadeInRight;
+	}
+
+	/** Reverse "exit" animations */
+  &.is-exiting {
+      .scene_element {
+        animation-direction: alternate-reverse;
+      }
+  }
+}
