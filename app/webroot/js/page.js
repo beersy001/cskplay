@@ -1,3 +1,6 @@
+//global var to set and remove home countdown timer
+var intervals = [];
+
 //window onload events
 window.onload = function() {
 	pageScripts();
@@ -37,6 +40,10 @@ function pageScripts(){
 	var md = new MobileDetect(window.navigator.userAgent);
 	var mobile = md.mobile();
 
+	$('a[href*=#]:not([href=#])').click(function() {
+		smoothScroll(this, location);
+	});
+
 	$(".header__hamburger-icon").toggleElement({"targetElem" : ".header__nav-wrapper"});
 	$(".nav-bar__close-btn").toggleElement({"targetElem" : ".header__nav-wrapper"});
 
@@ -44,16 +51,16 @@ function pageScripts(){
 	changeActiveMenu( controller );
 
 	if(pageId == 'home'){
-		runCameraFlashes(300);
-		runCameraFlashes(500);
-		var timer = setInterval(countdown, 1000);
+		intervals.push(runCameraFlashes(300));
+		intervals.push(runCameraFlashes(500));
+		intervals.push(setInterval(countdown, 1000));
 		if(mobile == null){
 			$('.home-bg-wrapper__image-bg').parallax({ "coeff" : 0.7 });
 		}
-	}
-
-	if(pageId == 'viewTeam'){
-		teamAjaxRequest('details');
+	}else{
+		for (var i = 0; i < intervals.length; i++) {
+			clearInterval(intervals[i]);
+		};
 	}
 
 	if(pageId == 'displayGame'){
@@ -121,3 +128,16 @@ function pageScripts(){
 		}
 	}
 }
+
+function smoothScroll(elm, location){
+	if (location.pathname.replace(/^\//,'') == elm.pathname.replace(/^\//,'') || location.hostname == elm.hostname) {
+		var target = $(elm.hash);
+		target = target.length ? target : $('[name=' + elm.hash.slice(1) +']');
+		if (target.length) {
+			$('html,body').animate({
+				scrollTop: target.offset().top
+			}, 1000);
+			return false;
+		}
+	}
+};
