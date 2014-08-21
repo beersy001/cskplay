@@ -5,7 +5,7 @@ window.onload = function() {
 	var $body = $('html, body'); // Define jQuery collection 
 	var content = $('#main').smoothState({
 		prefetch: true,
-		pageCacheSize: 4,
+		pageCacheSize: 5,
 		development: true,
 		onStart : {
 			duration: 500,

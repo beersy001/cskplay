@@ -17,7 +17,7 @@
 	</div>
 
 	<script>
-		$('#celeb-profile-video-wrapper').tubular({videoId: 'IAb-OD-5JFI'});
+		$('#celeb-profile-video-wrapper').tubular({videoId: 'F5dSllf_1bs'});
 		//window.player.playVideo();
 	</script>
 
