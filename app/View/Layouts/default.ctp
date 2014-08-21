@@ -13,7 +13,6 @@
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 		<?php
-
 			echo $this->Html->charset(); 
 			echo $this->Html->meta('icon');
 			echo $this->Html->css('style.min');
@@ -24,6 +23,7 @@
 			echo $this->Html->script('jquery.toggleDiv');
 			echo $this->Html->script('jquery.smoothState');
 			echo $this->Html->script('countdown');
+			echo $this->Html->script('gamePlay');
 			echo $this->Html->script('changeActiveMenu');
 			echo $this->Html->script('smoothAnchorScrolling');
 			echo $this->Html->meta('icon', $this->Html->url('/favicon.ico'));
@@ -31,15 +31,13 @@
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 			echo $this->Js->writeBuffer(array('cache'=>FALSE));
-			
+
 			echo $this->Html->script('page');
 		?>
 		
 		<title><?= $pageId ?></title>
-
 	</head>
-	<body id="main">
-				
+	<body id="main" class="scene">
 		<div id="fb-root"></div>
 		<script>
 			(function(d, s, id) {
@@ -58,6 +56,5 @@
 			<?= $this->fetch('content'); ?>
 			<?= $this->element('footer'); ?>
 		</div>
-
 	</body>
 </html>

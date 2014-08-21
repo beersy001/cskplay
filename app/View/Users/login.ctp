@@ -1,13 +1,8 @@
-<?php
-	echo '<script>var date = "' . date('Ym') . '"</script>';
-	$this->Html->script( "slideShow", array("inline"=>false));
-?>
-
 <div class="grid" id="main_grid">
-	<div class="onerow">
+	<div class="onerow ">
 
 
-		<div class="colcenter40">
+		<div class="colcenter40 scene__element scene__element--fadeinup">
 			<h1 class="helper--center-align">login</h1>			
 
 			<?= $this->Form->create( 'User',

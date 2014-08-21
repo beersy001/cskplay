@@ -32,7 +32,7 @@ class CelebritiesController extends AppController {
 
 	function beforeFilter(){
 		parent::beforeFilter();
-		$this->Auth->allow('profile', 'outtakes','viewAllOuttakes');
+		$this->Auth->allow('profile', 'outtakes','viewAllOuttakes', 'listAll');
 	}
 
 	
@@ -178,16 +178,7 @@ class CelebritiesController extends AppController {
 		$this->redirect(array('action' => 'celebrityAdmin'));
 	}
 
-	/********************************************************
-	 *		List All 										*
-	 ********************************************************/
 
-	public function listAll(){
-		$this->set('title_for_page', 'our celebrities');
-		$this->set('pageId','viewAll');
-
-		$this->layout= 'blank';
-	}
 
 
 }

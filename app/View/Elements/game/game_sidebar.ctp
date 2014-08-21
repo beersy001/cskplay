@@ -18,9 +18,9 @@
 				<label>Price</label>
 			</li>
 			<li id="selections-form__blank-input">
-				<input readonly>
-				<input readonly>
-				<input readonly>
+				<input readonly disabled>
+				<input readonly disabled>
+				<input readonly disabled>
 			</li>
 		</ul>
 

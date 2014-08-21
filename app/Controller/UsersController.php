@@ -18,7 +18,7 @@ class UsersController extends AppController {
 
 	public function beforeFilter(){
 		parent::beforeFilter();
-		$this->Auth->allow('add');
+		$this->Auth->allow('add', 'login');
 
 		$this->Security->blackHoleCallback = 'blackhole';
 	}
@@ -39,13 +39,10 @@ class UsersController extends AppController {
 	 ********************************************************/
 	public function login(){
 		$this->set('pageId', 'login');
-		$this->set('month', date('Ym'));
-
 
 		if($this->Auth->loggedIn()){
 			if( $this->Session->read('basketRedirect') ) {
 				$this->redirect(array('controller' => 'games' , 'action' => 'basket'));
-
 			}
 			return $this->redirect(array('controller' => 'pages', 'action' => 'home'));
 		}
@@ -104,9 +101,6 @@ class UsersController extends AppController {
 					$this->redirect(array('action' => 'login', '?' => array('code' => 'code')));
 				}
 			}
-		} else {
-			//$this->Session->setFlash('none');
-
 		}
 	}
 

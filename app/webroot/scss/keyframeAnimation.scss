@@ -69,8 +69,8 @@
 .scene {
 	/** Basic styles for an animated element */
 	.scene__element {
-		-webkit-animation-duration: 1s;
-		animation-duration: 1s;
+		-webkit-animation-duration: 0.5s;
+		animation-duration: 0.5s;
 		-webkit-transition-timing-function: ease-in;
 		transition-timing-function: ease-in;
 		-webkit-animation-fill-mode: both;
@@ -97,9 +97,11 @@
 	}
 
 	/** Reverse "exit" animations */
-  &.is-exiting {
-      .scene_element {
-        animation-direction: alternate-reverse;
-      }
-  }
+	&.is-exiting {
+		.scene__element {
+			animation-direction: alternate-reverse;
+			-webkit-animation-direction: alternate-reverse;
+		}
+	}
 }
+

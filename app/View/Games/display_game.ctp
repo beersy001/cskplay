@@ -1,6 +1,5 @@
 <?php
-$this->Html->script( 'gamePlay', array('inline'=>false));
-//$this->Html->script( 'ajaxGetSelections', array('inline'=>false));
+//$this->Html->script( 'gamePlay', array('inline'=>false));
 ?>
 
 <div class="grid">
@@ -8,7 +7,7 @@ $this->Html->script( 'gamePlay', array('inline'=>false));
 		<?= $this->element('game/game_loupe'); ?>
 	</div>
 
-	<div class="onerow">
+	<div class="onerow scene__element scene__element--fadeinup">
 		<div class="col4">
 			<p class="helper--round-number">1</p>
 			<p class="helper--center-align">Click an area in the photo where you think the ball is</p>
@@ -24,7 +23,7 @@ $this->Html->script( 'gamePlay', array('inline'=>false));
 
 	</div>
 
-	<div class="onerow alt-background">
+	<div class="onerow alt-background scene__element scene__element--fadeinup">
 		<?php /*
 		<div id="game_video_container">
 			<div id="game_video_inner">

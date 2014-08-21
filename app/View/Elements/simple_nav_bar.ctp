@@ -13,14 +13,6 @@
 		<?=$this->Html->link('celebrities',array('controller' => 'celebrities', 'action' => 'viewAll'), array('class' => 'link-wrapper__link'));?>
 	</li>
 
-	<li class="nav-bar__link-wrapper" id="celebrities_menu_item">
-		<?=$this->Html->link('list all',array('controller' => 'celebrities', 'action' => 'listAll'), array('class' => 'link-wrapper__link'));?>
-	</li>
-
-	<li class="nav-bar__link-wrapper" id="charities_menu_item">
-		<?=$this->Html->link('charities',array('controller' => 'charities', 'action' => 'viewAll'), array('class' => 'link-wrapper__link'));?>
-	</li>
-
 	<li class="nav-bar__link-wrapper" id="partners_menu_item">
 		<?=$this->Html->link('partners',array('controller' => 'partners', 'action' => 'viewAll'), array('class' => 'link-wrapper__link'));?>
 	</li>

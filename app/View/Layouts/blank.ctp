@@ -13,7 +13,6 @@
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 		<?php
-
 			echo $this->Html->charset(); 
 			echo $this->Html->meta('icon');
 			echo $this->Html->css('style.min');
@@ -24,28 +23,41 @@
 			echo $this->Html->script('jquery.toggleDiv');
 			echo $this->Html->script('jquery.smoothState');
 			echo $this->Html->script('countdown');
+			echo $this->Html->script('gamePlay');
+			echo $this->Html->script('cameraFlashes');
 			echo $this->Html->script('changeActiveMenu');
 			echo $this->Html->script('smoothAnchorScrolling');
+			echo $this->Html->script('scrollingAnimation');
 			echo $this->Html->meta('icon', $this->Html->url('/favicon.ico'));
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
 			echo $this->fetch('script');
 			echo $this->Js->writeBuffer(array('cache'=>FALSE));
-			
+
 			echo $this->Html->script('page');
 		?>
 		
 		<title><?= $pageId ?></title>
-
 	</head>
-	<body id="main">
-			
-		<?= $this->element('header'); ?>
+	<body id="main" class="scene">
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=503746699700838";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk')
+			);
+		</script>
 
-		<div id="body-wrapper" class="body-wrapper">
+		
+
+		<div class="content-wrapper">
+			<?= $this->element('header'); ?>
 			<?= $this->fetch('content'); ?>
 			<?= $this->element('footer'); ?>
 		</div>
-
 	</body>
 </html>

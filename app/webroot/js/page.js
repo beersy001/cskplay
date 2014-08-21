@@ -1,26 +1,36 @@
 //window onload events
 window.onload = function() {
+	pageScripts();
+
+	var $body = $('html, body'); // Define jQuery collection 
+	var content = $('#main').smoothState({
+		prefetch: true,
+		pageCacheSize: 4,
+		development: true,
+		onStart : {
+			duration: 500,
+			render: function (url, $container) {
+				content.toggleAnimationClass('is-exiting');
+				console.log("rendering");
+				$body.animate({ 'scrollTop': 0 });
+			}
+		},
+		onEnd : {
+			duration: 0, // Duration of the animations, if any.
+			render: function (url, $container, $content) {
+				$body.css('cursor', 'auto');
+				$body.find('a').css('cursor', 'auto');
+				$container.html($content);
+				pageScripts();
+			}
+		}
+	}).data('smoothState');
+};
 
 
-var $body = $('html, body'), // Define jQuery collection 
-      content = $('#main').smoothState({
-      	prefetch: true,
-      	development: true,
-        onStart : {
-          duration: 250,
-          render: function () {
-            content.toggleAnimationClass('is-exiting');
-            console.log("rendering");
-            // Scroll user to the top
-            $body.animate({ 'scrollTop': 0 });
-
-          }
-        }
-      }).data('smoothState');
 
 
-
-
+function pageScripts(){
 	var pageId = document.title;
 	var path = window.location.pathname.split("/");
 	var controller = path[2];
@@ -70,10 +80,7 @@ var $body = $('html, body'), // Define jQuery collection
 			})
 			.on("click", ".cancel-btn", function(event) {
 				removeGameball($(this).data("gameballid"));
-			});
-
-
-			
+			});	
 	}
 
 	if(pageId == 'my gameballs'){
@@ -86,6 +93,7 @@ var $body = $('html, body'), // Define jQuery collection
 	}
 
 	if(pageId == 'celebrityProfile'){
+
 		if(mobile == null){
 			$('.parallax--top-position').parallax({ "coeff" : 0.7 });
 			$('.parallax--bg-position').parallax({ "coeff" : 0.7, "type" : "background-position" });
@@ -97,5 +105,4 @@ var $body = $('html, body'), // Define jQuery collection
 			$('.video-bg-wrapper').parallax({ "coeff" : 0.7 });
 		}
 	}
-
-};
+}

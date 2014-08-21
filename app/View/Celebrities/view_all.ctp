@@ -1,4 +1,4 @@
-<div class="grid scene" id="main_grid">
+<div class="grid" id="main_grid">
 	<div class="onerow scene__element scene__element--fadeinup">
 
 		<div class="col4">
@@ -13,15 +13,15 @@
 			<h2 class="helper--highlight-text">James Corden</h2>
 			<p>Our current celebrity is actor, comedian, synchronised swimming extraordinaire, and presenter James Cordon!! Have a look at his outtakes, interview and sample some of his slinky penalty skills.</p>
 			<p>James supports the teenage cancer trust charity and is hoping to raise as much money as possible over the next 4 weeks.</p>
-
-
 		</div>
+
 		<div class="col4 last">
 			<h1>next celebrity</h1>
 			<h2 class="helper--highlight-text">Kiera Knightley</h2>
 			<p>Our next celebrity is going to be Keira Knightley.  Keira is a brilliant actress who has a hidden talent – she can play make music by playing her teeth!!</p>
 			<p>Keira has great sporting ability, proven by her role in Bend it like Beckham! Keira supports Cancer Trust UK and is looking forward to you helping her raise some great sums for them.</p>
 		</div>
+
 	</div>
 
 	<div class="onerow alt-background scene__element scene__element--fadeinup">

@@ -4,9 +4,12 @@
 	margin-left: auto;
 	height: 100%;
 	width: 100%;
-	overflow-y: auto;
+	overflow-y: hidden;
 	overflow-x: hidden;
 	max-width: 1650px;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 #home_container .grid{

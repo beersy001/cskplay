@@ -66,25 +66,17 @@ class AppController extends Controller {
 
 		$this->Auth->allow('display','view','displayWinners','thisMonthsCelebrity','viewAll');
 		$this->set('authUser', $this->Auth->user());
-		
-		//if(!$this->Session->check('celebs')){
-			$this->loadModel('Celebrity');
-			$this->loadModel('Charity');
-			$this->loadModel('Partner');
-			$this->Session->write('celebs',$this->Celebrity->getAllCelebritiesNames());
-			$this->Session->write('cskCharities',$this->Charity->getCharityNamesByType('csk'));
-			$this->Session->write('celebCharities',$this->Charity->getCharityNamesByType('celeb'));
-			$this->Session->write('partners',$this->Partner->getPartnerNames());
-		//}
 
 	}
 
-	public function isAuthorized($user){
 
+	public function isAuthorized($user){
 		return true;
 	}
 
 	public function beforeRender(){
+
+    	parent::beforeRender();
 		$this->set('fb_login_url', $this->Facebook->getLoginUrl(array(
 			'scope'=>'email',
 			'redirect_uri' => Router::url(array(
@@ -95,6 +87,9 @@ class AppController extends Controller {
 		$this->set('fb_logout_url', $this->Facebook->getLogoutUrl(array('next' => Router::url(array('controller' => 'users', 'action' => 'logout'), true))));
 		$this->set('user', $this->Auth->user());
 
-		//print_r($this->Session->read());
+		echo '<script>var date = "' . date('Ym') . '"</script>';
+
+		$this->layout = 'blank';
+
 	}
 }

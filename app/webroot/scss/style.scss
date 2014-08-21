@@ -443,20 +443,17 @@ label a{
 	}
 }
 
-.body-wrapper{
-	width: 100%;
-	min-height: 100%;
-	padding-top: $totalHeaderHeight;
-	top: 0px;
-	position: absolute;
+.content-wrapper{
+	position: relative;
 	overflow: hidden;
 }
 
 .home-bg-wrapper{
 	width: 100%;
 	height: 100%;
-	margin-top: -100px;
+	margin-top: -135px;
 	overflow: hidden;
+	position: relative;
 
 	.home-bg-wrapper__image-bg{
 		position: relative;
@@ -483,6 +480,7 @@ label a{
 	z-index: 30;
 	width: 100%;
 	height: 100px;
+	margin-bottom: 35px;
 
 	.header__logo-wrapper{
 		a{

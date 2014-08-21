@@ -3,14 +3,13 @@
 	echo '<script>var date = "' . date('Ym') . '"</script>';
 
 	$this->Html->script( "registrationValidation", array("inline"=>false));
-	$this->Html->script( "slideShow", array("inline"=>false));
 ?>
 
 <div class="grid" id="main_grid">
-	<div class="onerow ">
+	<div class="onerow">
 
-		<div class="colcenter40">
-			<h2>register with us...</h2>
+		<div class="colcenter40 scene__element scene__element--fadeinup">
+			<h1 class="helper--center-align">register</h1>	
 
 			<?= $this->Form->create('User', array(
 				'controller'=>'Users',
