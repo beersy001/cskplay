@@ -19,8 +19,8 @@ class GamesController extends AppController {
 
 	public function displayGame() {
 
-		$this->set('title_for_page', 'play now');
-		$this->set('pageId', 'displayGame');
+		$this->set('title_for_page', 'CSK - play now');
+		$this->set('pageId', 'gamesDisplayGame');
 
 		echo '<script>var date = "' . date('Ym') . '"</script>';
 		
@@ -65,6 +65,9 @@ class GamesController extends AppController {
 
 	public function basket(){
 
+		$this->set('title_for_page', 'CSK - gameball basket');
+		$this->set('pageId', 'gamesBasket');
+
 		if ($this->request->is('post')) {
 			if ( isset( $this->request->data['Selection'] ) ) {
 				
@@ -77,12 +80,15 @@ class GamesController extends AppController {
 		if(!$this->Auth->user()){
 			
 			$this->Session->write('basketRedirect', true);
-			$this->redirect(array('controller' => 'Users', 'action' => 'add'));
+			$this->redirect(array('controller' => 'Users', 'action' => 'login'));
 
 		}
 	}
 
 	public function confirmation(){
+
+		$this->set('title_for_page', 'CSK - gameball confirmation');
+		$this->set('pageId', 'gamesConfirmation');
 
 		$this->loadModel('GameBall');
 

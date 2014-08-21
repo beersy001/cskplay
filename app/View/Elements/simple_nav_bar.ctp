@@ -1,8 +1,8 @@
 <ul class="nav-warpper__nar-bar">
 	<i class="nav-bar__close-btn fa fa-times fa-3x helper--mobile-only-inline helper--font-color"></i>
 
-	<li class="nav-bar__link-wrapper" id="home_menu_item">
-		<?=$this->Html->link('home',array('controller' => 'pages', 'action' => 'home'), array('class' => 'link-wrapper__link helper--mobile-only')); ?>
+	<li class="nav-bar__link-wrapper helper--mobile-only" id="home_menu_item">
+		<?=$this->Html->link('home',array('controller' => 'pages', 'action' => 'home'), array('class' => 'link-wrapper__link')); ?>
 	</li>
 
 	<li class="nav-bar__link-wrapper" id="pages_menu_item">
@@ -21,12 +21,12 @@
 		<?=$this->Html->link('play',array('controller' => 'games', 'action' => 'displayGame'), array('class' => 'link-wrapper__link')); ?>
 	</li>
 
-	<li class="nav-bar__link-wrapper" id="login_menu_item">
-		<?=$this->Html->link('login',array('controller' => 'users', 'action' => 'login'), array('class' => 'link-wrapper__link helper--mobile-only')); ?>
+	<li class="nav-bar__link-wrapper helper--mobile-only" id="login_menu_item">
+		<?=$this->Html->link('login',array('controller' => 'users', 'action' => 'login'), array('class' => 'link-wrapper__link')); ?>
 	</li>
 
-	<li class="nav-bar__link-wrapper" id="register_menu_item">
-		<?=$this->Html->link('register',array('controller' => 'users', 'action' => 'add'), array('class' => 'link-wrapper__link helper--mobile-only')); ?>
+	<li class="nav-bar__link-wrapper helper--mobile-only" id="register_menu_item">
+		<?=$this->Html->link('register',array('controller' => 'users', 'action' => 'add'), array('class' => 'link-wrapper__link')); ?>
 	</li>
 
 	<?php
