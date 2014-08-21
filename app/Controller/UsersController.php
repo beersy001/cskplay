@@ -77,6 +77,8 @@ class UsersController extends AppController {
 					//	$this->redirect($this->Auth->redirectUrl());
 					//}
 
+					$this->redirect($this->Auth->redirectUrl());
+
 				}else {
 
 					list($firstName,$surname) = explode(' ', $facebookUser['name']);
