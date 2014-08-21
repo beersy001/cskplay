@@ -1,6 +1,6 @@
 function runCameraFlashes(delay){
 
-	setInterval(function(){
+	return setInterval(function(){
 
 		var randomFlashId = Math.floor(Math.random() * 24) + 1;
 		var count = 0;
@@ -23,4 +23,6 @@ function runCameraFlashes(delay){
 			}
 		},200);
 	},delay);
+
+
 }

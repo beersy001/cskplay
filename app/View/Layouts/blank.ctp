@@ -26,7 +26,6 @@
 			echo $this->Html->script('gamePlay');
 			echo $this->Html->script('cameraFlashes');
 			echo $this->Html->script('changeActiveMenu');
-			echo $this->Html->script('smoothAnchorScrolling');
 			echo $this->Html->script('scrollingAnimation');
 			echo $this->Html->meta('icon', $this->Html->url('/favicon.ico'));
 			echo $this->fetch('meta');
