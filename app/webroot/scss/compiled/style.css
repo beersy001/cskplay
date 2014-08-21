@@ -1154,9 +1154,8 @@ label a {
   /* using viewport height so video can be full screen in middle of the page */
   overflow: hidden;
 }
-.video-bg-wrapper .video-bg-wrapper__video {
-  width: 100%;
-  height: 100%;
+.video-bg-wrapper .video-bg-wrapper__video-wrapper {
+  position: absolute;
 }
 .video-bg-wrapper .video-bg-wrapper__overlay {
   position: absolute;

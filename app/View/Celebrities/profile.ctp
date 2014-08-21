@@ -2,9 +2,9 @@
 
 	<script>var currentMonth = <?=$currentMonth?></script>
 
-	<div id="video-wrapper" class="video-bg-wrapper helper--minus-header-margin parallax--top-position  scene__element scene__element--fadeinup">
+	<div id="celeb-profile-video-wrapper" class="video-bg-wrapper helper--minus-header-margin parallax--top-position  scene__element scene__element--fadeinup">
 		<div class="video-bg-wrapper__overlay">
-			<div class="overlay__content-wrapper tubular-play">
+			<div class="overlay__content-wrapper">
 				<h1 class="content-wrapper__heading"><?=$celebName?></h1>
 				<p class="helper--center-align"><?=$celebName?> was a great sport, scroll down to see how they got on and take a look at their outtakes</p>
 			</div>
@@ -17,7 +17,7 @@
 	</div>
 
 	<script>
-		$('#video-wrapper').tubular({videoId: 'IAb-OD-5JFI'});
+		$('#celeb-profile-video-wrapper').tubular({videoId: 'IAb-OD-5JFI'});
 		//window.player.playVideo();
 	</script>
 

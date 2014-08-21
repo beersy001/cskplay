@@ -93,6 +93,13 @@ function pageScripts(){
 	}
 
 	if(pageId == 'celebrityProfile'){
+		if($("#youtube-api-script").length <= 0){
+			var tag = document.createElement('script');
+			tag.id = "youtube-api-script";
+			tag.src = "//www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		}
 
 		if(mobile == null){
 			$('.parallax--top-position').parallax({ "coeff" : 0.7 });

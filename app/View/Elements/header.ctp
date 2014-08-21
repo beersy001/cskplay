@@ -25,14 +25,6 @@
 			}
 		?>
 	</div>
-	<?php
-	if(isset($title_for_page)){
-		echo '<div class="header__title-wrapper">';
-			echo '<h1 class="title-wrapper__page-title">' . $title_for_page . '</h1>';
-		echo '</div>';
-	}
-	?>
-
 
 	<i class="header__hamburger-icon fa fa-bars helper--mobile-only helper--font-color"></i>
 

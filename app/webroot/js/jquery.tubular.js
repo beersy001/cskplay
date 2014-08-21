@@ -1,16 +1,6 @@
-/* jQuery tubular plugin
-|* by Sean McCambridge
-|* http://www.seanmccambridge.com/tubular
-|* version: 1.0
-|* updated: October 1, 2012
-|* since 2010
-|* licensed under the MIT License
-|* Enjoy.
-|* 
-|* Thanks,
-|* Sean */
 var player;
-;(function ($, window) {
+
+(function ($, window) {
 
 	// defaults
 	var defaults = {
@@ -42,10 +32,12 @@ var player;
 		if($("#tubular-container").length > 0){
 			$("#tubular-container").remove();
 		}
-		var tubularContainer = '<div id="tubular-container" style="overflow: hidden; width: 100%; height: 100%"><div id="tubular-player"></div></div>';
+		var tubularContainer = '<div class="video-bg-wrapper__video-wrapper" id="tubular-container" style="overflow: hidden; width: 100%; height: 100%"><div id="tubular-player" class="video-wrapper__video"></div></div>';
 
-		$node.append(tubularContainer);
+		$node.prepend(tubularContainer);
 		$node.css({position: 'relative'});
+
+		console.log("Player.length : " + $(player).length);
 
 		//check to see if a player has already been created
 		//(meaning that the onYouTubeIframeAPIReady event has already been fired. )
@@ -136,12 +128,6 @@ var player;
 			player.setVolume(currentVolume + options.increaseVolumeBy);
 		})
 	}
-
-	// load yt iframe js api
-	var tag = document.createElement('script');
-	tag.src = "//www.youtube.com/iframe_api";
-	var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 	// create plugin
 
