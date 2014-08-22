@@ -36,7 +36,7 @@
 			echo $this->Html->script('page');
 		?>
 		
-		<title><?= $pageId ?></title>
+		<title><?= $title_for_page ?></title>
 	</head>
 	<body id="main" class="scene">
 		<div id="fb-root"></div>

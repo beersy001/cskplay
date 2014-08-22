@@ -1,22 +1,17 @@
 <div class="grid" id="main_grid">
-	<div class="onerow background_container">
+
+	<div class="onerow scene__element scene__element--fadeinup">
 		<div class="col12">
-			<h1 class="border_bottom">confirm your selections</h1>
+			<h1 class="border_bottom">Your Basket</h1>
+			<p>1. check your gameballs</p>
+			<p>2. complete your gameballs by paying with PayPal or entering a promotional code</p>
+
 		</div>
 	</div>
 
-	<div class="onerow background_container">
+	<div class="onerow alt-background scene__element scene__element--fadeinup">
 		<div class="col12">
-			<ul>
-				<li>1. check your gameballs</li>
-				<li>2. complete your gameballs by paying with PayPal or entering a promotional code</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="onerow background_container">
-		<div class="col12">
-			<table class="basket__gameballs">
+			<table>
 				<th>#</th>
 				<th>x</th>
 				<th>y</th>
@@ -37,7 +32,7 @@
 		</div>
 	</div>
 
-	<div class="onerow background_container margin_bottom">
+	<div class="onerow">
 		<div class="col3">
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="pay_pal_form">
 				<input type="hidden" name="cmd" value="_s-xclick">
@@ -48,7 +43,6 @@
 		</div>
 
 		<div class="col3">
-
 			<div class="form_container">
 				<?php
 				echo $this->Form->create('GameBalls', array('action' => 'saveSelection'));
@@ -60,13 +54,9 @@
 				echo '</div>';
 				echo $this->Form->end('submit');
 				?>
-
 				<?php echo $this->Session->flash(); ?>
 			</div>
 		</div>
 	</div>
 
-	
 </div>
-
-<?= $this->element('quick_links'); ?>

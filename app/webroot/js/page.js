@@ -34,7 +34,8 @@ window.onload = function() {
 
 
 function pageScripts(){
-	var pageId = document.title;
+
+	var pageId = this.location.pathname.match(/(\/)((?:[A-z][A-z0-9_]*))(\/)((?:[A-z][A-z]+))/)[0].toLowerCase().trim();
 	var path = window.location.pathname.split("/");
 	var controller = path[2];
 	var md = new MobileDetect(window.navigator.userAgent);
@@ -50,7 +51,7 @@ function pageScripts(){
 
 	changeActiveMenu( controller );
 
-	if(pageId == 'home'){
+	if(pageId == '/pages/home'){
 		intervals.push(runCameraFlashes(300));
 		intervals.push(runCameraFlashes(500));
 		intervals.push(setInterval(countdown, 1000));
@@ -63,7 +64,7 @@ function pageScripts(){
 		};
 	}
 
-	if(pageId == 'displayGame'){
+	if(pageId == '/games/displaygame'){
 		moveUserSelections(date);
 		$(".crosshairs").css("display","none");
 
@@ -99,7 +100,7 @@ function pageScripts(){
 		playMode = true;
 	}
 
-	if(pageId == 'celebrityProfile'){
+	if(pageId == '/celebrities/profile'){
 		if($("#youtube-api-script").length <= 0){
 			var tag = document.createElement('script');
 			tag.id = "youtube-api-script";
@@ -114,7 +115,7 @@ function pageScripts(){
 		}
 	}
 
-	if(pageId == 'csk'){
+	if(pageId == '/pages/csk'){
 		if($("#youtube-api-script").length <= 0){
 			var tag = document.createElement('script');
 			tag.id = "youtube-api-script";

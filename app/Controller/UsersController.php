@@ -38,7 +38,8 @@ class UsersController extends AppController {
 	 *		Login											*
 	 ********************************************************/
 	public function login(){
-		$this->set('pageId', 'login');
+		$this->set('pageId', 'usersLogin');
+		$this->set('title_for_page', 'CSK - login');
 
 		if($this->Auth->loggedIn()){
 			if( $this->Session->read('basketRedirect') ) {
