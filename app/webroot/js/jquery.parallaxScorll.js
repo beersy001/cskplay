@@ -1,5 +1,5 @@
 // The plugin code
-(function($){
+;(function($){
 	$.fn.parallax = function(options){
 		var $$ = $(this);
 	

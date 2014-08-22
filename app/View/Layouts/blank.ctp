@@ -17,8 +17,9 @@
 			echo $this->Html->meta('icon');
 			echo $this->Html->css('style.min');
 			echo $this->Html->css('jquery-ui-1.10.3.custom');
+			echo $this->Html->script('modernizr');
 			echo $this->Html->script('mobile-detect.min');
-			echo $this->Html->script('jquery.parallaxScroll');
+			echo $this->Html->script('jquery.parallaxScorll');
 			echo $this->Html->script('jquery.tubular');
 			echo $this->Html->script('jquery.toggleDiv');
 			echo $this->Html->script('jquery.smoothState');

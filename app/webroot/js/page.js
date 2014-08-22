@@ -5,29 +5,33 @@ var intervals = [];
 window.onload = function() {
 	pageScripts();
 
-	var $body = $('html, body'); // Define jQuery collection 
-	var content = $('#main').smoothState({
-		prefetch: true,
-		pageCacheSize: 5,
-		development: true,
-		onStart : {
-			duration: 500,
-			render: function (url, $container) {
-				content.toggleAnimationClass('is-exiting');
-				console.log("rendering");
-				$body.animate({ 'scrollTop': 0 });
+	console.log(Modernizr.history);
+	
+	if(Modernizr.history){
+		var $body = $('html, body'); // Define jQuery collection 
+		var content = $('#main').smoothState({
+			prefetch: true,
+			pageCacheSize: 5,
+			development: true,
+			onStart : {
+				duration: 500,
+				render: function (url, $container) {
+					content.toggleAnimationClass('is-exiting');
+					console.log("rendering");
+					$body.animate({ 'scrollTop': 0 });
+				}
+			},
+			onEnd : {
+				duration: 0, // Duration of the animations, if any.
+				render: function (url, $container, $content) {
+					$body.css('cursor', 'auto');
+					$body.find('a').css('cursor', 'auto');
+					$container.html($content);
+					pageScripts();
+				}
 			}
-		},
-		onEnd : {
-			duration: 0, // Duration of the animations, if any.
-			render: function (url, $container, $content) {
-				$body.css('cursor', 'auto');
-				$body.find('a').css('cursor', 'auto');
-				$container.html($content);
-				pageScripts();
-			}
-		}
-	}).data('smoothState');
+		}).data('smoothState');
+	}
 };
 
 

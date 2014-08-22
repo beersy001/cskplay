@@ -2,6 +2,13 @@
 
 class User extends AppModel{
 
+	public $validate = array(
+		'username' => array(
+			'rule'     => 'alphaNumeric',
+			'required' => true
+		)
+	);
+
 	/********************************************************
 	 *		Get number of gameballs left					*
 	 ********************************************************/

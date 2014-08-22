@@ -183,7 +183,7 @@ function setSelection(gameball, type){
 	};
 
 	var crosshair = document.createElement("img");
-	crosshair.src = "/" + rootDir + "/app/webroot/img/logo_orange.png";
+	crosshair.src = "/img/logo_orange.png";
 	crosshair.id = crosshairId;
 	crosshair.className = "crosshair--auto crosshair " + bespokeClass;
 	crosshair.style.pointerEvents = "none";
