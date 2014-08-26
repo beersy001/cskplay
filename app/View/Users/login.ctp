@@ -2,7 +2,7 @@
 	<div class="onerow ">
 
 
-		<div class="colcenter40 scene__element scene__element--fadeinup">
+		<div class="[ colcenter40 ]  [ scene__element  scene__element--fadeinup ]">
 			<h1 class="helper--center-align">login</h1>			
 
 			<?= $this->Form->create( 'User',

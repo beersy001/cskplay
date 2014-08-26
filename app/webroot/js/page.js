@@ -4,8 +4,6 @@ var intervals = [];
 //window onload events
 window.onload = function() {
 	pageScripts();
-
-	console.log(Modernizr.history);
 	
 	if(Modernizr.history){
 		var $body = $('html, body'); // Define jQuery collection 
@@ -21,14 +19,8 @@ window.onload = function() {
 					$body.animate({ 'scrollTop': 0 });
 				}
 			},
-			onEnd : {
-				duration: 0, // Duration of the animations, if any.
-				render: function (url, $container, $content) {
-					$body.css('cursor', 'auto');
-					$body.find('a').css('cursor', 'auto');
-					$container.html($content);
-					pageScripts();
-				}
+			callback : function(url, $container, $content) {
+				pageScripts();
 			}
 		}).data('smoothState');
 	}

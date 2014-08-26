@@ -1,62 +1,69 @@
 <div class="grid" id="main_grid">
 
 	<div class="onerow scene__element scene__element--fadeinup">
-		<div class="col12">
-			<h1 class="border_bottom">Your Basket</h1>
+		<div class="col6">
+			<h1>Your Basket</h1>
 			<p>1. check your gameballs</p>
 			<p>2. complete your gameballs by paying with PayPal or entering a promotional code</p>
+			
+			<div class="payment-details-wrapper helper--clearfix">
+				<div class="table-wrapper payment-details-wrapper__gameballs-wrapper">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">x</th>
+								<th scope="col">y</th>
+								<th scope="col">cost</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+							$i = 1;
+							foreach ($this->Session->read( 'selections' ) as $key => $gameball) {
+								echo '<tr>';
+								echo '<td scope="row">' . $i . '</td>';
+								echo '<td>' . $gameball['x'] . '</td>';
+								echo '<td>' . $gameball['y'] . '</td>';
+								echo '<td>' . $gameball['price']. '</td>';
+								echo '</tr>';
 
-		</div>
-	</div>
+								$i++;
+							}
+							?>
+						</tbody>
+					</table>
+				</div>
 
-	<div class="onerow alt-background scene__element scene__element--fadeinup">
-		<div class="col12">
-			<table>
-				<th>#</th>
-				<th>x</th>
-				<th>y</th>
-				<?php
-				$i = 1;
-				foreach ($this->Session->read( 'selections' ) as $key => $gameball) {
-					echo '<tr>';
-					echo '<td>' . $i . '</td>';
-					echo '<td>' . $gameball['x'] . '</td>';
-					echo '<td>' . $gameball['y'] . '</td>';
-					echo '</tr>';
-
-					$i++;
-				}
-				?>
-
-			</table>
-		</div>
-	</div>
-
-	<div class="onerow">
-		<div class="col3">
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="pay_pal_form">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="FRT9UD9L6LSZ8">
-				<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-				<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-			</form>
-		</div>
-
-		<div class="col3">
-			<div class="form_container">
-				<?php
-				echo $this->Form->create('GameBalls', array('action' => 'saveSelection'));
-				echo '<div class="input_row">';
-				echo $this->Form->input('code',array(
-					'class' => 'helper--clearfix wide_input ',
-					'label' => array( 'text' => 'promo code' )
-				));
-				echo '</div>';
-				echo $this->Form->end('submit');
-				?>
-				<?php echo $this->Session->flash(); ?>
+				<div class="payment-details-wrapper__paypal-wrapper">
+					<h2>total to pay: <span class="paypal-wrapper__price">£<?=$this->Session->read( 'totalPrice' )?></span></h2>
+					<img class="paypal-wrapper__paypal-btn" src="https://www.paypalobjects.com/en_GB/i/btn/btn_paynow_LG.gif">
+				</div>				
 			</div>
 		</div>
-	</div>
 
+		<div class="col4 last">
+			<h1>Pay With PayPal</h1>
+			
+			<?= $this->Form->create('GameBalls', array(
+				'action' => 'saveSelection',
+				'inputDefaults' => array(
+					'label' => false,
+					'div' => false
+				)
+			)); ?>
+				<ul>
+					<li>
+						<?= $this->Form->label('User.firstName', 'promo code'); ?>
+						<?= $this->Form->input('code'); ?>
+					</li>
+					<li>
+						<?= $this->Form->input('submit promo code',array('type' => 'submit', 'class' => 'cta')); ?>
+					</li>
+				</ul>
+			<?= $this->Form->end();	?>
+
+			<?= $this->Session->flash(); ?>
+		</div>
+	</div>
 </div>

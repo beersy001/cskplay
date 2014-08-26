@@ -5,6 +5,7 @@ app/tmp/cache/persistent/*
 app/tmp/cache/models/*
 app/tmp/cache/views/*
 app/tmp/logs/error.log
+app/tmp/logs/debug.log
 
 # SASS cache
 .sass-cache/

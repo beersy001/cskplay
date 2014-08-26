@@ -14,6 +14,7 @@
 			<?= $this->Form->create('User', array(
 				'controller'=>'Users',
 				'action' => 'add',
+				'novalidate' => true,
 				'inputDefaults' => array(
 					'label' => false,
 					'div' => false
@@ -21,10 +22,14 @@
 				)); ?>
 			<ul>
 				<li>
-					<?= $this->Form->label('User.firstName', 'first name', array('class' => 'half')); ?>
-					<?= $this->Form->label('User.surname', 'surname', array('class' => 'half')); ?>
-					<?= $this->Form->input('firstName',array('class' => 'half', 'onChange'=>'validateFirstName();')); ?>
-					<?= $this->Form->input('surname',array('class' => 'half')); ?>
+					<div class="half-wrapper">
+						<?= $this->Form->label('User.firstName', 'first name'); ?>
+						<?= $this->Form->input('firstName',array('onChange'=>'validateFirstName();')); ?>
+					</div>
+					<div class="half-wrapper">
+						<?= $this->Form->label('User.surname', 'surname'); ?>
+						<?= $this->Form->input('surname'); ?>
+					</div>
 				</li>
 				<li>
 					<?= $this->Form->label('User.username', 'username',array('class' => 'helper--clearfix')); ?>
@@ -32,19 +37,19 @@
 				</li>
 				<li>
 					<?= $this->Form->label('User.emailAddress', 'email address'); ?>
-					<?= $this->Form->input('emailAddress',array('class' => '')); ?>
+					<?= $this->Form->input('emailAddress'); ?>
 				</li>
 				<li>
-					<?= $this->Form->label('User.phoneNumberOne', '1st contact number',array('class' => 'helper--clearfix')); ?>
-					<?= $this->Form->input('phoneNumberOne',array('class' => ' ')); ?>
+					<?= $this->Form->label('User.contactNumber', 'contact number',array('class' => 'helper--clearfix')); ?>
+					<?= $this->Form->input('contactNumber'); ?>
 				</li>
 				<li>
 					<?= $this->Form->label('User.password', 'password',array('class' => '')); ?>
-					<?= $this->Form->input('password',array('class' => 'helper--clearfix ','onchange' => 'validatePassword(); ?>')); ?>
+					<?= $this->Form->input('password',array('class' => 'helper--clearfix ','onchange' => 'validatePassword();')); ?>
 				</li>
 				<li>
 					<?= $this->Form->label('User.passwordVerify', 'verify password'); ?>
-					<?= $this->Form->input('passwordVerify', array('type'=>'password', 'class' => '')); ?>
+					<?= $this->Form->input('passwordVerify', array('type'=>'password')); ?>
 				</li>
 				<li>
 					<?= $this->Form->label('User.dayOfBirth', 'date of birth',array('class' => 'helper--clearfix')); ?>
@@ -59,7 +64,7 @@
 					</div>
 				</li>
 				<li>
-					<?= $this->Form->label('User.region', 'region',array('class' => '')); ?>
+					<?= $this->Form->label('User.region', 'region'); ?>
 					<div class="select-wrapper">
 						<?= $this->Form->input('region', array(
 							'options' => array(
@@ -72,7 +77,8 @@
 								'wales'=>'wales',
 								'scotland'=>'scotland',
 								'northern ireland'=>'northern ireland'
-							)
+							),
+    						'empty' => '(please choose)'
 						)); ?>
 					</div>	
 				</li>

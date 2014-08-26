@@ -2,12 +2,9 @@
 
 class User extends AppModel{
 
-	public $validate = array(
-		'username' => array(
-			'rule'     => 'alphaNumeric',
-			'required' => true
-		)
-	);
+	var $name = 'User';
+
+
 
 	/********************************************************
 	 *		Get number of gameballs left					*
@@ -62,6 +59,66 @@ class User extends AppModel{
 		return $this->find('all', array('conditions' => array('User.teams.'.$teamName.'.months.'.$month.'.active' => true)));
 	}
 
+	public $validate = array(
+		'firstName' => array(
+			'rule' => 'notempty',
+			'required' => true
+		),
+
+		'surname' => array(
+			'rule' => 'notempty',
+			'required' => true
+		),
+		
+		'username' => array(
+			'rule' => 'notempty',
+			'required' => true
+		),
+/*
+		'emailAddress' => array(
+			'rule1' => array(
+				'rule' => 'notempty',
+				'message' => 'This field cannot be left blank',
+				'required' => true
+			),
+			'rule2' => array(
+				'rule' => array('email', true),
+				'message' => 'Please enter a valid email address',
+				'required' => true
+			)
+		),
+
+		'contactNumber' => array(
+			'rule1' => array(
+				'rule' => array('phone','/^\s*\(?(020[78]?\)? ?[1-9][0-9]{2,3} ?[0-9]{4})|(0[1-8][0-9]{3}\)? ?[1-9][0-9]{2} ?[0-9]{3})\s*$/','all'),
+				'message' => 'Please enter a valid contact number',
+				'required' => true
+			),
+			'rule2' => array(
+				'rule' => 'notempty',
+				'message' => 'This field cannot be left blank',
+				'required' => true
+			)
+		),
+*/
+		'password' => array(
+			'rule' => 'notempty'
+		),
+
+		'passwordVerify' => array(
+			'rule' => 'notempty'
+		),
+
+		'dayOfBirth' => array(
+			'rule' => 'notempty',	
+			'required' => true
+		),
+
+		'region' => array(
+			'rule' => 'notempty',	
+			'required' => true
+		)
+	);
 }
 
 ?>

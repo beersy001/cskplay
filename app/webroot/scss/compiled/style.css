@@ -1,3 +1,6 @@
+/********************************************************/
+/*****		#Inports								*****/
+/********************************************************/
 /* responsive imports at the bottom of the sheet */
 /**
  *
@@ -593,11 +596,11 @@ form input[type=submit] {
   -webkit-appearance: none;
   border: none;
 }
-form .half {
+form .half-wrapper {
   width: calc((100% / 2) - 8px);
   float: left;
 }
-form .half:first-of-type {
+form .half-wrapper:first-of-type {
   margin-right: 16px;
 }
 form .cta {
@@ -607,6 +610,14 @@ form ul li {
   padding-top: 20px;
   overflow: hidden;
   _overflow: visible;
+}
+form input.form-error, form select.form-error {
+  border: 1px solid orange;
+  border-LEFT: 35px solid orange;
+}
+form .error-message {
+  color: orange;
+  margin-top: 5px;
 }
 
 .float-form ul {
@@ -734,18 +745,23 @@ form ul li {
   -webkit-animation-direction: alternate-reverse;
 }
 
-/** General Style Info **/
+/********************************************************/
+/*****		#General Styling						*****/
+/********************************************************/
 * {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 100;
   letter-spacing: 1px;
+  color: gainsboro;
 }
 
 html, body {
   max-width: 100%;
 }
 
-/** Headings **/
+/********************************************************/
+/*****		#Headings								*****/
+/********************************************************/
 h1, h2, h3, a, input, select {
   color: white;
 }
@@ -769,13 +785,12 @@ h3 {
   clear: both;
 }
 
-h1 + div, h1 + h2, h1 + p, h2 + p, p + p, p + a, p + video, video + p, ul + p, form + p {
+h1 + div, h1 + h2, h1 + p, h2 + p, p + p, p + a, p + video, video + p, ul + p, form + p, h1 + form {
   margin-top: 15px;
 }
 
 p, span {
   line-height: 1.5em;
-  color: gainsboro;
 }
 
 a:hover {
@@ -1012,7 +1027,7 @@ a:hover + i {
   left: 8px;
 }
 
-body, #container, .onerow {
+body, #container, .main-background {
   background: #505050;
   background: url("../img/grey_bg.jpg") repeat 0 0;
 }
@@ -1047,7 +1062,44 @@ label a {
 }
 
 /********************************************************/
-/*****		Custom Scroll Bar						*****/
+/*****	#payment details - basket					*****/
+/********************************************************/
+.payment-details-wrapper .payment-details-wrapper__gameballs-wrapper {
+  float: left;
+  margin: 20px;
+}
+.payment-details-wrapper .payment-details-wrapper__paypal-wrapper {
+  float: left;
+  margin: 60px 20px 20px;
+}
+.payment-details-wrapper .payment-details-wrapper__paypal-wrapper .paypal-wrapper__price {
+  font-size: 45px;
+}
+.payment-details-wrapper .payment-details-wrapper__paypal-wrapper .paypal-wrapper__paypal-btn {
+  width: auto;
+  margin-top: 40px;
+}
+
+/********************************************************/
+/*****	#table										*****/
+/********************************************************/
+.table-wrapper table {
+  border-collapse: collapse;
+  text-align: left;
+}
+.table-wrapper table thead {
+  border-bottom: 3px solid white;
+  text-align: center;
+}
+.table-wrapper table td {
+  padding: 10px 20px;
+}
+.table-wrapper table th {
+  padding: 0 10px 10px;
+}
+
+/********************************************************/
+/*****		#Custom Scroll Bar						*****/
 /********************************************************/
 ::-webkit-scrollbar {
   width: 12px;
@@ -1064,7 +1116,7 @@ label a {
 }
 
 /********************************************************/
-/*****		info-wrapper							*****/
+/*****		#info-wrapper							*****/
 /********************************************************/
 .info-wrapper {
   overflow: hidden;
@@ -1145,7 +1197,7 @@ label a {
 }
 
 /********************************************************/
-/*****		full video background					*****/
+/*****		#full video background					*****/
 /********************************************************/
 .video-bg-wrapper {
   position: relative;
@@ -1177,7 +1229,7 @@ label a {
 }
 
 /********************************************************/
-/*****	parallax scrolling							*****/
+/*****	#parallax scrolling							*****/
 /********************************************************/
 .parallax {
   min-height: 250px;
@@ -1185,7 +1237,7 @@ label a {
 }
 
 /********************************************************/
-/*****	image gallery								*****/
+/*****	#image gallery								*****/
 /********************************************************/
 .image-gallery {
   display: table;
@@ -1201,7 +1253,7 @@ label a {
 }
 
 /********************************************************/
-/*****	scroll wrapper								*****/
+/*****	#scroll wrapper								*****/
 /********************************************************/
 .scroll-wrapper {
   position: absolute;
@@ -1252,7 +1304,7 @@ label a {
 }
 
 /********************************************************/
-/*****		header									*****/
+/*****		#header									*****/
 /********************************************************/
 .header {
   background: rgba(30, 30, 30, 0.85);
@@ -1332,7 +1384,7 @@ label a {
 }
 
 /********************************************************/
-/*****		full width banners						*****/
+/*****		#full width banners						*****/
 /********************************************************/
 .banner-wapper {
   position: absolute;
@@ -1355,7 +1407,7 @@ label a {
 }
 
 /********************************************************/
-/*****		CTA Links								*****/
+/*****		#CTA Links								*****/
 /********************************************************/
 .cta {
   position: relative;
@@ -1751,9 +1803,9 @@ label a {
   left: 180px;
 }
 
-/***********************************************************************************
- *		Loupe
- ***********************************************************************************/
+/********************************************************/
+/*****	#loupe										*****/
+/********************************************************/
 #loupe {
   position: absolute;
   z-index: 100;
@@ -1831,9 +1883,9 @@ label a {
   opacity: 1;
 }
 
-/***********************************************************************************
- *		Game
- ***********************************************************************************/
+/********************************************************/
+/*****	#game										*****/
+/********************************************************/
 .game_image {
   width: 100%;
   cursor: crosshair;
@@ -1969,55 +2021,9 @@ input:checked + .sliding_container .large_link {
   color: #f9a31c;
 }
 
-table {
-  width: 96%;
-  border-collapse: collapse;
-}
-
-table label {
-  width: auto;
-  margin: 0;
-}
-
-table, th, td {
-  padding: 2px;
-  text-align: left;
-}
-
-th {
-  height: 40px;
-  font-weight: 300;
-}
-
-.full_table tr:hover {
-  background: #58585b;
-  color: orange;
-}
-
-.full_table tr:hover tr td {
-  color: orange;
-}
-
-.icon_table {
-  border: none;
-  width: auto;
-  float: right;
-}
-
-.icon_table tr:hover {
-  background: #404041;
-  cursor: default;
-}
-
-.icon_table td {
-  border: none;
-  padding: 2px;
-  min-width: 50px;
-}
-
-/* **********************************************************************************/
-/*		Home Buttons																*/
-/* **********************************************************************************/
+/********************************************************/
+/*****	#home buttons								*****/
+/********************************************************/
 .home_button_container {
   position: absolute;
   bottom: 90px;
@@ -2032,9 +2038,9 @@ th {
   text-decoration: none;
 }
 
-/* **********************************************************************************/
-/*		blocks																		*/
-/* **********************************************************************************/
+/********************************************************/
+/*****	#blocks										*****/
+/********************************************************/
 .call-to-action {
   position: relative;
   width: 100%;
@@ -2066,9 +2072,9 @@ th {
   margin: 0 15px 15px 0;
 }
 
-/* **********************************************************************************/
-/*		Media Block																	*/
-/* **********************************************************************************/
+/********************************************************/
+/*****	#media block								*****/
+/********************************************************/
 .media {
   margin-right: 10px;
 }
@@ -2086,7 +2092,7 @@ th {
 }
 
 /* **********************************************************************************/
-/*		About Us Nav Bar															*/
+/*		#About Us Nav Bar															*/
 /* **********************************************************************************/
 #about_us_nav_bar li {
   padding-top: 5px;
@@ -2114,7 +2120,7 @@ th {
 }
 
 /* **********************************************************************************/
-/*		Pagination																	*/
+/*		#Pagination																	*/
 /* **********************************************************************************/
 .paging {
   margin-top: 10px;
@@ -2127,77 +2133,7 @@ th {
 }
 
 /* **********************************************************************************/
-/*		Tabular Form CSS															*/
-/* **********************************************************************************/
-.tabular_form {
-  clear: both;
-  overflow: auto;
-  padding-top: 3px;
-  cursor: default;
-}
-
-.tabular_form:hover {
-  background: #58585b;
-}
-
-.tabular_form_header {
-  padding-bottom: 15px;
-  overflow: auto;
-}
-
-.tabular_form span {
-  float: left;
-  padding-right: 20px;
-}
-
-.tabular_form div {
-  float: left;
-  padding-right: 20px;
-}
-
-.tabular_form .width25 {
-  width: 25px;
-}
-
-.tabular_form .width50 {
-  width: 50px;
-}
-
-.tabular_form .width75 {
-  width: 75px;
-}
-
-.tabular_form .width100 {
-  width: 100px;
-}
-
-.tabular_form .width175 {
-  width: 170px;
-}
-
-.tabular_form .width245 {
-  width: 245px;
-}
-
-.tabular_form select {
-  background: transparent;
-  color: white;
-  padding: 0;
-  border-style: none;
-  margin-right: 20px;
-  margin-bottom: 0;
-}
-
-.tabular_form .submit input {
-  background: transparent;
-}
-
-.tabular_form .checkbox {
-  padding-top: 3px;
-}
-
-/* **********************************************************************************/
-/*		faq dropdowns																*/
+/*		#faq dropdowns																*/
 /* **********************************************************************************/
 .faq_container {
   position: relative;
@@ -2239,95 +2175,7 @@ th {
 }
 
 /* **********************************************************************************/
-/*		Form CSS																	*/
-/* **********************************************************************************/
-.highlight_input {
-  border-color: #f9a31c;
-}
-
-.radio_input {
-  width: 20px;
-}
-
-option {
-  background: white;
-  color: #404041;
-}
-
-optgroup {
-  color: white;
-  background: #404041;
-}
-
-#cancel_submition {
-  margin-left: 10px;
-}
-
-#pay_pal_form input {
-  border: none;
-  min-width: 125px;
-  background: none;
-  width: 70px;
-  padding-bottom: 10px;
-}
-
-.form_container .input_row input, .form_container .input_row textarea {
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
-  background: #404041;
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-}
-
-/* **********************************************************************************/
-/*		Outtakes Page																*/
-/* **********************************************************************************/
-blockquote {
-  font-family: Georgia, serif;
-  font-size: 23px;
-  font-style: italic;
-  color: white;
-  padding-left: 120px;
-  margin-top: 50px;
-}
-
-blockquote:before {
-  display: block;
-  font-size: 200px;
-  content: open-quote;
-  height: 1px;
-  margin-left: -0.55em;
-  position: relative;
-  top: -60px;
-}
-
-.headshot_image {
-  width: 150px;
-  text-align: left;
-  margin-right: 10px;
-}
-
-.outtakes_text {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  color: white;
-  margin-bottom: 15px;
-}
-
-/* **********************************************************************************/
-/*		Media Queries																*/
-/* **********************************************************************************/
-@media all and (max-width: 970px) {
-  #facebook_info {
-    display: none;
-  }
-}
-/* **********************************************************************************/
-/*		Facebook Like																*/
+/*		#Facebook Like																*/
 /* **********************************************************************************/
 .fb-like {
   float: left;
@@ -2336,12 +2184,8 @@ blockquote:before {
 }
 
 /* **********************************************************************************/
-/*		Common Elements																*/
+/*		#Common Elements																*/
 /* **********************************************************************************/
-.unavaliable_text {
-  color: #59595b;
-}
-
 .mock_link {
   cursor: pointer;
   text-decoration: underline;
@@ -2350,21 +2194,6 @@ blockquote:before {
 
 .mock_link:hover {
   color: #f9a31c;
-}
-
-.hidden_link {
-  cursor: pointer;
-}
-
-.hidden_link:hover {
-  color: #f9a31c;
-}
-
-.page_container {
-  overflow: auto;
-  padding: 0;
-  margin-bottom: 20px;
-  background: white;
 }
 
 .toggle_section {
@@ -2397,7 +2226,7 @@ blockquote:before {
 }
 
 /* **********************************************************************************/
-/*		Cross Fade																	*/
+/*		#Cross Fade																	*/
 /* **********************************************************************************/
 .crossfade-wrapper {
   position: relative;
@@ -2450,6 +2279,9 @@ blockquote:before {
   padding-top: 5px;
 }
 
+/* **********************************************************************************\
+/*		#Imports																	*\
+/* **********************************************************************************/
 /* 
  * Small devices
  */

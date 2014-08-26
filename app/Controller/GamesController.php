@@ -70,18 +70,30 @@ class GamesController extends AppController {
 
 		if ($this->request->is('post')) {
 			if ( isset( $this->request->data['Selection'] ) ) {
-				
 				$data = $this->request->data;
+				$selections = $data['Selection'];
+				$price = 0;
 
-				$this->Session->write('selections', $data['Selection']);
+				for ($i=1; $i <= count($selections); $i++) { 
+					if($i % 3 == 0){
+						$selections[$i-1]["price"] = "free";
+					}else{
+						$selections[$i-1]["price"] = "£1";
+						$price++;
+					}
+				}
+
+				CakeLog::write('debug', print_r($selections, true));
+				CakeLog::write('debug', "totalPrice: " . $price);
+
+				$this->Session->write('selections', $selections);
+				$this->Session->write('totalPrice', $price);
 			}
 		}
 		
 		if(!$this->Auth->user()){
-			
 			$this->Session->write('basketRedirect', true);
 			$this->redirect(array('controller' => 'Users', 'action' => 'login'));
-
 		}
 	}
 

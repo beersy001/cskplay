@@ -21,6 +21,7 @@
 				<input readonly disabled>
 				<input readonly disabled>
 				<input readonly disabled>
+				<i class="cancel-btn fa fa-times helper--font-color" id="0_cancel-btn" data-gameballid="0"></i>
 			</li>
 		</ul>
 

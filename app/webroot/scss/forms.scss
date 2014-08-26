@@ -74,7 +74,7 @@ form{
 		border: none;
 	}
 
-	.half{
+	.half-wrapper{
 		width: calc((100% / 2) - 8px);
 		float: left;
 
@@ -93,6 +93,16 @@ form{
 			overflow: hidden;
 			_overflow: visible;
 		}
+	}
+
+	input.form-error, select.form-error{
+		border: 1px solid orange;
+		border-LEFT: 35px solid orange;
+	}
+
+	.error-message{
+		color: orange;
+		margin-top: 5px;
 	}
 }
 

@@ -18,22 +18,13 @@
 		</script>
 	</div>
 
-	<div id="first-scroll-content" class="onerow">
-		<div class="col12">
+	<div id="first-scroll-content" class="onerow main-background">
+		<div class="colcenter40 helper--center-align">
 			<h1>about us</h1>
-		</div>
-	</div>
-
-	<div class="onerow helper--no-pad-top">
-		<div class="col4">
 			<p>We are a team of professionals from all walks of life and industries, including sports, marketing, finance, charity and social media, brought together by two individuals wanting to make a difference.</p>
-		</div>
 
-		<div class="col4">
 			<p>We are all pulling in the same direction to create a long-lasting legacy of giving and providing a platform to give underprivileged children in this Country the ability to play and take part in many different sports.</p>
-		</div>
 
-		<div class="col4 last">
 			<p>Our mission is to raise money for charities, good causes and Celebrity Spot Kick’s Sporting Programmes, through sport orientated online competitions. Our aim is to ensure each competition is both fun and worthwhile for you as our players and supporters and charities alike.</p>
 		</div>
 	</div>

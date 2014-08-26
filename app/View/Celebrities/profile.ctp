@@ -22,7 +22,7 @@
 	</script>
 
 
-	<div id="first-scroll-content" class="onerow">
+	<div id="first-scroll-content" class="onerow main-background">
 		<div class="col6">
 			<h1><?=$profileHeading1?></h1>
 			<?= $this->Html->image( $image7, array('class'=>'headshot_image', 'align'=>'left') ) ?>
