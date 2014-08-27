@@ -33,7 +33,7 @@ $highlightColor: rgb(249,163,28);
 
 
 /********************************************************/
-/*****		#Inports								*****/
+/*****      #Imports                                *****/
 /********************************************************/
 
 /* responsive imports at the bottom of the sheet */
@@ -49,7 +49,7 @@ $highlightColor: rgb(249,163,28);
 
 
 /********************************************************/
-/*****		#General Styling						*****/
+/*****      #General Styling                        *****/
 /********************************************************/
 
 *{
@@ -68,7 +68,23 @@ html, body {
 
 
 /********************************************************/
-/*****		#Headings								*****/
+/*****      #vertical spacing                       *****/
+/********************************************************/
+
+h1+h2, p+p, p+a, p+video, video+p, ul+p, form+p, h1+form{
+	margin-top: 15px;
+}
+
+ h1+div, h2+div, h1+p, h2+p{
+	margin-top: 25px;
+}
+
+
+
+
+
+/********************************************************/
+/*****      #Headings                               *****/
 /********************************************************/
 
 h1, h2, h3, a, input, select{ color: rgb(255,255,255); }
@@ -93,9 +109,7 @@ h3{
 	clear: both;
 }
 
-h1+div, h1+h2, h1+p, h2+p, p+p, p+a, p+video, video+p, ul+p, form+p, h1+form{
-	margin-top: 15px;
-}
+
 
 p, span{
 	line-height: 1.5em;
@@ -126,30 +140,30 @@ a:hover{
 	color: black;
 }
 
-#flash1{	top:145px;		right: 65%;}
-#flash2{	top:300px;		right: 95%;}
-#flash3{	top:145px;		right: 45%;}
-#flash4{	top:150px;		right: 35%;}
-#flash5{	top:150px;		right: 25%;}
-#flash6{	top:150px;		right: 15%;}
-#flash7{	top:150px;		right: 5%;}
-#flash8{	top:200px;		right: 70%;}
-#flash9{	top:200px;		right: 60%;}
-#flash10{	top:200px;		right: 95%;}
-#flash11{	top:250px;		right: 40%;}
-#flash12{	top:200px;		right: 30%;}
-#flash13{	top:200px;		right: 20%;}
-#flash14{	top:200px;		right: 10%;}
-#flash15{	top:250px;		right: 25%;}
-#flash16{	top:250px;		right: 15%;}
-#flash17{	top:250px;		right: 5%;}
-#flash18{	top:300px;		right: 30%;}
-#flash19{	top:300px;		right: 20%;}
-#flash20{	top:300px;		right: 10%;}
-#flash21{	top:350px;		right: 35%;}
-#flash22{	top:350px;		right: 25%;}
-#flash23{	top:350px;		right: 15%;}
-#flash24{	top:350px;		right: 5%;}
+#flash1{    top:145px;      right: 65%;}
+#flash2{    top:300px;      right: 95%;}
+#flash3{    top:145px;      right: 45%;}
+#flash4{    top:150px;      right: 35%;}
+#flash5{    top:150px;      right: 25%;}
+#flash6{    top:150px;      right: 15%;}
+#flash7{    top:150px;      right: 5%;}
+#flash8{    top:200px;      right: 70%;}
+#flash9{    top:200px;      right: 60%;}
+#flash10{   top:200px;      right: 95%;}
+#flash11{   top:250px;      right: 40%;}
+#flash12{   top:200px;      right: 30%;}
+#flash13{   top:200px;      right: 20%;}
+#flash14{   top:200px;      right: 10%;}
+#flash15{   top:250px;      right: 25%;}
+#flash16{   top:250px;      right: 15%;}
+#flash17{   top:250px;      right: 5%;}
+#flash18{   top:300px;      right: 30%;}
+#flash19{   top:300px;      right: 20%;}
+#flash20{   top:300px;      right: 10%;}
+#flash21{   top:350px;      right: 35%;}
+#flash22{   top:350px;      right: 25%;}
+#flash23{   top:350px;      right: 15%;}
+#flash24{   top:350px;      right: 5%;}
 
 .inline_title_image{
 	width: 35px;
@@ -275,7 +289,7 @@ label a{
 
 
 /********************************************************/
-/*****	#payment details - basket					*****/
+/*****  #payment details - basket                   *****/
 /********************************************************/
 
 .payment-details-wrapper{
@@ -287,7 +301,7 @@ label a{
 
 	.payment-details-wrapper__paypal-wrapper{
 		float: left;
-		margin: 60px 20px 20px;
+		margin: 35px 20px 20px;
 
 		.paypal-wrapper__price{
 			font-size: 45px;
@@ -305,7 +319,7 @@ label a{
 
 
 /********************************************************/
-/*****	#table										*****/
+/*****  #table                                      *****/
 /********************************************************/
 
 .table-wrapper{
@@ -319,7 +333,7 @@ label a{
 		}
 
 		td{
-			padding: 10px 20px;
+			padding: 10px 15px;
 		}
 		th{
 			padding: 0 10px 10px;
@@ -331,21 +345,21 @@ label a{
 
 
 /********************************************************/
-/*****		#Custom Scroll Bar						*****/
+/*****      #Custom Scroll Bar                      *****/
 /********************************************************/
 
 ::-webkit-scrollbar {
-    width: 12px;
+	width: 12px;
 }
  
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	border-radius: 10px;
 }
  
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
 
@@ -353,7 +367,7 @@ label a{
 
 
 /********************************************************/
-/*****		#info-wrapper							*****/
+/*****      #info-wrapper                           *****/
 /********************************************************/
 
 .info-wrapper{
@@ -447,7 +461,7 @@ label a{
 
 
 /********************************************************/
-/*****		#full video background					*****/
+/*****      #full video background                  *****/
 /********************************************************/
 
 .video-bg-wrapper{
@@ -487,12 +501,16 @@ label a{
 
 
 /********************************************************/
-/*****	#parallax scrolling							*****/
+/*****  #parallax scrolling                         *****/
 /********************************************************/
 
 .parallax{
 	min-height: 250px;
 	background-size: cover;
+
+	&.parallax--100pc-high{
+		height: 100%;
+	}
 }
 
 
@@ -500,7 +518,7 @@ label a{
 
 
 /********************************************************/
-/*****	#image gallery								*****/
+/*****  #image gallery                              *****/
 /********************************************************/
 
 .image-gallery{
@@ -523,7 +541,7 @@ label a{
 
 
 /********************************************************/
-/*****	#scroll wrapper								*****/
+/*****  #scroll wrapper                             *****/
 /********************************************************/
 
 .scroll-wrapper{
@@ -563,7 +581,7 @@ label a{
 		position: relative;
 		width: 100%;
 		height: 100%;
-		background: url("../img/homePage/backdrop.png");	
+		background: url("../img/homePage/backdrop.png");    
 		background-repeat: no-repeat;
 		background-position: 50% 70%;
 		background-attachment: scroll;
@@ -580,7 +598,7 @@ label a{
 
 
 /********************************************************/
-/*****		#header									*****/
+/*****      #header                                 *****/
 /********************************************************/
 
 .header{
@@ -592,6 +610,7 @@ label a{
 	margin-bottom: 35px;
 
 	.header__logo-wrapper{
+
 		a{
 			text-decoration: none;
 		}
@@ -648,7 +667,7 @@ label a{
 			li.nav-bar__link-wrapper{
 				float: left;
 				margin-right: 5px;
-				padding: 0	8px;
+				padding: 0  8px;
 
 				&.active-menu{
 					border-bottom: 2px solid white;
@@ -683,7 +702,7 @@ label a{
 
 
 /********************************************************/
-/*****		#full width banners						*****/
+/*****      #full width banners                     *****/
 /********************************************************/
 
 .banner-wapper{
@@ -714,7 +733,7 @@ label a{
 
 
 /********************************************************/
-/*****		#CTA Links								*****/
+/*****      #CTA Links                              *****/
 /********************************************************/
 
 .cta{
@@ -753,7 +772,7 @@ label a{
 
 
 /********************************************************/
-/*****												*****/
+/*****                                              *****/
 /********************************************************/
 
 #main_body{
@@ -1105,7 +1124,7 @@ label a{
 
 
 /********************************************************/
-/*****	#loupe										*****/
+/*****  #loupe                                      *****/
 /********************************************************/
 
  #loupe{
@@ -1137,7 +1156,7 @@ label a{
 
 #loupe_coords{
 	position: absolute;
-	bottom:	0px;
+	bottom: 0px;
 	width: 100%;
 	height: 40px;
 	text-align: center;
@@ -1189,7 +1208,7 @@ label a{
 
 
 /********************************************************/
-/*****	#game										*****/
+/*****  #game                                       *****/
 /********************************************************/
 
 .game_image{
@@ -1283,7 +1302,7 @@ img.game_ball_image{
 
 .sliding_container{
 	max-height: 48px;
-	position: relative;	
+	position: relative; 
 	overflow: hidden;
 	clear: both;
 	@include allTransition1000();
@@ -1332,7 +1351,7 @@ input:checked + .sliding_container .large_link{
 
 
 /********************************************************/
-/*****	#home buttons								*****/
+/*****  #home buttons                               *****/
 /********************************************************/
 
 .home_button_container{
@@ -1355,7 +1374,7 @@ input:checked + .sliding_container .large_link{
 
 
 /********************************************************/
-/*****	#blocks										*****/
+/*****  #blocks                                     *****/
 /********************************************************/
 
 .call-to-action{
@@ -1394,7 +1413,7 @@ input:checked + .sliding_container .large_link{
 
 
 /********************************************************/
-/*****	#media block								*****/
+/*****  #media block                                *****/
 /********************************************************/
 
 .media{
@@ -1420,7 +1439,7 @@ input:checked + .sliding_container .large_link{
 
 
 /* **********************************************************************************/
-/*		#About Us Nav Bar															*/
+/*      #About Us Nav Bar                                                           */
 /* **********************************************************************************/
 
 #about_us_nav_bar li{
@@ -1453,7 +1472,7 @@ input:checked + .sliding_container .large_link{
 
 
 /* **********************************************************************************/
-/*		#Pagination																	*/
+/*      #Pagination                                                                 */
 /* **********************************************************************************/
 
 .paging{
@@ -1471,7 +1490,7 @@ input:checked + .sliding_container .large_link{
 
 
 /* **********************************************************************************/
-/*		#faq dropdowns																*/
+/*      #faq dropdowns                                                              */
 /* **********************************************************************************/
 
 .faq_container{
@@ -1514,7 +1533,7 @@ input:checked + .sliding_container .large_link{
 
 
 /* **********************************************************************************/
-/*		#Facebook Like																*/
+/*      #Facebook Like                                                              */
 /* **********************************************************************************/
 
 .fb-like{
@@ -1528,7 +1547,7 @@ input:checked + .sliding_container .large_link{
 
 
 /* **********************************************************************************/
-/*		#Common Elements																*/
+/*      #Common Elements                                                                */
 /* **********************************************************************************/
 .mock_link{
 	cursor: pointer;
@@ -1570,14 +1589,14 @@ input:checked + .sliding_container .large_link{
 
 
 /* **********************************************************************************/
-/*		#Cross Fade																	*/
+/*      #Cross Fade                                                                 */
 /* **********************************************************************************/
 
 .crossfade-wrapper{
 	position:relative;
 	display: inline-block;
 
-	&.crossfade-wrapper--width155{	
+	&.crossfade-wrapper--width155{  
 		height: 155px;
 		width: 155px;
 
@@ -1640,7 +1659,7 @@ input:checked + .sliding_container .large_link{
 
 
 /* **********************************************************************************\
-/*		#Imports																	*\
+/*      #Imports                                                                    *\
 /* **********************************************************************************/
 
 @import 'grid_responsive';

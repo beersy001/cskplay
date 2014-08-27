@@ -14,14 +14,27 @@ window.onload = function() {
 			onStart : {
 				duration: 500,
 				render: function (url, $container) {
+					console.log("-------------------------------------");
+					console.log("smoothState - onStart");
 					content.toggleAnimationClass('is-exiting');
-					console.log("rendering");
 					$body.animate({ 'scrollTop': 0 });
 				}
 			},
 			callback : function(url, $container, $content) {
+				console.log("smoothState - callback");
 				pageScripts();
-			}
+			},
+			onEnd : {
+				duration: 1000, // Duration of the animations, if any.
+				render: function (url, $container, $content) {
+					console.log("smoothState - onEnd");
+					$body.css('cursor', 'auto');
+					$body.find('a').css('cursor', 'auto');
+					$container.html($content);
+				}
+			},
+
+			
 		}).data('smoothState');
 	}
 };
@@ -97,13 +110,7 @@ function pageScripts(){
 	}
 
 	if(pageId == '/celebrities/profile'){
-		if($("#youtube-api-script").length <= 0){
-			var tag = document.createElement('script');
-			tag.id = "youtube-api-script";
-			tag.src = "//www.youtube.com/iframe_api";
-			var firstScriptTag = document.getElementsByTagName('script')[0];
-			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-		}
+		checkForYTApi();
 
 		if(mobile == null){
 			$('.parallax--top-position').parallax({ "coeff" : 0.7 });
@@ -111,14 +118,17 @@ function pageScripts(){
 		}
 	}
 
-	if(pageId == '/pages/csk'){
-		if($("#youtube-api-script").length <= 0){
-			var tag = document.createElement('script');
-			tag.id = "youtube-api-script";
-			tag.src = "//www.youtube.com/iframe_api";
-			var firstScriptTag = document.getElementsByTagName('script')[0];
-			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	if(pageId == '/games/confirmation'){
+		checkForYTApi();
+
+		if(mobile == null){
+			$('.parallax--bg-position').parallax({ "coeff" : 0.7, "type" : "background-position" });
 		}
+	}
+
+	if(pageId == '/pages/csk'){
+		checkForYTApi();
 		
 		if(mobile == null){
 			$('.video-bg-wrapper').parallax({ "coeff" : 0.7 });
@@ -138,3 +148,13 @@ function smoothScroll(elm, location){
 		}
 	}
 };
+
+function checkForYTApi(){
+	if($("#youtube-api-script").length <= 0){
+		var tag = document.createElement('script');
+		tag.id = "youtube-api-script";
+		tag.src = "//www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	}
+}

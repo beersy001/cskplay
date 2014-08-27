@@ -116,65 +116,10 @@ class GamesController extends AppController {
 			array_push($insertedGameBalls, $gameball);
 		}
 
+		CakeLog::write('debug', "GamesController - confirmation() - insertedGameBalls: " . print_r($insertedGameBalls, true));
+
 		$this->set('insertedGameBalls', $insertedGameBalls);
 		
-	}
-
-	public function fetchGameSidebar(){
-
-		$this->loadModel('User');
-		$this->loadModel('GameBall');
-
-		$username = $this->Session->read('Auth.User.username');
-		$user = $this->User->read(null, $username);
-
-		$numberOfBallsRemaining = $this->User->getNumberOfAttemptsRemaining($username);
-		$results = $this->GameBall->getUsersResults($username,date('Ym'));
-		$teams = $this->User->getTeams($username);
-		$practiceGames = $this->Game->getPracticeGames();
-		$competition = $this->Game->getCurrentCompetition();
-
-		$this->set('month', date('Ym'));
-		$this->set('results', $results);
-		$this->set('ballsRemaining', $numberOfBallsRemaining);
-		$this->set('teams', $teams);
-		$this->set('typeOfGame', 'competition');
-		$this->set('practiceGames',$practiceGames);
-		$this->set('competition',$competition);
-	}
-
-	public function fetchCompetition(){
-		if($this->request->is('ajax')){
-			$this->set('month', date('Ym'));
-			$this->set('typeOfGame', 'competition');
-			$this->render('/Elements/game/game_images');
-		}
-	}
-
-	public function fetchPractice(){
-		if($this->request->is('ajax')){
-
-			$month = $this->request->params['named']['month'];
-
-			$this->set('month', $month);
-			$this->set('typeOfGame', 'practice');
-			$this->render('/Elements/game/game_images');
-		}
-	}
-
-	public function fetchLoupe(){
-		if($this->request->is('ajax')){
-
-			if(isset($this->request->params['named']['month'])){
-				$month = $this->request->params['named']['month'];
-			}else{
-				$month = date('Ym');
-			}
-
-			$this->set('month', $month);
-			$this->set('typeOfGame', 'practice');
-			$this->render('/Elements/game/game_loupe');
-		}
 	}
 
 

@@ -24,7 +24,7 @@ class GameBallsController extends AppController{
 
 			$this->User->read(null, $username);
 			$user = $this->User->read();
-			$currentDate = date('Ym');
+			$currentMonth = date('Ym');
 
 
 			if($this->request->data['GameBalls']['code'] == 'FOCUS05' ){
@@ -36,12 +36,15 @@ class GameBallsController extends AppController{
 					$newGameBall['GameBall']['x'] = $selection['x'];
 					$newGameBall['GameBall']['y'] = $selection['y'];
 					$newGameBall['GameBall']['username'] = $username;
-					$newGameBall['GameBall']['month'] = $currentDate;
-					$newGameBall['GameBall']['team'] = 'individual';
+					$newGameBall['GameBall']['month'] = $currentMonth;
+					$newGameBall['GameBall']['price'] = $selection['price'];
 
 
 					array_push($gameballs, $newGameBall);
 				}
+
+				CakeLog::write('debug', "GameBallsController - saveSelection() - gameballs: " . print_r($gameballs, true));
+
 
 				$this->GameBall->saveMany( $gameballs );
 

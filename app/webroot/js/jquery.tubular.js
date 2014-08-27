@@ -8,7 +8,9 @@ var player;
 		videoId: 'ZCAnLxRvNNc', // toy robot in space is a good default, no?
 		mute: true,
 		repeat: true,
-		width: $(window).width(),
+		autoPlay: true,
+		resize: true,
+		fullscreen: true,
 		wrapperZIndex: 99,
 		playButtonClass: 'tubular-play',
 		pauseButtonClass: 'tubular-pause',
@@ -18,32 +20,43 @@ var player;
 		increaseVolumeBy: 10,
 		start: 0,
 		id: '0',
-		minimumSupportedWidth: 600
+		controls: 0,
+		showinfo: 0
 	};
-
+ 
 	// methods
 	var tubular = function(node, options) { // should be called on the wrapper div
+
+		console.log(options);
+		console.log($(node).width());
+		console.log($(node).height());
 
 		var options = $.extend({}, defaults, options),
 			$body = $('body') // cache body node
 			$node = $(node); // cache wrapper node
 
+		if(options.fullscreen){
+			options.width = $(window).width();
+		}else{
+			options.width = $(node).width();
+		}
+
 		// remove container when refreshing a jquery.SmoothState cached page
 		if($("#tubular-container").length > 0){
 			$("#tubular-container").remove();
 		}
+
 		var tubularContainer = '<div class="video-bg-wrapper__video-wrapper" id="tubular-container" style="overflow: hidden; width: 100%; height: 100%"><div id="tubular-player" class="video-wrapper__video"></div></div>';
 
 		$node.prepend(tubularContainer);
 		$node.css({position: 'relative'});
-
-		console.log("Player.length : " + $(player).length);
 
 		//check to see if a player has already been created
 		//(meaning that the onYouTubeIframeAPIReady event has already been fired. )
 		if($(player).length > 0){
 			newPlayer();
 		}
+
 
 		function newPlayer(){
 			player = new YT.Player('tubular-player', {
@@ -53,6 +66,7 @@ var player;
 				playerVars: {
 					controls: 0,
 					showinfo: 0,
+					rel: 0,
 					modestbranding: 1,
 					wmode: 'transparent'
 				},
@@ -70,10 +84,10 @@ var player;
 
 
 		window.onPlayerReady = function(e) {
-			resize();
+			if (options.resize) resize();
 			if (options.mute) e.target.mute();
 			e.target.seekTo(options.start);
-			e.target.playVideo();
+			if (options.autoPlay)  e.target.playVideo();
 		}
 
 		window.onPlayerStateChange = function(state) {
@@ -84,11 +98,22 @@ var player;
 
 		// resize handler updates width, height and offset of player after resize/init
 		var resize = function() {
-			var width = $(window).width(),
-				pWidth, // player width, to be defined
-				height = $(window).height(),
+
+			
+			
+			var pWidth, // player width, to be defined
 				pHeight, // player height, tbd
+				width,
+				height,
 				$tubularPlayer = $('#tubular-player');
+
+			if(options.fullscreen){
+				width = $(window).width();
+				height = $(window).height();
+			}else{
+				width = $(node).width();
+				height = $(node).height();
+			}
 
 			// when screen aspect ratio differs from video, video must center and underlay one dimension
 
@@ -99,6 +124,7 @@ var player;
 				pHeight = Math.ceil(width / options.ratio); // get new player height
 				$tubularPlayer.width(width).height(pHeight).css({left: 0, top: (height - pHeight) / 2}); // player height is greater, offset top; reset left
 			}
+			
 		}
 
 		// events

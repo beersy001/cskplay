@@ -1,5 +1,5 @@
 /********************************************************/
-/*****		#Inports								*****/
+/*****      #Imports                                *****/
 /********************************************************/
 /* responsive imports at the bottom of the sheet */
 /**
@@ -746,7 +746,7 @@ form .error-message {
 }
 
 /********************************************************/
-/*****		#General Styling						*****/
+/*****      #General Styling                        *****/
 /********************************************************/
 * {
   font-family: 'Helvetica Neue', sans-serif;
@@ -760,7 +760,18 @@ html, body {
 }
 
 /********************************************************/
-/*****		#Headings								*****/
+/*****      #vertical spacing                       *****/
+/********************************************************/
+h1 + h2, p + p, p + a, p + video, video + p, ul + p, form + p, h1 + form {
+  margin-top: 15px;
+}
+
+h1 + div, h2 + div, h1 + p, h2 + p {
+  margin-top: 25px;
+}
+
+/********************************************************/
+/*****      #Headings                               *****/
 /********************************************************/
 h1, h2, h3, a, input, select {
   color: white;
@@ -783,10 +794,6 @@ h2 {
 h3 {
   font-weight: 100;
   clear: both;
-}
-
-h1 + div, h1 + h2, h1 + p, h2 + p, p + p, p + a, p + video, video + p, ul + p, form + p, h1 + form {
-  margin-top: 15px;
 }
 
 p, span {
@@ -1062,7 +1069,7 @@ label a {
 }
 
 /********************************************************/
-/*****	#payment details - basket					*****/
+/*****  #payment details - basket                   *****/
 /********************************************************/
 .payment-details-wrapper .payment-details-wrapper__gameballs-wrapper {
   float: left;
@@ -1070,7 +1077,7 @@ label a {
 }
 .payment-details-wrapper .payment-details-wrapper__paypal-wrapper {
   float: left;
-  margin: 60px 20px 20px;
+  margin: 35px 20px 20px;
 }
 .payment-details-wrapper .payment-details-wrapper__paypal-wrapper .paypal-wrapper__price {
   font-size: 45px;
@@ -1081,7 +1088,7 @@ label a {
 }
 
 /********************************************************/
-/*****	#table										*****/
+/*****  #table                                      *****/
 /********************************************************/
 .table-wrapper table {
   border-collapse: collapse;
@@ -1092,14 +1099,14 @@ label a {
   text-align: center;
 }
 .table-wrapper table td {
-  padding: 10px 20px;
+  padding: 10px 15px;
 }
 .table-wrapper table th {
   padding: 0 10px 10px;
 }
 
 /********************************************************/
-/*****		#Custom Scroll Bar						*****/
+/*****      #Custom Scroll Bar                      *****/
 /********************************************************/
 ::-webkit-scrollbar {
   width: 12px;
@@ -1116,7 +1123,7 @@ label a {
 }
 
 /********************************************************/
-/*****		#info-wrapper							*****/
+/*****      #info-wrapper                           *****/
 /********************************************************/
 .info-wrapper {
   overflow: hidden;
@@ -1197,7 +1204,7 @@ label a {
 }
 
 /********************************************************/
-/*****		#full video background					*****/
+/*****      #full video background                  *****/
 /********************************************************/
 .video-bg-wrapper {
   position: relative;
@@ -1229,15 +1236,18 @@ label a {
 }
 
 /********************************************************/
-/*****	#parallax scrolling							*****/
+/*****  #parallax scrolling                         *****/
 /********************************************************/
 .parallax {
   min-height: 250px;
   background-size: cover;
 }
+.parallax.parallax--100pc-high {
+  height: 100%;
+}
 
 /********************************************************/
-/*****	#image gallery								*****/
+/*****  #image gallery                              *****/
 /********************************************************/
 .image-gallery {
   display: table;
@@ -1253,7 +1263,7 @@ label a {
 }
 
 /********************************************************/
-/*****	#scroll wrapper								*****/
+/*****  #scroll wrapper                             *****/
 /********************************************************/
 .scroll-wrapper {
   position: absolute;
@@ -1304,7 +1314,7 @@ label a {
 }
 
 /********************************************************/
-/*****		#header									*****/
+/*****      #header                                 *****/
 /********************************************************/
 .header {
   background: rgba(30, 30, 30, 0.85);
@@ -1360,7 +1370,7 @@ label a {
 .header .header__nav-wrapper ul.nav-warpper__nar-bar li.nav-bar__link-wrapper {
   float: left;
   margin-right: 5px;
-  padding: 0	8px;
+  padding: 0  8px;
 }
 .header .header__nav-wrapper ul.nav-warpper__nar-bar li.nav-bar__link-wrapper.active-menu {
   border-bottom: 2px solid white;
@@ -1384,7 +1394,7 @@ label a {
 }
 
 /********************************************************/
-/*****		#full width banners						*****/
+/*****      #full width banners                     *****/
 /********************************************************/
 .banner-wapper {
   position: absolute;
@@ -1407,7 +1417,7 @@ label a {
 }
 
 /********************************************************/
-/*****		#CTA Links								*****/
+/*****      #CTA Links                              *****/
 /********************************************************/
 .cta {
   position: relative;
@@ -1447,7 +1457,7 @@ label a {
 }
 
 /********************************************************/
-/*****												*****/
+/*****                                              *****/
 /********************************************************/
 #main_body {
   padding-bottom: 100px;
@@ -1804,7 +1814,7 @@ label a {
 }
 
 /********************************************************/
-/*****	#loupe										*****/
+/*****  #loupe                                      *****/
 /********************************************************/
 #loupe {
   position: absolute;
@@ -1884,7 +1894,7 @@ label a {
 }
 
 /********************************************************/
-/*****	#game										*****/
+/*****  #game                                       *****/
 /********************************************************/
 .game_image {
   width: 100%;
@@ -2022,7 +2032,7 @@ input:checked + .sliding_container .large_link {
 }
 
 /********************************************************/
-/*****	#home buttons								*****/
+/*****  #home buttons                               *****/
 /********************************************************/
 .home_button_container {
   position: absolute;
@@ -2039,7 +2049,7 @@ input:checked + .sliding_container .large_link {
 }
 
 /********************************************************/
-/*****	#blocks										*****/
+/*****  #blocks                                     *****/
 /********************************************************/
 .call-to-action {
   position: relative;
@@ -2073,7 +2083,7 @@ input:checked + .sliding_container .large_link {
 }
 
 /********************************************************/
-/*****	#media block								*****/
+/*****  #media block                                *****/
 /********************************************************/
 .media {
   margin-right: 10px;
@@ -2092,7 +2102,7 @@ input:checked + .sliding_container .large_link {
 }
 
 /* **********************************************************************************/
-/*		#About Us Nav Bar															*/
+/*      #About Us Nav Bar                                                           */
 /* **********************************************************************************/
 #about_us_nav_bar li {
   padding-top: 5px;
@@ -2120,7 +2130,7 @@ input:checked + .sliding_container .large_link {
 }
 
 /* **********************************************************************************/
-/*		#Pagination																	*/
+/*      #Pagination                                                                 */
 /* **********************************************************************************/
 .paging {
   margin-top: 10px;
@@ -2133,7 +2143,7 @@ input:checked + .sliding_container .large_link {
 }
 
 /* **********************************************************************************/
-/*		#faq dropdowns																*/
+/*      #faq dropdowns                                                              */
 /* **********************************************************************************/
 .faq_container {
   position: relative;
@@ -2175,7 +2185,7 @@ input:checked + .sliding_container .large_link {
 }
 
 /* **********************************************************************************/
-/*		#Facebook Like																*/
+/*      #Facebook Like                                                              */
 /* **********************************************************************************/
 .fb-like {
   float: left;
@@ -2184,7 +2194,7 @@ input:checked + .sliding_container .large_link {
 }
 
 /* **********************************************************************************/
-/*		#Common Elements																*/
+/*      #Common Elements                                                                */
 /* **********************************************************************************/
 .mock_link {
   cursor: pointer;
@@ -2226,7 +2236,7 @@ input:checked + .sliding_container .large_link {
 }
 
 /* **********************************************************************************/
-/*		#Cross Fade																	*/
+/*      #Cross Fade                                                                 */
 /* **********************************************************************************/
 .crossfade-wrapper {
   position: relative;
@@ -2280,7 +2290,7 @@ input:checked + .sliding_container .large_link {
 }
 
 /* **********************************************************************************\
-/*		#Imports																	*\
+/*      #Imports                                                                    *\
 /* **********************************************************************************/
 /* 
  * Small devices

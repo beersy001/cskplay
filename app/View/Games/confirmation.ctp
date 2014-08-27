@@ -12,56 +12,93 @@
 </script>
 
 <div class="grid" id="main_grid">
-	<div class="onerow background_container">
-		<div class="col12">
-			<h1 class="border_bottom">thank you!</h1>
+	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]">
+		<div class="col6">
+			<h1>Thank You!</h1>
+			<h2 class="helper--highlight-text">your Gameballs have been saved</h2>
+		</div>
+
+		<div class="col6 last">
 		</div>
 	</div>
 
-	<div class="onerow background_container">
-		<div class="col8">
-			<iframe id="player" frameborder="0" allowfullscreen="1" title="YouTube video player" width="700" height="413" src="https://www.youtube.com/embed/bNLy54amlio?autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;origin=http%3A%2F%2Flocalhost"></iframe>
+	<div class="[ onerow ]  [ alt-background ]  [ scene__element  scene__element--fadeinup ]">
+
+		
+
+		<div class="col7">
+			
+			<div class="table-wrapper">
+				<table class="confirmation__table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>id</th>
+							<th>x</th>
+							<th>y</th>
+							<th>date and time</th>
+							<th>price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+						$i = 1;
+						foreach ($insertedGameBalls as $key => $gameball) {
+							echo '<tr>';
+							echo '<td>' . $i . '</td>';
+							echo '<td>' . $gameball['GameBall']['id'] . '</td>';
+							echo '<td>' . $gameball['GameBall']['x'] . '</td>';
+							echo '<td>' . $gameball['GameBall']['y'] . '</td>';
+							echo '<td>' . date('d M Y - H:i', $gameball['GameBall']['created']->sec)   . '</td>';
+							echo '<td>' . $gameball['GameBall']['price'] . '</td>';
+							echo '</tr>';
+
+
+							$i++;
+						}
+						?>
+					</tbody>
+				</table>
+			</div>
 		</div>
+		<div class="col5 last">
+			<h2>thank you</h2>
+			<p>thank you for playing Celebrity spot kick, view you gameballs in the <a href="/users/accountAdmin/">my account</a> area</p>
+			<p>every gameball you play helps us give more and more to our sporting foundation</p>
+		</div>
+	</div>
 
-
-		<div class="col4 last">
-			<p>thank you for playing Celebrity spot kick, view you gameballs in the 'my account' area</p>
-			<p>every gameball you play helps us give more and more to the charities our celebrities have chosen to support. we couldn't do it without your help!</p>
-			<div class="adaptive_text">
-				<br><br>
-				<?=$this->Html->link('play again',array('controller'=>'games', 'action'=>'displayGame'), array('class'=>'no_decoration'))?>
+	<div class="[ onerow helper--no-pad ]  [ parallax parallax--100pc-high  parallax--bg-position ]  [ scene__element  scene__element--fadeinup ]" style="background-image:url(/img/celebrities/ryangiggs/banner.jpg)">
+		<div class="banner-wapper">
+			<div class="banner-wapper__text-wrapper">
+				<?= $this->Html->link('Play Again!',array('controller' => 'games', 'action' => 'displayGame'),array( 'class' => 'text-wrapper__link')) ?>
 			</div>
 		</div>
 	</div>
 
-	<div class="onerow background_container">
-		<div class="col12">
-			<h1>your gameballs</h1>
-			<table class="confirmation__table">
-				<th>#</th>
-				<th>id</th>
-				<th>x</th>
-				<th>y</th>
-				<?php
-				$i = 1;
-				foreach ($insertedGameBalls as $key => $gameball) {
-					echo '<tr>';
-					echo '<td class="coord">' . $i . '</td>';
-					echo '<td class="id">' . $gameball['GameBall']['id'] . '</td>';
-					echo '<td class="coord">' . $gameball['GameBall']['x'] . '</td>';
-					echo '<td class="coord">' . $gameball['GameBall']['y'] . '</td>';
-					echo '</tr>';
+	
 
-					$i++;
-				}
-				?>
-
-			</table>
+	<div class="[ onerow ]  [ alt-background ]">
+		<div id="thank-you-video-wrapper" class="colcenter40"><!--
+			<iframe id="player" frameborder="0" allowfullscreen="1" title="YouTube video player" width="700" height="413" src="https://www.youtube.com/embed/bNLy54amlio?autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;origin=http%3A%2F%2Flocalhost"></iframe>
+		-->
 		</div>
 
+		<script>
+			$('#thank-you-video-wrapper').tubular({
+				videoId: 'bNLy54amlio',
+				mute: false,
+				repeat: false,
+				controls: 1,
+				autoPlay: false,
+				fullscreen: false
+			});
+		</script>
 	</div>
 
-	<div class="onerow background_container margin_bottom">
+
+
+	<div class="onerow">
 		<div class="col3">
 			<?= $this->element('blocks/find_out_more_prizes'); ?>
 		</div>
@@ -77,5 +114,3 @@
 	</div>
 	
 </div>
-
-<?= $this->element('quick_links'); ?>

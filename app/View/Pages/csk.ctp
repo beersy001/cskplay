@@ -1,6 +1,6 @@
 <div class="grid" id="main_grid">
 
-	<div id="video-wrapper" class="video-bg-wrapper helper--minus-header-margin">
+	<div id="video-wrapper" class="[ video-bg-wrapper ]  [ helper--minus-header-margin ]  [ scene__element  scene__element--fadeinup ]">
 		<div class="video-bg-wrapper__overlay">
 			<div class="overlay__content-wrapper">
 				<h1 class="content-wrapper__heading">Celebrity Spot Kick</h1>
