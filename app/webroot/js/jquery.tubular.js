@@ -94,6 +94,10 @@ var player;
 			if (state.data === 0 && options.repeat) { // video ended and repeat option is set true
 				player.seekTo(options.start); // restart
 			}
+
+			if(state.data === 1){
+				console.log($(player));
+			}
 		}
 
 		// resize handler updates width, height and offset of player after resize/init

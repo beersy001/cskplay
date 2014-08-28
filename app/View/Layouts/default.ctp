@@ -24,6 +24,7 @@
 			echo $this->Html->script('jquery.smoothState');
 			echo $this->Html->script('countdown');
 			echo $this->Html->script('gamePlay');
+			echo $this->Html->script('onePageMenu');
 			echo $this->Html->script('changeActiveMenu');
 			echo $this->Html->script('smoothAnchorScrolling');
 			echo $this->Html->meta('icon', $this->Html->url('/favicon.ico'));

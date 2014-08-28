@@ -3,6 +3,7 @@
 $paragraphTextColor: rgb(220,220,220);
 $totalHeaderHeight: 135px;
 $highlightColor: rgb(249,163,28);
+$texturedBackground: url('../img/grey_bg.jpg') repeat 0 0;
 
 @mixin allTransition1000() {
 	transition: all 1000ms ease-in-out;
@@ -707,27 +708,29 @@ label a{
 /********************************************************/
 /*****      #one page van menu                      *****/
 /********************************************************/
-
 .one-page-nav-wrapper{
-	position: fixed;
-	top: 30px;
+	position: absolute;
+	width: 100%;
 	z-index: 100;
-	left: 50%;
-	text-align: left;
+	background: $texturedBackground;
+	border-bottom: 1px solid rgb(80,80,80);
 
-	ul{
-		list-style: none; 
-		position: relative;
-		left: -50%;
+	.one-page-nav-wrapper__inner-wrapper{
+		display: table;
+		margin: auto;
+		padding: 15px 0;
 
-		li{
-			float: left;
-			position: relative;
+		ul{
+			list-style: none; 
 
-			a{
-				padding: 10px;
-				text-decoration: none;
-				font-size: 20px;
+			li{
+				display: inline;
+
+				a{
+					padding: 10px;
+					text-decoration: none;
+					font-size: 20px;
+				}
 			}
 		}
 	}

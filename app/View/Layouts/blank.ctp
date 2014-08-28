@@ -23,6 +23,7 @@
 			echo $this->Html->script('jquery.tubular');
 			echo $this->Html->script('jquery.toggleDiv');
 			echo $this->Html->script('jquery.smoothState');
+			echo $this->Html->script('jquery.stickyMenu');
 			echo $this->Html->script('countdown');
 			echo $this->Html->script('gamePlay');
 			echo $this->Html->script('cameraFlashes');

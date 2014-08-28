@@ -51,6 +51,7 @@ function pageScripts(){
 	var mobile = md.mobile();
 
 	$('a[href*=#]:not([href=#])').click(function() {
+		event.preventDefault();
 		smoothScroll(this, location);
 	});
 
@@ -129,6 +130,8 @@ function pageScripts(){
 
 	if(pageId == '/pages/csk'){
 		checkForYTApi();
+
+		$(".js-fix-to-top").stickyMenu({anchorElement : ".js-fix-to-top__anchor"});
 		
 		if(mobile == null){
 			$('.video-bg-wrapper').parallax({ "coeff" : 0.7 });
@@ -140,8 +143,9 @@ function smoothScroll(elm, location){
 	if (location.pathname.replace(/^\//,'') == elm.pathname.replace(/^\//,'') || location.hostname == elm.hostname) {
 		var target = $(elm.hash);
 		target = target.length ? target : $('[name=' + elm.hash.slice(1) +']');
+
 		if (target.length) {
-			$('html,body').animate({
+			$('html,body').stop().animate({
 				scrollTop: target.offset().top
 			}, 1000);
 			return false;

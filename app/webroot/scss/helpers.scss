@@ -17,9 +17,6 @@
 /* clearfix */
 .helper--clearfix{ content: ""; display: table; clear: both; overflow: auto;}
 
-/* marging */
-.helper--minus-header-margin{ margin-top: -$totalHeaderHeight; }
-
 /* floats */
 .helper--float-left{ float: left !important; }
 .helper--float-right{ float: right !important; }
@@ -30,6 +27,10 @@
 .helper--no-pad-bottom{ padding-bottom: 0 !important; }
 .helper--no-pad-left{ padding-left: 0 !important; }
 .helper--no-pad-right{ padding-right: 0 !important; }
+
+/* margin */
+.helper--minus-header-margin{ margin-top: -$totalHeaderHeight; }
+.helper--reduce-paragraph-margin p { margin-top: 3px !important };
 
 /* layout helpers */
 .helper--desktop-only{  }

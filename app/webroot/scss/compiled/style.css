@@ -386,11 +386,6 @@ pre {
   overflow: auto;
 }
 
-/* marging */
-.helper--minus-header-margin {
-  margin-top: -135px;
-}
-
 /* floats */
 .helper--float-left {
   float: left !important;
@@ -419,6 +414,15 @@ pre {
 
 .helper--no-pad-right {
   padding-right: 0 !important;
+}
+
+/* margin */
+.helper--minus-header-margin {
+  margin-top: -135px;
+}
+
+.helper--reduce-paragraph-margin p {
+  margin-top: 3px !important;
 }
 
 /* layout helpers */
@@ -1400,22 +1404,24 @@ label a {
 /*****      #one page van menu                      *****/
 /********************************************************/
 .one-page-nav-wrapper {
-  position: fixed;
-  top: 30px;
+  position: absolute;
+  width: 100%;
   z-index: 100;
-  left: 50%;
-  text-align: left;
+  background: url("../img/grey_bg.jpg") repeat 0 0;
+  border-bottom: 1px solid #505050;
 }
-.one-page-nav-wrapper ul {
+.one-page-nav-wrapper .one-page-nav-wrapper__inner-wrapper {
+  display: table;
+  margin: auto;
+  padding: 15px 0;
+}
+.one-page-nav-wrapper .one-page-nav-wrapper__inner-wrapper ul {
   list-style: none;
-  position: relative;
-  left: -50%;
 }
-.one-page-nav-wrapper ul li {
-  float: left;
-  position: relative;
+.one-page-nav-wrapper .one-page-nav-wrapper__inner-wrapper ul li {
+  display: inline;
 }
-.one-page-nav-wrapper ul li a {
+.one-page-nav-wrapper .one-page-nav-wrapper__inner-wrapper ul li a {
   padding: 10px;
   text-decoration: none;
   font-size: 20px;
