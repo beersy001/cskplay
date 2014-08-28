@@ -14,14 +14,16 @@
 				echo $this->Html->link('register', array('controller'=>'Users', 'action'=>'add'),array('class' => 'cta cta--100px cta--highlight' ));
 			} else {
 				if($authUser['facebook'] == true){
+					echo $this->Html->link('logout', $fb_logout_url,array('class' => '[ cta  cta--100px ]'));
+					echo $this->Html->link('my account', array('controller'=>'Users', 'action'=>'accountAdmin'),array('class' => '[ cta  cta--100px  cta--highlight ]'));
 					echo "<img class='login-wrapper__profile-picture' src='https://graph.facebook.com/$facebookUserId/picture'> ";
-					echo "<p>welcome " . $facebookUserProfile['name'] . " | ";
-					echo $this->Html->link('logout', $fb_logout_url) . " | ";
+					echo "<p>welcome " . $facebookUserProfile['name'] . "</p>";
 				}else{
-					echo "<p>welcome " . $authUser['username'] . " | ";
-					echo $this->Html->link('logout', array('controller'=>'Users', 'action'=>'logout'),array('id' => 'facebookButton')) . " | ";
+					echo $this->Html->link('logout', array('controller'=>'Users', 'action'=>'logout'),array('class' => '[ cta  cta--100px ]'));
+					echo $this->Html->link('my account', array('controller'=>'Users', 'action'=>'accountAdmin'),array('class' => '[ cta  cta--100px  cta--highlight ]'));
+					echo "<p>welcome " . $authUser['username'] . "</p>";
 				}
-				echo $this->Html->link('my account', array('controller'=>'Users', 'action'=>'accountAdmin'),array('id' => 'facebookButton')) . "</p>";
+				
 			}
 		?>
 	</div>

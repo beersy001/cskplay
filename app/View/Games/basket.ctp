@@ -43,7 +43,7 @@
 		</div>
 
 		<div class="col4 last">
-			<h1>Have a promo codo?</h1>
+			<h1>Have a promo code?</h1>
 			
 			<?= $this->Form->create('GameBalls', array(
 				'action' => 'saveSelection',

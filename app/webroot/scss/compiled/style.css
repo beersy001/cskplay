@@ -1348,16 +1348,19 @@ label a {
 .header .header__login-wrapper {
   position: absolute;
   left: 25px;
-  top: 25px;
+  top: 20px;
   font-size: 15px;
   text-decoration: none;
   overflow: visible;
 }
 .header .header__login-wrapper img {
   position: absolute;
-  top: 35px;
-  left: 0;
-  width: 55px;
+  top: 0px;
+  left: 215px;
+  width: 45px;
+}
+.header .header__login-wrapper p {
+  padding: 5px 0;
 }
 .header .header__nav-wrapper {
   position: absolute;
@@ -1391,6 +1394,31 @@ label a {
 .header .header__title-wrapper .title-wrapper__page-title {
   font-size: 28px;
   color: #f9a31c;
+}
+
+/********************************************************/
+/*****      #one page van menu                      *****/
+/********************************************************/
+.one-page-nav-wrapper {
+  position: fixed;
+  top: 30px;
+  z-index: 100;
+  left: 50%;
+  text-align: left;
+}
+.one-page-nav-wrapper ul {
+  list-style: none;
+  position: relative;
+  left: -50%;
+}
+.one-page-nav-wrapper ul li {
+  float: left;
+  position: relative;
+}
+.one-page-nav-wrapper ul li a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 /********************************************************/
