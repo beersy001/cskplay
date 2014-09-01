@@ -14,30 +14,54 @@ class GamesController extends AppController {
 
 	public function beforeFilter(){
 		parent::beforeFilter();
-		$this->Auth->allow('displayDemo', 'displayGame', 'fetchPractice', 'fetchLoupe', 'confirmation', 'basket');
+		$this->Auth->allow(
+			'noGame',
+			'displayDemo',
+			'displayGame',
+			'fetchPractice',
+			'fetchLoupe',
+			'confirmation',
+			'basket'
+		);
+	}
+
+	public function noGame(){
+		$this->set('title_for_page', 'CSK - no game available');
+		$this->set('pageId', 'gamesNoGame');
 	}
 
 	public function displayGame() {
 
+		$this->redirect(array('controller' => 'games','action' => 'noGame'));
+
+		CakeLog::write('debug', "currentCompetition: " . $currentCompetition);
+
 		$this->set('title_for_page', 'CSK - play now');
 		$this->set('pageId', 'gamesDisplayGame');
 
-		echo '<script>var date = "' . date('Ym') . '"</script>';
-		
-		$this->loadModel('User');
-		$this->loadModel('GameBall');
-
-		$username = $this->Session->read('Auth.User.username');
-		$month = date('Ym');
-
-		$this->set('month', $month);
-		$this->set('realMonth', strtolower(DateTime::createFromFormat('!Ym', $month)->format('F')));
-
-		//$results = $this->GameBall->getUsersResults($username,date('Ym'));
 		$currentCompetition = $this->Game->getCurrentCompetition();
 
-		//$this->set('results', $results);
-		$this->set('currentCompetition', $currentCompetition);
+		if( sizeof($currentCompetition) > 0 ){
+
+			echo '<script>var date = "' . date('Ym') . '"</script>';
+			
+			$this->loadModel('User');
+			$this->loadModel('GameBall');
+
+			$username = $this->Session->read('Auth.User.username');
+			$month = date('Ym');
+
+			$this->set('month', $month);
+			$this->set('realMonth', strtolower(DateTime::createFromFormat('!Ym', $month)->format('F')));
+
+			//$results = $this->GameBall->getUsersResults($username,date('Ym'));
+			
+
+			//$this->set('results', $results);
+			$this->set('currentCompetition', $currentCompetition);
+		}else{
+			$this->redirect(array('controller' => 'games','action' => 'noGame'));
+		}
 	}
 
 	public function displayDemo() {
