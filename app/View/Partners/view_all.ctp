@@ -8,9 +8,6 @@
 		</div>
 	</div>
 
-
-
-
 	<div class="onerow background_container margin_bottom">
 
 		<div class="col3">
@@ -60,5 +57,3 @@
 
 
 </div>
-
-<?= $this->element('quick_links'); ?>

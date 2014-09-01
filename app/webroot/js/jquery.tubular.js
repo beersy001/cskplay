@@ -27,10 +27,6 @@ var player;
 	// methods
 	var tubular = function(node, options) { // should be called on the wrapper div
 
-		console.log(options);
-		console.log($(node).width());
-		console.log($(node).height());
-
 		var options = $.extend({}, defaults, options),
 			$body = $('body') // cache body node
 			$node = $(node); // cache wrapper node
@@ -78,7 +74,6 @@ var player;
 		}
 	
 		window.onYouTubeIframeAPIReady = function() {
-			console.log("onYouTubeIframeAPIReady...");
 			newPlayer();
 		}
 
@@ -96,7 +91,6 @@ var player;
 			}
 
 			if(state.data === 1){
-				console.log($(player));
 			}
 		}
 

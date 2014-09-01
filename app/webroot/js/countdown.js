@@ -1,5 +1,5 @@
 function countdown() {
-	if($("#countdown")){
+	if($("#countdown").length){
 		var now = new Date();
 		var m = now.getMonth();
 		var y = now.getFullYear();

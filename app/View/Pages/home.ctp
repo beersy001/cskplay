@@ -63,71 +63,82 @@
 	</div>
 
 	<div class="scroll-wrapper">
-		<a href="#first-scroll-content">scroll down</a>
-	<i class="fa fa-3 fa-angle-down"></i>
+		<a href="#section__celebrity-spot-kick">scroll down</a>
+		<i class="fa fa-3 fa-angle-down"></i>
+	</div>
+</section>
+
+<div class="grid" id="main_grid">
+	<section id="section__celebrity-spot-kick" class="[ onerow main-background ]  [ js-fix-to-top__anchor ]">
+		<div class="[ onerow__reduce-70pc ]">
+			<div class="[ col12 ]">
+				<div class="[ media-wrapper ]  [ animation-step ]" id="who-are-csk__step" data-animation-run="false">
+					<div class="[ media-wrapper__header ]  [ helper--center-align ]  [ animation-step__element ]">
+						<h1>Celebrity Spot Kick</h1>
+						<h2 class="helper--highlight-text">Who are we and what do we stand for?</h2>
+					</div>
+					<div class="[ media-wrapper__body ]">
+						<div class="[ body__image-wrapper  media-wrapper__image-wrapper--60-margin ]">
+							<?= $this->Html->image( 'icons/logo_white_200x200.png', array('url' => array('controller' => 'pages', 'action' => 'csk')) ) ?>
+						</div>
+						<div class="[ body__text-wrapper ]">
+							<p>We believe that every child in the country deserves the right to play a vast variety or sports.</p>
+							<p>Our sporting program is designed to provide the equipment and coaching needed for our youngstars to be successfull sports men and women.</p>
+						</div>
+					</div>
+
+					<div class="[ media-wrapper__footer ]">
+						<?= $this->Html->link('find out more',array('controller' => 'pages', 'action' => 'csk'),array('class' => 'cta helper--fullwidth')) ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="info-wrapper">
+		<div class="info-wrapper__block animation-step" id="celebrities__step" data-animation-run="false">
+			<div class="right last animation-step__element">
+				<h1>Our Celebrities</h1>
+				<h2 class="helper--highlight-text">Who's been working with us?</h2>
+				<p>Checkout the celebrities that are supporting our cause. Each has participated in a number of sporting challenges</p>
+				<p>We have great people like James Corden working with us and supporting ur great cause.</p>
+				<?= $this->Html->link('find out more',array('controller' => 'celebrities', 'action' => 'viewAll'),array('class' => 'cta helper--fullwidth')) ?>
+			</div>
+			<div class="col4 left animation-step__element">
+				<?= $this->Html->image( 'icons/celebs_white.png', array('url' => array('controller' => 'celebrities', 'action' => 'viewAll')) ) ?>
+			</div>
+			<div class="helper--clearfix"></div>
+		</div>
+
+		<div class="info-wrapper__block animation-step" id="who-are-csk__step" data-animation-run="false">
+			<div class="left animation-step__element">
+				<h1>Sporting Foundation</h1>
+				<h2 class="helper--highlight-text">How do we help children through sports?</h2>
+				<p>We believe that every child in the country deserves the right to play a vast variety or sports.</p>
+				<p>Our sporting program is designed to provide the equipment and coaching needed for our youngstars to be successfull sports men and women.</p>
+				<?= $this->Html->link('find out more',array('controller' => 'game_balls', 'action' => 'checkResults'),array('class' => 'cta helper--fullwidth')) ?>
+			</div>
+			<div class="col4 right last animation-step__element">
+				<?= $this->Html->image( 'icons/charity_white.png', array('url' => array('controller' => 'game_balls', 'action' => 'checkResults'))) ?>
+			</div>
+			<div class="helper--clearfix"></div>
+		</div>
+
+
+		<div class="info-wrapper__block animation-step" id="celebrities__step" data-animation-run="false">
+			
+			<div class="right last animation-step__element">
+				<h1>Spot The Ball</h1>
+				<h2 class="helper--highlight-text">Why do we use spot the ball?</h2>
+				<p>Spot the ball is an age old game that we can all relate to from our childhood.</p>
+				<p>It gives us the ability to raise money whilst giving the players a chance to win the jackpot!</p>
+				<?= $this->Html->link('find out more',array('controller' => 'game_balls', 'action' => 'checkResults'),array('class' => 'cta helper--fullwidth')) ?>
+			</div>
+			<div class="col4 left animation-step__element">
+				<?= $this->Html->image( 'icons/results_white.png', array('url' => array('controller' => 'game_balls', 'action' => 'checkResults'))) ?>
+			</div>
+			<div class="helper--clearfix"></div>
+		</div>
+
+	</section>
 </div>
-</section>
-
-
-<section id="first-scroll-content" class="info-wrapper">
-
-	<div class="info-wrapper__block animation-step" id="who-are-csk__step" data-animation-run="false">
-		<div class="left animation-step__element">
-			<h1>Celebrity Spot Kick</h1>
-			<h2 class="helper--highlight-text">Who are we and what do we stand for?</h2>
-			<p>We believe that every child in the country deserves the right to play a vast variety or sports.</p>
-			<p>Our sporting program is designed to provide the equipment and coaching needed for our youngstars to be successfull sports men and women.</p>
-			<?= $this->Html->link('find out more',array('controller' => 'pages', 'action' => 'csk'),array('class' => 'cta helper--fullwidth')) ?>
-		</div>
-		<div class="col4 right last animation-step__element">
-			<?= $this->Html->image( 'quickLinks/logo_white.png', array('url' => array('controller' => 'pages', 'action' => 'csk')) ) ?>
-		</div>
-		<div class="helper--clearfix"></div>
-	</div>
-
-
-	<div class="info-wrapper__block animation-step" id="celebrities__step" data-animation-run="false">
-		<div class="right last animation-step__element">
-			<h1>Our Celebrities</h1>
-			<h2 class="helper--highlight-text">Who's been working with us?</h2>
-			<p>Checkout the celebrities that are supporting our cause. Each has participated in a number of sporting challenges</p>
-			<p>We have great people like James Corden working with us and supporting ur great cause.</p>
-			<?= $this->Html->link('find out more',array('controller' => 'celebrities', 'action' => 'viewAll'),array('class' => 'cta helper--fullwidth')) ?>
-		</div>
-		<div class="col4 left animation-step__element">
-			<?= $this->Html->image( 'quickLinks/celebs_white.png', array('url' => array('controller' => 'celebrities', 'action' => 'viewAll')) ) ?>
-		</div>
-		<div class="helper--clearfix"></div>
-	</div>
-
-	<div class="info-wrapper__block animation-step" id="who-are-csk__step" data-animation-run="false">
-		<div class="left animation-step__element">
-			<h1>Sporting Foundation</h1>
-			<h2 class="helper--highlight-text">How do we help children through sports?</h2>
-			<p>We believe that every child in the country deserves the right to play a vast variety or sports.</p>
-			<p>Our sporting program is designed to provide the equipment and coaching needed for our youngstars to be successfull sports men and women.</p>
-			<?= $this->Html->link('find out more',array('controller' => 'game_balls', 'action' => 'checkResults'),array('class' => 'cta helper--fullwidth')) ?>
-		</div>
-		<div class="col4 right last animation-step__element">
-			<?= $this->Html->image( 'quickLinks/charity_white.png', array('url' => array('controller' => 'game_balls', 'action' => 'checkResults'))) ?>
-		</div>
-		<div class="helper--clearfix"></div>
-	</div>
-
-
-	<div class="info-wrapper__block animation-step" id="celebrities__step" data-animation-run="false">
-		
-		<div class="right last animation-step__element">
-			<h1>Spot The Ball</h1>
-			<h2 class="helper--highlight-text">Why do we use spot the ball?</h2>
-			<p>Spot the ball is an age old game that we can all relate to from our childhood.</p>
-			<p>It gives us the ability to raise money whilst giving the players a chance to win the jackpot!</p>
-			<?= $this->Html->link('find out more',array('controller' => 'game_balls', 'action' => 'checkResults'),array('class' => 'cta helper--fullwidth')) ?>
-		</div>
-		<div class="col4 left animation-step__element">
-			<?= $this->Html->image( 'quickLinks/results_white.png', array('url' => array('controller' => 'game_balls', 'action' => 'checkResults'))) ?>
-		</div>
-		<div class="helper--clearfix"></div>
-	</div>
-
-</section>

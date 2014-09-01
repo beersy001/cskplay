@@ -6,7 +6,7 @@
 	</li>
 
 	<li class="nav-bar__link-wrapper" id="pages_menu_item">
-		<?= $this->Html->link('about us',array('controller' => 'pages', 'action' => 'csk'), array('class' => 'link-wrapper__link')); ?>
+		<?= $this->Html->link('about csk',array('controller' => 'pages', 'action' => 'csk'), array('class' => 'link-wrapper__link')); ?>
 	</li>
 
 	<li class="nav-bar__link-wrapper" id="celebrities_menu_item">

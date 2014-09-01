@@ -6,22 +6,25 @@ function runCameraFlashes(delay){
 		var count = 0;
 		var flashElement = document.getElementById("flash" + randomFlashId);
 
-		flashElement.style.display = "none";
-		
-		var intervalId = setInterval(function(){
+		if($(flashElement).length){
 
-			if(count < 2){
-				if(flashElement.style.display == "none"){
-					flashElement.style.display = "block";
-				} else{
+			flashElement.style.display = "none";
+			
+			var intervalId = setInterval(function(){
+
+				if(count < 2){
+					if(flashElement.style.display == "none"){
+						flashElement.style.display = "block";
+					} else{
+						flashElement.style.display = "none";
+					}
+					count++;
+				}else{
 					flashElement.style.display = "none";
+					clearInterval(intervalId);
 				}
-				count++;
-			}else{
-				flashElement.style.display = "none";
-				clearInterval(intervalId);
-			}
-		},200);
+			},200);
+		}
 	},delay);
 
 
