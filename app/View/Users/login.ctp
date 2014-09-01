@@ -1,7 +1,6 @@
 <div class="grid" id="main_grid">
 	<div class="onerow ">
-
-
+		
 		<div class="[ colcenter40 ]  [ scene__element  scene__element--fadeinup ]">
 			<h1 class="helper--center-align">login</h1>			
 

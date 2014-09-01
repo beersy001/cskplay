@@ -4,39 +4,23 @@ var intervals = [];
 //window onload events
 window.onload = function() {
 	pageScripts();
-	
-	if(Modernizr.history){
-		var $body = $('html, body'); // Define jQuery collection 
-		var content = $('#main').smoothState({
-			prefetch: true,
-			pageCacheSize: 5,
-			development: true,
-			onStart : {
-				duration: 500,
-				render: function (url, $container) {
-					console.log("-------------------------------------");
-					console.log("smoothState - onStart");
-					content.toggleAnimationClass('is-exiting');
-					$body.animate({ 'scrollTop': 0 });
-				}
-			},
-			callback : function(url, $container, $content) {
-				console.log("smoothState - callback");
-				pageScripts();
-			},
-			onEnd : {
-				duration: 1000, // Duration of the animations, if any.
-				render: function (url, $container, $content) {
-					console.log("smoothState - onEnd");
-					$body.css('cursor', 'auto');
-					$body.find('a').css('cursor', 'auto');
-					$container.html($content);
-				}
-			},
 
-			
-		}).data('smoothState');
-	}
+	var $body = $('html, body'); // Define jQuery collection 
+	var content = $('#main').smoothState({
+		prefetch: true,
+		pageCacheSize: 5,
+		development: true,
+		onStart : {
+			duration: 500,
+			render: function (url, $container) {
+				content.toggleAnimationClass('is-exiting');
+				$body.animate({ 'scrollTop': 0 });
+			}
+		},
+		callback : function(url, $container, $content) {
+			pageScripts();
+		}
+	}).data('smoothState');
 };
 
 
@@ -74,7 +58,7 @@ function pageScripts(){
 		};
 	}
 
-	if(pageId == '/games/displaygame'){
+	if(pageId == '/games/displaygame' && $(".main_game_image").length > 0){
 		moveUserSelections(date);
 		$(".crosshairs").css("display","none");
 

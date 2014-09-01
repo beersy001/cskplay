@@ -41,8 +41,8 @@ class CelebritiesController extends AppController {
 	 ********************************************************/
 
 	public function viewAll(){
-		$this->set('title_for_page', 'our celebrities');
-		$this->set('pageId','viewAllCelebrities');
+		$this->set('title_for_page', 'csk - our celebrities');
+		$this->set('pageId','celebritiesViewAll');
 
 		$this->set('celebrities', $this->Celebrity->getAllCelebrities());
 	}
@@ -53,13 +53,14 @@ class CelebritiesController extends AppController {
 	 ********************************************************/
 
 	public function profile() {
-
+		
 		$this->loadModel('Charity');
-		$this->set('pageId', 'celebrityProfile');
 
 		$month = $this->request->params['named']['month'];
-
 		$celeb = $this->Celebrity->getCelebrityByMonth($month);
+		
+		$this->set('pageId', 'celebritiesProfile');
+		$this->set('title_for_page', 'csk - ' . $celeb['Celebrity']['firstName'] . ' ' . $celeb['Celebrity']['surname']);
 			
 		if(!empty($celeb)){
 			$celebNameId = $celeb['Celebrity']['nameId'];

@@ -32,10 +32,6 @@ class GamesController extends AppController {
 
 	public function displayGame() {
 
-		$this->redirect(array('controller' => 'games','action' => 'noGame'));
-
-		CakeLog::write('debug', "currentCompetition: " . $currentCompetition);
-
 		$this->set('title_for_page', 'CSK - play now');
 		$this->set('pageId', 'gamesDisplayGame');
 
@@ -60,7 +56,7 @@ class GamesController extends AppController {
 			//$this->set('results', $results);
 			$this->set('currentCompetition', $currentCompetition);
 		}else{
-			$this->redirect(array('controller' => 'games','action' => 'noGame'));
+			$this->render('noGame');
 		}
 	}
 

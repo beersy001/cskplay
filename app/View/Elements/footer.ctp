@@ -1,6 +1,5 @@
-<div id="small_footer">
+<div id="small_footer" class="[ scene__element scene__element--fadeinup ]">
 	<div class="onerow ">
-
 		<div class="col5">
 
 		<?= $this->Html->image( 'logo_grey.png', array('id'=>'main_logo_small', 'url' => array('controller' => 'pages', 'action' => 'home')) ) ?>
