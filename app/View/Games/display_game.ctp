@@ -24,14 +24,6 @@
 	</div>
 
 	<div class="onerow alt-background scene__element scene__element--fadeinup">
-		<?php /*
-		<div id="game_video_container">
-			<div id="game_video_inner">
-				<div id="player"></div>
-				<span id="hide_game_video" onclick="toggleVideoPlayer()">hide video</span>
-			</div>
-		</div>
-		*/ ?>
 
 		<div class="col4">
 			<h1>Your Gameballs</h1>
@@ -62,59 +54,4 @@
 		</div>
 	</div>
 
-	<?php /*
-	<div class="col12">
-		<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-		<script>
-			// 2. This code loads the IFrame Player API code asynchronously.
-			var tag = document.createElement('script');
-
-			tag.src = "https://www.youtube.com/iframe_api";
-			var firstScriptTag = document.getElementsByTagName('script')[0];
-			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-		  // 3. This function creates an <iframe> (and YouTube player)
-		  //    after the API code downloads.
-			var player;
-			function onYouTubeIframeAPIReady() {
-				player = new YT.Player('player', {
-
-					width: '740',
-					height: '413',
-					videoId: '<?=$competition["Game"]["videoId"]?>',
-					playerVars: {
-						'autoplay': 1,
-						'controls': 0,
-						'showinfo' : 0,
-						'rel' : 0
-						
-					},
-					events: {
-						'onStateChange': onPlayerStateChange
-					}
-				});
-			}
-		  // 5. The API calls this function when the player's state changes.
-		  //    The function indicates that when playing a video (state=1),
-		  //    the player should play for six seconds and then stop.
-
-			function onPlayerStateChange(event) {
-				if (event.data === 0) {
-					console.log("finished!");
-					playMode = true;
-					$("#game_video_container").css('left', '-1500px');
-				}
-			}
-
-			function toggleVideoPlayer(){
-				if( $("#game_video_container").css('left') == '-1500px')  {
-					$("#game_video_container").css('left', '0px');
-				} else {
-					$("#game_video_container").css('left', '-1500px');
-				}
-			}
-
-		</script>
-	</div>
-	*/?>
 </div>
