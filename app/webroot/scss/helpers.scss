@@ -10,6 +10,8 @@
 .helper--right-align{ text-align: right !important; }
 .helper--full-align{ text-align: justify !important; }
 .helper--subscript{ font-size: 11px !important; margin-top: 0 !important; }
+.helper--mock-link { text-decoration: underline !important; color: white !important; cursor: pointer; }
+.helper--mock-link:hover { color: $highlightColor !important; }
 
 /* overflows */
 .helper--overflow-hidden{ overflow: hidden !important; }
@@ -40,6 +42,11 @@
 
 /* colors */
 .helper--font-color{ color: rgb(255,255,255) };
+
+/* images */
+.helper--circular-img{
+	border-radius: 50%;
+}
 
 /* rounded number */
 .helper--round-number{

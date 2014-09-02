@@ -23,7 +23,7 @@ class PartnersController extends AppController {
 	/********************************************************
 	 *		add partner										*
 	 ********************************************************/
-	public function addPartner(){
+	public function add(){
 		$this->set('title_for_page', 'add partner');
 		$this->set('pageId', 'add partner');
 

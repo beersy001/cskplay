@@ -29,6 +29,7 @@
 			echo $this->Html->script('cameraFlashes');
 			echo $this->Html->script('changeActiveMenu');
 			echo $this->Html->script('scrollingAnimation');
+			echo $this->Html->script('cms.builder');
 			echo $this->Html->meta('icon', $this->Html->url('/favicon.ico'));
 			echo $this->fetch('meta');
 			echo $this->fetch('css');

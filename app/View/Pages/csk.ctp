@@ -1,6 +1,6 @@
 <div class="grid" id="main_grid">
 
-	<div id="video-wrapper" class="[ video-bg-wrapper ]  [ helper--minus-header-margin ]  [ scene__element  scene__element--fadeinup ]">
+	<div id="video-wrapper" class="[ video-bg-wrapper  video-bg-wrapper--100vh ]  [ helper--minus-header-margin ]  [ scene__element  scene__element--fadeinup ]">
 		<div class="video-bg-wrapper__overlay">
 			<div class="overlay__content-wrapper">
 				<h1 class="content-wrapper__heading">What Is Celebrity Spot Kick?</h1>
@@ -44,29 +44,27 @@
 		</div>
 	</div>
 
-	<section id="section__how-to-play" class="[ onerow alt-background ]  [ js-fix-to-top__anchor ]">
-		<div class="[ onerow__reduce-70pc ]">
-			<div class="[ col12 ]">
-				<div class="[ media-wrapper ]">
-					<div class="[ media-wrapper__header ]  [ helper--center-align ]">
-						<h1>how to play</h1>
-						<h2 class="[ helper--highlight-text ]">what do you need to do to win?</h2>
+	<section id="section__how-to-play" class="[ onerow  onerow--reduce-70pc ]  [ alt-background ]  [ js-fix-to-top__anchor ]">
+		<div class="[ col12 ]">
+			<div class="[ media-wrapper ]">
+				<div class="[ media-wrapper__header ]  [ helper--center-align ]">
+					<h1>how to play</h1>
+					<h2 class="[ helper--highlight-text ]">what do you need to do to win?</h2>
+				</div>
+
+				<div class="[ media-wrapper__body ]">
+					<div class="[ body__image-wrapper  body__image-wrapper--60-margin ]">
+						<img src="/img/icons/results_white_200x200.png">
 					</div>
 
-					<div class="[ media-wrapper__body ]">
-						<div class="[ body__image-wrapper  body__image-wrapper--60-margin ]">
-							<img src="/img/icons/results_white_200x200.png">
-						</div>
-
-						<div class="[ body__text-wrapper ]">
-							<p>We are a team of professionals from all walks of life and industries, including sports, marketing, finance, charity and social media, brought together by two individuals wanting to make a difference.</p>
-							<p>We are all pulling in the same direction to create a long-lasting legacy of giving and providing a platform to give underprivileged children in this Country the ability to play and take part in many different sports.</p>
-							<p>Our mission is to raise money for charities, good causes and Celebrity Spot Kick’s Sporting Programmes, through sport orientated online competitions. Our aim is to ensure each competition is both fun and worthwhile for you as our players and supporters and charities alike.</p>
-						</div>
+					<div class="[ body__text-wrapper ]">
+						<p>We are a team of professionals from all walks of life and industries, including sports, marketing, finance, charity and social media, brought together by two individuals wanting to make a difference.</p>
+						<p>We are all pulling in the same direction to create a long-lasting legacy of giving and providing a platform to give underprivileged children in this Country the ability to play and take part in many different sports.</p>
+						<p>Our mission is to raise money for charities, good causes and Celebrity Spot Kick’s Sporting Programmes, through sport orientated online competitions. Our aim is to ensure each competition is both fun and worthwhile for you as our players and supporters and charities alike.</p>
 					</div>
-					<div class="[ media-wrapper__footer ]">
-						<?= $this->Html->link('Play Now!',array('controller' => 'games', 'action' => 'displayGame'),array('class' => 'cta helper--fullwidth')) ?>
-					</div>
+				</div>
+				<div class="[ media-wrapper__footer ]">
+					<?= $this->Html->link('Play Now!',array('controller' => 'games', 'action' => 'displayGame'),array('class' => 'cta helper--fullwidth')) ?>
 				</div>
 			</div>
 		</div>

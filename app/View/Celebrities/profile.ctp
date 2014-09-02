@@ -2,7 +2,7 @@
 
 	<script>var currentMonth = <?=$currentMonth?></script>
 
-	<div id="celeb-profile-video-wrapper" class="video-bg-wrapper helper--minus-header-margin parallax--top-position  scene__element scene__element--fadeinup">
+	<div id="celeb-profile-video-wrapper" class="[ video-bg-wrapper  video-bg-wrapper--100vh ]  [ helper--minus-header-margin ]  [ scene__element  scene__element--fadeinup ]">
 		<div class="video-bg-wrapper__overlay">
 			<div class="overlay__content-wrapper">
 				<h1 class="content-wrapper__heading"><?=$celebName?></h1>

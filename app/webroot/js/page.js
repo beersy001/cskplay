@@ -30,7 +30,7 @@ function pageScripts(){
 
 	var pageId = this.location.pathname.match(/(\/)((?:[A-z][A-z0-9_]*))(\/)((?:[A-z][A-z]+))/)[0].toLowerCase().trim();
 	var path = window.location.pathname.split("/");
-	var controller = path[2];
+	var controller = path[1];
 	var md = new MobileDetect(window.navigator.userAgent);
 	var mobile = md.mobile();
 
@@ -43,7 +43,7 @@ function pageScripts(){
 	$(".nav-bar__close-btn").toggleElement({"targetElem" : ".header__nav-wrapper"});
 
 
-	changeActiveMenu( controller );
+	console.log("pageId: " + pageId)
 
 	if(pageId == '/pages/home'){
 		intervals.push(runCameraFlashes(300));
@@ -113,6 +113,16 @@ function pageScripts(){
 	}
 
 	if(pageId == '/pages/csk'){
+		checkForYTApi();
+
+		$(".js-fix-to-top").stickyMenu({anchorElement : ".js-fix-to-top__anchor"});
+		
+		if(mobile == null){
+			$('.video-bg-wrapper').parallax({ "coeff" : 0.7 });
+		}
+	}
+
+	if(pageId == '/partners/viewall'){
 		checkForYTApi();
 
 		$(".js-fix-to-top").stickyMenu({anchorElement : ".js-fix-to-top__anchor"});

@@ -69,27 +69,25 @@
 </section>
 
 <div class="grid" id="main_grid">
-	<section id="section__celebrity-spot-kick" class="[ onerow main-background ]  [ js-fix-to-top__anchor ]">
-		<div class="[ onerow__reduce-70pc ]">
-			<div class="[ col12 ]">
-				<div class="[ media-wrapper ]  [ animation-step ]" id="who-are-csk__step" data-animation-run="false">
-					<div class="[ media-wrapper__header ]  [ helper--center-align ]  [ animation-step__element ]">
-						<h1>Celebrity Spot Kick</h1>
-						<h2 class="helper--highlight-text">Who are we and what do we stand for?</h2>
+	<section id="section__celebrity-spot-kick" class="[ onerow ] [ onerow--reduce-50pc ]  [ main-background ]  [ js-fix-to-top__anchor ]">
+		<div class="[ col12 ]">
+			<div class="[ media-wrapper ]  [ animation-step ]" id="who-are-csk__step" data-animation-run="false">
+				<div class="[ media-wrapper__header ]  [ helper--center-align ]  [ animation-step__element ]">
+					<h1>Celebrity Spot Kick</h1>
+					<h2 class="helper--highlight-text">Who are we and what do we stand for?</h2>
+				</div>
+				<div class="[ media-wrapper__body ]">
+					<div class="[ body__image-wrapper  media-wrapper__image-wrapper--60-margin ]">
+						<?= $this->Html->image( 'icons/logo_white_200x200.png', array('url' => array('controller' => 'pages', 'action' => 'csk')) ) ?>
 					</div>
-					<div class="[ media-wrapper__body ]">
-						<div class="[ body__image-wrapper  media-wrapper__image-wrapper--60-margin ]">
-							<?= $this->Html->image( 'icons/logo_white_200x200.png', array('url' => array('controller' => 'pages', 'action' => 'csk')) ) ?>
-						</div>
-						<div class="[ body__text-wrapper ]">
-							<p>We believe that every child in the country deserves the right to play a vast variety or sports.</p>
-							<p>Our sporting program is designed to provide the equipment and coaching needed for our youngstars to be successfull sports men and women.</p>
-						</div>
+					<div class="[ body__text-wrapper ]">
+						<p>We believe that every child in the country deserves the right to play a vast variety or sports.</p>
+						<p>Our sporting program is designed to provide the equipment and coaching needed for our youngstars to be successfull sports men and women.</p>
 					</div>
+				</div>
 
-					<div class="[ media-wrapper__footer ]">
-						<?= $this->Html->link('find out more',array('controller' => 'pages', 'action' => 'csk'),array('class' => 'cta helper--fullwidth')) ?>
-					</div>
+				<div class="[ media-wrapper__footer ]">
+					<?= $this->Html->link('find out more',array('controller' => 'pages', 'action' => 'csk'),array('class' => 'cta helper--fullwidth')) ?>
 				</div>
 			</div>
 		</div>
