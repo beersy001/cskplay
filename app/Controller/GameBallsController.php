@@ -53,6 +53,8 @@ class GameBallsController extends AppController{
 
 				$this->Session->write( 'insertedIds', $insertedIds );
 
+
+
 			}else{
 				$this->Session->setFlash( 'invalid promo code' );
 				$this->redirect($this->referer());

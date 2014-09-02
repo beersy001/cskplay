@@ -1,37 +1,17 @@
-<?php
-$this->Html->script( 'gamePlay', array('inline'=>false));
-$this->Html->script( 'ajaxGetSelections', array('inline'=>false));
-$this->Html->script( 'moveUserSelections', array('inline'=>false));
-?>
-
-<script>
-	$(document).ready(function() {
-		var originalFontSize = 16;
-		var sectionWidth = $('.adaptive_text').width();
-
-		$('.adaptive_text a').each(function(){
-			var spanWidth = $(this).width();
-			var newFontSize = (sectionWidth/spanWidth) * originalFontSize;
-			$(this).css({"font-size" : newFontSize, "line-height" : newFontSize/1.2 + "px"});
-		});
-	});
-</script>
-
 <div class="grid" id="main_grid">
 	<div id="loupe" oncontextmenu="toggleLoupe();return false;">
 		<?= $this->element('game/game_loupe'); ?>
 	</div>
 
-	<div class="onerow background_container">
+	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]">
 		<div class="col12">
-			<h1 class="border_bottom"><?=$realDate?> - your selections</h1>
-			<a id="my_gameballs_return_link" href="<?=$this->Html->url(array('controller'=>'Users', 'action'=>'accountAdmin'))?>">back to my account</a>
+			<h1><?=$realDate?> - your selections</h1>
+			<a href="<?=$this->Html->url(array('controller'=>'Users', 'action'=>'accountAdmin'))?>">back to my account</a>
 		</div>
 	</div>
 
-	<div class="onerow background_container">
-		<div class="col4 no_pad_top">
-			<?= $this->Html->image( 'quickLinks/results_white.png', array('class'=>'results_title_image', 'align'=>'left') ) ?>
+	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]">
+		<div class="col4">
 			<h2 class="border_bottom large_indent">game details</h2>
 			<div class="large_indent text_info">
 				<p>game month <span class="large_text"><?=$realDate?></span></p>
@@ -46,110 +26,20 @@ $this->Html->script( 'moveUserSelections', array('inline'=>false));
 				echo '<p>closest distance to winning spot <span class="large_text">' . $closestResult['GameBall']['distanceFromWinningSpot']  . '</span></p>';
 				echo '<p>average distance to winning spot <span class="large_text">' . $averageDistance . '</span></p>';
 			}?>
-
-				<?php
-				if(!$gameHasEnded){
-				?>
-					<br><br><br><br><br><br>
-					<div class="adaptive_text">
-						<?=$this->Html->link('play',array('controller'=>'games', 'action'=>'displayGame'), array('class'=>'no_decoration'))?>
-					</div>
-				<?php
-				}
-				?>
-
 			</div>
 		</div>
-		<div class="col8 last no_padding no_margin">
-			<div oncontextmenu="toggleLoupe();return false;" onmouseout="removeLoupe()">
-				<?= $this->element('game/game_images'); ?>
-			</div>
+		<div class="col8 last">
+			<?= $this->element('game/game_images'); ?>
 		</div>
 	</div>
 
-	<div class="onerow background_container">
-		<?php if(!$gameHasEnded){
-		?>	
+	<?php
+	if($gameHasEnded){
+	?>
+		<div class="onerow">
 			<div class="col12">
-				<?= $this->Html->image( 'logo_white.png', array('class'=>'logo_title_image', 'align'=>'left') ); ?>
-				<h2 class="large_indent border_bottom margin_bottom">transfer gameballs</h2>
-
-				<div class="large_indent">
-					<div class="tabular_form tabular_form_header">
-						<span class="width25">#</span>
-						<span class="width245">id</span>
-						<span class="width100">team</span>
-						<span class="width50">x</span>
-						<span class="width50">y</span>
-						<span class="width175">date played</span>
-						<span class="width75">highlight</span>
-						<?php if(isset($teams)){
-							echo '<span class="width100">submit</span>';
-						} ?>
-					</div>
-
-					<?php
-					$i = 0;
-					foreach ($results as $key => $selection) {
-						$count = $i + 1;
-
-						if(isset($teams)){
-
-							echo $this->Form->create('GameBall', array(
-								'controller'=>'GameBalls',
-								'action' => 'transferGameball',
-								'class' => 'tabular_form',
-								'inputDefaults' => array(
-									'label' => false,
-									'div' => false
-									)
-								));
-
-							echo $this->Form->input('id', array(
-								'type' => 'hidden',
-								'value' => $selection['GameBall']['id']
-							));
-							
-							echo '<span class="width25">' . $count . '</span>';
-							echo '<span class="width245">' . $selection['GameBall']['id'] . '</span>';
-
-							echo $this->Form->input('team', array(
-								'options' => $teams,
-								'class' => 'width100',
-								'default' => $selection['GameBall']['team']
-							));
-
-							echo '<span class="width50">' . $selection['GameBall']['x'] . '</span>';
-							echo '<span class="width50">' . $selection['GameBall']['y'] . '</span>';
-							echo '<span class="width175">' . date('d/m/Y - H:i', $selection['GameBall']['created']->sec) . '</span>';
-							echo '<span class="width75 checkbox"><input id="' . $i . '_checkbox_transfer" type="checkbox" onChange="changeSelectionIcon(this,' . $month . ')">' . '</span>';
-							echo $this->Form->end('update');
-
-						}else{
-							echo '<div class="tabular_form">';
-							echo '<span class="width25">' . $count . '</span>';
-							echo '<span class="width245">' . $selection['GameBall']['id'] . '</span>';
-							echo '<span class="width100">' . $selection['GameBall']['team'] . '</span>';
-							echo '<span class="width50">' . $selection['GameBall']['x'] . '</span>';
-							echo '<span class="width50">' . $selection['GameBall']['y'] . '</span>';
-							echo '<span class="width175">' . date('d/m/Y - H:i', $selection['GameBall']['created']->sec) . '</span>';
-							echo '<span class="width75 checkbox"><input id="' . $i . '_checkbox_transfer" type="checkbox" onChange="changeSelectionIcon(this,' . $month . ')">' . '</span>';
-							echo '</div>';
-						}
-
-						$i++;
-					}
-					?>
-				</div>
-			</div>
-		<?php
-		}else if($gameHasEnded){
-		?>
-			<div class="col12">
-				<?= $this->Html->image( 'quickLinks/win_white.png', array('class'=>'win_title_image', 'align'=>'left') ); ?>
-				<h2 class="large_indent border_bottom margin_bottom">winners</h2>
-				<div class="large_indent full_table">
-
+				<h2>winners</h2>
+				<div>
 					<table>
 						<tr>
 							<th>ranking</th>
@@ -238,20 +128,14 @@ $this->Html->script( 'moveUserSelections', array('inline'=>false));
 					</table>
 				</div>
 			</div>
-		<?php
-		}?>
-	</div>
-
+		</div>
 	<?php
+	}
 	if (sizeof($distinctMonths) > 0) {
 	?>
-		<div class="onerow background_container margin_bottom">
+		<div class="[ onerow ]  [ alt-background ]  [ scene__element  scene__element--fadeinup ]">
 			<div class="col12">
-				<?= $this->Html->image( 'user_white.png', array('class'=>'user_title_image', 'align'=>'left') ); ?>
-				<h2 class="large_indent border_bottom margin_bottom">my previous games</h2>
-				<div class="large_indent">
-					<?= $this->element('gameballs/months_played'); ?>
-				</div>
+				<?=$this->element('gameballs/months_played');?>
 			</div>
 		</div>
 	<?php
@@ -317,5 +201,3 @@ $this->Html->script( 'moveUserSelections', array('inline'=>false));
 		}
 	}
 </script>
-
-<?= $this->element('quick_links'); ?>

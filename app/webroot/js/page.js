@@ -85,8 +85,13 @@ function pageScripts(){
 			});	
 	}
 
-	if(pageId == 'my gameballs'){
+	if(pageId == '/gameballs/mygameballs'){
 		moveUserSelections(date);
+
+		$(window).resize(function(){
+			moveUserSelections(date);
+		});
+		
 		playMode = true;
 	}
 

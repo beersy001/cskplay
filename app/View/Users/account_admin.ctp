@@ -9,19 +9,6 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 
 <script>
 	$(document).ready(function() {
-		var originalFontSize = 16;
-		var sectionWidth = $('.adaptive_text').width();
-
-		$('.adaptive_text a').each(function(){
-			var spanWidth = $(this).width();
-			var newFontSize = (sectionWidth/spanWidth) * originalFontSize;
-			$(this).css({"font-size" : newFontSize, "line-height" : newFontSize/1.2 + "px"});
-		});
-	});
-</script>
-
-<script>
-	$(document).ready(function() {
 
 		$("#edit_details_button").click( function(event) {		
 			$(".full_overlay").css("left","0px");
@@ -35,11 +22,9 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 
 
 <div class="full_overlay" id="edit_user_overlay">
-	<div id="edit_user_container">
-		<?= $this->Html->image( 'quickLinks/pencil_white.png', array('class'=>'user_title_image', 'align'=>'left') ) ?>
-		<p id="cancel_edit_details_button" class="mock_link">back to my account</a>
-		<h2 class="large_indent border_bottom margin_bottom">edit your details</h2>
-		<div class="large_indent form_container">
+	<div>
+		<h2>edit your details</h2>
+		<div class="form_container">
 			<?php
 				echo $this->Form->create('User', array(
 					'controller'=>'Users',
@@ -55,26 +40,19 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 					'value' => AuthComponent::user('id')
 				));
 
-				echo '<div class="input_row">';
-				echo $this->Form->label('User.firstName', 'first name',array('class' => 'helper--clearfix'));
+
+				echo $this->Form->label('User.firstName', 'first name');
+				echo $this->Form->input('firstName');
+				
 				echo $this->Form->label('User.surname', 'surname');
-				echo $this->Form->input('firstName',array('class' => 'helper--clearfix small_input', 'onChange'=>'validateFirstName();'));
-				echo $this->Form->input('surname',array('class' => 'small_input'));
-				echo '<div id="check_name" class="input_row_validaion tiny_text"></div>';
+				echo $this->Form->input('surname');
 
-				echo '</div>';
-
-				echo '<div class="input_row">';
 				echo $this->Form->label('User.emailAddress', 'email address');
-				echo $this->Form->input('emailAddress',array('class' => 'helper--clearfix medium_input'));
-				echo '</div>';
+				echo $this->Form->input('emailAddress');
 
-				echo '<div class="input_row">';
-				echo $this->Form->label('User.phoneNumberOne', '1st contact number',array('class' => 'helper--clearfix'));
-				echo $this->Form->label('User.phoneNumberTwo', '2nd contact number');
-				echo $this->Form->input('phoneNumberOne',array('class' => 'helper--clearfix small_input'));
-				echo $this->Form->input('phoneNumberTwo',array('class' => 'small_input'));
-				echo '</div>';
+				echo $this->Form->label('User.phoneNumberOne', '1st contact number');
+				echo $this->Form->input('phoneNumberOne');
+
 
 				echo $this->Form->end('submit');
 			?>
@@ -85,13 +63,12 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 
 <div class="grid" id="main_grid">
 
-	<div class="onerow background_container" id="my_account_container">
+	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]" id="my_account_container">
 
 		<div class="col6">
-			<p id="edit_details_button" class="mock_link tiny_text">edit</p>
-			<?= $this->Html->image( 'user_white.png', array('class'=>'user_title_image', 'align'=>'left') ) ?>
-			<h2 class="large_indent">my details</h2>
-			<div class="large_indent text_info">
+			<p class="mock_link">edit</p>
+			<h2>my details</h2>
+			<div class="text_info">
 				<?php
 					$completeProfile = $this->Session->read('Auth.User.completeProfile');
 					$username = $this->Session->read('Auth.User.username');
@@ -140,34 +117,16 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 
 			</div>
 		</div>
-
-		<div class="col6 last">
-
-		</div>
-
 	</div>
-
 
 	<?php
 	if (sizeof($distinctMonths) > 0) {
 	?>
-
-	<div class="onerow background_container margin_bottom">
-		<div class="col7">
-			<?= $this->Html->image( 'user_white.png', array('class'=>'title_image user_title_image', 'align'=>'left') ) ?>
-			<h2 class="large_indent">my game history</h2>
-			<div class="large_indent">
-				<?= $this->element('gameballs/months_played'); ?>
+		<div class="[ onerow ]  [ alt-background ]  [ scene__element  scene__element--fadeinup ]">
+			<div class="col12">
+				<?=$this->element('gameballs/months_played');?>
 			</div>
 		</div>
-
-		<div class="col5 last">
-			<div class="adaptive_text">
-
-				<?=$this->Html->link('play',array('controller'=>'games', 'action'=>'displayGame'), array('class'=>'no_decoration'))?>
-			</div>
-		</div>
-	</div>
 	<?php
 	}
 	?>

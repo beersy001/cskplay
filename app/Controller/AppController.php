@@ -21,7 +21,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('Controller', 'Controller');
-
+App::uses('CakeEmail', 'Network/Email');
 
 /**
  * Application Controller
@@ -51,11 +51,13 @@ class AppController extends Controller {
 
 	public function beforeFilter(){
 
-		App::import('Vendor', 'facebook-php-sdk-master/src/facebook');
+		//App::import('Vendor', 'facebook-php-sdk-master/src/facebook');
+		App::import('Vendor','facebook', array('file' => 'facebook-php-sdk-master'.DS.'src'.DS.'facebook.php'));
 		$this->Facebook = new Facebook(array(
 			'appId'  => '503746699700838',
 			'secret' => '36979bf24abf8718d89defdb933889e5'
 		));
+
 
 		if($this->Facebook->getUser()){
 			$this->set('facebookUserId', $this->Facebook->getUser());

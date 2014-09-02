@@ -1,32 +1,25 @@
-<?php
+<div id="thumbnail_container">
+	<?php
 	krsort($distinctMonths);
+	foreach($distinctMonths as $month){
+	?>
 
-	//print_r($allGames);
+		<div class="crossfade-wrapper crossfade-wrapper--width155">
+			<a href="<?= $this->Html->url(array('controller' => 'gameballs', 'action' => 'myGameballs', 'month' => $month))?>">
 
-	foreach ($distinctMonths as $month) { ?>
+				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--bottom crossfade-wrapper__layer--circle">
+					<?= $this->Html->image( 'gameImages/' . $month . '/front_small_square.jpg' ); ?>
+				</div>
 
+				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--top crossfade-wrapper__layer--circle crossfade-wrapper__layer--grey">
+					<div class="layer__text-wrapper">
+						<p class="text-wrapper__text"><?= strtolower(date("F Y", strtotime(substr($month, 0, 4 ). '-' . substr($month, 4,5)))); ?></p>
+					</div>
+				</div>
 
-
-		<div class="crossfade float_left">
-
-			<div class=" fade_bottom">
-				<?= $this->Html->image( 'gameImages/' . $month . '/front_small_square.jpg' ); ?>
-			</div>
-
-			<div class="fade_top">
-				<?= $this->Html->link('',array('controller' => 'gameballs', 'action' => 'myGameballs', 'month' => $month)); ?>
-				<?php
-					if(isset($allGames[$month]['Game']['ended']) && $allGames[$month]['Game']['ended'] == true){
-						echo '<span>finished</span>';
-					}
-				?>
-			</div>
-
-			<br>
-
-			<span class="footer "><?= strtolower(date("F Y", strtotime(substr($month, 0, 4 ). '-' . substr($month, 4,5)))); ?></span>
+			</a>
 		</div>
-
 	<?php
 	}
-?>
+	?>
+</div>

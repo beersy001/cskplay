@@ -1,4 +1,4 @@
-<div class='crosshairs' id="main_crosshairs">
+<div id="game-img-wrapper" oncontextmenu="toggleLoupe();return false;" onmouseout="removeLoupe()">
 	<?php
 	if(isset($results)){
 		foreach ($results as $id => $element) {
@@ -6,9 +6,8 @@
 			$xPos = $element['GameBall']['x'];
 			$yPos = $element['GameBall']['y'];
 
-			echo $this->Html->image( 'logo_white.png', array('class'=>'crosshair saved_selection','id' => 'unselected_' . $id . '_' . $month . '_normal', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px" ) );
-			echo $this->Html->image( 'logo_orange.png', array('class'=>'crosshair saved_selection','id' => 'selected_' . $id . '_' . $month . '_normal', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px; display: none" ) );
-			echo '<span id="span_' . $id . '_' . $month . '_normal" style="left:' . $xPos . "px; top: " . $yPos . 'px">' . $element['GameBall']['team'] . '</span>';
+			echo $this->Html->image( 'logo_white.png', array( 'data-x' => $xPos, 'data-y' => $yPos, 'class'=>'crosshair crosshair--main saved_selection','id' => 'unselected_' . $id . '_' . $month . '_normal', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px" ) );
+			echo $this->Html->image( 'logo_orange.png', array( 'data-x' => $xPos, 'data-y' => $yPos, 'class'=>'crosshair crosshair--main saved_selection','id' => 'selected_' . $id . '_' . $month . '_normal', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px; display: none" ) );
 		}
 	}
 
@@ -19,11 +18,7 @@
 
 		echo $this->Html->image( 'winning_spot_grey.png', array('class'=>'winning_selection','id' => 'unselected_win_' . $month . '_normal', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px" ) );
 	}
-	?>
-</div>
 
-<div id="game-img-wrapper" oncontextmenu="toggleLoupe();return false;" onmouseout="removeLoupe()">
-	<?php
 	$compFrontLarge = 'gameImages/' . $month . '/front_large.jpg';
 	$compRearLarge = 'gameImages/' . $month . '/rear_large.jpg';
 	$compFrontSmall = 'gameImages/' . $month . '/front_small.jpg';
@@ -33,4 +28,6 @@
 	echo $this->Html->image( $compFrontSmall, array('class'=>'game_image_inlay display_none', 'id'=>'game_image_main_inlay') );
 	echo $this->Html->image( $compFrontLarge, array('id'=>'hidden_image','style'=>'display: none; position: absolute'));
 	?>
+
+
 </div>

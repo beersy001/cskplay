@@ -28,9 +28,14 @@ class GamesController extends AppController {
 	public function noGame(){
 		$this->set('title_for_page', 'CSK - no game available');
 		$this->set('pageId', 'gamesNoGame');
+
+		
+
 	}
 
 	public function displayGame() {
+
+
 
 		$this->set('title_for_page', 'CSK - play now');
 		$this->set('pageId', 'gamesDisplayGame');
