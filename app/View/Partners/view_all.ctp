@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="[ one-page-nav-wrapper ]  [ js-fix-to-top ]">
-		<h3>Celebrity Spot Kick's Friends</h3>
+		<h3 class="helper--highlight-text">Celebrity Spot Kick's Friends</h3>
 		<div class="[ one-page-nav-wrapper__inner-wrapper ]">
 			<ul>
 				<li>
@@ -41,12 +41,6 @@
 			</ul>
 		</div>
 	</div>
-
-
-
-<!-- -------------------------------------------------------------------------------------- -->
-
-
 
 	<section id="section__csk-friends" class="[ onerow  onerow--reduce-70pc ]  [ alt-background ]  [ js-fix-to-top__anchor ]">
 		<div class="[ col12 ]">

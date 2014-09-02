@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="[ one-page-nav-wrapper ]  [ js-fix-to-top ]">
-		<h3>about celebrity spot kick</h3>
+		<h3 class="helper--highlight-text">about celebrity spot kick</h3>
 		<div class="[ one-page-nav-wrapper__inner-wrapper ]">
 			<ul>
 				<li>
