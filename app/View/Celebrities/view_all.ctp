@@ -45,7 +45,7 @@
 					$realDate = DateTime::createFromFormat('!Ym', $celeb['month'])->format('F Y');
 					?>
 
-					<div class="crossfade-wrapper crossfade-wrapper--width155">
+					<div class="crossfade-wrapper crossfade-wrapper--width200">
 						<a href="<?= $this->Html->url(array('controller'=>'celebrities', 'action'=>'profile', 'month'=>$celeb['month']))?>">
 
 							<div class="crossfade-wrapper__layer crossfade-wrapper__layer--bottom crossfade-wrapper__layer--circle">

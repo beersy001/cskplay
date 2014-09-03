@@ -4,7 +4,7 @@
 	foreach($distinctMonths as $month){
 	?>
 
-		<div class="crossfade-wrapper crossfade-wrapper--width155">
+		<div class="crossfade-wrapper crossfade-wrapper--width200">
 			<a href="<?= $this->Html->url(array('controller' => 'gameballs', 'action' => 'myGameballs', 'month' => $month))?>">
 
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--bottom crossfade-wrapper__layer--circle">
