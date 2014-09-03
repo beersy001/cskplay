@@ -95,23 +95,31 @@ class GamesController extends AppController {
 
 		if ($this->request->is('post')) {
 			if ( isset( $this->request->data['Selection'] ) ) {
-				$data = $this->request->data;
-				$selections = $data['Selection'];
-				$price = 0;
 
-				for ($i=1; $i <= count($selections); $i++) { 
-					if($i % 3 == 0){
-						$selections[$i-1]["price"] = "free";
+				$selections = $this->request->data['Selection'];
+				$updatedSelections = array();
+				$price = 0;
+				$count = 0;
+
+				foreach ($selections as $selection) { 
+					$count++;
+
+					CakeLog::write('debug', "GamesController - basket() - count: " . $count);
+					CakeLog::write('debug', "GamesController - basket() - $count % 3: " . $count % 3);
+
+					if($count % 3 == 0){
+						$selection["price"] = "free";
 					}else{
-						$selections[$i-1]["price"] = "£1";
+						$selection["price"] = "£1";
 						$price++;
 					}
+
+					$updatedSelections[] = $selection;
 				}
 
-				CakeLog::write('debug', print_r($selections, true));
-				CakeLog::write('debug', "totalPrice: " . $price);
+				CakeLog::write('debug', "GamesController - basket() - selection: " . print_r($updatedSelections, true));
 
-				$this->Session->write('selections', $selections);
+				$this->Session->write('selections', $updatedSelections);
 				$this->Session->write('totalPrice', $price);
 			}
 		}
