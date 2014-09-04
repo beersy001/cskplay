@@ -622,6 +622,7 @@ label a{
 .content-wrapper{
 	position: relative;
 	overflow: hidden;
+	min-height: 100%;
 }
 
 .home-bg-wrapper{
@@ -1470,7 +1471,7 @@ input:checked + .sliding_container .large_link{
 .call-to-action{
 	position: relative;
 	width: 100%;
-	padding: 15px;
+	padding: 0 15px;
 	min-height: 215px;
 }
 

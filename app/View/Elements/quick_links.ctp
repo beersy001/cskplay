@@ -14,11 +14,11 @@
 		<div class="col2 crossfade-wrapper">
 			<a href="<?= $this->Html->url(array('controller' => 'charities', 'action' => 'viewAll'))?>">
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--bottom">
-					<?= $this->Html->image( 'quickLinks/charity_orange.png') ?>
+					<?= $this->Html->image( 'icons/charity_orange.png') ?>
 				</div>
 
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--top">
-					<?= $this->Html->image( 'quickLinks/charity_white.png')?>
+					<?= $this->Html->image( 'icons/charity_white.png')?>
 				</div>
 			</a>
 		</div>
@@ -26,11 +26,11 @@
 		<div class="col2 crossfade-wrapper">
 			<a href="<?= $this->Html->url(array('controller' => 'game_balls', 'action' => 'checkResults'))?>">
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--bottom">
-					<?= $this->Html->image( 'quickLinks/results_orange.png' ) ?>
+					<?= $this->Html->image( 'icons/results_orange.png' ) ?>
 				</div>
 
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--top">
-					<?= $this->Html->image( 'quickLinks/results_white.png') ?>
+					<?= $this->Html->image( 'icons/results_white.png') ?>
 				</div>
 			</a>
 		</div>
@@ -38,11 +38,11 @@
 		<div class="col2 crossfade-wrapper">
 			<a href="<?= $this->Html->url(array('controller' => 'outtakes', 'action' => 'viewAll'))?>">
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--bottom">
-					<?= $this->Html->image( 'quickLinks/outtakes_orange.png' ) ?>
+					<?= $this->Html->image( 'icons/outtakes_orange.png' ) ?>
 				</div>
 
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--top">
-					<?= $this->Html->image( 'quickLinks/outtakes_white.png') ?>
+					<?= $this->Html->image( 'icons/outtakes_white.png') ?>
 				</div>
 			</a>
 		</div>
@@ -50,11 +50,11 @@
 		<div class="col2 crossfade-wrapper">
 			<a href="<?= $this->Html->url(array('controller' => 'celebrities', 'action' => 'viewAll'))?>">
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--bottom">
-					<?= $this->Html->image( 'quickLinks/celebs_orange.png' ) ?>
+					<?= $this->Html->image( 'icons/celebs_orange.png' ) ?>
 				</div>
 
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--top">
-					<?= $this->Html->image( 'quickLinks/celebs_white.png') ?>
+					<?= $this->Html->image( 'icons/celebs_white.png') ?>
 				</div>
 			</a>
 		</div>
@@ -62,11 +62,11 @@
 		<div class="col2 crossfade-wrapper">
 			<a href="<?= $this->Html->url(array('controller' => 'pages', 'action' => 'prizes'))?>">
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--bottom">
-					<?= $this->Html->image( 'quickLinks/win_orange.png' ) ?>
+					<?= $this->Html->image( 'icons/win_orange.png' ) ?>
 				</div>
 
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--top">
-					<?= $this->Html->image( 'quickLinks/win_white.png') ?>
+					<?= $this->Html->image( 'icons/win_white.png') ?>
 				</div>
 			</a>
 		</div>
@@ -74,11 +74,11 @@
 		<div class="col2 last crossfade-wrapper">
 			<a href="<?= $this->Html->url(array('controller' => 'pages', 'action' => 'contactUs'))?>">
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--bottom">
-					<?= $this->Html->image( 'quickLinks/contact_orange.png' ) ?>
+					<?= $this->Html->image( 'icons/contact_orange.png' ) ?>
 				</div>
 
 				<div class="crossfade-wrapper__layer crossfade-wrapper__layer--top">
-					<?= $this->Html->image( 'quickLinks/contact_white.png') ?>
+					<?= $this->Html->image( 'icons/contact_white.png') ?>
 				</div>
 			</a>
 		</div>

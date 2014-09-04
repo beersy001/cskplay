@@ -14,7 +14,7 @@
 		</div>
 
 		<script>
-			$('#video-wrapper').tubular({videoId: 'IAb-OD-5JFI'});
+			$('#video-wrapper').tubular({videoId: 'IAb-OD-5JFI', fullscreen: true});
 		</script>
 	</div>
 
