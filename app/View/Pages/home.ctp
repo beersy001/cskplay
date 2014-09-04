@@ -1,5 +1,5 @@
 <div class="grid" id="main_grid">
-	<section class="home-bg-wrapper scene__element scene__element--fadeinup">
+	<section class="[ home-bg-wrapper ]  [ scene__element scene__element--fadeinup ]  [ parallax  parallax--bg-position ]">
 		<div class="home-bg-wrapper__image-bg">
 			<div class="home_button_container" id="play_button_container">
 				<?= $this->Html->link('play',array('controller' => 'games', 'action' => 'displayGame'),array( 'id' => 'play_button', 'class' => 'main_button')) ?>

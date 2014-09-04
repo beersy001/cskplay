@@ -2,7 +2,7 @@
 
 	<script>var currentMonth = <?=$currentMonth?></script>
 
-	<div id="celeb-profile-video-wrapper" class="[ video-bg-wrapper  video-bg-wrapper--100vh ]  [ helper--minus-header-margin ]  [ scene__element  scene__element--fadeinup ]">
+	<div id="celeb-profile-video-wrapper" class="[ video-bg-wrapper  video-bg-wrapper--100vh ]  [ helper--minus-header-margin ]  [ scene__element  scene__element--fadeinup ] [ parallax  parallax--top-position ]">
 		<div class="video-bg-wrapper__overlay">
 			<div class="overlay__content-wrapper">
 				<h1 class="content-wrapper__heading"><?=$celebName?></h1>
@@ -46,7 +46,7 @@
 		</div>
 	</div>
 
-	<div class="onerow helper--no-pad parallax parallax--bg-position" style="background-image:url(/img/celebrities/<?=$celeb['Celebrity']['nameId']?>/banner.jpg)">
+	<div class="[ onerow ]  [ helper--no-pad ]  [ parallax  parallax--bg-position ]" style="background-image:url(/img/celebrities/<?=$celeb['Celebrity']['nameId']?>/banner.jpg)">
 		<div class="banner-wapper">
 			<div class="banner-wapper__text-wrapper">
 				<?= $this->Html->link('Play Now',array('controller' => 'games', 'action' => 'displayGame'),array( 'class' => 'text-wrapper__link')) ?>
