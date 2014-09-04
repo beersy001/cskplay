@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 $paragraphTextColor: rgb(220,220,220);
-$totalHeaderHeight: 135px;
+$totalHeaderHeight: 100px;
 $highlightColor: rgb(249,163,28);
 $texturedBackground: url('../img/grey_bg.jpg') repeat 0 0;
 
@@ -626,8 +626,8 @@ label a{
 
 .home-bg-wrapper{
 	width: 100%;
-	height: 100%;
-	margin-top: -135px;
+	height: 100vh;
+	margin-top: -$totalHeaderHeight;
 	overflow: hidden;
 	position: relative;
 
@@ -661,7 +661,6 @@ label a{
 	z-index: 30;
 	width: 100%;
 	height: 100px;
-	margin-bottom: 35px;
 
 	.header__logo-wrapper{
 
@@ -712,36 +711,6 @@ label a{
 		}
 	}
 
-	.header__nav-wrapper{
-		position: absolute;
-		bottom: -35px;
-		height: 35px;
-		width: 100%;
-		padding-left: 25px;
-		background: rgba(50,50,50, 0.9);
-
-		ul.nav-warpper__nar-bar{
-
-			li.nav-bar__link-wrapper{
-				float: left;
-				margin-right: 5px;
-				padding: 0  8px;
-
-				&.active-menu{
-					border-bottom: 2px solid white;
-				}
-
-				a.link-wrapper__link{
-					height: 35px;
-					font-size: 1.2em;
-					text-decoration: none;
-					vertical-align: middle;
-					display: table-cell;
-				}
-			}
-		}
-	}
-
 	.header__title-wrapper{
 		position: absolute;
 		bottom: -30px;
@@ -759,14 +728,26 @@ label a{
 
 
 /********************************************************/
-/*****      #one page van menu                      *****/
+/*****      #nav wrapper                            *****/
 /********************************************************/
-.one-page-nav-wrapper{
+.nav-wrapper{
 	position: absolute;
+	top: 100px;
 	width: 100%;
 	z-index: 100;
 	background: $texturedBackground;
 	border-bottom: 1px solid rgb(80,80,80);
+	overflow: hidden;
+
+	&.nav-wrapper--fixed{
+		position: fixed;
+		top: 0px;	
+	}
+
+	&.nav-wrapper--absolute{
+		position: absolute;
+		top: 100px;
+	}
 
 	h3{
 		position: absolute;
@@ -774,10 +755,31 @@ label a{
 		top: 15px;
 	}
 
-	.one-page-nav-wrapper__inner-wrapper{
+	.nav-wrapper__img-logo{
+		display: none;
+		position: absolute;
+		top: 50%;
+		right: 35px;
+		height: 30px;
+		width: 30px;
+		margin-top: -15px;
+	}
+
+	.nav-wrapper__text-logo{
+		display: none;
+		position: absolute;
+		right: 80px;
+		line-height: 50px;
+		font-size: 25px;
+	}
+
+	.nav-wrapper__inner-wrapper{
+		padding: 15px 18px;
 		display: table;
-		margin: auto;
-		padding: 15px 0;
+
+		&.nav-wrapper__inner-wrapper--center{
+			margin: auto;
+		}
 
 		ul{
 			list-style: none; 

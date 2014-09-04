@@ -436,7 +436,7 @@ pre {
 
 /* margin */
 .helper--minus-header-margin {
-  margin-top: -135px;
+  margin-top: -100px;
 }
 
 .helper--reduce-paragraph-margin p {
@@ -1359,8 +1359,8 @@ label a {
 
 .home-bg-wrapper {
   width: 100%;
-  height: 100%;
-  margin-top: -135px;
+  height: 100vh;
+  margin-top: -100px;
   overflow: hidden;
   position: relative;
 }
@@ -1388,7 +1388,6 @@ label a {
   z-index: 30;
   width: 100%;
   height: 100px;
-  margin-bottom: 35px;
 }
 .header .header__logo-wrapper a {
   text-decoration: none;
@@ -1428,29 +1427,6 @@ label a {
 .header .header__login-wrapper p {
   padding: 5px 0;
 }
-.header .header__nav-wrapper {
-  position: absolute;
-  bottom: -35px;
-  height: 35px;
-  width: 100%;
-  padding-left: 25px;
-  background: rgba(50, 50, 50, 0.9);
-}
-.header .header__nav-wrapper ul.nav-warpper__nar-bar li.nav-bar__link-wrapper {
-  float: left;
-  margin-right: 5px;
-  padding: 0  8px;
-}
-.header .header__nav-wrapper ul.nav-warpper__nar-bar li.nav-bar__link-wrapper.active-menu {
-  border-bottom: 2px solid white;
-}
-.header .header__nav-wrapper ul.nav-warpper__nar-bar li.nav-bar__link-wrapper a.link-wrapper__link {
-  height: 35px;
-  font-size: 1.2em;
-  text-decoration: none;
-  vertical-align: middle;
-  display: table-cell;
-}
 .header .header__title-wrapper {
   position: absolute;
   bottom: -30px;
@@ -1463,32 +1439,60 @@ label a {
 }
 
 /********************************************************/
-/*****      #one page van menu                      *****/
+/*****      #nav wrapper                            *****/
 /********************************************************/
-.one-page-nav-wrapper {
+.nav-wrapper {
   position: absolute;
+  top: 100px;
   width: 100%;
   z-index: 100;
   background: url("../img/grey_bg.jpg") repeat 0 0;
   border-bottom: 1px solid #505050;
+  overflow: hidden;
 }
-.one-page-nav-wrapper h3 {
+.nav-wrapper.nav-wrapper--fixed {
+  position: fixed;
+  top: 0px;
+}
+.nav-wrapper.nav-wrapper--absolute {
+  position: absolute;
+  top: 100px;
+}
+.nav-wrapper h3 {
   position: absolute;
   left: 15px;
   top: 15px;
 }
-.one-page-nav-wrapper .one-page-nav-wrapper__inner-wrapper {
-  display: table;
-  margin: auto;
-  padding: 15px 0;
+.nav-wrapper .nav-wrapper__img-logo {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  height: 30px;
+  width: 30px;
+  margin-top: -15px;
 }
-.one-page-nav-wrapper .one-page-nav-wrapper__inner-wrapper ul {
+.nav-wrapper .nav-wrapper__text-logo {
+  display: none;
+  position: absolute;
+  right: 80px;
+  line-height: 50px;
+  font-size: 25px;
+}
+.nav-wrapper .nav-wrapper__inner-wrapper {
+  padding: 15px 18px;
+  display: table;
+}
+.nav-wrapper .nav-wrapper__inner-wrapper.nav-wrapper__inner-wrapper--center {
+  margin: auto;
+}
+.nav-wrapper .nav-wrapper__inner-wrapper ul {
   list-style: none;
 }
-.one-page-nav-wrapper .one-page-nav-wrapper__inner-wrapper ul li {
+.nav-wrapper .nav-wrapper__inner-wrapper ul li {
   display: inline;
 }
-.one-page-nav-wrapper .one-page-nav-wrapper__inner-wrapper ul li a {
+.nav-wrapper .nav-wrapper__inner-wrapper ul li a {
   padding: 10px;
   text-decoration: none;
   font-size: 20px;

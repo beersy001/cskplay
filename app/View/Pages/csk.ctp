@@ -18,9 +18,9 @@
 		</script>
 	</div>
 
-	<div class="[ one-page-nav-wrapper ]  [ js-fix-to-top ]">
+	<div class="[ nav-wrapper ]  [ js-fix-to-top ]">
 		<h3 class="helper--highlight-text">about celebrity spot kick</h3>
-		<div class="[ one-page-nav-wrapper__inner-wrapper ]">
+		<div class="[ nav-wrapper__inner-wrapper  nav-wrapper__inner-wrapper--center ]">
 			<ul>
 				<li>
 					<a href="#header-wrapper">top</a>

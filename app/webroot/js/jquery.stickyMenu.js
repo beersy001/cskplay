@@ -12,18 +12,30 @@
 		var $anchor = $(options.anchorElement);
 		var stickyMenuOffset = $stickyMenuWrapper.offset();
 
-		$(window).scroll(function() {
+		rePositionMenu();	
 
-
-			var anchorPosition = $anchor.position();
-
-			if($(window).scrollTop() > stickyMenuOffset.top){
-				$stickyMenuWrapper.css("position", "fixed");
-				$stickyMenuWrapper.css("top", "0px");
-			}else{
-				$stickyMenuWrapper.css("position", "absolute");
-				$stickyMenuWrapper.css("top", anchorPosition.top + "px");
-			}
+		$( window ).scroll(function() {
+			rePositionMenu();			
 		})
+
+		function rePositionMenu(){
+			var anchorPosition = $anchor.position();			
+
+			if($(window).scrollTop() > stickyMenuOffset.top && !$stickyMenuWrapper.hasClass( "nav-wrapper--fixed" )){
+
+				$stickyMenuWrapper.addClass( "nav-wrapper--fixed" );
+				$stickyMenuWrapper.removeClass( "nav-wrapper--absolute" );
+				$stickyMenuWrapper.css("top", "0px");
+				//$(".nav-wrapper__img-logo, .nav-wrapper__text-logo").slideToggle();
+
+			}else if($(window).scrollTop() <= stickyMenuOffset.top && !$stickyMenuWrapper.hasClass( "nav-wrapper--absolute" )){
+
+				$stickyMenuWrapper.addClass( "nav-wrapper--absolute" );
+				$stickyMenuWrapper.removeClass( "nav-wrapper--fixed" );
+				$stickyMenuWrapper.css("top", anchorPosition.top + "px");
+				//$(".nav-wrapper__img-logo, .nav-wrapper__text-logo").slideToggle();
+
+			}	
+		}
 	};
 })(jQuery);

@@ -3,11 +3,11 @@
 	<div class="header__logo-wrapper">
 		<a href="<?=$this->Html->url(array('controller' => 'pages', 'action' => 'home'));?>">
 			<?= $this->Html->image( 'logo_orange.png', array('class' => 'logo-wrapper__img') ) ?>
-			<h1 class="logo-wrapper__text dark_background"> CELEBRITY SP<span class="helper--highlight-text">O</span>T KICK</h1>
+			<h1 class="logo-wrapper__text "> CELEBRITY SP<span class="helper--highlight-text">O</span>T KICK</h1>
 		</a>
 	</div>
 
-	<div class="header__login-wrapper helper--desktop-tablet-only">
+	<div class="[ header__login-wrapper ]  [ helper--desktop-tablet-only ]">
 		<?php
 			if(!$authUser){
 				echo $this->Html->link('login', array('controller'=>'Users', 'action'=>'login'),array('class' => 'cta cta--100px' ));
@@ -28,9 +28,11 @@
 		?>
 	</div>
 
-	<i class="header__hamburger-icon fa fa-bars helper--mobile-only helper--font-color"></i>
+	<i class="[ header__hamburger-icon ]  [ fa fa-bars ]  [ helper--mobile-only  helper--font-color ]"></i>
 
-	<div class="header__nav-wrapper ">
+	<div class="[ header__nav-wrapper  nav-wrapper ]">
+		<span class="[ nav-wrapper__text-logo ]">CELEBRITY SP<span class="[ helper--highlight-text ]">O</span>T KICK</span>
+		<?= $this->Html->image( 'logo_orange.png', array('class' => '[ nav-wrapper__img-logo ]') ) ?>
 		<?= $this->element('simple_nav_bar'); ?>
 	</div>
 

@@ -24,8 +24,6 @@ window.onload = function() {
 };
 
 
-
-
 function pageScripts(){
 
 	var pageId = this.location.pathname.match(/(\/)((?:[A-z][A-z0-9_]*))(\/)((?:[A-z][A-z]+))/)[0].toLowerCase().trim();
@@ -34,7 +32,11 @@ function pageScripts(){
 	var md = new MobileDetect(window.navigator.userAgent);
 	var mobile = md.mobile();
 
-	$('a[href*=#]:not([href=#])').click(function() {
+	
+	$(".header__nav-wrapper").stickyMenu({anchorElement : ".grid"});
+
+
+	$('a[href*=#]:not([href=#])').click(function(event) {
 		event.preventDefault();
 		smoothScroll(this, location);
 	});
