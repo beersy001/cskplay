@@ -34,11 +34,10 @@ class GamesController extends AppController {
 	}
 
 	public function displayGame() {
-
-
-
 		$this->set('title_for_page', 'CSK - play now');
 		$this->set('pageId', 'gamesDisplayGame');
+
+		CakeLog::write('debug', "GamesController - displayGame() - session selections: " . print_r($this->Session->read('selections'), true));
 
 		$currentCompetition = $this->Game->getCurrentCompetition();
 
@@ -56,9 +55,7 @@ class GamesController extends AppController {
 			$this->set('realMonth', strtolower(DateTime::createFromFormat('!Ym', $month)->format('F')));
 
 			//$results = $this->GameBall->getUsersResults($username,date('Ym'));
-			
 
-			//$this->set('results', $results);
 			$this->set('currentCompetition', $currentCompetition);
 		}else{
 			$this->render('noGame');
@@ -121,8 +118,12 @@ class GamesController extends AppController {
 
 				$this->Session->write('selections', $updatedSelections);
 				$this->Session->write('totalPrice', $price);
+
+
 			}
 		}
+
+		CakeLog::write('debug', "GamesController - basket() - session selections: " . print_r($this->Session->read('selections'), true));
 		
 		if(!$this->Auth->user()){
 			$this->Session->write('basketRedirect', true);

@@ -83,6 +83,7 @@ function pageScripts(){
 				findMouseWithinLoupe(event,date);
 			})
 			.on("click", ".cancel-btn", function(event) {
+				console.log("cancel: " + $(this).data("gameballid"));
 				removeGameball($(this).data("gameballid"));
 			});	
 	}

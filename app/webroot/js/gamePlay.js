@@ -1,3 +1,8 @@
+$(window).load(function() {
+	selectionId = $("#selections-form").data("count");
+});
+
+
 var frontView = "front view";
 var rearView = "rear view";
 var permanentlyShowGameBalls = false;
@@ -9,10 +14,13 @@ var playMode = true;
 var viewMode = "none";
 var compertitionMode = true;
 
-var selectionId = 0;
 var previousSelection = 0;
 var numberOfBallsPlayed = 0;
 var allGameballs = [];
+var selectionId = 0;
+
+
+
 
 function addGameballToArray(gameball){
 
@@ -28,20 +36,20 @@ function addGameballToArray(gameball){
 
 function removeGameball(gameballId){
 
-	for (var i = 0; i < allGameballs.length; i++) {
-		if(allGameballs[i].id == gameballId){
+	//for (var i = 0; i < 30.length; i++) {
+		//if(allGameballs[i].id == gameballId){
 
 			$("#input-row--" + gameballId).remove();
 			$("#single_crosshair_" + gameballId).remove();
 			$("#loupe_crosshair_" + gameballId).remove();
 
-			 calculateDiscount();
+			calculateDiscount();
 
 			numberOfBallsPlayed--;
 			previousSelection--;
 			return true;
-		};
-	};
+		//};
+	//};
 }
 
 function calculateDiscount(){
@@ -95,7 +103,7 @@ function registerSelectClick(event,date) {
 		loupeCrosshairId: "loupe_crosshair_" + selectionId,
 		mainContainerId: mainContainerId,
 		mainCrosshairId: "single_crosshair_" + selectionId
-	};	
+	};
 	
 	if(addGameballToArray(gameball)){
 
@@ -268,36 +276,34 @@ function toggleInLayImageOut(){
 };
 
 function swapGameImage(){
-
-
 	if(document.getElementById("mainImage").style.display != "none"){
 
 		playMode = false;
-		document.getElementById("game_image_main_inlay").src = "/" + rootDir + "/img/gameImages/" + date + "/front_small.jpg";
+		document.getElementById("game_image_main_inlay").src = "/img/gameImages/" + date + "/front_small.jpg";
 		document.getElementById("mainImage").style.display = "none";
 		document.getElementById("game_image_alt").style.display = "inline";
 		$( "#toggle_selection_view_button" ).css( "color", "rgb(89,89,91)");
 
-	if(document.contains(document.getElementById("single_crosshair"))){
-			document.getElementById("single_crosshair").style.display = "none";
-		}
+		$( ".crosshair" ).toggle()
+
 		if(permanentlyShowGameBalls == true && tempHideGameBalls == false){
-			$( ".crosshairs" ).css( "display", "none" );
+			
+			$( ".crosshair" ).toggle();
 			tempHideGameBalls = true;
 		}
 	}else{
 		playMode = true;
-		document.getElementById("game_image_main_inlay").src = "/" + rootDir + "/img/gameImages/" + date + "/rear_small.jpg";
+		document.getElementById("game_image_main_inlay").src = "/img/gameImages/" + date + "/rear_small.jpg";
 		document.getElementById("mainImage").style.display = "inline";
 		document.getElementById("game_image_alt").style.display = "none";
-		if(playMode == true){
-			$( "#toggle_selection_view_button" ).css( "color", "rgb(255,255,255)");
-		}
-		if(document.contains(document.getElementById("single_crosshair"))){
-			document.getElementById("single_crosshair").style.display = "block";
-		}
+
+		
+		$( ".crosshair" ).toggle()
+
+
 		if(permanentlyShowGameBalls == true && tempHideGameBalls == true){
-			$( ".crosshairs" ).css( "display", "block" );
+			
+			$( ".crosshair" ).toggle();
 			tempHideGameBalls = false;
 		}
 	}
@@ -319,14 +325,14 @@ function changeSelectionIconBack(elem,date){
 
 function showOverlay(){
 	if(playMode == true){
-		$( ".crosshairs" ).css( "display", "block" );
+			$( ".crosshair" ).toggle();
 	}
 }
 
 function hideOvelay(){
 	if(playMode == true){
 		if(permanentlyShowGameBalls == false){
-			$( ".crosshairs" ).css( "display", "none" );
+			$( ".crosshair" ).toggle();
 		}
 	}
 }

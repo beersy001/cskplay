@@ -1,10 +1,14 @@
-<div id="selections-form-wrapper">
+<?php 
+$selections = $this->Session->read( 'selections');
+?>
+<div id="selections-form-wrapper" data-count="<?=sizeof($selections);?>">
 
 	<?= $this->Form->create('Game', array(
 		'controller'=>'Games',
 		'action' => 'basket',
 		'id' => 'selections-form',
 		'class' => 'float-form',
+		'data-count' => sizeof($selections),
 		'inputDefaults' => array(
 			'label' => false,
 			'div' => false
@@ -17,12 +21,31 @@
 				<label>X Coordinate</label>
 				<label>Price</label>
 			</li>
-			<li id="selections-form__blank-input">
-				<input readonly disabled>
-				<input readonly disabled>
-				<input readonly disabled>
-				<i class="cancel-btn fa fa-times helper--font-color" id="0_cancel-btn" data-gameballid="0"></i>
-			</li>
+			<?php
+			$count = 0;
+			if( isset( $selections ) ) {
+				foreach ($this->Session->read( 'selections') as $key => $selection) {
+			?>
+					<li id="input-row--<?=$count;?>">
+						<input name="Selection[<?=$count;?>][x]" id="<?=$count;?>_x_input" readonly disabled value="<?=$selection['x'];?>">
+						<input name="Selection[<?=$count;?>][x]" id="<?=$count;?>_x_input" readonly disabled value="<?=$selection['y'];?>">
+						<input id="<?=$count;?>_price" class="price-input" readonly disabled value="<?=$selection['price'];?>">
+						<i class="cancel-btn fa fa-times helper--font-color" id="<?=$count;?>_cancel-btn" data-gameballid="<?=$count;?>"></i>
+					</li>
+			<?php
+					$count++;
+				}
+			}else{
+			?>
+				<li id="selections-form__blank-input">
+					<input readonly disabled>
+					<input readonly disabled>
+					<input readonly disabled>
+					<i class="cancel-btn fa fa-times helper--font-color" id="0_cancel-btn" data-gameballid="0"></i>
+				</li>
+			<?php
+		}
+		?>
 		</ul>
 
 		<p>Total Price: <span id="total-price">£0</span></p>
