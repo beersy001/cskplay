@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 $paragraphTextColor: rgb(220,220,220);
-$totalHeaderHeight: 100px;
+$totalHeaderHeight: 150px;
 $highlightColor: rgb(249,163,28);
 $texturedBackground: url('../img/grey_bg.jpg') repeat 0 0;
 
@@ -849,6 +849,7 @@ label a{
 	padding: 5px 0;
 	display: inline-block;
 	cursor: pointer;
+	color: white;
 	@include noUserSelect();
 
 	&.cta--highlight{
@@ -1312,7 +1313,6 @@ label a{
 
 #game-img-wrapper{
 	position: relative;
-	margin-top: 15px;
 }
 
 #game_image_alt{

@@ -1,13 +1,9 @@
 <?php $imageSize = getimagesize('img/gameImages/'. $month . '/front_large.jpg'); ?>
 
 <div id="loupe_teams_slider" class="loupe_slider">
-
 	<p>Your gameball has been added to the basket.</p>
-
 	<a id="cancel_link" class="cta cta--100pc cta--highlight" onclick="$('#selections-form').submit();">go to checkout</a>
 	<a id="cancel_link" class="cta cta--100pc" onclick="removeGameball()">remove gameball</a>
-
-
 </div>
 
 
@@ -19,12 +15,11 @@
 		if(isset($results)){
 			foreach ($results as $id => $element) {
 
-				$xPos = $element['GameBall']['x'] - 21;
-				$yPos = $element['GameBall']['y'] - 21;
+				$xPos = $element['GameBall']['x'] - 7.5;
+				$yPos = $element['GameBall']['y'] - 7.5;
 
 				echo $this->Html->image( 'logo_white.png', array('class'=>'crosshair','id' => 'unselected_' . $id . '_' . $month . '_loupe', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px" ) );
 				echo $this->Html->image( 'logo_orange.png', array('class'=>'crosshair','id' => 'selected_' . $id . '_' . $month . '_loupe', 'style' => 'left:' . $xPos . "px; top: " . $yPos . "px; display: none" ) );
-				echo '<span id="span_' . $id . '_' . $month . '_loupe" style="left:' . $xPos . "px; top: " . $yPos . 'px">' . $element['GameBall']['team'] . '</span>';
 			}
 
 			if(isset($gameHasEnded) && $gameHasEnded){

@@ -156,7 +156,7 @@ class UsersController extends AppController {
 				}
 
 				$this->Session->setFlash('user created, please login' ,'default', array('class'=>'small_orange_flash'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'login'));
 			}
 
 			if(isset($this->request->data['User']['password']) && $this->request->data['User']['password'] != ""){
@@ -236,14 +236,14 @@ class UsersController extends AppController {
 		$currentUser = $this->User->find('first', array('conditions' => array('id' => $username)));
 		$numberOfBallsPlayed = $this->GameBall->getNumberOfBallsPlayed($username,  date('Ym'));
 		$numberOfBallsRemaining = $this->User->getNumberOfAttemptsRemaining($username);
-		$distinctMonths = $this->GameBall->getDistinctMonths($username);
+		$usersPreviousGames = $this->GameBall->getDistinctMonths($username);
 		$allGames = $this->Game->find('all');
 
 		foreach ($allGames as $id => $singleGame) {
 			$sortedGames[$singleGame['Game']['month']] = $singleGame;
 		}
 		
-		$this->set('distinctMonths', $distinctMonths);
+		$this->set('usersPreviousGames', $usersPreviousGames);
 		$this->set('currentUser', $currentUser );
 		$this->set('ballsRemaining', $numberOfBallsRemaining );
 		$this->set('ballsPlayed', $numberOfBallsPlayed );

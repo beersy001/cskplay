@@ -4,21 +4,26 @@
 	</div>
 
 	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]">
-		<div class="col12">
-			<h1><?=$realDate?> - your selections</h1>
-			<a href="<?=$this->Html->url(array('controller'=>'Users', 'action'=>'accountAdmin'))?>">back to my account</a>
+		<div class="col9">
+			<h1><?=$realDate?> - <?=$celebrityName;?></h1>
+			<h2 class="helper--highlight-text">Your Gameballs</h2>
+		</div>
+		<div class="col3 last">
+			<a class="[ cta  cta--100pc ]" href="<?=$this->Html->url(array('controller'=>'Users', 'action'=>'accountAdmin'))?>">back to my account</a>
+			<?php if(!$game['Game']['ended']){ ?>
+				<a class="[ cta  cta--100pc  cta--highlight ]" href="<?=$this->Html->url(array('controller'=>'Games', 'action'=>'displayGame'))?>">play again!</a>
+			<?php } ?>
 		</div>
 	</div>
 
 	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]  [ alt-background ]">
 		<div class="col4">
-			<h2 class="border_bottom large_indent">game details</h2>
-			<div class="large_indent text_info">
+			<h2>game details</h2>
+			<div class="text_info">
 				<p>game month <span class="large_text"><?=$realDate?></span></p>
 				<p>celebrity <span class="large_text"><?=$celebrityName?></span></p>
-				<p>charity <span class="large_text"><?=$charityName?></span></p>
 				<p>total # of gameballs played <span class="large_text"><?=$numberOfBallsPlayed?></span></p>
-			<?php if(!$gameHasEnded){
+			<?php if(!$game['Game']['ended']){
 			}else{
 				echo '<p>winning coordinates <span class="large_text">x ' . $winningX . ' y ' . $winningY . '</span></p>';
 				echo '<p>closest gameball <span class="large_text">#' . $closestResult['GameBall']['gameballNumber'] . '</span></p>';
@@ -34,7 +39,7 @@
 	</div>
 
 	<?php
-	if($gameHasEnded){
+	if($game['Game']['ended']){
 	?>
 		<div class="onerow">
 			<div class="col12">
@@ -131,9 +136,9 @@
 		</div>
 	<?php
 	}
-	if (sizeof($distinctMonths) > 0) {
+	if (sizeof($usersPreviousGames) > 0) {
 	?>
-		<div class="[ onerow ]  [ alt-background ]  [ scene__element  scene__element--fadeinup ]">
+		<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]">
 			<div class="col12">
 				<?=$this->element('gameballs/months_played');?>
 			</div>

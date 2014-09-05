@@ -197,7 +197,7 @@ class GameBallsController extends AppController{
 		$celebrity				= $this->Celebrity->getCelebrityByMonth($requestedMonth);
 		$numberOfBallsPlayed	= $this->GameBall->getNumberOfBallsPlayed($username, $requestedMonth);
 		$results				= $this->GameBall->getUsersResults($username,$requestedMonth);
-		$distinctMonths			= $this->GameBall->getDistinctMonths($username);
+		$usersPreviousGames		= $this->GameBall->getDistinctMonths($username);
 		$game 					= $this->Game->getGameByMonth($requestedMonth);
 		$allGames				= $this->Game->find('all');
 
@@ -253,16 +253,15 @@ class GameBallsController extends AppController{
 			$game['Game']['ended'] = false;
 		}
 
-		$this->set('distinctMonths', $distinctMonths);
+		$this->set('usersPreviousGames', $usersPreviousGames);
 		$this->set('username', $username);
 		//$this->set('gameBallsLeft', $user['User']['gameBallsLeft']);
-		$this->set('gameHasEnded', $game['Game']['ended']);
+		$this->set('game', $game);
 		$this->set('results', $results);
 		$this->set('numberOfBallsPlayed', $numberOfBallsPlayed );
 		$this->set('month', $requestedMonth);
-		$this->set('celebrityName', strtolower($celebrity['Celebrity']['firstName'] . ' ' . $celebrity['Celebrity']['surname']));
-		$this->set('charityName', strtolower($celebrity['Celebrity']['charity']));
-		$this->set('realDate', strtolower(date("F Y", strtotime(substr($requestedMonth, 0, 4 ). '-' . substr($requestedMonth, 4,5)))));
+		$this->set('celebrityName', $celebrity['Celebrity']['firstName'] . ' ' . $celebrity['Celebrity']['surname']);
+		$this->set('realDate', date("F Y", strtotime(substr($requestedMonth, 0, 4 ). '-' . substr($requestedMonth, 4,5))));
 		$this->set('allGames', $sortedGames);
 		$this->set('typeOfGame', 'competition');
 		

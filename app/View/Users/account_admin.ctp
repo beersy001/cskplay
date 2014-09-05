@@ -1,9 +1,5 @@
 <?php
 App::uses('Debugger', 'Utility');
-
-$this->Html->script( "moveUserSelections", array("inline"=>false));
-$this->Html->script( "gamePlay", array("inline"=>false));
-
 $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? true : false ;
 ?>
 
@@ -63,10 +59,22 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 
 <div class="grid" id="main_grid">
 
+	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]  [ alt-background ]" id="my_account_container">
+		<div class="[ col9 ]">
+			<h1>Your Account</h1>
+			<h2 class="[ helper--highlight-text ]">edit your details and view your Gameballs</h2>
+		</div>
+
+		<div class="[ col3  last ]">
+			<a class="[ cta  cta--100pc  cta--highlight ]" href="<?=$this->Html->url(array('controller'=>'games', 'action'=>'displayGame'))?>">Play Now!</a>
+		</div>
+	</div>
+
+
+
 	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]" id="my_account_container">
 
-		<div class="col6">
-			<p class="mock_link">edit</p>
+		<div class="col9">
 			<h2>my details</h2>
 			<div class="text_info">
 				<?php
@@ -100,15 +108,9 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 						echo '<p>phone number <span class="large_text">' . $phoneNumberOne . '</span></p>';
 					}
 
-					if(!empty($phoneNumberTwo)){
-						echo '<p>phone number <span class="large_text">' . $phoneNumberTwo . '</span></p>';
-					}
-
 					if(isset($region)){
 						echo '<p>region <span class="large_text">' . $region . '</span></p>';
 					}
-
-					echo '<p>gameballs remaining <span class="large_text">'. $currentUser['User']['gameBallsLeft'] .'</span></p>';
 
 					if(!$completeProfile){
 					}
@@ -117,10 +119,14 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 
 			</div>
 		</div>
+
+		<div class="[ col3  last ]">
+			<p class="[ cta  cta--100pc ]" href="<?=$this->Html->url(array('controller'=>'games', 'action'=>'displayGame'))?>">edit details</a>
+		</div>
 	</div>
 
 	<?php
-	if (sizeof($distinctMonths) > 0) {
+	if (sizeof($usersPreviousGames) > 0) {
 	?>
 		<div class="[ onerow ]  [ alt-background ]  [ scene__element  scene__element--fadeinup ]">
 			<div class="col12">

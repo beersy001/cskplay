@@ -1,8 +1,9 @@
 <div id="thumbnail_container">
 	<?php
-	krsort($distinctMonths);
-	foreach($distinctMonths as $month){
+	krsort($usersPreviousGames);
+	foreach($usersPreviousGames as $month){
 	?>
+
 
 		<div class="crossfade-wrapper crossfade-wrapper--width200">
 			<a href="<?= $this->Html->url(array('controller' => 'gameballs', 'action' => 'myGameballs', 'month' => $month))?>">
