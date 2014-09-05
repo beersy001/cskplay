@@ -61,23 +61,23 @@ class User extends AppModel{
 
 	public $validate = array(
 		'firstName' => array(
-			'rule' => 'notempty',
+			'rule' => 'notEmpty',
 			'required' => true
 		),
 
 		'surname' => array(
-			'rule' => 'notempty',
+			'rule' => 'notEmpty',
 			'required' => true
 		),
 		
 		'username' => array(
-			'rule' => 'notempty',
+			'rule' => 'notEmpty',
 			'required' => true
 		),
 
 		'emailAddress' => array(
 			'rule1' => array(
-				'rule' => 'notempty',
+				'rule' => 'notEmpty',
 				'message' => 'This field cannot be left blank',
 				'required' => true
 			),
@@ -95,30 +95,30 @@ class User extends AppModel{
 				'required' => true
 			),
 			'rule2' => array(
-				'rule' => 'notempty',
+				'rule' => 'notEmpty',
 				'message' => 'This field cannot be left blank',
 				'required' => true
 			)
 		),
 
 		'password' => array(
-			'rule' => 'notempty',
+			'rule' => 'notEmpty',
 			'required' => true
 		),
 
 		'passwordVerify' => array(
-			'rule' => 'notempty',
+			'rule' => 'notEmpty',
 			'required' => true
 		),
-/*
+
 		'dateOfBirth' => array(
-			'rule' => 'notempty',
+			'rule' => 'notEmpty',
 			'required' => true,
 			'message' => 'This field cannot be left blank',
 		),
-*/
+
 		'region' => array(
-			'rule' => 'notempty',
+			'rule' => 'notEmpty',
 			'required' => true
 		)
 		
