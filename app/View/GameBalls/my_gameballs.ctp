@@ -10,7 +10,7 @@
 		</div>
 	</div>
 
-	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]">
+	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]  [ alt-background ]">
 		<div class="col4">
 			<h2 class="border_bottom large_indent">game details</h2>
 			<div class="large_indent text_info">

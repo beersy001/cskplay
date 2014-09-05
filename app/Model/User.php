@@ -74,7 +74,7 @@ class User extends AppModel{
 			'rule' => 'notempty',
 			'required' => true
 		),
-/*
+
 		'emailAddress' => array(
 			'rule1' => array(
 				'rule' => 'notempty',
@@ -100,24 +100,28 @@ class User extends AppModel{
 				'required' => true
 			)
 		),
-*/
+
 		'password' => array(
-			'rule' => 'notempty'
+			'rule' => 'notempty',
+			'required' => true
 		),
 
 		'passwordVerify' => array(
-			'rule' => 'notempty'
-		),
-
-		'dayOfBirth' => array(
-			'rule' => 'notempty',	
+			'rule' => 'notempty',
 			'required' => true
 		),
-
+/*
+		'dateOfBirth' => array(
+			'rule' => 'notempty',
+			'required' => true,
+			'message' => 'This field cannot be left blank',
+		),
+*/
 		'region' => array(
-			'rule' => 'notempty',	
+			'rule' => 'notempty',
 			'required' => true
 		)
+		
 	);
 }
 

@@ -9,7 +9,8 @@
 	<div class="onerow">
 
 		<div class="colcenter40 scene__element scene__element--fadeinup">
-			<h1 class="helper--center-align">register</h1>	
+			<h1 class="helper--center-align">register</h1>
+			<p class="helper--center-align">all fields are required</p>
 
 			<?= $this->Form->create('User', array(
 				'controller'=>'Users',
@@ -52,15 +53,15 @@
 					<?= $this->Form->input('passwordVerify', array('type'=>'password')); ?>
 				</li>
 				<li>
-					<?= $this->Form->label('User.dayOfBirth', 'date of birth',array('class' => 'helper--clearfix')); ?>
+					<?= $this->Form->label('User.dateOfBirth', 'date of birth',array('class' => 'helper--clearfix')); ?>
 					<div class="select-wrapper select-wrapper--third">
-						<?= $this->Form->day('dayOfBirth', array('class'=>'date-of-birth', 'empty' => 'day')); ?>
+						<?= $this->Form->day('dateOfBirth', array('class'=>'date-of-birth', 'empty' => 'day')); ?>
 					</div>
 					<div class="select-wrapper select-wrapper--third">
-						<?= $this->Form->month('monthOfBirth', array('class'=>'date-of-birth','empty' => 'month')); ?>
+						<?= $this->Form->month('dateOfBirth', array('class'=>'date-of-birth','empty' => 'month')); ?>
 					</div>
 					<div class="select-wrapper select-wrapper--third">
-						<?= $this->Form->year('yearOfBirth','2014','1901', array('class'=>'date-of-birth','empty' => 'year')); ?>
+						<?= $this->Form->year('dateOfBirth','2014','1901', array('class'=>'date-of-birth','empty' => 'year')); ?>
 					</div>
 				</li>
 				<li>

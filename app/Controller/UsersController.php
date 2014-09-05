@@ -93,7 +93,6 @@ class UsersController extends AppController {
 						'emailAddress' => $facebookUser['email'],
 						'facebook' => true,
 						'completeProfile' => false,
-						'gameBallsLeft' => 0,
 						'role' => 'user'
 					);
 					
@@ -120,10 +119,7 @@ class UsersController extends AppController {
 	 *		Add												*
 	 ********************************************************/
 	public function add() {
-
-
-
-		$this->set('title_for_page', 'register');
+		$this->set('title_for_page', 'csk - register');
 		$this->set('pageId', 'register');
 
 		if($this->Auth->loggedIn()){
@@ -132,23 +128,21 @@ class UsersController extends AppController {
 
 		if ($this->request->is('post')) {
 
+			CakeLog::write('debug', "UserssController - add() - post data: " . print_r($this->request->data, true));
 
-			if(isset($this->request->data['User']['password'])){
+			if(isset($this->request->data['User']['password']) && $this->request->data['User']['password'] != ""){
 				$this->request->data['User']['password'] = AuthComponent::password($this->request->data['User']['password']);
+				$this->request->data['User']['passwordVerify'] = AuthComponent::password($this->request->data['User']['password']);
 			}
+			
 
-			$dateOfBirth = $this->request->data['User']['dayOfBirth']['day'] . '/' . $this->request->data['User']['monthOfBirth']['month'] . '/' . $this->request->data['User']['yearOfBirth']['year'];
+			$dateOfBirth = $this->request->data['User']['dateOfBirth']['day'] . '/' . $this->request->data['User']['dateOfBirth']['month'] . '/' . $this->request->data['User']['dateOfBirth']['year'];
 
 			$this->request->data['User']['_id'] = $this->request->data['User']['username'];
 			$this->request->data['User']['facebook'] = false;
-			$this->request->data['User']['gameBallsLeft'] = 0;
 			$this->request->data['User']['role'] = 'user';
 			$this->request->data['User']['completeProfile'] = true;
 			$this->request->data['User']['dateOfBirth'] = $dateOfBirth;
-
-			unset($this->request->data['User']['dayOfBirth']);
-			unset($this->request->data['User']['monthOfBirth']);
-			unset($this->request->data['User']['yearOfBirth']);
 
 			$this->User->create();
 
@@ -158,17 +152,19 @@ class UsersController extends AppController {
 				if( $this->Session->read('basketRedirect') ) {
 					
 					$this->Auth->login($this->request->data['User']);
-					$this->redirect(array('controller' => 'games' , 'action' => 'basket'));
-
+					$this->redirect(array('contorller' => 'games' , 'action' => 'basket'));
 				}
-
-				
 
 				$this->Session->setFlash('user created, please login' ,'default', array('class'=>'small_orange_flash'));
 				$this->redirect(array('action' => 'index'));
 			}
-			
+
+			if(isset($this->request->data['User']['password']) && $this->request->data['User']['password'] != ""){
+				$this->request->data['User']['password'] = null;
+				$this->request->data['User']['passwordVerify'] = null;
+			}
 		}
+
 	}
 
 	/********************************************************
