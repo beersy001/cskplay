@@ -1,13 +1,4 @@
 <script>
-/*
-	$(document).ready(function() {
-
-		$(".faq_container").click( function(event) {		
-			$(".faq_container").css("max-height","100px");
-
-		});
-	});
-*/
 	function openFAQ(id){
 
 		console.log($("#" + id).css("max-height"));
@@ -20,7 +11,6 @@
 			$("#" + id).css("background","transparent");
 		}
 	}
-
 </script>
 
 <div class="grid" id="main_grid">
@@ -70,8 +60,8 @@
 				break;
 		}
 
-		echo $this->Html->image( 'quickLinks/' . $image . '.png', array('class'=> $class, 'align'=>'left') );
-		echo '<h2 class="large_indent border_bottom">' . $categoryId . '</h2>';
+		echo $this->Html->image( 'icons/' . $image . '.png', array('class'=> $class, 'align'=>'left') );
+		echo '<h2>' . $categoryId . '</h2>';
 
 		foreach ( $category as $id => $question ) { ?>
 			
@@ -97,9 +87,7 @@
 	}
 	?>
 
-	<div class="onerow margin_bottom">
+	<div class="onerow ">
 	</div>
 
 </div>
-
-<?= $this->element('quick_links'); ?>

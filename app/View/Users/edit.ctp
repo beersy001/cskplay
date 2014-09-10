@@ -1,26 +1,42 @@
 <?php
 	echo $this->Session->flash(); 
 	echo '<script>var date = "' . date('Ym') . '"</script>';
-
 	$this->Html->script( "registrationValidation", array("inline"=>false));
 ?>
 
 <div class="grid" id="main_grid">
-	<div class="onerow">
 
-		<div class="colcenter40 scene__element scene__element--fadeinup">
-			<h1 class="helper--center-align">register</h1>
+	<div class="[ onerow  ]  [ scene__element  scene__element--fadeinup ]">
+		<div class="[ col3 ]">&nbsp</div>
+		<div class="[ col6 ]">
+			<h1 class="helper--center-align">edit your details</h1>
 			<p class="helper--center-align">all fields are required</p>
+		</div>
+		<div class="[ col3  last ]  [ cta-wrapper ]">
+			<a class="[ cta  cta--100pc  cta--highlight ]" href="<?=$this->Html->url(array('controller'=>'users', 'action'=>'accountAdmin'))?>">back to your account</a>
+			<a class="[ cta  cta--100pc ]" href="<?=$this->Html->url(array('controller'=>'users', 'action'=>'editPassword'))?>">change your password</a>
+		</div>
+	</div>
 
+	<div class="[ onerow  onerow--reduce-40pc ]  [ scene__element  scene__element--fadeinup ]  [ alt-background ]">
+		
+		<div class="[ col12 ]">
 			<?= $this->Form->create('User', array(
 				'controller'=>'Users',
-				'action' => 'add',
+				'action' => 'edit',
 				'novalidate' => true,
 				'inputDefaults' => array(
 					'label' => false,
 					'div' => false
 					)
-				)); ?>
+				));
+
+				echo $this->Form->input('id', array(
+					'type' => 'hidden',
+					'value' => AuthComponent::user('id')
+				));
+
+				?>
 			<ul>
 				<li>
 					<div class="half-wrapper">
@@ -33,10 +49,6 @@
 					</div>
 				</li>
 				<li>
-					<?= $this->Form->label('User.username', 'username'); ?>
-					<?= $this->Form->input('username'); ?>
-				</li>
-				<li>
 					<?= $this->Form->label('User.emailAddress', 'email address'); ?>
 					<?= $this->Form->input('emailAddress'); ?>
 				</li>
@@ -45,15 +57,7 @@
 					<?= $this->Form->input('contactNumber'); ?>
 				</li>
 				<li>
-					<?= $this->Form->label('User.password', 'password'); ?>
-					<?= $this->Form->input('password', array('type'=>'password')); ?>
-				</li>
-				<li>
-					<?= $this->Form->label('User.password2', 'verify password'); ?>
-					<?= $this->Form->input('password2', array('type'=>'password')); ?>
-				</li>
-				<li>
-					<?= $this->Form->label('User.dateOfBirth', 'date of birth', array('class' => 'helper--clearfix' )); ?>
+					<?= $this->Form->label('User.dateOfBirth', 'date of birth', array('class'=>'helper--clearfix')); ?>
 					<div class="select-wrapper select-wrapper--third">
 						<?= $this->Form->day('dateOfBirth', array('class'=>'date-of-birth', 'empty' => 'day')); ?>
 					</div>
@@ -84,11 +88,14 @@
 					</div>	
 				</li>
 				<li>
-					<?= $this->Form->input('register',array('type' => 'submit', 'class' => 'cta')); ?>
+					<?= $this->Form->input('submit details',array('type' => 'submit', 'class' => 'cta')); ?>
 				</li>
 			</ul>
 
 			<?= $this->Form->end(); ?>
 		</div>
+
+		
 	</div>
 </div>
+

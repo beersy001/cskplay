@@ -59,7 +59,7 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 
 <div class="grid" id="main_grid">
 
-	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]  [ alt-background ]" id="my_account_container">
+	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]" id="my_account_container">
 		<div class="[ col9 ]">
 			<h1>Your Account</h1>
 			<h2 class="[ helper--highlight-text ]">edit your details and view your Gameballs</h2>
@@ -72,10 +72,10 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 
 
 
-	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]" id="my_account_container">
+	<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]  [ alt-background ]" id="my_account_container">
 
 		<div class="col9">
-			<h2>my details</h2>
+			<h2>your details</h2>
 			<div class="text_info">
 				<?php
 					$completeProfile = $this->Session->read('Auth.User.completeProfile');
@@ -83,8 +83,7 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 					$firstName = $this->Session->read('Auth.User.firstName');
 					$surname = $this->Session->read('Auth.User.surname');
 					$emailAddress = $this->Session->read('Auth.User.emailAddress');
-					$phoneNumberOne = $this->Session->read('Auth.User.phoneNumberOne');
-					$phoneNumberTwo = $this->Session->read('Auth.User.phoneNumberTwo');
+					$contactNumber = $this->Session->read('Auth.User.contactNumber');
 					$region = $this->Session->read('Auth.User.region');
 					$dateOfBirth = $this->Session->read('Auth.User.dateOfBirth');
 
@@ -104,8 +103,8 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 						echo '<p>date of birth <span class="large_text">' . $dateOfBirth . '</span></p>';
 					}
 
-					if(isset($phoneNumberOne)){
-						echo '<p>phone number <span class="large_text">' . $phoneNumberOne . '</span></p>';
+					if(isset($contactNumber)){
+						echo '<p>phone number <span class="large_text">' . $contactNumber . '</span></p>';
 					}
 
 					if(isset($region)){
@@ -120,20 +119,25 @@ $endedBool = (isset($selections['ended']) && $selections['ended'] == true) ? tru
 			</div>
 		</div>
 
-		<div class="[ col3  last ]">
-			<p class="[ cta  cta--100pc ]" href="<?=$this->Html->url(array('controller'=>'games', 'action'=>'displayGame'))?>">edit details</a>
+		<div class="[ col3  last ]  [ cta-wrapper ]">
+			<a class="[ cta  cta--100pc ]" href="<?=$this->Html->url(array('controller'=>'users', 'action'=>'edit'))?>">edit details</a>
+			<a class="[ cta  cta--100pc ]" href="<?=$this->Html->url(array('controller'=>'users', 'action'=>'editPassword'))?>">change your password</a>
 		</div>
 	</div>
 
-	<?php
-	if (sizeof($usersPreviousGames) > 0) {
-	?>
-		<div class="[ onerow ]  [ alt-background ]  [ scene__element  scene__element--fadeinup ]">
+		<div class="[ onerow ]  [ scene__element  scene__element--fadeinup ]">
 			<div class="col12">
-				<?=$this->element('gameballs/months_played');?>
+				<?php
+				if (sizeof($usersPreviousGames) > 0) {
+					echo $this->element('gameballs/months_played');
+				}else{ ?>
+					<h2>your Gameballs</h2>
+					<p>you havn't played any Gameballs yet.</p>
+					<a class="[ cta  cta--300px  cta--highlight ]" href="<?=$this->Html->url(array('controller'=>'games', 'action'=>'displayGame'))?>">Play Now!</a>
+				<?php
+				}
+				?>
 			</div>
 		</div>
-	<?php
-	}
-	?>
+
 </div>

@@ -7,19 +7,19 @@
 		</a>
 	</div>
 
-	<div class="[ header__login-wrapper ]  [ helper--desktop-tablet-only ]">
+	<div class="[ header__login-wrapper ]  [ helper--desktop-tablet-only ]  [ cta-wrapper ]">
 		<?php
 			if(!$authUser){
 				echo $this->Html->link('login', array('controller'=>'Users', 'action'=>'login'),array('class' => 'cta cta--100px' ));
 				echo $this->Html->link('register', array('controller'=>'Users', 'action'=>'add'),array('class' => 'cta cta--100px cta--highlight' ));
 			} else {
 				if($authUser['facebook'] == true){
-					echo $this->Html->link('logout', $fb_logout_url,array('class' => '[ cta  cta--100px ]'));
+					echo $this->Html->link('logout', $fb_logout_url,array('class' => '[ cta  cta--100px ]  [ no-smoothstate ]'));
 					echo $this->Html->link('my account', array('controller'=>'Users', 'action'=>'accountAdmin'),array('class' => '[ cta  cta--100px  cta--highlight ]'));
 					echo "<img class='login-wrapper__profile-picture' src='https://graph.facebook.com/$facebookUserId/picture'> ";
 					echo "<p>welcome " . $facebookUserProfile['name'] . "</p>";
 				}else{
-					echo $this->Html->link('logout', array('controller'=>'Users', 'action'=>'logout'),array('class' => '[ cta  cta--100px ]'));
+					echo $this->Html->link('logout', array('controller'=>'Users', 'action'=>'logout'),array('class' => '[ cta  cta--100px ]  [ no-smoothstate ]'));
 					echo $this->Html->link('my account', array('controller'=>'Users', 'action'=>'accountAdmin'),array('class' => '[ cta  cta--100px  cta--highlight ]'));
 					echo "<p>welcome " . $authUser['username'] . "</p>";
 				}

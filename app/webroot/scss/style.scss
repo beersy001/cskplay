@@ -860,6 +860,7 @@ label a{
 	}
 
 	&.cta--100px{ width: 100px; }
+	&.cta--300px{ width: 300px; }
 	&.cta--50pc{ width: 49%; }
 	&.cta--100pc{ width: 100%; }
 
@@ -867,6 +868,13 @@ label a{
 		text-decoration: none;
 		background: rgb(100,100,100);
 		color: rgb(255,255,255);
+	}
+}
+
+.cta-wrapper{
+	.cta{
+		margin-bottom: 2px;
+		margin-right: 2px;
 	}
 }
 

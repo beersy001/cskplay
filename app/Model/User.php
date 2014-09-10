@@ -4,16 +4,28 @@ class User extends AppModel{
 
 	var $name = 'User';
 
+	public function beforeSave($options = array()) {
 
 
-	/********************************************************
-	 *		Get number of gameballs left					*
-	 ********************************************************/
-	public function getNumberOfAttemptsRemaining($username){
+		if (isset($this->data['User']['password'])) {
+			CakeLog::write('debug', "UserModel - beforeSave() - password is set");
+			CakeLog::write('debug', "UserModel - beforeSave() - password: " . $this->data['User']['password']);
 
-		$user = $this->findById($username);
+			$this->data['User']['password'] = AuthComponent::password($this->data['User']['password']);
 
-		return $user['User']['gameBallsLeft'];
+			CakeLog::write('debug', "UserModel - beforeSave() - password: " . $this->data['User']['password']);
+
+		}
+
+		if(isset($this->data['User']['password2'])){
+			CakeLog::write('debug', "UserModel - beforeSave() - unset password2");
+			unset($this->data['User']['password2']);
+		}
+
+		CakeLog::write('debug', "UserModel - beforeSave() - data: " . print_r($this->data, true));
+
+
+		return true;
 	}
 
 	/********************************************************
@@ -59,7 +71,21 @@ class User extends AppModel{
 		return $this->find('all', array('conditions' => array('User.teams.'.$teamName.'.months.'.$month.'.active' => true)));
 	}
 
+
+
+	public function checkCurrentPassword($data) {
+		$this->id = AuthComponent::user('id');
+		$password = $this->field('password');
+		
+		return(AuthComponent::password($data['currentPassword']) == $password);
+	}
+
 	public $validate = array(
+		'currentPassword' => array(
+			'rule' => 'checkCurrentPassword',
+			'message' => 'your password is incorrect'
+		),
+/*
 		'firstName' => array(
 			'rule' => 'notEmpty',
 			'required' => true
@@ -121,8 +147,9 @@ class User extends AppModel{
 			'rule' => 'notEmpty',
 			'required' => true
 		)
-		
+		*/
 	);
+
 }
 
 ?>

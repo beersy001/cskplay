@@ -111,6 +111,8 @@ class UsersController extends AppController {
 	 ********************************************************/
 	public function logout(){
 
+		CakeLog::write('debug', "UserssController - logout() - logout");
+
 		$this->Session->destroy();
 		$this->redirect($this->Auth->logout());
 	}
@@ -129,12 +131,6 @@ class UsersController extends AppController {
 		if ($this->request->is('post')) {
 
 			CakeLog::write('debug', "UserssController - add() - post data: " . print_r($this->request->data, true));
-
-			if(isset($this->request->data['User']['password']) && $this->request->data['User']['password'] != ""){
-				$this->request->data['User']['password'] = AuthComponent::password($this->request->data['User']['password']);
-				$this->request->data['User']['passwordVerify'] = AuthComponent::password($this->request->data['User']['password']);
-			}
-			
 
 			$dateOfBirth = $this->request->data['User']['dateOfBirth']['day'] . '/' . $this->request->data['User']['dateOfBirth']['month'] . '/' . $this->request->data['User']['dateOfBirth']['year'];
 
@@ -168,52 +164,42 @@ class UsersController extends AppController {
 	}
 
 	/********************************************************
-	 *		Edit												*
+	 *		Edit											*
 	 ********************************************************/
 	public function edit() {
 
+		$this->set('title_for_page', 'csk - edit details');
+
 		if ($this->request->is('post') && isset($this->request->data['User']['id']) && $this->request->data['User']['id'] == $this->Session->read('Auth.User.id')) {
+			
+			$dateOfBirth = $this->request->data['User']['dateOfBirth']['day'] . '/' . $this->request->data['User']['dateOfBirth']['month'] . '/' . $this->request->data['User']['dateOfBirth']['year'];
+			$this->request->data['User']['dateOfBirth'] = $dateOfBirth;
+
 			$this->User->save($this->request->data['User']);
+
 			$this->Session->write('Auth', $this->User->read());
+			$this->redirect(array('action' => 'accountAdmin'));
 		}
 
-		$this->redirect(array('action' => 'accountAdmin'));
+		$username = $this->Session->read('Auth.User.username');
+		$this->request->data = $this->User->findById($username);
 	}
 
 
-
-
-
 	/********************************************************
-	 *		Add Extra Details								*
+	 *		Edit Password									*
 	 ********************************************************/
-	public function addDetails() {
+	public function editPassword() {
 
-		$this->set('title_for_page', 'add details');
-		$this->set('pageId', 'addDetails');
+		$this->set('title_for_page', 'csk - edit password');
 
-		$user = $this->Auth->user();
-
-		if ($this->request->is('post') && isset($this->request->data['User'])) {
-
-			$dateOfBirth = $this->request->data['User']['dayOfBirth']['day'] . '/' . $this->request->data['User']['monthOfBirth']['month'] . '/' . $this->request->data['User']['yearOfBirth']['year'];
-
-			unset($this->request->data['User']['dayOfBirth']);
-			unset($this->request->data['User']['monthOfBirth']);
-			unset($this->request->data['User']['yearOfBirth']);
-
-			$this->request->data['User']['completeProfile'] = true;
-			$this->request->data['User']['dateOfBirth'] = $dateOfBirth;
-
-			$data = $this->request->data['User'];
-			
-			$user = array_merge($user,$data);
-
-			$this->User->save($user);
-
-			$this->Session->write('Auth', $this->User->read());
-
-			$this->redirect(array('controller'=>'games','action'=>'displayGame'));
+		if ($this->request->is('post') && isset($this->request->data['User']['id']) && $this->request->data['User']['id'] == $this->Session->read('Auth.User.id')) {
+			if($this->User->save($this->request->data['User'])){
+				$this->Session->write('Auth', $this->User->read());
+				$this->Session->setFlash('Successfully changed password');
+			}else{
+				$this->Session->setFlash('password not changed');
+			}
 		}
 	}
 
@@ -223,19 +209,15 @@ class UsersController extends AppController {
 	 ********************************************************/
 	public function accountAdmin(){
 
-		$this->set('title_for_page', 'my account');
-		$this->set('pageId', 'myAccount');
+		$this->set('title_for_page', 'csk - my account');
 
-		$this->loadModel('Winner');
 		$this->loadModel('GameBall');
 		$this->loadModel('Game');
 
 		$username = $this->Session->read('Auth.User.username');
-		$this->request->data = $this->User->findById($username);
 
 		$currentUser = $this->User->find('first', array('conditions' => array('id' => $username)));
 		$numberOfBallsPlayed = $this->GameBall->getNumberOfBallsPlayed($username,  date('Ym'));
-		$numberOfBallsRemaining = $this->User->getNumberOfAttemptsRemaining($username);
 		$usersPreviousGames = $this->GameBall->getDistinctMonths($username);
 		$allGames = $this->Game->find('all');
 
@@ -245,14 +227,10 @@ class UsersController extends AppController {
 		
 		$this->set('usersPreviousGames', $usersPreviousGames);
 		$this->set('currentUser', $currentUser );
-		$this->set('ballsRemaining', $numberOfBallsRemaining );
 		$this->set('ballsPlayed', $numberOfBallsPlayed );
 		$this->set('allGames', $sortedGames );
 
-		
 
-
-		
 	}
 
 	/********************************************************
